@@ -71,12 +71,13 @@ channels:
     error:
       data: |
         Please forward to me any message from your channel. Or send me its username or ID instead.
-      get_admins: |
-        Add @${username} to admins of your channel. Please check everything twice and try again.
+      channel_not_found: The channel not found.
+      you_are_not_administrator: You aren't an administrator in the channel.
+      you_do_not_have_rights: You don't have rights to post messages in the channel.
+      bot_is_not_admin: Add @${username} to admins of your channel. Please check everything twice and try again.
+      bot_is_not_admin_in_group: Add @${username} to admins of your group and try again.
       bot_was_deleted: |
-        Unable to add a channel. @${username} is no longer exist, or its token was revoked. Reconnect this bot or choose another. 
-      bot_is_not_admin: |
-        Add @${username} to admins of your group and try again.
+        Unable to add a channel. @${username} is no longer exist, or its token was revoked. Reconnect this bot or choose another.
       channel_already_added: This channel is already added. Go to @${bot_username} to create a new post.
       group_already_added: |
         This channel is already added by ${admin.first_name}${admin.last_name ? ' ' + admin.last_name : ''}${admin.username ? ' @' + admin.username : ''}
