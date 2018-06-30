@@ -1,6 +1,11 @@
 language_name: فارسی
 is_enabled: true
 
+move: |
+  All the main functions like creating and editing posts, view stats and scheduled posts were moved to connected bots, so you no longer need to switch between your bot and Controller Bot every time!
+
+  Go to your connected bot and send the command /start.
+
 common:
   choose_language: Please choose your language.
 
