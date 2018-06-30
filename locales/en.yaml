@@ -422,6 +422,34 @@ bot:
 
         And set reactions that will be automatically added to messages in new posts as well.
 
+donate:
+  welcome: |
+    ☘️ <b>Donate</b>
+
+    Thanks to your donations, we will be able to add new features, improve the stability of bots and pay for servers.
+
+    <i>Your help is greatly appreciated,</i>
+    <a href="https://t.me/BotUpdates">Controller Bot Team</a>
+
+  other_sum: Other amount
+  enter_sum: Enter amount of donation.
+  incorrect_sum: Enter the amount in rubles.
+
+  continue_use_bot: I will donate later 😦
+  donate_controller: ☘️ Donate
+
+  select_price: |
+    Click the "Pay" button to send <b>${sum} ₽</b> as a donation to the Controller Bot Team.
+
+    After payment, click the "Check Payment" button to hide this message.
+  pay: Pay
+  completed: Check Payment
+  not_pay: Payment not found 😔
+  success_pay: Thank you for your donation to the Controller Bot Team! 😍
+
+  problem: Проблемы с оплатой
+  help: Напишите нам в @ControllerSupportBot, если у вас есть проблемы с отправкой пожертвования или нет подходящего способа оплаты.
+
 btn:
   common:
     continue: Continue »
