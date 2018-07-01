@@ -501,6 +501,9 @@ btn:
     how_to_create_bot_url: http://telegra.ph/Add-Bot-to-Admins-Controller-FAQ-03-22
 
     control:
+      how_to_add_admin: Как добавить администратора?
+      how_to_add_admin_url: http://telegra.ph/Admins-Controller-Bot-03-22
+
       update: Обновить данные
       bot: Изменить бот
       timezone: Часовой пояс

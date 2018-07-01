@@ -483,6 +483,9 @@ btn:
     how_to_create_bot_url: http://telegra.ph/Create-Bot-Controller-FAQ-03-28
 
     control:
+      how_to_add_admin: How to add an admin?
+      how_to_add_admin_url: http://telegra.ph/Admins-Controller-FAQ-03-28
+
       update: Update Data
       bot: Change Connected Bot
       timezone: Change Time Zone
