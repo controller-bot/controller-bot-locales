@@ -490,7 +490,7 @@ btn:
     add_image: Attach Photo
     clear_image: Delete Attached Photo
 
-    open_comments: Open Comments
+    open_comments: Відкрити коментарі
     add_comments: Add Comments
     delete_comments: Delete Comments
     
