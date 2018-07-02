@@ -494,6 +494,7 @@ btn:
 
   channels:
     add_channel: Добавить канал
+    add_bot: Подключить бот
     add_change_bot: Изменить бот
     channel_added: Создать новый пост
 

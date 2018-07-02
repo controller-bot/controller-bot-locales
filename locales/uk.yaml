@@ -448,6 +448,7 @@ btn:
 
   channels:
     add_channel: Add Channel
+    add_bot: Під'єднати бота
     add_change_bot: Change Bot
     channel_added: Create Post
 
