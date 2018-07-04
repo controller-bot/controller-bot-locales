@@ -13,10 +13,10 @@ common:
     I can help you manage Telegram channels.
 
     You can control me by sending these commands:
-    
+
+    /newpost - create a new post
     /addchannel - add a new channel
     /mychannels - edit your channels
-    /newpost - create a new post
 
     /settings - other settings
 
@@ -468,8 +468,8 @@ btn:
 
   menu:
     create_post: Create Post
-    edit_sent_posts: Edit Sent Posts
-    scheduled_posts: Manage Scheduled Posts
+    edit_sent_posts: Edit Post
+    scheduled_posts: Scheduled Posts
     channels: Channels
     statistics: Channel Stats
     settings: Settings
