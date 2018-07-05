@@ -2,7 +2,7 @@ language_name: French
 is_enabled: true
 
 move: |
-  Toutes les fonctions principales telles que la création et l'édition de publications, les statistiques d'affichage et les publications planifiées ont été déplacées vers des bots connectés. Vous n'avez donc plus besoin de basculer entre votre bot et Contrôler Bot à chaque fois!
+  Toutes les fonctions principales telles que la création et l'édition de publications, les statistiques d'affichage et les publications planifiées ont été déplacées vers des bots connectés. Vous n'avez donc plus besoin de basculer entre votre bot et Controller Bot à chaque fois!
 
   Allez sur votre bot connecté et entrez la commande /start.
 
@@ -18,7 +18,7 @@ common:
     /addchannel - ajouter une nouvelle chaîne
     /mychannels - editer vos chaînes
 
-    /settings - autres réglages
+    /settings - réglages
 
   help: |
     Pour plus de questions visitez <a href="http://telegra.ph/Controller-Help-03-20">Controller Help</a>.
@@ -40,7 +40,7 @@ bots:
     1. Ouvrir @BotFather, puis entrer <code>/newbot</code> et choisir un nom et un nom d'utilisateur pour votre bot.
     2. Vous obtiendrez un jeton (e.g. 12345:6789ABCDEF) — faire un copier-coller vers moi ou me le transferer.
     
-    <b>Warning!</b> Ne pas connecter des bots déjà utilisés par d'autres services comme Chatfuel, Manybot, ect. 
+    <b>Attention!</b> Ne pas connecter des bots déjà utilisés par d'autres services comme Chatfuel, Manybot, ect. 
 
   wrong_token: Ceci ne me dit rien. Veuillez m\'envoyer le jeton de votre bot.
   error_add: Jeton invalide. Essayez d\'en obtenir un nouveau ou utilisez celui d\'un autre bot.
