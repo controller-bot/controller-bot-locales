@@ -13,10 +13,10 @@ common:
     Je peux vous aider à gérer les chaînes Telegram.
 
     Vous pouvez me contrôller en envoyant ces commandes:
-    
+
+    /newpost - créer une nouvelle publication
     /addchannel - ajouter une nouvelle chaîne
     /mychannels - editer vos chaînes
-    /newpost - créer une nouvelle publication
 
     /settings - autres réglages
 
@@ -42,8 +42,8 @@ bots:
     
     <b>Warning!</b> Ne pas connecter des bots déjà utilisés par d'autres services comme Chatfuel, Manybot, ect. 
 
-  wrong_token: Ceci ne me dit rien. Veuillez m'envoyer le jeton de votre bot.
-  error_add: Jeton invalide. Essayez d'en obtenir un nouveau ou utilisez celui d'un autre bot.
+  wrong_token: Ceci ne me dit rien. Veuillez m\'envoyer le jeton de votre bot.
+  error_add: Jeton invalide. Essayez d\'en obtenir un nouveau ou utilisez celui d\'un autre bot.
   bot_already_added: Il me semble familier. Ce bot est déjà connecté.
 
 channels:
@@ -52,7 +52,7 @@ channels:
 
     ${count
       ? 'Choisissez une chaîne dans la liste ci-dessous:'
-      : 'Il n'y a pas encore de chaînes ajoutées.'
+      : 'Il n\'y a pas encore de chaînes ajoutées.'
     }
   add:
     select_bot: |
@@ -77,8 +77,8 @@ channels:
       data: |
         Veuillez me transférer n'importe quel message depuis votre chaîne. Ou envoyez moi son nom d'utilisaeur ou son ID à la place.
       channel_not_found: Chaîne introuvable.
-      you_are_not_administrator: Vous n'êtes pas un administrateur de la chaîne.
-      you_do_not_have_rights: Vous n'êtes pas autorisé à publier des messages sur la chaîne.
+      you_are_not_administrator: Vous n\'êtes pas un administrateur de la chaîne.
+      you_do_not_have_rights: Vous n\'êtes pas autorisé à publier des messages sur la chaîne.
       bot_is_not_admin: Ajouter @${username} aux administrateurs de votre chaîne. Veuillez vérifier et réesayer de nouveau.
       bot_is_not_admin_in_group: Ajouter @${username} aux administrateurs de votre groupe.
       bot_was_deleted: |
@@ -98,7 +98,7 @@ channels:
     select_bot: |
       ${count
         ? 'Choisissez un bot qui sera utilisé pour envoyer des messages dans la chaîne.'
-        : 'Aucun bot connecté pour l'instant. Envoyez /addchannel pour en connecter un.'
+        : 'Aucun bot connecté pour l\'instant. Envoyez /addchannel pour en connecter un.'
       }
     bot_is_not_admin: Ajoutez le bot à la liste des administrateurs de votre chaîne.
     current_bot: Impossible de choisir le bot actuellement utilisé.
@@ -117,8 +117,8 @@ channels:
       · ${countryName}, ${name}
 
       Est-ce correct? Si non, essayez de m'envoyer le nom d'une autre ville proche de chez vous.
-    error_timezone: Désolé, je ne peux pas trouver cette ville. Essayez de m'envoyer le nom d'une autre ville proche de chez vous.
-    error_request_timezone: Une erreur s'est produite :( S'il vous plaît essayez à nouveau. Envoyez-nous un message à @ControllerSupportBot si pour une raison quelconque, cela n'a rien changé.
+    error_timezone: Désolé, je ne peux pas trouver cette ville. Essayez de m\'envoyer le nom d\'une autre ville proche de chez vous.
+    error_request_timezone: Une erreur s\'est produite :( S\'il vous plaît essayez à nouveau. Envoyez-nous un message à @ControllerSupportBot si pour une raison quelconque, cela n\'a rien changé.
     save_timezone: OK, Fuseau horaire sauvegardé.
 
 post:
@@ -127,8 +127,8 @@ post:
     Il n'y a aucune chaîne ajoutée pour l'instant.
 
     Envoyez /addchannel pour en ajouter une.
-  error_check_channel: Une erreur s'est produite :( S'il vous plaît essayez à nouveau. Envoyez-nous un message à @ControllerSupportBot si pour une raison quelconque, cela n'a rien changé.
-  channel_not_found: La chaîne n'existe pas ou vous n'y avez pas accès. Retournez sur @ControllerBot et réessayez à nouveau.
+  error_check_channel: Une erreur s\'est produite :( S\'il vous plaît essayez à nouveau. Envoyez-nous un message à @ControllerSupportBot si pour une raison quelconque, cela n'a rien changé.
+  channel_not_found: La chaîne n\'existe pas ou vous n\'y avez pas accès. Retournez sur @ControllerBot et réessayez à nouveau.
   problems: |
     Impossible de créer un nouveau message dans ${channel.name}. Les problèmes suivant ont été trouvés:
 
@@ -139,11 +139,11 @@ post:
       : 'Le créateur de la chaîne doit aller aux paramètres de chaîne afin de corriger les problèmes.'
     }
   problem_items:
-    timezone_is_not_set: 🔹 le fuseau horaire n'est pas défini
-    bot_is_not_connection: 🔹 la chaîne n'est pas connectée à un bot
-    channel_not_found: 🔹 la chaîne n'existe plus
-    bot_is_not_admin: 🔹 le bot connecté n'est pas ajouté à la liste des administrateurs de la chaîne
-    bot_was_deleted: 🔹 le bot connecté n'existe plus, ou son jeton a été revoqué
+    timezone_is_not_set: 🔹 le fuseau horaire n\'est pas défini
+    bot_is_not_connection: 🔹 la chaîne n\'est pas connectée à un bot
+    channel_not_found: 🔹 la chaîne n\'existe plus
+    bot_is_not_admin: 🔹 le bot connecté n\'est pas ajouté à la liste des administrateurs de la chaîne
+    bot_was_deleted: 🔹 le bot connecté n\'existe plus, ou son jeton a été revoqué
 
   start: |
     Allez à @ControllerBot pour connecter une nouvelle chaîne et commencer à créer des messages.
@@ -161,8 +161,8 @@ post:
       Envoyez-moi un ou plusieurs messages que vous souhaitez inclure dans la publication. Cela peut être — un texte, une photo, une vidéo, ou même un sticker.
     clear: Opération éffectuée! Tous les messages ont été supprimés.
     message_deleted: Éffectuée! Le message a été supprimé.
-    not_posts: Il n'y a aucun message pour l'instant.
-    not_posts_for_done: Il n'y a aucun message pour l'instant.
+    not_posts: Il n\'y a aucun message pour l\'instant.
+    not_posts_for_done: Il n\'y a aucun message pour l\'instant.
     preview_sent: |
       Aperçu des messages envoyés.
 
@@ -174,7 +174,7 @@ post:
       <pre>${description}</pre>
       
       Veuillez <a href="http://telegra.ph/Parsing-Error-Fix-Controller-FAQ-03-28">corriger toutes les erreurs</a> et envoyez le message à nouveau.
-    continue_collect: Vous pouvez continuer à m'envoyer des messages. 
+    continue_collect: Vous pouvez continuer à m\'envoyer des messages.
     html: |
       <b>gras</b>
       &lt;b&gt;bold&lt;/b&gt;
@@ -222,16 +222,16 @@ post:
         Veuillez corriger toutes les erreurs et envoyez le message à nouveau.
       not_keyboard: |
         Le message envoyé par vous ne correspond pas au format de la liste des boutons pour lien URL. Vérifiez le tout deux fois et réessayez de nouveau.
-      save: Boutons pour lien URL enregistrés. Vous pouvez continuer à m'envoyer des messages.
+      save: Boutons pour lien URL enregistrés. Vous pouvez continuer à m\'envoyer des messages.
       cleared: Opération éffectuée! Boutons URL effacés.
     reactions:
       welcome: |
-        Envoyez-moi un ou plusieurs émoticônes qui seront utilisés comme émoji en bouton "Like" (jusqu'à 6 emoji).
+        Envoyez-moi un ou plusieurs émoticônes qui seront utilisés comme émoji en bouton "Like" (jusqu\'à 6 emoji).
       not_found_smiles: |
         Envoyez-moi un ou plusieurs émoticônes. Par exemple: 👍👎
-      save: Réactions enregistrées. Vous pouvez continuer à m'envoyer des messages.
+      save: Réactions enregistrées. Vous pouvez continuer à m\'envoyer des messages.
       cleared: Opération éffectuée! Réactions effacées.
-      notify: Le compteur sera disponible après l'envoi.
+      notify: Le compteur sera disponible après l\'envoi.
       default_reactions:
         welcome: |
           Vous pouvez définir des réactions qui seront automatiquement ajoutées aux messages dans les nouvelles publications. Envoyez-moi un ou plusieurs émoticônes. Par exemple: 👍👎
@@ -264,8 +264,8 @@ post:
         ? 'Accédez aux paramètres de chaîne pour résoudre ces problèmes.'
         : 'Le créateur de la chaîne doit aller aux paramètres de chaîne afin de corriger les problèmes.'
       }
-    cancel_send: L'envoi du message a été annulé.
-    continue_send: Vous pouvez continuer à m'envoyer des messages.
+    cancel_send: L\'envoi du message a été annulé.
+    continue_send: Vous pouvez continuer à m\'envoyer des messages.
     confirm_send: >
       Voulez-vous vraiment envoyer <b>${pluralize(posts, 'message', 'messages', 'messages')}</b> à
       <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''}?
@@ -274,56 +274,56 @@ post:
 
   schedule:
     day:
-      today: aujourd'hui
+      today: aujourd\'hui
       tomorrow: demain
       after_tomorrow: après-demain
     welcome: |
-      Envoyez l'heure à laquelle vous souhaitez envoyer la publicaion ${day}.
+      Envoyez l\'heure à laquelle vous souhaitez envoyer la publicaion ${day}.
       Envoyez heure+date pour mettre le message en file d'attente pour un autre jour.
-      
     help: |
       <b>Les formats d'heure suivants sont supportés:</b>
       <pre>"6" → 06:00
       "5 3" → 05:03
       "15:30" → 15:30
       "1530" → 15:30</pre>
-      
+
       <b>Les formats d'heure suivants sont supportés:</b>
       <pre>"6" → 6 du mois actuel
       "9 12" → 9 Décembre
       "8 7 18" → 8 Juillet, 2018</pre>
-      
-      Vous pouvez également utiliser les colonnes et les points au lieu des espaces pour la séparation. 
-      
+
+      Vous pouvez également utiliser les colonnes et les points au lieu des espaces pour la séparation.
+
       Si vous envoyez uniquement l'heure, la publication sera mis en file d'attente pour le jour en cours, par défaut. Pour mettre le message en file attente pour un autre jour, envoyez heure+date. Par exemple, <code>16 30 6 8 -> 16:30, 6 Août</code>
-    error_date: Heure et date incorrects. choisissez 'Aide' pour obtenir de l'aide.
+    error_date: Heure et date incorrects. choisissez \'Aide\' pour obtenir de l\'aide.
     invalid_date: Date incorrecte.
-    limit: Vous devez choisir une heure supérieure d'une minute ou plus à celle actuelle. L'heure et la date actuelle est ${current_date}.
-    limit_year: 'Impossible de choisir une heure supérieure d'un an ou plus à celle actuelle. Qui sait ce qui va se passer... :)'
+    limit: Vous devez choisir une heure supérieure d\'une minute ou plus à celle actuelle. L\'heure et la date actuelle est ${current_date}.
+    limit_year: "Impossible de choisir une heure supérieure d'un an ou plus à celle actuelle. Qui sait ce qui va se passer... :)"
     ok: |
        Le message planifié a été créé. Le message sera envoyé à <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''} le <b>${date}</b>.
 
   timer:
-    welcome: Choisissez ou envoyez une période de temps en heures après laquelle la publication s'auto-détruira.
+    welcome: Choisissez ou envoyez une période de temps en heures après laquelle la publication s\'auto-détruira.
     wrong_hour: Heure incorrecte. Seules les périodes de 1 à 48 heures sont autorisées.
-    save_timer: Temps d'auto-destruction enregistré.
-    timer_off: Temps d'auto-destruction désactivé.
+    save_timer: Temps d\'auto-destruction enregistré.
+    timer_off: Temps d\'auto-destruction désactivé.
+
 posts:
   edit:
     welcome: Renvoyez-moi un message de votre chaîne que vous souhaitez modifier.
     only_channel_post: |
       Désolé, seuls les messages des chaînes peuvent être modifiés.
     channel_not_found: |
-       Cette chaîne n'est pas disponible. Le chaîne et le bot via lesquels le message a été envoyé doivent être connectés à Controller Bot. Veuillez vérifier à nouveau et réessayer.
+      Cette chaîne n'est pas disponible. Le chaîne et le bot via lesquels le message a été envoyé doivent être connectés à Controller Bot. Veuillez vérifier à nouveau et réessayer.
     unsupported_type: |
       Impossible d'éditer ce message. Vous pouvez modifier uniquement les messages textes.
     post_not_found: |
       Cette publication n'est pas disponible. Le chaîne et le bot via lesquels le message a été envoyé doivent être connectés à Controller Bot. Veuillez vérifier à nouveau et réessayer.
     editing: |
-      Message type: ${type_text}.${type == 'text' ? '\nFormatting style: ' + parse_mode : ''}
+      Message type: ${type_text}.${type == 'text' ? '\nStyle de formatage: ' + parse_mode : ''}
 
-      Envoyer un nouveau texte pour l'éditer ${type == 'text' ? 'message' : 'caption. Pas plus de 200 caractères sont autorisés'}.
-    not_changed: 'Une erreur s'est produite :( S'il vous plaît essayez à nouveau.'
+      Envoyer un nouveau texte pour l\'éditer ${type == 'text' ? 'message' : 'caption. Pas plus de 200 caractères sont autorisés'}.
+    not_changed: Une erreur s\'est produite :( S\'il vous plaît essayez à nouveau.
     edited: Opération éffectuée! Le message a été modifié.
     continue_edit: Vous pouvez continuer à modifier le message.
 
@@ -354,7 +354,7 @@ posts:
     venue: 🕹
     video_note: 📹
   welcome_schedule: Choisissez une chaîne pour gérer les publications programmés.
-  not_schedule_posts: Il n'y a pas encore de publication planifiée pour cette chaîne.
+  not_schedule_posts: Il n\'y a pas encore de publication planifiée pour cette chaîne.
   choose_scheduled_post: choisissez une publication planifiée que vous souhaitez afficher ou supprimer.
   view_scheduled_post: |
     ${messages}
@@ -392,14 +392,14 @@ statistics:
     
     Envoyez /addchannel pour en ajouter une nouvelle.
   selected_channel: 'Ça y est: ${channel.name}. Que voulez-vous faire de ces statistiques?'
-  channel_not_found: Cette chaîne n'est pas disponible.
+  channel_not_found: Cette chaîne n\'est pas disponible.
   select_periods: Choisissez une période pour obtenir des statistiques.
   loading_data: 🕒 Traitement de donnée et rendu des graphes...
   error_load_data: |
     Une erreur est survenu lors du traitement de donnée
      
     Envoyez-nous un message à @ControllerSupportBot pour signaler le problème.
-  not_found_data: Il n'y a pas encore de données statistiques pour cette chaîne. Revenez plus tard.
+  not_found_data: Il n\'y a pas encore de données statistiques pour cette chaîne. Revenez plus tard.
   share_text: |
     Voici le lien pour voir les statistiques de ${channel.name}${channel.username ? ' @' + channel.username : ''}
   data: |
@@ -417,7 +417,7 @@ statistics:
 
 bot:
   start:
-    welcome: Ici, vous pouvez créer des publications enrichies, afficher des statistiques et accomplir d'autres tâches.
+    welcome: Ici, vous pouvez créer des publications enrichies, afficher des statistiques et accomplir d\'autres tâches.
 
   settings:
     posting:
@@ -514,21 +514,22 @@ btn:
     preview_disable: 'Aperçu du lien: Désactiver'
 
     send:
-      self_destruct_timer: "${+hours
-        ? 'Temps d'auto-destruction: ' + hours + 'h'
-        : 'Régler temps d'auto-destruction'
-      }"
+      self_destruct_timer: |-
+        ${+hours
+          ? "Temps d'auto-destruction: " + hours + 'h'
+          : "Régler temps d'auto-destruction"
+        }
       hours: ${hour}h
       send_now: Envoyer maintenant
       sent: Voir le message dans la chaîne
-      create_scheduled: Mettre en file d'attente
+      create_scheduled: Mettre en file d\'attente
       
       send: Envoyer
       cancel: Annuler
 
     schedule:
       today: |-
-        ${active ? '🔹 ' : ''}Aujourd'hui
+        ${active ? '🔹 ' : ''}Aujourd\'hui
       tomorrow: |-
         ${active ? '🔹 ' : ''}Semain
       after_tomorrow: |-
@@ -541,7 +542,7 @@ btn:
 
   posts:
     edit:
-      original: Voir l'original
+      original: Voir l\'original
       clear_caption: Supprimer Caption
       save: Sauvegarder
       cancel: Annuler
@@ -549,7 +550,7 @@ btn:
 
     view: Voir publication
     copy: Créer une copie
-    edit_time: Editer l'heure
+    edit_time: Editer l\'heure
     delete: Supprimer la publication
 
   statistics:

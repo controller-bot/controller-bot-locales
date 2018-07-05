@@ -423,7 +423,7 @@ bot:
   settings:
     posting:
       open: |
-        Aquí puede establecer el estilo de formato que se usará de manera predeterminada. Envía  /markdown o /HTML para obtener ayuda.
+        Aquí puede establecer el estilo de formato que se usará de manera predeterminada. Envía /markdown o /HTML para obtener ayuda.
 
         Y establezca reacciones que se agregarán automáticamente a los mensajes en las publicaciones nuevas también.
 
