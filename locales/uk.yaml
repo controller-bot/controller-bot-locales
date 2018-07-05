@@ -402,7 +402,7 @@ statistics:
   share_text: |
     Ось посилання на перегляд статистики ${channel.name}${channel.username ? ' @' + channel.username : ''}
   data: |
-    Статистика ${channel.name}${channel.username ? ' @' + channel.username : ''} за ${period == 'тиждень'
+    Статистика ${channel.username ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>' : channel.name} за ${period == 'тиждень'
       ? 'останні 7 днів'
       : 'останній 31 день'
     }.

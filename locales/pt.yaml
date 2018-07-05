@@ -404,7 +404,7 @@ statistics:
   share_text: |
     Here is the link to view stats of ${channel.name}${channel.username ? ' @' + channel.username : ''}
   data: |
-    Stats of ${channel.name}${channel.username ? ' @' + channel.username : ''} for ${period == 'week'
+    Stats of ${channel.username ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>' : channel.name} for ${period == 'week'
       ? 'the last 7 days'
       : 'the last 31 day'
     }.

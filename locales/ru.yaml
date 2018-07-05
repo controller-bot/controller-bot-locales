@@ -422,7 +422,7 @@ statistics:
   share_text: |
     Статистика канала ${channel.name}${channel.username ? ' @' + channel.username : ''}
   data: |
-    Статистика канала ${channel.name}${channel.username ? ' @' + channel.username : ''} за ${period == 'week'
+    Статистика канала ${channel.username ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>' : channel.name} за ${period == 'week'
       ? 'последние 7 дней'
       : 'последний 31 день'
     }.
