@@ -290,8 +290,8 @@ post:
       "1530" → 15:30</pre>
       
       <b>Los siguientes formatos de fecha son compatibles:</b>
-      <pre>"6" → 6 of the current month
-      "9 12" → December 9
+      <pre>"6" → 6 del mes actual
+      "9 12" → 9 de Diciembre
       "8 7 18" → 8 Julio, 2018</pre>
       
       También puede usar dos puntos y puntos en lugar de espacios para la separación.
@@ -328,7 +328,7 @@ posts:
     edited: ¡Éxito! El mensaje ha sido editado.
     continue_edit: Puede continuar editando el mensaje.
 
-  edit_time: Envía hora + fecha para volver a poner en cola la publicación en cualquier otro día.
+  edit_time: Envía hora + fecha para volver a programar la publicación para cualquier otro día.
 
   types:
     text: texto
@@ -469,8 +469,8 @@ btn:
 
   post:
     settings: 
-      disable_notification_disable: 'Transmisión silenciosa: OFF'
-      disable_notification_enable: 'Transmisión silenciosa: ON'
+      disable_notification_disable: 'Noticifación silenciosa: OFF'
+      disable_notification_enable: 'Noticifación silenciosa: ON'
       
       disable_web_page_preview_disable: 'Vista previa de enlaces: ON'
       disable_web_page_preview_enable: 'Vista previa de enlaces: OFF'
@@ -551,7 +551,7 @@ btn:
     view: Ver publicación
     copy: Crear copia
     edit_time: Editar hora
-    delete: Borrar publciación
+    delete: Borrar publicación
 
   statistics:
     view_periods: Ver
