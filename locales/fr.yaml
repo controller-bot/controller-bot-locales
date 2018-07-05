@@ -515,8 +515,8 @@ btn:
 
     send:
       self_destruct_timer: "${+hours
-        ? 'Self-Destruct Timer: ' + hours + 'h'
-        : 'Set Self-Destruct Timer'
+        ? 'Temps d'auto-destruction: ' + hours + 'h'
+        : 'Régler temps d'auto-destruction'
       }"
       hours: ${hour}h
       send_now: Envoyer maintenant
