@@ -520,9 +520,9 @@ btn:
           : "Régler temps d'auto-destruction"
         }
       hours: ${hour}h
-      send_now: Envoyer maintenant
+      send_now: Maintenant
       sent: Voir le message dans la chaîne
-      create_scheduled: Mettre en file d\'attente
+      create_scheduled: File d\'attente
       
       send: Envoyer
       cancel: Annuler
