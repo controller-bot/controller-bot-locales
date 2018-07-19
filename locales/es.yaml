@@ -424,23 +424,23 @@ bot:
     controller_updates_join_link: https://t.me/joinchat/AAAAAFNNAyKG1y7GopROHg
     controller_updates_id: '-1001397556002'
     controller_updates: |
-      🍀 We recommend you to join on the <a href="https://t.me/joinchat/AAAAAFNNAyKG1y7GopROHg">official channel</a> of Controller Bot to be aware of new updates and other news of the bot.
+      🍀 Te recomendamos que te unas al <a href="https://t.me/joinchat/AAAAAFNNAyKG1y7GopROHg">canal oficial</a> de Controller Bot para estar al tanto de las nuevas actualizaciones y otras noticias del bot.
 
-      This message will not show if you join the channel.
+      Este mensaje no se mostrará si te unes al canal.
 
     secretship_join_link: https://t.me/joinchat/AAAAAD63ENxmBG7CW3RG7A
     secretship_id: '-1001052184796'
     secretship: |
-      🍀 Please join <a href="https://t.me/joinchat/AAAAAD63ENxmBG7CW3RG7A">the channel</a> of the founder and developer of this bot.
+      🍀 Por favor únete <a href="https://t.me/joinchat/AAAAAD63ENxmBG7CW3RG7A">al canal</a> del fundador y desarrollador de este bot.
 
-      This message will not show if you join the channel.
+      Este mensaje no se mostrará si te unes al canal.
 
     bot_updates_join_link: https://t.me/joinchat/AAAAAD3PQl5OvYEEjS6RJw
     bot_updates_id: '-1001036993118'
     bot_updates: |
-      🍀 Please join <a href="https://t.me/joinchat/AAAAAD3PQl5OvYEEjS6RJw">the channel</a> of the founder and developer of this bot.
+      🍀 Por favor únete <a href="https://t.me/joinchat/AAAAAD3PQl5OvYEEjS6RJw">al canal</a> del fundador y desarrollador de este bot.
 
-      This message will not show if you join the channel.
+      Este mensaje no se mostrará si te unes al canal.
 
   settings:
     posting:
