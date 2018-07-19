@@ -420,6 +420,28 @@ bot:
   start:
     welcome: Here you can create rich posts, view stats and accomplish other tasks.
 
+  channels:
+    controller_updates_join_link: https://t.me/joinchat/AAAAAFNNAyKG1y7GopROHg
+    controller_updates_id: '-1001397556002'
+    controller_updates: |
+      🍀 We recommend you to join on the <a href="https://t.me/joinchat/AAAAAFNNAyKG1y7GopROHg">official channel</a> of Controller Bot to be aware of new updates and other news of the bot.
+
+      This message will not show if you join the channel.
+
+    secretship_join_link: https://t.me/joinchat/AAAAAD63ENxmBG7CW3RG7A
+    secretship_id: '-1001052184796'
+    secretship: |
+      🍀 Please join <a href="https://t.me/joinchat/AAAAAD63ENxmBG7CW3RG7A">the channel</a> of the founder and developer of this bot.
+
+      This message will not show if you join the channel.
+
+    bot_updates_join_link: https://t.me/joinchat/AAAAAD3PQl5OvYEEjS6RJw
+    bot_updates_id: '-1001036993118'
+    bot_updates: |
+      🍀 Please join <a href="https://t.me/joinchat/AAAAAD3PQl5OvYEEjS6RJw">the channel</a> of the founder and developer of this bot.
+
+      This message will not show if you join the channel.
+
   settings:
     posting:
       open: |
