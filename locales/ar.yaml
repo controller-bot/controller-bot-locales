@@ -1,4 +1,4 @@
-language_name: Arabic
+language_name: Arabic(العربيه)
 is_enabled: false
 
 move: |
@@ -7,44 +7,44 @@ move: |
   Go to your connected bot and send the command /start.
 
 common:
-  choose_language: Please choose your language.
+  choose_language: من فضلك،اختر لغتك.
 
   start: |
-    I can help you manage Telegram channels.
+    استطيع مساعدتك فى اداره قناوات التليجرام.
 
-    You can control me by sending these commands:
+    تستطيع التحكم فىٌ بواسطه ارسال احدى هذه التعليكات التاليه:
 
-    /newpost - create a new post
-    /addchannel - add a new channel
-    /mychannels - edit your channels
+    /newpost - انشاء منشور جديد
+    /addchannel - اضافه قناه جديده
+    /mychannels - تعديل قنواتك
 
-    /settings - other settings
+    /settings - اعدادات اخرى
 
   help: |
-    If you have any questions, take a look at the <a href="http://telegra.ph/Controller-Help-03-20">Controller Help</a>.
+    لو عندك اى اسئله، خد نظره هنا <a href="http://telegra.ph/Controller-Help-03-20">Controller Help</a>.
 
-    You can control me by sending these commands:
+    تستطيع التحكم فىٌ بواسطه ارسال احدى هذه التعليكات التاليه:
     
-    /newpost - create a new post
-    /addchannel - add a new channel
-    /mychannels - edit your channels
-    /settings - other settings
-    /lang - change language
+    /newpost - انشاء منشور جديد
+    /addchannel - اضافه قناه جديده
+    /mychannels - تعديل قنواتك
+    /settings - اعدادات اخرى
+    /lang - تغير اللغه
 
 bots:
   add: |
-    <b>Connecting a bot</b>
+    <b>ربط البوت</b>
 
-    To connect a bot, you should follow these two steps:
+    لربط بوت يجب عليك اتباع الخطوات التاليه:
     
-    1. Open @BotFather and <a href="http://telegra.ph/Create-Bot-Controller-FAQ-03-28">create a new bot</a>.
-    2. You’ll get a token (e.g. 12345:6789ABCDEF) — just forward or copy-paste it to me.
+    1. افتح @BotFather و <a href="http://telegra.ph/Create-Bot-Controller-FAQ-03-28">اصنع بوت جديد</a>.
+    2. ستحصل على توكن (e.g. 12345:6789ABCDEF) — فقط اعاده ارسال او نسخ-لصق هنا.
     
-    <b>Warning!</b> Don't connect bots already used by other services like Chatfuel, Manybot, ect. 
+    <b>احذر!</b> لا تقم بتوصيل اى بوت متصل بالفعل مع اى خدمه اخرى مثل Chatfuel, Manybot, الخ. 
 
-  wrong_token: Doesn't look like anything to me. Please send me a token of your bot.
-  error_add: Invalid token. Try to get a new one or use a token of another bot.
-  bot_already_added: Looks familiar to me. You already have this bot connected.
+  wrong_token: لا تبدو لى كاى شئ، من فضلك ارسل التوكن الصحيح.
+  error_add: توكن خاطئ، حاول الحصول علي واحد جديد او استخدام توكن بوت اخر.
+  bot_already_added: يبدو مالوف، انت بالفعل رابط هذا البوت.
 
 channels:
   welcome: |
