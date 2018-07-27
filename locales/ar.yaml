@@ -48,30 +48,30 @@ bots:
 
 channels:
   welcome: |
-    <b>Channel managment</b>
+    <b>اداره القناه</b>
 
     ${count
-      ? 'Choose a channel from the list below:'
-      : 'There is no added channels yet.'
+      ? 'اختر القناه من القائمه الاتيه:'
+      : 'لا قنوات حتى الان'
     }
   add:
     select_bot: |
-      Choose a bot that will be used to send posts in the channel.
+      اختر البوت الذى سيكون المسئول عن نشر المنشورات فى القناه
     welcome: |
-      <b>Adding a channel</b>
+      <b>اضافه قناه</b>
 
-      To add a channel you should follow these two steps:
+      لاضافه قناه عليك اتباع الخطوات التاليه:
     
-      1. <a href="http://telegra.ph/Add-Bot-to-Admins-Controller-FAQ-03-28">Add @${username} to admins</a> of your channel. 
-      2. Then forward to me any message from your channel (you can also send me its username or ID).
+      1. <a href="http://telegra.ph/Add-Bot-to-Admins-Controller-FAQ-03-28">اضف @${username} كمسئول</a> فى قناتك. 
+      2. و من ثم ارسل الى اى رساله من قناتك (او ارسل المعرف او الـID.
     added: |
-      Success! The channel ${channel.username ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>' : '<b>' + channel.name + '</b>'} has been added.
+      تم! قناه ${channel.username ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>' : '<b>' + channel.name + '</b>'} اضيفت بنجاح.
 
-      Go to @${bot_username} to create a new post.
+      اذهب الى@${bot_username} لصنع منشور جديد.
 
-      All administrators of your channel can also use this bot to create posts in this channel.
+      كل مسئولى قناتك يستطيعوا استخدام هذا البوت فى صنع منشورات فى القناه.
 
-      If you add a new administrator, go to the channel settings and choose "Update Data" to update the list of administrators.
+      اذا اضفت مسئول جديد اذهب الى اعدادات القناه و اضغط "تحديث الوقت" لتحديث قائمه المسئولين
 
     error:
       data: |
