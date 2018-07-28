@@ -419,6 +419,9 @@ bot:
   start:
     welcome: Ici, vous pouvez créer des publications enrichies, afficher des statistiques et accomplir d\'autres tâches.
 
+  is_not_user: |
+    To start using this bot, you need to send the command /start to @ControllerBot, then go back to this bot and tap the "Continue" button.
+
   channels:
     controller_updates_join_link: https://t.me/joinchat/AAAAAFNNAyKG1y7GopROHg
     controller_updates_id: '-1001397556002'

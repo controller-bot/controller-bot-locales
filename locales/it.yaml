@@ -98,7 +98,7 @@ channels:
     select_bot: |
       ${count
         ? 'Scegli un bot che verrà utilizzato per inviare post nel canale.'
-        : 'Non c'è ancora alcun bot connesso. Invia /addchannel per connetterne uno.'
+        : 'Non c\'è ancora alcun bot connesso. Invia /addchannel per connetterne uno.'
       }
     bot_is_not_admin: Aggiungi il bot agli admin del tuo canale.
     current_bot: Impossibile scegliere un bot già utilizzato.
@@ -416,6 +416,9 @@ statistics:
 bot:
   start:
     welcome: Here you can create rich posts, view stats and accomplish other tasks.
+
+  is_not_user: |
+    To start using this bot, you need to send the command /start to @ControllerBot, then go back to this bot and tap the "Continue" button.
 
   channels:
     controller_updates_join_link: https://t.me/joinchat/AAAAAFNNAyKG1y7GopROHg

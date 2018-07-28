@@ -420,6 +420,9 @@ bot:
   start:
     welcome: Aquí puede crear publicaciones, ver estadísticas y realizar otras tareas.
 
+  is_not_user: |
+    To start using this bot, you need to send the command /start to @ControllerBot, then go back to this bot and tap the "Continue" button.
+
   channels:
     controller_updates_join_link: https://t.me/joinchat/AAAAAFNNAyKG1y7GopROHg
     controller_updates_id: '-1001397556002'

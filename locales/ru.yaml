@@ -466,6 +466,9 @@ bot:
   start:
     welcome: Здесь вы можете создавать посты, просматривать статистику и выполнять другие задачи.
 
+  is_not_user: |
+    Для начала использования этого бота, необходимо отправить команду /start в @ControllerBot, затем вернуться в этот бот и нажать кнопку "Продолжить".
+
   channels:
     controller_updates_join_link: https://t.me/joinchat/AAAAAFNNAyKG1y7GopROHg
     controller_updates_id: '-1001397556002'
