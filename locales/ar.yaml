@@ -1,10 +1,10 @@
-language_name: Arabic(العربيه)
-is_enabled: false
+language_name: العربيه
+is_enabled: true
 
 move: |
-  All the main functions like creating and editing posts, view stats and scheduled posts were moved to connected bots, so you no longer need to switch between your bot and Controller Bot every time!
+  تم نقل جميع الوظائف الرئيسية مثل إنشاء المشاركات وتعديلها ، وعرض الإحصاءات والمشاركات المجدولة إلى Bots المتصلة ، بحيث لم تعد بحاجة إلى التبديل بين Bot و ControllerBot في كل مرة!
 
-  Go to your connected bot and send the command /start.
+  انتقل إلى بوتك المتصل وأرسل الأمر /start.
 
 common:
   choose_language: من فضلك،اختر لغتك.
@@ -482,134 +482,134 @@ donate:
 
 btn:
   common:
-    continue: Continue »
-    true: Yes, It's Right
-    back: « Back
-    cancel: Cancel
-    off: Disable
-    help: Help
-    yes: Yes
-    no: No
+    continue: استمر »
+    true: نعم هذا صحيح
+    back: « الى الخلف
+    cancel: إلغاء
+    off: تعطيل
+    help: مساعدة
+    yes: نعم
+    no: لا
 
   menu:
-    create_post: Create Post
-    edit_sent_posts: Edit Post
-    scheduled_posts: Scheduled Posts
-    channels: Channels
-    statistics: Channel Stats
-    settings: Settings
+    create_post: انشاء منشور
+    edit_sent_posts: تعديل منشور
+    scheduled_posts: المنشورات المجدوله
+    channels: القنوات
+    statistics: إحصائيات القناة
+    settings: إعدادات
 
   channels:
-    add_channel: Add Channel
-    add_bot: Connect Bot
-    add_change_bot: Change Bot
-    channel_added: Create Post
+    add_channel: أضف قناة
+    add_bot: ربط بوت
+    add_change_bot: تغيير بوت
+    channel_added: انشاء منشور
 
-    how_to_create_bot: How to create bot?
+    how_to_create_bot: كيف تصنع بوت؟
     how_to_create_bot_url: http://telegra.ph/Create-Bot-Controller-FAQ-03-28
 
     control:
-      how_to_add_admin: How to add an admin?
+      how_to_add_admin: كيف تضيف مسؤول؟
       how_to_add_admin_url: http://telegra.ph/Admins-Controller-FAQ-03-28
 
-      update: Update Data
-      bot: Change Connected Bot
-      timezone: Change Time Zone
-      delete: Delete Channel
+      update: تحديث البيانات
+      bot:تغيير بوت متصلة
+      timezone: تغيير المنطقة الزمنية
+      delete: حذف القناة
 
-      confirm_delete_yes: Yes
-      confirm_delete_no: No
+      confirm_delete_yes: نعم
+      confirm_delete_no: لا
 
   post:
     settings: 
-      disable_notification_disable: 'Silent Broadcast: OFF'
-      disable_notification_enable: 'Silent Broadcast: ON'
+      disable_notification_disable: 'النشر الصامت: مغلق'
+      disable_notification_enable: 'النشر الصامت: يعمل'
       
-      disable_web_page_preview_disable: 'Link Previews: ON'
-      disable_web_page_preview_enable: 'Link Previews: OFF'
+      disable_web_page_preview_disable: 'معاينة الرابط: يعمل'
+      disable_web_page_preview_enable: 'معاينة الرابط: مغلق'
       
-      parse_mode_markdown: 'Formatting Style: Markdown'
-      parse_mode_html: 'Formatting Style: HTML'
+      parse_mode_markdown: ' نمط التنسيق: Markdown'
+      parse_mode_html: 'نمط التنسيق: HTML'
 
-      default_reactions_disable: 'Default Reactions: OFF'
-      default_reactions_enable: 'Default Reactions: ON'
+      default_reactions_disable: 'ردود الفعل الافتراضية: إيقاف'
+      default_reactions_enable: 'ردود الفعل الافتراضية: يعمل'
 
     faq: Controller Help
     
-    control_channel: Go to Channel Settings
-    return_to_channels: « Back to Channels List
+    control_channel: انتقل إلى إعدادات القناة
+    return_to_channels: « العودة لقائمة القنوات
 
-    continue: Continue »
+    continue: استمر »
 
-    add_image: Attach Photo
-    clear_image: Delete Attached Photo
+    add_image: إرفاق صورة
+    clear_image: حذف الصور المرفقة
 
-    open_comments: Open Comments
-    add_comments: Add Comments
-    delete_comments: Delete Comments
+    open_comments: فتح التعليقات
+    add_comments: أضف تعليقات
+    delete_comments: حذف التعليقات
     
-    add_inline: Add URL Buttons
-    clear_inline: Delete URL Buttons
+    add_inline: إضافة أزرار URL
+    clear_inline: حذف أزرار URL
     
-    add_reactions: Add Reactions
-    clear_reactions: Delete Reactions
+    add_reactions: أضف ردود الفعل
+    clear_reactions: حذف ردود الفعل
 
-    clear: Delete All 
-    preview: Preview
-    done: Send
-    cancel: Cancel
+    clear: حذف الكل
+    preview: معاينة
+    done: إرسال
+    cancel: إلغاء
 
-    more: ⇣ Show Actions
+    more: ⇣ عرض الإجراءات
 
-    delete: Delete Message
-    silent_enable: 'Notify: ON'
-    silent_disable: 'Notify: OFF'
-    preview_enable: 'Link Previews: ON'
-    preview_disable: 'Link Previews: OFF'
+    delete: حذف رسالة
+    silent_enable: 'الاشعرات: تعمل'
+    silent_disable: 'الاشعرات: مغلقه'
+    preview_enable: 'معاينة الوصلة: تعمل'
+    preview_disable: 'معاينة الوصلة: مغلقه'
 
     send:
       self_destruct_timer: "${+hours
-        ? 'Self-Destruct Timer: ' + hours + 'h'
-        : 'Set Self-Destruct Timer'
+        ? 'وقت التدمير الذاتى: ' + hours + 'h'
+        : 'حدد وقت التدمير الذاتى'
       }"
-      hours: ${hour}h
-      send_now: Send Now
-      sent: View Post in Channel
-      create_scheduled: Enqueue
+      hours: ${hour}س
+      send_now: ارسل الان
+      sent: عرض المنشور في القناة
+      create_scheduled: إدراج بقائمة الانتظار
       
-      send: Send
-      cancel: Cancel
+      send: ارسل
+      cancel: الغاء
 
     schedule:
       today: |-
-        ${active ? '🔹 ' : ''}Today
+        ${active ? '🔹 ' : ''}اليوم
       tomorrow: |-
-        ${active ? '🔹 ' : ''}Tomorrow
+        ${active ? '🔹 ' : ''}غدا
       after_tomorrow: |-
-        ${active ? '🔹 ' : ''}Overmorrow
+        ${active ? '🔹 ' : ''}اكثر من ذالك
 
   settings:
-    bots: Manage Connected Bots
-    delete_bot: Delete Bot
-    language: Change Language
+    bots: إدارة البوتات المتصلة
+    delete_bot: حذف بوت
+    language: تغيير اللغة
 
   posts:
     edit:
-      original: View Previous Version
-      clear_caption: Delete Caption
-      save: Save Changes
-      cancel: Cancel
-      open_edited_post: View Post in Channel
+      original: عرض النسخة السابقة
+      clear_caption: حذف التسمية التوضيحية
+      save: حفظ التغييرات
+      cancel: الغاء
+      open_edited_post: عرض المنشور في القناة
 
-    view: View Post
-    copy: Create Copy
-    edit_time: Edit Time
-    delete: Delete Post
+    view: رؤية المنشور
+    copy: انشاء نسخة
+    edit_time: تعديل الوقت
+    delete: حذف المنشور
 
   statistics:
-    view_periods: View
-    view_via_web: View via Webpage
+    view_periods: عرض
+    view_via_web: عرض عبر صفحة الويب
     
     periods:
-      one_week: Week
-      one_month: Month
+      one_week: أسبوع
+      one_month: شهر
