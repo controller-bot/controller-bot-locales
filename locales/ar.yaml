@@ -399,83 +399,83 @@ statistics:
   error_load_data: |
     حدث خطأ أثناء معالجة البيانات.
      
-    Message us at @ControllerSupportBot to report an issue.
-  not_found_data: There is no stats data for this channel yet. Come back later.
+    أرسل لنا رسالة على@ControllerSupportBot للإبلاغ عن مشكلة.
+  not_found_data: لا توجد بيانات احصائيات لهذه القناة بعد. عد لاحقا.
   share_text: |
-    Here is the link to view stats of ${channel.name}${channel.username ? ' @' + channel.username : ''}
+    هذا هو رابط عرض الاحصائيات ${channel.name}${channel.username ? ' @' + channel.username : ''}
   data: |
-    Stats of ${channel.username ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>' : channel.name} for ${period == 'week'
-      ? 'the last 7 days'
-      : 'the last 31 day'
+    احصائيات ${channel.username ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>' : channel.name} لـ ${period == 'week'
+      ? 'اخر سبعه ايام'
+      : 'اخر 31 يوم'
     }.
 
     ${data}
   chart:
     title: |
-      Stats for ${channel.name}${channel.username ? ' @' + channel.username : ''}
-    copyright: Powered by @ControllerBot
-    label: subscribers
+      احصائيات ${channel.name}${channel.username ? ' @' + channel.username : ''}
+    copyright: مشغل بواسطة @ControllerBot
+    label: مشتركين
 
 bot:
   start:
-    welcome: Here you can create rich posts, view stats and accomplish other tasks.
+    welcome: هنا يمكنك إنشاء مشاركات منسقة ، وعرض الإحصائيات وإنجاز مهام أخرى.
 
   is_not_user: |
-    To start using this bot, you need to send the command /start to @ControllerBot, then go back to this bot and tap the "Continue" button.
+    لبدء استخدام هذا البرنامج ، يجب عليك إرسال الأمر /start إلى@ControllerBot ، ثم الرجوع إلى هذا الروبوت والنقر على زر "متابعة".
 
   channels:
     controller_updates_join_link: https://t.me/joinchat/AAAAAFNNAyKG1y7GopROHg
     controller_updates_id: '-1001397556002'
     controller_updates: |
-      🍀 We recommend you to join on the <a href="https://t.me/joinchat/AAAAAFNNAyKG1y7GopROHg">official channel</a> of Controller Bot to be aware of new updates and other news of the bot.
+      🍀 نوصيك بالانضمام إلى <a href="https://t.me/joinchat/AAAAAFNNAyKG1y7GopROHg">القناة الرسمية</a> لـ Controller Bot لتكون على علم بالتحديثات الجديدة والأخبار الأخرى للبوت.
 
-      This message will not show if you join the channel.
+      لن تظهر هذه الرسالة إذا انضممت إلى القناة.
 
     secretship_join_link: https://t.me/joinchat/AAAAAD63ENxmBG7CW3RG7A
     secretship_id: '-1001052184796'
     secretship: |
-      🍀 Please join <a href="https://t.me/joinchat/AAAAAD63ENxmBG7CW3RG7A">the channel</a> of the founder and developer of this bot.
+      🍀 يرجى الانضمام الى <a href="https://t.me/joinchat/AAAAAD63ENxmBG7CW3RG7A">قناه</a> مؤسس ومطور هذا بوت.
 
-      This message will not show if you join the channel.
+      لن تظهر هذه الرسالة إذا انضممت إلى القناة.
 
     bot_updates_join_link: https://t.me/joinchat/AAAAAD3PQl5OvYEEjS6RJw
     bot_updates_id: '-1001036993118'
     bot_updates: |
-      🍀 Please join <a href="https://t.me/joinchat/AAAAAD3PQl5OvYEEjS6RJw">the channel</a> of the founder and developer of this bot.
+      🍀 يرجى الانضمام الى <a href="https://t.me/joinchat/AAAAAD3PQl5OvYEEjS6RJw">قناه</a> مؤسس ومطور هذا بوت.
 
-      This message will not show if you join the channel.
+      لن تظهر هذه الرسالة إذا انضممت إلى القناة.
 
   settings:
     posting:
       open: |
-        Here you can set the formatting style that will be used by default. Send /markdown or /HTML to get a hint.
+        هنا يمكنك ضبط نمط التنسيق الذي سيتم استخدامه بشكل افتراضي. إرسال /Markdown أو /HTML للحصول على تلميح.
 
-        And set reactions that will be automatically added to messages in new posts as well.
+        وتعيين ردود الفعل التي ستضاف تلقائيا إلى الرسائل في المنشورات جديدة كذلك.
 
 donate:
   welcome: |
-    ☘️ <b>Donate</b>
+    ☘️ <b>تبرع</b>
 
-    Thanks to your donations, we will be able to add new features, improve the stability of bots and pay for servers.
+    بفضل تبرعاتك ، سنتمكن من إضافة ميزات جديدة ، وتحسين استقرار برامج التتبع ودفع الخوادم.
 
-    <i>Your help is greatly appreciated,</i>
+    <i>مساعدتكم هو موضع تقدير كبير،</i>
     <a href="https://t.me/BotUpdates">Controller Bot Team</a>
 
-  other_sum: Other amount
-  enter_sum: Enter amount of donation.
-  incorrect_sum: Enter the amount in rubles.
+  other_sum: كمية اخرى
+  enter_sum: أدخل مبلغ التبرع.
+  incorrect_sum: أدخل المبلغ بالروبل.
 
-  continue_use_bot: I will donate later 😦
-  donate_controller: ☘️ Donate
+  continue_use_bot: سأتبرع لاحقا 😦
+  donate_controller: ☘️ تبرع
 
   select_price: |
-    Click the "Pay" button to send <b>${sum} ₽</b> as a donation to the Controller Bot Team.
+    انقر على زر "دفع" لإرسال <b>${sum} ₽</b> كتبرع مالي لـ فريق  the Controller Bot.
 
-    After payment, click the "Check Payment" button to hide this message.
-  pay: Pay
-  completed: Check Payment
-  not_pay: Payment not found 😔
-  success_pay: Thank you for your donation to the Controller Bot Team! 😍
+    بعد الدفع ، انقر على الزر "التحقق من الدفع" لإخفاء هذه الرسالة.
+  pay: دفع
+  completed: التحقق من الدفع
+  not_pay: الدفع غير موجود 😔
+  success_pay: شكرا لك على تبرعك لفريق Controller Bot! 😍
 
   problem: Проблемы с оплатой
   help: Напишите нам в @ControllerSupportBot, если у вас есть проблемы с отправкой пожертвования или нет подходящего способа оплаты.
