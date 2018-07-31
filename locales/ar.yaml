@@ -1,5 +1,5 @@
 language_name: العربيه
-is_enabled: true
+is_enabled: false
 
 move: |
   تم نقل جميع الوظائف الرئيسية مثل إنشاء المشاركات وتعديلها ، وعرض الإحصاءات والمشاركات المجدولة إلى Bots المتصلة ، بحيث لم تعد بحاجة إلى التبديل بين Bot و ControllerBot في كل مرة!
@@ -513,7 +513,7 @@ btn:
       how_to_add_admin_url: http://telegra.ph/Admins-Controller-FAQ-03-28
 
       update: تحديث البيانات
-      bot:تغيير بوت متصلة
+      bot: تغيير بوت متصلة
       timezone: تغيير المنطقة الزمنية
       delete: حذف القناة
 
