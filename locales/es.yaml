@@ -227,9 +227,9 @@ post:
       cleared: ¡Éxito! Botones de URL borrados
     reactions:
       welcome: |
-        <a href="http://telegra.ph/file/dd1fcbdd1ebb1ce76ab59.jpg">&#8203;</a>Send me emojies or a text with <b>/</b> as separator to add reactions.
+        <a href="http://telegra.ph/file/dd1fcbdd1ebb1ce76ab59.jpg">&#8203;</a>Envíame emojis o un texto con <b>/</b> como separación para añadir reacciones.
 
-        For example:
+        Por ejemplo:
       not_found_smiles: |
         Envíame uno o más emoticonos. Por ejemplo: 👍👎
       save: Reacciones guardadas Puedes continuar enviándome mensajes.
