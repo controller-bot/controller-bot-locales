@@ -224,7 +224,9 @@ post:
       cleared: Tutti i pulsanti sono stati cancellati con successo!
     reactions:
       welcome: |
-        Inviami una o più emoticon da utilizzare come reaction al tuo post (puoi inviarne fino a 6).
+        <a href="http://telegra.ph/file/dd1fcbdd1ebb1ce76ab59.jpg">&#8203;</a>Send me emojies or a text with <b>/</b> as separator to add reactions.
+
+        For example:
       not_found_smiles: |
         Inviami una o più emoticon. Ad esempio: 👍👎
       save: Reactions salvate. Puoi continuare ad inviarmi messaggi.

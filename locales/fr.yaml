@@ -226,7 +226,9 @@ post:
       cleared: Opération éffectuée! Boutons URL effacés.
     reactions:
       welcome: |
-        Envoyez-moi un ou plusieurs émoticônes qui seront utilisés comme émoji en bouton "Like" (jusqu\'à 6 emoji).
+        <a href="http://telegra.ph/file/dd1fcbdd1ebb1ce76ab59.jpg">&#8203;</a>Send me emojies or a text with <b>/</b> as separator to add reactions.
+
+        For example:
       not_found_smiles: |
         Envoyez-moi un ou plusieurs émoticônes. Par exemple: 👍👎
       save: Réactions enregistrées. Vous pouvez continuer à m\'envoyer des messages.

@@ -227,7 +227,9 @@ post:
       cleared: Success! URL buttons cleared.
     reactions:
       welcome: |
-        Send me one or more emoticons that will be used for emoji like-buttons (up to 6 emoji).
+        <a href="http://telegra.ph/file/dd1fcbdd1ebb1ce76ab59.jpg">&#8203;</a>Send me emojies or a text with <b>/</b> as separator to add reactions.
+
+        For example:
       not_found_smiles: |
         Send me one or more emoticons. For example: 👍👎
       save: Reactions saved. You can continue to send me messages.
