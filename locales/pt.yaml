@@ -429,117 +429,116 @@ bot:
     controller_updates_join_link: https://t.me/joinchat/AAAAAFNNAyKG1y7GopROHg
     controller_updates_id: '-1001397556002'
     controller_updates: |
-      🍀 We recommend you to join on the <a href="https://t.me/joinchat/AAAAAFNNAyKG1y7GopROHg">official channel</a> of Controller Bot to be aware of new updates and other news of the bot.
+      🍀 Nós recomendamos que você junte-se ao<a href="https://t.me/joinchat/AAAAAFNNAyKG1y7GopROHg">canal oficial</a> do Controller Bot para ficar atualizado com as novas atualizações e outras notícias do bot.
 
-      This message will not show if you join the channel.
+      Esta mensagem não será mais exibida se você entrar no canal.
 
     secretship_join_link: https://t.me/joinchat/AAAAAD63ENxmBG7CW3RG7A
     secretship_id: '-1001052184796'
     secretship: |
-      🍀 Please join <a href="https://t.me/joinchat/AAAAAD63ENxmBG7CW3RG7A">the channel</a> of the founder and developer of this bot.
+      🍀 Por favor, siga <a href="https://t.me/joinchat/AAAAAD63ENxmBG7CW3RG7A">o canal</a>do fundador e desenvolvedor deste bot.
 
-      This message will not show if you join the channel.
+      Esta mensagem não será mais exibida se você entrar no canal.
 
     bot_updates_join_link: https://t.me/joinchat/AAAAAD3PQl5OvYEEjS6RJw
     bot_updates_id: '-1001036993118'
     bot_updates: |
-      🍀 Please join <a href="https://t.me/joinchat/AAAAAD3PQl5OvYEEjS6RJw">the channel</a> of the founder and developer of this bot.
+      🍀 Por favor, siga <a href="https://t.me/joinchat/AAAAAD3PQl5OvYEEjS6RJw">o canal</a> do fundador e desenvolvedor deste bot.
 
-      This message will not show if you join the channel.
+      Esta mensagem não será mais exibida se você entrar no canal.
 
   settings:
     posting:
       open: |
-        Here you can set the formatting style that will be used by default. Send /markdown or /HTML to get a hint.
+        Aqui você pode definir o estilo de formatação que será usado como padrão. Envie /markdown ou /HTML para obter ajuda.
 
-        And set reactions that will be automatically added to messages in new posts as well.
+        E o conjunto de reações que serão adicionadas automaticamente às próximas mensagens.
 
 btn:
-  common:
-    continue: Continue »
-    true: Yes, It's Right
-    back: « Back
-    cancel: Cancel
-    off: Disable
-    help: Help
-    yes: Yes
-    no: No
+    continue: Continuar »
+    true: Sim, tudo bem
+    back: « Voltar
+    cancel: Cancelar
+    off: Desabilitar
+    help: Ajuda
+    yes: Sim
+    no: Não
 
   menu:
-    create_post: Create Post
-    edit_sent_posts: Edit Post
-    scheduled_posts: Scheduled Posts
-    channels: Channels
-    statistics: Channel Stats
-    settings: Settings
+    create_post: Criar Post
+    edit_sent_posts: Editar Postagens
+    scheduled_posts: Postagens Agendadas
+    channels: Canais
+    statistics: Estatísticas do Canal
+    settings: Configurações
 
   channels:
-    add_channel: Add Channel
-    add_bot: Conectar o Bot
-    add_change_bot: Change Bot
-    channel_added: Create Post
+    add_channel: Adicionar Canal
+    add_bot: Conectar Bot
+    add_change_bot: Alterar Bot
+    channel_added: Criar Post
 
-    how_to_create_bot: How to create bot?
+    how_to_create_bot: Como criar um bot?
     how_to_create_bot_url: http://telegra.ph/Create-Bot-Controller-FAQ-03-28
 
     control:
-      how_to_add_admin: How to add an admin?
+      how_to_add_admin: Como adicionar um administrador?
       how_to_add_admin_url: http://telegra.ph/Admins-Controller-FAQ-03-28
 
-      update: Update Data
-      bot: Change Connected Bot
-      timezone: Change Time Zone
-      delete: Delete Channel
+      update: Atualizar Dados
+      bot: Alterar Bots Conectados
+      timezone: Alterar Fuso Horário
+      delete: Deletar Canal
 
-      confirm_delete_yes: Yes
-      confirm_delete_no: No
+      confirm_delete_yes: Sim
+      confirm_delete_no: Não
 
   post:
     settings: 
-      disable_notification_disable: 'Silent Broadcast: OFF'
-      disable_notification_enable: 'Silent Broadcast: ON'
+      disable_notification_disable: 'Transmissão Silenciosa: OFF'
+      disable_notification_enable: 'Transmissão Silenciosa: ON'
       
-      disable_web_page_preview_disable: 'Link Previews: ON'
-      disable_web_page_preview_enable: 'Link Previews: OFF'
+      disable_web_page_preview_disable: 'Pré-visualização Links: ON'
+      disable_web_page_preview_enable: 'Pré-visualização Links: OFF'
       
-      parse_mode_markdown: 'Formatting Style: Markdown'
-      parse_mode_html: 'Formatting Style: HTML'
+      parse_mode_markdown: 'Estilo de Formatação: Markdown'
+      parse_mode_html: 'Estilo de Formatação: HTML'
 
-      default_reactions_disable: 'Default Reactions: OFF'
-      default_reactions_enable: 'Default Reactions: ON'
+      default_reactions_disable: 'Padrão Reações: OFF'
+      default_reactions_enable: 'Padrão Reações: ON'
 
     faq: Controller Help
     
-    control_channel: Go to Channel Settings
-    return_to_channels: « Back to Channels List
+    control_channel: Ir para Configurações Canais
+    return_to_channels: « Voltar a Lista de Canais
 
-    continue: Continue »
+    continue: Continuar »
 
-    add_image: Attach Photo
-    clear_image: Delete Attached Photo
+    add_image: Anexar Fotos
+    clear_image: Deletar Fotos Anexadas
 
-    open_comments: Open Comments
-    add_comments: Add Comments
-    delete_comments: Delete Comments
+    open_comments: Abrir Comentários
+    add_comments: Adicionar Comentários
+    delete_comments: Deletar Comentários
     
-    add_inline: Add URL Buttons
-    clear_inline: Delete URL Buttons
+    add_inline: Adicionar URL Buttons
+    clear_inline: Deletar URL Buttons
     
-    add_reactions: Add Reactions
-    clear_reactions: Delete Reactions
+    add_reactions: Adicionar Reações
+    clear_reactions: Deletar Reações
 
-    clear: Delete All 
-    preview: Preview
-    done: Send
-    cancel: Cancel
+    clear: Deletar Todos 
+    preview: Pré-Visualização
+    done: Enviar
+    cancel: Cancelar
 
-    more: ⇣ Show Actions
+    more: ⇣ Mostrar Ações
 
-    delete: Delete Message
-    silent_enable: 'Notify: ON'
-    silent_disable: 'Notify: OFF'
-    preview_enable: 'Link Previews: ON'
-    preview_disable: 'Link Previews: OFF'
+    delete: Deletar Mensagem
+    silent_enable: 'Notificações: ON'
+    silent_disable: 'Notificações: OFF'
+    preview_enable: 'Pré-visualização Links: ON'
+    preview_disable: 'Pré-visualização Links: OFF'
 
     send:
       self_destruct_timer: "${+hours
@@ -547,20 +546,20 @@ btn:
         : 'Set Self-Destruct Timer'
       }"
       hours: ${hour}h
-      send_now: Send Now
-      sent: View Post in Channel
-      create_scheduled: Enqueue
+      send_now: Enviar agora
+      sent: Visualizar Post no Canal
+      create_scheduled: Agendar
       
-      send: Send
-      cancel: Cancel
+      send: Enviar
+      cancel: Cancelar
 
     schedule:
       today: |-
-        ${active ? '🔹 ' : ''}Today
+        ${active ? '🔹 ' : ''}Hoje
       tomorrow: |-
-        ${active ? '🔹 ' : ''}Tomorrow
+        ${active ? '🔹 ' : ''}Amanhã
       after_tomorrow: |-
-        ${active ? '🔹 ' : ''}Overmorrow
+        ${active ? '🔹 ' : ''}No dia seguinte
 
   settings:
     bots: Gerenciar Bots Conectados
