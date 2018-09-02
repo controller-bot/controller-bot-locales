@@ -2,7 +2,7 @@ language_name: Portuguese
 is_enabled: true
 
 move: |
-  Todas as principais funções, como a criação e edição de posts, visualiação de estatísticas e publicações programadas foram movidos para bots conectados, assim você não precisará ficar alternando entre o seu bot e Controller Bot toda vez!
+  Todas as principais funções, como a criação e edição de posts, visualização de estatísticas e publicações programadas foram movidas para os bots conectados, assim você não precisará mais ficar alternando entre o seu bot e Controller Bot toda vez!
 
   Vá para seu bot conectado e envie o comando /start.
 
@@ -21,7 +21,7 @@ common:
     /settings - outras configurações
 
   help: |
-    Caso tenha duvidas, dê uma verificada no <a href="http://telegra.ph/Controller-Help-03-20">Controller Help</a>.
+    Caso tenha dúvidas, dê uma verificada no <a href="http://telegra.ph/Controller-Help-03-20">Controller Help</a>.
 
     Você pode me controlar enviando os seguintes comandos:
     
@@ -37,14 +37,14 @@ bots:
 
     Para conectar um bot, você deve seguir estes dois passos:
     
-    1. Abra o @BotFather e <a href="http://telegra.ph/Create-Bot-Controller-FAQ-03-28">create a new bot</a>.
+    1. Abra o @BotFather e <a href="http://telegra.ph/Create-Bot-Controller-FAQ-03-28">criar um novo bot</a>.
     2. Você vai receber um "token" (e.g. 12345:6789ABCDEF) — encaminhe ou copie/cole para mim.
     
-    <b>Cuidado!</b> Não conecte bots já utilizados por outros serviços como Chatfuel, Manybot, etc. 
+    <b>Cuidado!</b> Não conecte bots já utilizados por outros serviços como Chatfuel, Manybot e etc. 
 
-  wrong_token: Não consigo identificar as informações. Por favor me envie um "token" válido do seu bot.
-  error_add: "Token" invalido. Tente pegar um novo ou use um "token" de outro bot.
-  bot_already_added: Me parece familiar. Voçê já tem este bot conectado.
+  wrong_token: Não consigo identificar as informações enviadas. Por favor me envie um "token" válido do seu bot.
+  error_add: "Token" inválido. Tente pegar um novo ou use um "token" de outro bot.
+  bot_already_added: Isso me parece familiar. Voçê já tem este bot conectado.
 
 channels:
   welcome: |
@@ -62,27 +62,27 @@ channels:
 
       Para adicionar um canal você deve seguir estes dois passos:
     
-      1. <a href="http://telegra.ph/Add-Bot-to-Admins-Controller-FAQ-03-28">Adicionar @${username} como admins</a> de seu canal. 
-      2. Em seguida, encaminhe qualquer mensagem do seu canal (você também pode enviar o username ou ID).
+      1. <a href="http://telegra.ph/Add-Bot-to-Admins-Controller-FAQ-03-28">Adicionar @${username} como um dos admins</a> do seu canal. 
+      2. Em seguida, encaminhe qualquer mensagem do seu canal (você também pode enviar o username ou ID do canal).
     added: |
       Sucesso! O canal ${channel.username ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>' : '<b>' + channel.name + '</b>'} foi adicionado.
 
       Vá até @${bot_username} para criar um novo post.
 
-      Todos os administradores do seu canal também poderão usar este bot para criar posts neste canal.
+      Todos os administradores do seu canal também poderão usar este bot para criar posts no canal.
 
-      Se você adicionar um novo administrador, vá para configurações de canal e escolha "Update Data" para atualizar a lista de administradores.
+      Se você adicionar um novo administrador, vá em configurações de canal e escolha "Update Data" para atualizar a lista de administradores.
 
     error:
       data: |
-        Por favor, encaminhe uma mensagem a partir do seu canal. Ou me envie o seu username ou ID, se desejar.
-      channel_not_found: O canal não encontrado.
-      you_are_not_administrator: Você não é um administrador deste canal.
+        Por favor, encaminhe uma mensagem a partir do seu canal. Ou me envie o username ou ID do canal.
+      channel_not_found: Canal não encontrado.
+      you_are_not_administrator: Você não é administrador deste canal.
       you_do_not_have_rights: Você não tem permissões para postar mensagens neste canal.
-      bot_is_not_admin: Adicione @${username} como administrador no seu canal. Por favor, verifique todos os passos anterior e tente novamente.
-      bot_is_not_admin_in_group: Adicione @${username} como administrador de seu grupo e tente novamente.
+      bot_is_not_admin: Adicione @${username} como administrador do canal. Por favor, verifique todos os passos anterior e tente novamente.
+      bot_is_not_admin_in_group: Adicione @${username} como administrador do grupo e tente novamente.
       bot_was_deleted: |
-        Não é possível adicionar o canal. @${username} não existir mais, ou seu "token" foi revogado. Reconecte este bot ou escolha outro.
+        Não é possível adicionar o canal. @${username} não existe mais, ou seu "token" foi revogado. Reconecte este bot ou escolha outro.
       channel_already_added: Este canal já foi adicionado. Vá até @${bot_username} para criar um post.
       group_already_added: |
         Este canal já foi adicionado por ${admin.first_name}${admin.last_name ? ' ' + admin.last_name : ''}${admin.username ? ' @' + admin.username : ''}
