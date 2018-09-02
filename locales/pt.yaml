@@ -89,97 +89,97 @@ channels:
 
   control:
     options: |
-      Here it is: ${channel.name}. What do you want to do with the channel?
+      Aqui está: ${channel.name}. O que você pretende fazer com o canal?
     delete_confirm: |
-      Are you sure you want to delete this channel?
+      Tem certeza de que deseja excluir este canal?
       
-      All scheduled posts and saved stats for this channel will be also deleted.
-    channel_deleted: Done! The channel is gone.
+      Todas as publicações agendadas e estatísticas salvas deste canal serão excluídas.
+    channel_deleted: Feito! O canal foi removido.
     select_bot: |
       ${count
-        ? 'Choose a bot that will be used to send posts in the channel.'
-        : 'There is no connected bots yet. Send /addchannel to connect a new one.'
+        ? 'Escolha o bot que será usado para enviar postagens no canal.'
+        : 'Não há nenhum bot conectado. Envie /addchannel para conectar um novo.'
       }
-    bot_is_not_admin: Add the bot to admins of your channel.
-    current_bot: Unable to choose currently used bot.
-    sync_ok: 👌 OK. The data has been synced.
+    bot_is_not_admin: Adicione o bot como admin do seu canal.
+    current_bot: Não é possível escolher o bot. Bot em uso.
+    sync_ok: 👌 OK. Os dados foram sincronizados.
     set_timezone: |
-      <b>Setting the time zone</b>
+      <b>Configurações do fuso horário</b>
 
-      Now send me the name of your city, so I will be able to determine your time zone. Your time zone is required for the management of scheduled posts.
+      Agora me enviar o nome de sua cidade, para que eu seja capaz de determinar o seu fuso horário. O fuso horário é necessária para o gerenciamento de postagens agendadas.
     timezone: |
-      Current time zone:
+      Fuso horário atual:
       ${city ? '🔹 GMT ' + (gmt > 0 ? '+' + gmt : gmt) + '\n🔹 ' + timezone_id + ' – ' + city : '🔹 None'}
 
-      Send me the name of the city close to you to change the time zone.
+      Envie-me o nome da capital do seu estado para alterar o fuso horário.
     check_timezone: |
       · GMT ${timezone.gmtOffset > 0 ? '+' + timezone.gmtOffset : timezone.gmtOffset} (${timezone.timeZoneId})
       · ${countryName}, ${name}
 
-      Is it right? If not, try to send me the name of another city close to you.
-    error_timezone: Sorry, I can't find this city. Try to send me the name of another city close to you.
-    error_request_timezone: Something went wrong :( Please try again. Send us a message to @ControllerSupportBot if for some reason it doesn't change anything.
-    save_timezone: OK, your timezone saved.
+      Tudo certo? Se não, tente me enviar o nome de outra cidade da sua região.
+    error_timezone: Desculpe, não consigo encontrar esta cidade. Tente me enviar o nome de outra cidade da sua região.
+    error_request_timezone: Ops! Algo deu errado :( Por favor, tente novamente. Envie uma mensagem para @ControllerSupportBot se por algum motivo o erro continuar.
+    save_timezone: OK, seu fuso horário foi salvo.
 
 post:
-  select_channel: Choose a channel to create a new post.
+  select_channel: Escolha um canal para criar uma nova postagem.
   no_channels: |
-    There is no added channels yet.
+    Ainda não há canais adicionados.
 
-    Send /addchannel to add a new one.
-  error_check_channel: Something went wrong :( Please try again. Send us a message to @ControllerSupportBot if for some reason it doesn't change anything.
-  channel_not_found: The channel doesn't exist, or you don't have access to it. Go back to @ControllerBot and try again.
+    Envie /addchannel para adicionar um novo.
+  error_check_channel: Ops! Algo deu errado :( Por favor, tente novamente. Envie uma mensagem para @ControllerSupportBot se por algum motivo o erro continuar.
+  channel_not_found: O canal não existe, ou você não tem mais acesso a ele. Voltar para @ControllerBot e tente novamente.
   problems: |
-    Unable to create a new post in ${channel.name}. The next issues found:
+    Não é possível criar um novo post ${channel.name}. Os seguintes problemas foram encontrados:
 
     ${problems}
 
     ${from.id == channel.owner_id
-      ? 'Go to the channel settings to fix the issues.'
-      : 'The creator of the channel should go to the channel settings and fix the issues.'
+      ? 'Vá nas configurações de canal para corrigir os erros.'
+      : 'O criador do canal, deve ir nas configurações de canal e corrigir os erros.'
     }
   problem_items: 
-    timezone_is_not_set: 🔹 the time zone is not set
-    bot_is_not_connection: 🔹 the channel is not connected to a bot
-    channel_not_found: 🔹 the channel is no longer exist
-    bot_is_not_admin: 🔹 the connected bot is not added to the channel admins
-    bot_was_deleted: 🔹 the connected bot is no longer exist, or its token was revoked
+    timezone_is_not_set: 🔹 o fuso horário não está definido
+    bot_is_not_connection: 🔹 o canal não está conectado a um bot
+    channel_not_found: 🔹 o canal não existe mais
+    bot_is_not_admin: 🔹 o bot conectado não foi adicionado aos administradores do canal
+    bot_was_deleted: 🔹 o bot conectado não existe mais ou seu "token" foi revogado
 
   start: |
-    Go to @ControllerBot to connect a new channel and start creating posts.
+    Vá até @ControllerBot para conectar um novo canal e começar a criar postagens.
 
   make:
     set_formatting: |
-      First, you need to set the formatting style that will be used by default.
+      Primeiro, você precisa definir o estilo de formatação que será usado como padrão.
 
-      Send /markdown or /HTML to get a hint.
+      Envie /markdown ou /HTML para obter ajuda.
 
-      Most users prefer Markdown because it is shorter and easier. Native formatting is allowed as well.
+      A maioria dos usuários prefere o Markdown porque é mais curto e mais fácil de usar. A formatação nativa do Telegram também é permitida.
     start: |
-      Here it is: <b>"${channel.name}"</b>${channel.username ? ' @' + channel.username : ''}.
+      Aqui está:: <b>"${channel.name}"</b>${channel.username ? ' @' + channel.username : ''}.
 
-      Send me one or multiple messages you want to include in the post. It can be anything — a text, photo, video, even a sticker.
-    clear: Success! All messages have been deleted.
-    message_deleted: Done! The message has been deleted.
-    not_posts: There is no any messages yet.
-    not_posts_for_done: There is no any messages yet.
+      Envie uma ou várias mensagens para incluir na postagem. Pode ser qualquer coisa - um texto, foto, vídeo, até mesmo um sticker.
+    clear: Sucesso! Todas as mensagens foram excluídas.
+    message_deleted: Feito! A mensagem foi excluída.
+    not_posts: Ainda não existem postagens.
+    not_posts_for_done: Ainda não existem postagens para enviar.
     preview_sent: |
-      The post preview sent above.
+      A pré-visualização do post enviado acima.
 
-      You have <b>${pluralize(posts, 'message', 'messages', 'messages')}</b> in this post:
+      Você tem <b>${pluralize(posts, 'message', 'messages', 'messages')}</b> neste post:
       ${messages}
     error_parse: |
       Errors in formatting text:
       
       <pre>${description}</pre>
       
-      Please <a href="http://telegra.ph/Parsing-Error-Fix-Controller-FAQ-03-28">fix all errors</a> and send message again.
-    continue_collect: You can continue to send me messages. 
+      Por favor <a href="http://telegra.ph/Parsing-Error-Fix-Controller-FAQ-03-28">corrija todos os erros</a> e envie a mensagem novamente.
+    continue_collect: Você pode continuar me enviando mensagens. 
     html: |
-      <b>bold</b>
+      <b>negrito</b>
       &lt;b&gt;bold&lt;/b&gt;
       
-      <i>italic</i>
+      <i>itálico</i>
       &lt;i&gt;italic&lt;/i&gt;
       
       <a href="http://www.example.com/">inline URL</a>
@@ -192,10 +192,10 @@ post:
       &lt;pre&gt;pre-formatted fixed-width 
       code block&lt;/pre&gt;
     markdown: |
-      <b>bold text</b>
+      <b>texto negrito</b>
       *bold text*
       
-      <i>italic text</i>
+      <i>texto itálico</i>
       _italic text_
       
       <a href="http://www.example.com/">text</a>
