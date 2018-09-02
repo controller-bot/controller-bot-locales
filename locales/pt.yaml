@@ -2,90 +2,90 @@ language_name: Portuguese
 is_enabled: true
 
 move: |
-  All the main functions like creating and editing posts, view stats and scheduled posts were moved to connected bots, so you no longer need to switch between your bot and Controller Bot every time!
+  Todas as principais funções, como a criação e edição de posts, visualiação de estatísticas e publicações programadas foram movidos para bots conectados, assim você não precisará ficar alternando entre o seu bot e Controller Bot toda vez!
 
-  Go to your connected bot and send the command /start.
+  Vá para seu bot conectado e envie o comando /start.
 
 common:
-  choose_language: Please choose your language.
+  choose_language: Por favor, escolha seu idioma.
 
   start: |
-    I can help you manage Telegram channels.
+    Eu posso ajudar você a gerenciar seus canais no Telegram.
 
-    You can control me by sending these commands:
+    Você pode me controlar enviando os seguintes comandos:
 
-    /newpost - create a new post
-    /addchannel - add a new channel
-    /mychannels - edit your channels
+    /newpost - criar um novo post
+    /addchannel - adicionar um novo canal
+    /mychannels - editar seus canais
 
-    /settings - other settings
+    /settings - outras configurações
 
   help: |
-    If you have any questions, take a look at the <a href="http://telegra.ph/Controller-Help-03-20">Controller Help</a>.
+    Caso tenha duvidas, dê uma verificada no <a href="http://telegra.ph/Controller-Help-03-20">Controller Help</a>.
 
-    You can control me by sending these commands:
+    Você pode me controlar enviando os seguintes comandos:
     
-    /newpost - create a new post
-    /addchannel - add a new channel
-    /mychannels - edit your channels
-    /settings - other settings
-    /lang - change language
+    /newpost - criar um novo post
+    /addchannel - adicionar um novo canal
+    /mychannels - editar seus canais
+    /settings - outras configurações
+    /lang - alterar idiomas
 
 bots:
   add: |
-    <b>Connecting a bot</b>
+    <b>Conectando um bot</b>
 
-    To connect a bot, you should follow these two steps:
+    Para conectar um bot, você deve seguir estes dois passos:
     
-    1. Open @BotFather and <a href="http://telegra.ph/Create-Bot-Controller-FAQ-03-28">create a new bot</a>.
-    2. You’ll get a token (e.g. 12345:6789ABCDEF) — just forward or copy-paste it to me.
+    1. Abra o @BotFather e <a href="http://telegra.ph/Create-Bot-Controller-FAQ-03-28">create a new bot</a>.
+    2. Você vai receber um "token" (e.g. 12345:6789ABCDEF) — encaminhe ou copie/cole para mim.
     
-    <b>Warning!</b> Don't connect bots already used by other services like Chatfuel, Manybot, ect. 
+    <b>Cuidado!</b> Não conecte bots já utilizados por outros serviços como Chatfuel, Manybot, etc. 
 
-  wrong_token: Doesn't look like anything to me. Please send me a token of your bot.
-  error_add: Invalid token. Try to get a new one or use a token of another bot.
-  bot_already_added: Looks familiar to me. You already have this bot connected.
+  wrong_token: Não consigo identificar as informações. Por favor me envie um "token" válido do seu bot.
+  error_add: "Token" invalido. Tente pegar um novo ou use um "token" de outro bot.
+  bot_already_added: Me parece familiar. Voçê já tem este bot conectado.
 
 channels:
   welcome: |
-    <b>Channel managment</b>
+    <b>Gerenciador de Canais</b>
 
     ${count
-      ? 'Choose a channel from the list below:'
-      : 'There is no added channels yet.'
+      ? 'Escolha um canal da lista abaixo:'
+      : 'Ainda não existe canais adicionados.'
     }
   add:
     select_bot: |
-      Choose a bot that will be used to send posts in the channel.
+      Escolha um bot que será usado para enviar posts nos canais.
     welcome: |
-      <b>Adding a channel</b>
+      <b>Adicionando um canal</b>
 
-      To add a channel you should follow these two steps:
+      Para adicionar um canal você deve seguir estes dois passos:
     
-      1. <a href="http://telegra.ph/Add-Bot-to-Admins-Controller-FAQ-03-28">Add @${username} to admins</a> of your channel. 
-      2. Then forward to me any message from your channel (you can also send me its username or ID).
+      1. <a href="http://telegra.ph/Add-Bot-to-Admins-Controller-FAQ-03-28">Adicionar @${username} como admins</a> de seu canal. 
+      2. Em seguida, encaminhe qualquer mensagem do seu canal (você também pode enviar o username ou ID).
     added: |
-      Success! The channel ${channel.username ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>' : '<b>' + channel.name + '</b>'} has been added.
+      Sucesso! O canal ${channel.username ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>' : '<b>' + channel.name + '</b>'} foi adicionado.
 
-      Go to @${bot_username} to create a new post.
+      Vá até @${bot_username} para criar um novo post.
 
-      All administrators of your channel can also use this bot to create posts in this channel.
+      Todos os administradores do seu canal também poderão usar este bot para criar posts neste canal.
 
-      If you add a new administrator, go to the channel settings and choose "Update Data" to update the list of administrators.
+      Se você adicionar um novo administrador, vá para configurações de canal e escolha "Update Data" para atualizar a lista de administradores.
 
     error:
       data: |
-        Please forward to me any message from your channel. Or send me its username or ID instead.
-      channel_not_found: The channel not found.
-      you_are_not_administrator: You aren't an administrator in the channel.
-      you_do_not_have_rights: You don't have rights to post messages in the channel.
-      bot_is_not_admin: Add @${username} to admins of your channel. Please check everything twice and try again.
-      bot_is_not_admin_in_group: Add @${username} to admins of your group and try again.
+        Por favor, encaminhe uma mensagem a partir do seu canal. Ou me envie o seu username ou ID, se desejar.
+      channel_not_found: O canal não encontrado.
+      you_are_not_administrator: Você não é um administrador deste canal.
+      you_do_not_have_rights: Você não tem permissões para postar mensagens neste canal.
+      bot_is_not_admin: Adicione @${username} como administrador no seu canal. Por favor, verifique todos os passos anterior e tente novamente.
+      bot_is_not_admin_in_group: Adicione @${username} como administrador de seu grupo e tente novamente.
       bot_was_deleted: |
-        Unable to add a channel. @${username} is no longer exist, or its token was revoked. Reconnect this bot or choose another.
-      channel_already_added: This channel is already added. Go to @${bot_username} to create a new post.
+        Não é possível adicionar o canal. @${username} não existir mais, ou seu "token" foi revogado. Reconecte este bot ou escolha outro.
+      channel_already_added: Este canal já foi adicionado. Vá até @${bot_username} para criar um post.
       group_already_added: |
-        This channel is already added by ${admin.first_name}${admin.last_name ? ' ' + admin.last_name : ''}${admin.username ? ' @' + admin.username : ''}
+        Este canal já foi adicionado por ${admin.first_name}${admin.last_name ? ' ' + admin.last_name : ''}${admin.username ? ' @' + admin.username : ''}
 
   control:
     options: |
