@@ -563,27 +563,27 @@ btn:
         ${active ? '🔹 ' : ''}Overmorrow
 
   settings:
-    bots: Manage Connected Bots
-    delete_bot: Delete Bot
-    language: Change Language
+    bots: Gerenciar Bots Conectados
+    delete_bot: Deletar Bot
+    language: Alterar Idioma
 
   posts:
     edit:
-      original: View Previous Version
-      clear_caption: Delete Caption
-      save: Save Changes
-      cancel: Cancel
-      open_edited_post: View Post in Channel
+      original: Visualizar Versão Anterior
+      clear_caption: Deletar Legenda
+      save: Salvar Alterações
+      cancel: Cancelar
+      open_edited_post: Visualizar Post no Canal
 
-    view: View Post
-    copy: Create Copy
-    edit_time: Edit Time
-    delete: Delete Post
+    view: Visualizar Post
+    copy: Criar Cópia
+    edit_time: Editar Período
+    delete: Deletar Post
 
   statistics:
-    view_periods: View
-    view_via_web: View via Webpage
+    view_periods: Visualizar
+    view_via_web: Visualizar via Navegador
     
     periods:
-      one_week: Week
-      one_month: Month
+      one_week: Semana
+      one_month: Mês
