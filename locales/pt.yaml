@@ -169,7 +169,7 @@ post:
       Você tem <b>${pluralize(posts, 'message', 'messages', 'messages')}</b> neste post:
       ${messages}
     error_parse: |
-      Errors in formatting text:
+    Erros na formatação de texto:
       
       <pre>${description}</pre>
       
@@ -209,66 +209,66 @@ post:
       ```pre-formatted fixed-width 
       code block
       ```
-    canceled: Creating of the post has been canceled.
+    canceled: A criação do post foi cancelada.
     inline:
       welcome: |
-        Send me a list of URL buttons for the message. Please use this format:
-        <pre>Button text 1 - http://www.example.com/ | Button text 2 - http://www.example2.com/
-        Button text 3 - http://www.example3.com/
+        Envie uma lista de botões com URL com as mensagens. Por favor use este formato:
+        <pre>Botão texto 1 - http://www.example.com/ | Botão texto 2 - http://www.example2.com/
+        Botão texto 3 - http://www.example3.com/
         </pre>
-        Choose 'Cancel' to back to creating of the post.
+        Escolha 'Cancelar' e volte para criação de post.
       error: |
-        Errors in URL buttons list: <code>${error}</code>
+        Erros na lista de botões com URL: <code>${error}</code>
         
-        Please fix all errors and send message again.
+        Por favor, corrija todos os erros e envie a mensagem novamente.
       not_keyboard: |
-        The message sent by you does not fit the format of URL buttons list. Please check everything twice and try again.
-      save: URL buttons saved. You can continue to send me messages.
-      cleared: Success! URL buttons cleared.
+        A mensagem enviada não está de acordo com o formato sugerido para lista de botões com URL. Por favor, verifique tudo novamente e tente outra vez.
+      save: Botões com URL salvo. Continue me enviando mensagens.
+      cleared: Sucesso! Botões com URL buttons removidos.
     reactions:
       welcome: |
-        <a href="http://telegra.ph/file/dd1fcbdd1ebb1ce76ab59.jpg">&#8203;</a>Send me emojies or a text with <b>/</b> as separator to add reactions.
+        <a href="http://telegra.ph/file/dd1fcbdd1ebb1ce76ab59.jpg">&#8203;</a>Me envie emoticons ou um texto com<b>/</b> como separador para adicionar reações.
 
-        For example:
+        Por exemplo:
       not_found_smiles: |
-        Send me one or more emoticons. For example: 👍👎
-      save: Reactions saved. You can continue to send me messages.
-      cleared: Success! Reactions cleared.
-      notify: Counters will be available after sending.
-      default_reactions:
+        Envie-me um ou mais emoticons. Por exemplo: 👍👎
+      save: Reações salvas. Continue me enviando mensagens.
+      cleared: Sucess! Reações removidas.
+      notify: Os contadores estarão disponíveis após o envio.
+      default_reactionso:
         welcome: |
-          You can set reactions that will be automatically added to messages in new posts. Send me one or more emoticons. For example: 👍👎
+          Você pode definir reações que serão adicionadas automaticamente às novas mensagens. Me envie um ou mais emoticons. Por exemplo: 👍👎
 
           ${reactions.length ? 'Current default reactions: ' + reactions.join(' ') : ''}
-        saved: Default reactions saved.
-        deleted: Default reactions disabled.
-        canceled: Setting of the default reactions has been canceled.
+        saved: Padrão de Reações salvo.
+        deleted: Padrão de Reações desativado.
+        canceled: A configuração para o padrão de reações foi cancelada.
     image:
       welcome: |
-        Send me a photo to attach it as a link preview.
-      only_link_or_photo: Send me a photo or a link.
+        Me envie uma foto para anexá-la como pré-visualização de um link.
+      only_link_or_photo: Me envie uma foto ou um link.
       error: |
-        An error occurred while uploading.
+        Ocorreu um erro ao fazer o upload.
 
-        Message us at @ControllerSupportBot to report an issue.
-      save: The photo attached.
-      cleared: Attached photo deleted.
+        Envie uma mensagem para @ControllerSupportBot e relate um problema.
+      save: Foto anexada.
+      cleared: Foto anexada excluída.
 
   send:
     count_posts: |
       ${pluralize(count, 'message', 'messages', 'messages')} ready to be sent to <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''}.
-    choose_type: When you want to send the post?
+    choose_type: Quando você deseja enviar o post?
     problems: |
-      Unable to create a new post in ${channel.name}. The next issues found:
+      Não é possível criar um novo post em ${channel.name}. Os seguintes erros foram encontrados:
 
       ${problems}
 
       ${from.id == channel.owner_id
-        ? 'Go to the channel settings to fix the issues.'
-        : 'The creator of the channel should go to the channel settings and fix the issues.'
+        ? 'Vá nas configurações do canal para corrigir os erros.'
+        : 'O criador do canal deve ir nas configurações do canal e corrigir os erros.'
       }
-    cancel_send: Sending of the post has been canceled.
-    continue_send: You can continue to send me messages.
+    cancel_send: O envio da postagem foi cancelado.
+    continue_send: Continue me enviando mensagens.
     confirm_send: >
       Are you sure you want to send <b>${pluralize(posts, 'message', 'messages', 'messages')}</b> to
       <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''}?
