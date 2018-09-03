@@ -270,80 +270,80 @@ post:
     cancel_send: O envio da postagem foi cancelado.
     continue_send: Continue me enviando mensagens.
     confirm_send: >
-      Are you sure you want to send <b>${pluralize(posts, 'message', 'messages', 'messages')}</b> to
+      Tem certeza de que deseja enviar <b>${pluralize(posts, 'message', 'messages', 'messages')}</b> para
       <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''}?
-    waiting: 🕒 Sending...
-    ok: Done!
+    waiting: 🕒 Enviando...
+    ok: Feito!
 
   schedule:
     day:
-      today: today
-      tomorrow: tomorrow
-      after_tomorrow: overmorrow
+      today: hoje
+      tomorrow: amanhã
+      after_tomorrow: no dia seguinte
     welcome: |
-      Send time at which you want to send the post ${day}.
-      Send time+date to enqueue the post at any other day.
+      Enviar a hora em que você deseja enviar a postagem ${day}.
+      Enviar hora + data para agendar a postagem para outro dia.
       
     help: |
-      <b>The following time formats are supported:</b>
+      <b>Os seguintes formatos de hora são suportados:</b>
       <pre>"6" → 06:00
       "5 3" → 05:03
       "15:30" → 15:30
       "1530" → 15:30</pre>
       
-      <b>The following date formats are supported:</b>
-      <pre>"6" → 6 of the current month
-      "9 12" → December 9
-      "8 7 18" → Jule 8, 2018</pre>
+      <b>Os seguintes formatos de data são suportados:</b>
+      <pre>"6" → 6 do mês atual
+      "9 12" → 9 Dezembro
+      "8 7 18" → 8 Julho 2018</pre>
       
-      You can also use colons and dots instead of spaces for separation. 
+      Você também pode usar dois pontos (:) ou pontos (.) em vez de espaços para separação. 
       
-      If you send only time, the post will be enqueued at the current day by default. To enqueue the post at any other day send time+date. For example, <code>16 30 6 8 -> 16:30, Aug 6</code>
-    error_date: Incorrect date or time. Choose 'Help' to get a hint.
-    invalid_date: Incorrect date.
-    limit: You need to choose a time more than the current by 1 minute or more. The current date and time is ${current_date}.
-    limit_year: 'Unable to choose a time over than the current by 1 year or more. Who knows what is going to happen... :)'
+      Se você enviar apenas a hora, a postagem será agendada no dia atual por padrão. Para agendar a postagem para qualquer outro dia, envie hora + data. Por examplo, <code>16 30 6 8 -> 16:30, 6 Agosto</code>
+    error_date: Ops! Data ou hora incorreta. Escolha 'Help' para obter ajuda.
+    invalid_date: Data incorreta.
+    limit: Você precisa escolher um perído maior que 1 minuto. A data e hora atuais são ${current_date}.
+    limit_year: 'Não é possível escolher um período maior que 1 ano. Quem sabe o que vai acontecer?... :)'
     ok: |
-       Scheduled post has been сreated. The post will be sent to <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''} on <b>${date}</b>.
+       Postagem agendada concluída. A postagem será enviada para <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''} em <b>${date}</b>.
 
   timer:
-    welcome: Choose or send a period of time in hours after which the post will self-destruct.
-    wrong_hour: Incorrect time. Only periods from 1 to 48 hours are allowed.
-    save_timer: The self-destruct timer saved.
-    timer_off: The self-destruct timer disabled.
+    welcome: Escolha ou envie um período de tempo (em horas) para autodestruição da postagem.
+    wrong_hour: Tempo incorreto. São permitidos apenas períodos de 1 a 48 horas.
+    save_timer: O tempo de autodestruição foi salvo.
+    timer_off: O tempo de autodestruição foi desativado.
 posts:
   edit:
-    welcome: Forward to me a message from your channel you want to edit.
+    welcome: Encaminhe a mensagem do seu canal que você deseja editar.
     only_channel_post: |
-      Sorry, only messages from channels are available for editing.
+      Desculpe, apenas mensagens de canais estão disponíveis para edição.
     channel_not_found: |
-       This channel is not available. The channel and the bot via which message was sent must be connected to Controller Bot. Please check everything twice and try again.
+       Este canal não está disponível. O canal e o bot através o qual a mensagem foi enviada deverão estar conectados ao Controller Bot. Por favor, verifique tudo novamente e tente outra vez.
     unsupported_type: |
-      Unable to edit this message. You can edit only text messages and captions.
+      Não é possível editar esta mensagem. Você pode editar apenas mensagens de texto ou legendas.
     post_not_found: |
-      This post is not available. The channel and the bot via which message was sent must be connected to Controller Bot. Please check everything twice and try again.
+      Esta postagem não está disponível. O canal e o bot através o qual a mensagem foi enviada deverão estar conectados ao Controller Bot. Por favor, verifique tudo novamente e tente outra vez.
     editing: |
-      Message type: ${type_text}.${type == 'text' ? '\nFormatting style: ' + parse_mode : ''}
+      Modelo de Mensagem: ${type_text}.${type == 'text' ? '\nFormatting style: ' + parse_mode : ''}
 
-      Send a new text to edit this ${type == 'text' ? 'message' : 'caption. No more 200 characters are allowed'}.
-    not_changed: 'Something went wrong :( Please try again.'
-    edited: Success! Message has been edited.
-    continue_edit: You can continue to edit the message.
+      Envie um novo texto para editar este ${type == 'text' ? 'message' : 'legendas. Não são permitidos mais que 200 caracteres'}.
+    not_changed: 'Algo deu errado :( Por favor, tente outra vez.'
+    edited: Sucesso! A mensagem foi editada.
+    continue_edit: Você pode continuar editando a mensagem.
 
-  edit_time: Send time+date to re-enqueue the post at any other day.
+  edit_time: Enviar hora + data para reagendar a postagem para outro dia.
 
   types:
-    text: text
+    text: texto
     audio: audio
-    document: file
-    photo: photo
+    document: arquivo
+    photo: foto
     sticker: sticker
     video: video
-    voice: voice message
-    contact: contact
-    location: location
-    venue: venue
-    video_note: video message
+    voice: mensagem de voz
+    contact: contatos
+    location: localização
+    venue: local
+    video_note: video mensagem
   types_emoji:
     text: 📃
     audio: 🎧
@@ -356,9 +356,9 @@ posts:
     location: 📍
     venue: 🕹
     video_note: 📹
-  welcome_schedule: Choose a channel to manage scheduled posts.
-  not_schedule_posts: There is no scheduled posts for this channel in yet.
-  choose_scheduled_post: Choose a scheduled post you want to view or delete.
+  welcome_schedule: Escolha um canal para gerenciar as postagens agendadas.
+  not_schedule_posts: Ainda não há postagens agendadas para este canal.
+  choose_scheduled_post: Escolha uma postagem agendada que você deseja visualizar ou excluir.
   view_scheduled_post: |
     ${messages}
     🕘 ${date} › ${channel.username
@@ -366,64 +366,64 @@ posts:
       : channel.name
     }
     ${date_delete ? '🗑 ' + date_delete : ''}
-  confirm_delete_post: Are you sure you want to delete this scheduled post?
-  scheduled_post_was_deleted: Done! Scheduled post has been deleted.
+  confirm_delete_post: Tem certeza de que deseja excluir esta postagem agendada?
+  scheduled_post_was_deleted: Feito! A postagem agendada foi excluída.
 
 settings:
-  welcome: Choose what you want to change.
+  welcome: Escolha o que você quer alterar.
 
   bots:
     select_bot: |
       ${count
-        ? 'Choose a bot you want to delete.'
-        : 'There is no connected bots yet.'
+        ? 'Escolha o bot que você deseja excluir.'
+        : 'Ainda não há bots conectados.'
       }
     channel_item: |
       ${index}. ${name}
     confirm_delete: |
       ${count 
-        ? 'The bot is connected with these channels:\n\n' + channels 
-        : 'The bot is not connected with any channels.\n'
+        ? 'O bot está conectado com os seguintes canais:\n\n' + channels 
+        : 'O bot não está conectado com nenhum canal.\n'
       }
-      Are you sure you want to delete this bot?
-    bot_deleted: Done! The bot is gone.
+      Tem certeza de que deseja excluir este bot?
+    bot_deleted: Feito! O bot foi excluído.
 
 statistics:
-  select_channel: Choose a channel to view stats.
+  select_channel: Escolha um canal para ver as estatísticas.
   no_channels: |
-    There is no added channels yet.
+    Ainda não há canais adicionados.
     
-    Send /addchannel to add a new one.
-  selected_channel: 'Here it is: ${channel.name}. What do you want to do with stats?'
-  channel_not_found: This channel is not available.
-  select_periods: Choose a period you want to get stats.
-  loading_data: 🕒 Processing the data and rendering graphs...
+    Envie /addchannel para adicionar um novo.
+  selected_channel: 'Aqui está: ${channel.name}. O que você deseja fazer com as estatísticas?'
+  channel_not_found: Este canal não está disponível.
+  select_periods: Escolha o período que deseja obter estatísticas.
+  loading_data: 🕒 Processando dados e obtendo gráficos...
   error_load_data: |
-    An error occurred while data processing.
+    Ocorreu um erro durante o processamento de dados.
      
-    Message us at @ControllerSupportBot to report an issue.
-  not_found_data: There is no stats data for this channel yet. Come back later.
+    Envie uma mensagem para @ControllerSupportBot e relate o erro.
+  not_found_data: Ainda não há dados de estatísticas para este canal. Volte mais tarde.
   share_text: |
-    Here is the link to view stats of ${channel.name}${channel.username ? ' @' + channel.username : ''}
+    Aqui está o link para ver as estatísticas de ${channel.name}${channel.username ? ' @' + channel.username : ''}
   data: |
-    Stats of ${channel.username ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>' : channel.name} for ${period == 'week'
-      ? 'the last 7 days'
-      : 'the last 31 day'
+    Estatísticas de ${channel.username ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>' : channel.name} de ${period == 'week'
+      ? 'os últimos 7 dias'
+      : 'os últimos 31 dias'
     }.
 
     ${data}
   chart:
     title: |
-      Stats for ${channel.name}${channel.username ? ' @' + channel.username : ''}
-    copyright: Powered by @ControllerBot
-    label: subscribers
+      Estatísticas de ${channel.name}${channel.username ? ' @' + channel.username : ''}
+    copyright: Distribuído por @ControllerBot
+    label: inscritos
 
 bot:
   start:
-    welcome: Here you can create rich posts, view stats and accomplish other tasks.
+    welcome: Aqui você pode criar postagens relevantes, visualizar estatísticas e realizar outras tarefas.
 
   is_not_user: |
-    To start using this bot, you need to send the command /start to @ControllerBot, then go back to this bot and tap the "Continue" button.
+    Para começar a usar este bot, você precisa enviar o comando / start para @ControllerBot, depois voltar para este bot e tocar no botão "Continue".
 
   channels:
     controller_updates_join_link: https://t.me/joinchat/AAAAAFNNAyKG1y7GopROHg
