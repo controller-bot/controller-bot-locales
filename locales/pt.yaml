@@ -43,7 +43,7 @@ bots:
     <b>Cuidado!</b> Não conecte bots já utilizados por outros serviços como Chatfuel, Manybot e etc. 
 
   wrong_token: Não consigo identificar as informações enviadas. Por favor me envie um "token" válido do seu bot.
-  error_add: "Token" inválido. Tente pegar um novo ou use um "token" de outro bot.
+  error_add: '"Token" inválido. Tente pegar um novo ou use um "token" de outro bot.'
   bot_already_added: Isso me parece familiar. Voçê já tem este bot conectado.
 
 channels:
@@ -156,7 +156,7 @@ post:
 
       A maioria dos usuários prefere o Markdown porque é mais curto e mais fácil de usar. A formatação nativa do Telegram também é permitida.
     start: |
-      Aqui está:: <b>"${channel.name}"</b>${channel.username ? ' @' + channel.username : ''}.
+      Aqui está: <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''}.
 
       Envie uma ou várias mensagens para incluir na postagem. Pode ser qualquer coisa - um texto, foto, vídeo, até mesmo um sticker.
     clear: Sucesso! Todas as mensagens foram excluídas.
@@ -169,7 +169,7 @@ post:
       Você tem <b>${pluralize(posts, 'message', 'messages', 'messages')}</b> neste post:
       ${messages}
     error_parse: |
-    Erros na formatação de texto:
+      Erros na formatação de texto:
       
       <pre>${description}</pre>
       
@@ -177,10 +177,10 @@ post:
     continue_collect: Você pode continuar me enviando mensagens. 
     html: |
       <b>negrito</b>
-      &lt;b&gt;bold&lt;/b&gt;
+      &lt;b&gt;negrito&lt;/b&gt;
       
       <i>itálico</i>
-      &lt;i&gt;italic&lt;/i&gt;
+      &lt;i&gt;itálico&lt;/i&gt;
       
       <a href="http://www.example.com/">inline URL</a>
       &lt;a href=&quot;http://www.example.com/&quot;&gt;inline URL&lt;/a&gt;
@@ -235,7 +235,7 @@ post:
       save: Reações salvas. Continue me enviando mensagens.
       cleared: Sucess! Reações removidas.
       notify: Os contadores estarão disponíveis após o envio.
-      default_reactionso:
+      default_reactions:
         welcome: |
           Você pode definir reações que serão adicionadas automaticamente às novas mensagens. Me envie um ou mais emoticons. Por exemplo: 👍👎
 
@@ -423,20 +423,20 @@ bot:
     welcome: Aqui você pode criar postagens relevantes, visualizar estatísticas e realizar outras tarefas.
 
   is_not_user: |
-    Para começar a usar este bot, você precisa enviar o comando / start para @ControllerBot, depois voltar para este bot e tocar no botão "Continue".
+    Para começar a usar este bot, você precisa enviar o comando /start para @ControllerBot, depois voltar para este bot e tocar no botão "Continue".
 
   channels:
     controller_updates_join_link: https://t.me/joinchat/AAAAAFNNAyKG1y7GopROHg
     controller_updates_id: '-1001397556002'
     controller_updates: |
-      🍀 Nós recomendamos que você junte-se ao<a href="https://t.me/joinchat/AAAAAFNNAyKG1y7GopROHg">canal oficial</a> do Controller Bot para ficar atualizado com as novas atualizações e outras notícias do bot.
+      🍀 Nós recomendamos que você junte-se ao <a href="https://t.me/joinchat/AAAAAFNNAyKG1y7GopROHg">canal oficial</a> do Controller Bot para ficar atualizado com as novas atualizações e outras notícias do bot.
 
       Esta mensagem não será mais exibida se você entrar no canal.
 
     secretship_join_link: https://t.me/joinchat/AAAAAD63ENxmBG7CW3RG7A
     secretship_id: '-1001052184796'
     secretship: |
-      🍀 Por favor, siga <a href="https://t.me/joinchat/AAAAAD63ENxmBG7CW3RG7A">o canal</a>do fundador e desenvolvedor deste bot.
+      🍀 Por favor, siga <a href="https://t.me/joinchat/AAAAAD63ENxmBG7CW3RG7A">o canal</a> do fundador e desenvolvedor deste bot.
 
       Esta mensagem não será mais exibida se você entrar no canal.
 
@@ -455,6 +455,7 @@ bot:
         E o conjunto de reações que serão adicionadas automaticamente às próximas mensagens.
 
 btn:
+  common:
     continue: Continuar »
     true: Sim, tudo bem
     back: « Voltar

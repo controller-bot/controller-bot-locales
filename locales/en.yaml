@@ -317,7 +317,7 @@ posts:
     only_channel_post: |
       Sorry, only messages from channels are available for editing.
     channel_not_found: |
-       This channel is not available. The channel and the bot via which message was sent must be connected to Controller Bot. Please check everything twice and try again.
+      This channel is not available. The channel and the bot via which message was sent must be connected to Controller Bot. Please check everything twice and try again.
     unsupported_type: |
       Unable to edit this message. You can edit only text messages and captions.
     post_not_found: |
