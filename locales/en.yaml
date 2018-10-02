@@ -245,14 +245,14 @@ post:
         canceled: Setting of the default reactions has been canceled.
     image:
       welcome: |
-        Send me a photo to attach it as a link preview.
-      only_link_or_photo: Send me a photo or a link.
+        Send me a link, image, GIF or video (up to 5 MB).
+      only_link_or_photo: Send me a link, image, GIF or video (up to 5 MB).
       error: |
         An error occurred while uploading.
 
         Message us at @ControllerSupportBot to report an issue.
-      save: The photo attached.
-      cleared: Attached photo deleted.
+      save: The media attached.
+      cleared: Attached media deleted.
 
   send:
     count_posts: |
@@ -543,8 +543,8 @@ btn:
 
     continue: Continue »
 
-    add_image: Attach Photo
-    clear_image: Delete Attached Photo
+    add_image: Attach Media
+    clear_image: Delete Attached Media
 
     open_comments: Open Comments
     add_comments: Add Comments
