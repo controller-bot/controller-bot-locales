@@ -372,7 +372,7 @@ settings:
     select_bot: |
       ${count
         ? 'Scegli un bot che vuoi rimuovere.'
-        : 'Non c'è ancora messun bot connesso.'
+        : 'Non c\'è ancora messun bot connesso.'
       }
     channel_item: |
       ${index}. ${name}
