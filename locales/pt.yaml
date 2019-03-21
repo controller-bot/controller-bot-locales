@@ -31,6 +31,13 @@ common:
     /settings - outras configurações
     /lang - alterar idiomas
 
+  web: |
+    🦠 <b>Controller Web</b>
+
+    Tap on the button below to Open Controller Web and create rich posts via the browser.
+
+    <i>For security reasons, the login link will be available for 5 minutes. Tap </i>/web <i>to get a new one.</i>
+
 bots:
   add: |
     <b>Conectando um bot</b>
@@ -464,6 +471,7 @@ btn:
     help: Ajuda
     yes: Sim
     no: Não
+    open_web: Open Controller Web
 
   menu:
     create_post: Criar Post

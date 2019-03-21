@@ -31,6 +31,13 @@ common:
     /settings - اعدادات اخرى
     /lang - تغير اللغه
 
+  web: |
+    🦠 <b>Controller Web</b>
+
+    Tap on the button below to Open Controller Web and create rich posts via the browser.
+
+    <i>For security reasons, the login link will be available for 5 minutes. Tap </i>/web <i>to get a new one.</i>
+
 bots:
   add: |
     <b>ربط البوت</b>
@@ -492,6 +499,7 @@ btn:
     help: مساعدة
     yes: نعم
     no: لا
+    open_web: Open Controller Web
 
   menu:
     create_post: انشاء منشور

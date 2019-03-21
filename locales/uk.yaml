@@ -31,6 +31,13 @@ common:
     /settings - інші налаштування
     /lang - змінити мову
 
+  web: |
+    🦠 <b>Controller Web</b>
+
+    Tap on the button below to Open Controller Web and create rich posts via the browser.
+
+    <i>For security reasons, the login link will be available for 5 minutes. Tap </i>/web <i>to get a new one.</i>
+
 bots:
   add: |
     <b>Під'єднання бота</b>
@@ -462,6 +469,7 @@ btn:
     help: Довідка
     yes: Так
     no: Ні
+    open_web: Open Controller Web
 
   menu:
     create_post: Cтворити пост
