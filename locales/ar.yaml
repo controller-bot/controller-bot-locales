@@ -14,7 +14,9 @@ common:
 
     تستطيع التحكم فىٌ بواسطه ارسال احدى هذه التعليكات التاليه:
 
+    /web - create a new post via web
     /newpost - انشاء منشور جديد
+
     /addchannel - اضافه قناه جديده
     /mychannels - تعديل قنواتك
 

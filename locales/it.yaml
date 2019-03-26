@@ -14,7 +14,9 @@ common:
 
     Puoi controllarmi usando questi comandi:
 
+    /web - create a new post via web
     /newpost - crea un nuovo post
+
     /addchannel - aggiungi un nuovo canale
     /mychannels - modifica i tuoi canali
 

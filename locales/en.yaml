@@ -14,7 +14,9 @@ common:
 
     You can control me by sending these commands:
 
+    /web - create a new post via web
     /newpost - create a new post
+
     /addchannel - add a new channel
     /mychannels - edit your channels
 

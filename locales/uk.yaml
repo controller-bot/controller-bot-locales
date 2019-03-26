@@ -14,7 +14,9 @@ common:
 
     Керувати мною можна, надсилаючи такі команди:
 
+    /web - create a new post via web
     /newpost - створити нову пост
+
     /addchannel - додати новий канал
     /mychannels - редагувати ваші канали
 

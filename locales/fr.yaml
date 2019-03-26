@@ -14,7 +14,9 @@ common:
 
     Vous pouvez me contrôller en envoyant ces commandes:
 
+    /web - create a new post via web
     /newpost - créer une nouvelle publication
+
     /addchannel - ajouter une nouvelle chaîne
     /mychannels - editer vos chaînes
 
