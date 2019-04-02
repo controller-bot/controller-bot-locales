@@ -14,7 +14,7 @@ common:
 
     Puoi controllarmi usando questi comandi:
 
-    /web - create a new post via web
+    /web - crea un nuovo post da web
     /newpost - crea un nuovo post
 
     /addchannel - aggiungi un nuovo canale
@@ -36,9 +36,9 @@ common:
   web: |
     🦠 <b>Controller Web</b>
 
-    Tap on the button below to Open Controller Web and create rich posts via the browser.
+    Premi il pulsante qui sotto per aprire Controller Web e creare post ricchi dal browser.
 
-    <i>For security reasons, the login link will be available for 5 minutes. Tap </i>/web <i>to get a new one.</i>
+    <i>Per motivi di sicurezza, il link per accedere rimarrà disponibile per 5 minuti. Invia </i>/web <i>per ottenerne uno nuovo.</i>
 
 bots:
   add: |
@@ -499,7 +499,7 @@ btn:
     help: Aiuto
     yes: Sì 
     no: No
-    open_web: Open Controller Web
+    open_web: Apri Controller Web
 
   menu:
     create_post: Crea post
