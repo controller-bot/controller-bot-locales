@@ -225,6 +225,8 @@ post:
         <pre>نص الزّر الأول - http://www.example.com/ | نص الزّر الثاني - http://www.example2.com/
         نص الزر الثالث - http://www.example3.com/
         </pre>
+        ${current ? '\nCurrent buttons:\n' + current : ''}
+
         انقر «إلغاء» للرجوع إلى عملية إنشاء المنشور.
       error: |
         أخطاء في قائمة أزرار ذات روابط URL: <code>${error}</code>
@@ -607,6 +609,7 @@ btn:
 
   posts:
     edit:
+      edit_inline: Change URL-buttons
       original: عرض النسخة السابقة
       clear_caption: حذف التعليق
       save: حفظ التغييرات

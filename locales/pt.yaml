@@ -225,6 +225,8 @@ post:
         <pre>Botão texto 1 - http://www.example.com/ | Botão texto 2 - http://www.example2.com/
         Botão texto 3 - http://www.example3.com/
         </pre>
+        ${current ? '\nCurrent buttons:\n' + current : ''}
+
         Escolha 'Cancelar' e volte para criação de post.
       error: |
         Erros na lista de botões com URL: <code>${error}</code>
@@ -334,7 +336,7 @@ posts:
     editing: |
       Modelo de Mensagem: ${type_text}.${type == 'text' ? '\nFormatting style: ' + parse_mode : ''}
 
-      Envie um novo texto para editar este ${type == 'text' ? 'message' : 'legendas. Não são permitidos mais que 200 caracteres'}.
+      Envie um novo texto para editar este ${type == 'text' ? 'message' : 'legendas. Não são permitidos mais que 1024 caracteres'}.
     not_changed: 'Algo deu errado :( Por favor, tente outra vez.'
     edited: Sucesso! A mensagem foi editada.
     continue_edit: Você pode continuar editando a mensagem.
@@ -579,6 +581,7 @@ btn:
 
   posts:
     edit:
+      edit_inline: Change URL-buttons
       original: Visualizar Versão Anterior
       clear_caption: Deletar Legenda
       save: Salvar Alterações

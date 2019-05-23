@@ -225,6 +225,8 @@ post:
         <pre>Button text 1 - http://www.example.com/ | Button text 2 - http://www.example2.com/
         Button text 3 - http://www.example3.com/
         </pre>
+        ${current ? '\nCurrent buttons:\n' + current : ''}
+
         Choose 'Cancel' to back to creating of the post.
       error: |
         Errors in URL buttons list: <code>${error}</code>
@@ -334,7 +336,7 @@ posts:
     editing: |
       Message type: ${type_text}.${type == 'text' ? '\nFormatting style: ' + parse_mode : ''}
 
-      Send a new text to edit this ${type == 'text' ? 'message' : 'caption. No more 200 characters are allowed'}.
+      Send a new text to edit this ${type == 'text' ? 'message' : 'caption. No more 1024 characters are allowed'}.
     not_changed: 'Something went wrong :( Please try again.'
     edited: Success! Message has been edited.
     continue_edit: You can continue to edit the message.
@@ -609,6 +611,7 @@ btn:
 
   posts:
     edit:
+      edit_inline: Change URL-buttons
       original: View Previous Version
       clear_caption: Delete Caption
       save: Save Changes
