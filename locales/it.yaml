@@ -332,7 +332,7 @@ posts:
     editing: |
       Tipo di messaggio: ${type_text}.${type == 'text' ? '\nStile di formattazione: ' + parse_mode : ''}
 
-      Invia un nuovo testo per modificare ${type == 'text' ? 'questo messaggio' : 'questa didascalia. Puoi usare non più di 1024 caratteri'}.
+      Invia un nuovo testo per modificare ${type == 'text' ? 'questo messaggio' : 'questa didascalia. Puoi usare fino a 1024 caratteri'}.
     not_changed: Qualcosa è andato storto ☹️. Per favore, riprova.
     edited: Perfetto! Il messaggio è stato modificato.
     continue_edit: Puoi continuare a modificare il messaggio.
