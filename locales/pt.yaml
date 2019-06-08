@@ -336,7 +336,7 @@ posts:
     editing: |
       Modelo de Mensagem: ${type_text}.${type == 'text' ? '\nFormatting style: ' + parse_mode : ''}
 
-      Envie um novo texto para editar este ${type == 'text' ? 'message' : 'legendas. Não são permitidos mais que 1024 caracteres'}.
+      Envie um novo texto para editar este ${type == 'text' ? 'message' : 'legendas. Não são permitidos mais que 200 caracteres'}.
     not_changed: 'Algo deu errado :( Por favor, tente outra vez.'
     edited: Sucesso! A mensagem foi editada.
     continue_edit: Você pode continuar editando a mensagem.
@@ -475,7 +475,7 @@ btn:
     help: Ajuda
     yes: Sim
     no: Não
-    open_web: Open Controller Web
+    open_web: Abrir Controller Web
 
   menu:
     create_post: Criar Post
