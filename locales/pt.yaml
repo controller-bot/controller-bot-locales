@@ -465,6 +465,36 @@ bot:
 
         E o conjunto de reações que serão adicionadas automaticamente às próximas mensagens.
 
+donate:
+  welcome: |
+    ☘️ <b>Doações</b>
+
+    Obrigado pela sua colaboração, com sua ajuda poderemos adicionar novos recursos, melhorar a estabilidade dos bots e pagar por servidores.
+
+    Esta mensagem ficará oculta após o pagamento.
+
+    <i>Sua ajuda é muito bem-vinda,</i>
+    <a href="https://t.me/BotUpdates">Equipe Controller Bot</a>
+
+  other_sum: Outro valor
+  enter_sum: Entre com o valor da doação.
+  incorrect_sum: Digite o valor em rublos.
+
+  continue_use_bot: Vou ajudar mais tarde 😦
+  donate_controller: ☘️ Doações
+
+  select_price: |
+    Clique no botão "Pagar" para enviar<b>${sum} ₽</b> como doação a equipe Controller Bot.
+
+    Após o pagamento, clique no botão "Realizar Pagamento" para ocultar esta mensagem.
+  pay: Pagar
+  completed: Realizar Pagamento
+  not_pay: Pagamento não realizado 😔
+  success_pay: Obrigado por sua colaboração a equipe Controller Bot! 😍
+
+  problem: Problemas ao efetuar pagamento
+  help: Escreva para @ControllerSupportBot, caso você esteja com problemas no envio de doações ou fora dos padrões de pagamento.
+  
 btn:
   common:
     continue: Continuar »
