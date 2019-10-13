@@ -221,7 +221,7 @@ post:
         <pre>Pulsante 1 - https://www.link1.it/ | Pulsante 2 - https://www.link2.it/
         Pulsante 3 - https://www.link3.it/
         </pre>
-        ${current ? '\nPulsanti attuali:\n' + current : ''}
+        ${current ? '\nCurrent buttons:\n' + current : ''}
 
         Scegli "Annulla" per tornare alla creazione del post.
       error: |
@@ -306,7 +306,7 @@ post:
       Puoi anche usare i due punti e il punto al posto degli spazi. 
       
       Se mi invii solo l'orario, il post sarà programmato oggi di predefinito. Per programmare il post in un altro giorno, invia orario+data. Per esempio, <code>16 30 6 8 -> 16:30 del 6 agosto</code>
-    error_date: Data o ora non corretta. Svegli "Aiuto" per avere un suggerimento.
+    error_date: Data o ora non corretta. Premi "Aiuto" per avere un suggerimento.
     invalid_date: Data non corretta.
     limit: "Devi scegliere un orario che sia avanti di almeno un minuto. Al momento, la data e l'orario è ${current_date}."
     limit_year: Impossibile scegliere una data oltre un anno. Chissà cosa potrebbe accadere... 😁
@@ -332,7 +332,7 @@ posts:
     editing: |
       Tipo di messaggio: ${type_text}.${type == 'text' ? '\nStile di formattazione: ' + parse_mode : ''}
 
-      Invia un nuovo testo per modificare ${type == 'text' ? 'questo messaggio' : 'questa didascalia. Puoi usare fino a 1024 caratteri'}.
+      Invia un nuovo testo per modificare ${type == 'text' ? 'questo messaggio' : 'questa didascalia'}.
     not_changed: Qualcosa è andato storto ☹️. Per favore, riprova.
     edited: Perfetto! Il messaggio è stato modificato.
     continue_edit: Puoi continuare a modificare il messaggio.
@@ -607,7 +607,7 @@ btn:
 
   posts:
     edit:
-      edit_inline: Cambia pulsanti
+      edit_inline: Change URL-buttons
       original: Vedi versione originale
       clear_caption: Rimuovi didascalia
       save: Salva modifiche
