@@ -221,7 +221,7 @@ post:
         <pre>Pulsante 1 - https://www.link1.it/ | Pulsante 2 - https://www.link2.it/
         Pulsante 3 - https://www.link3.it/
         </pre>
-        ${current ? '\nCurrent buttons:\n' + current : ''}
+        ${current ? '\nPulsanti attuali:\n' + current : ''}
 
         Scegli "Annulla" per tornare alla creazione del post.
       error: |
@@ -607,7 +607,7 @@ btn:
 
   posts:
     edit:
-      edit_inline: Change URL-buttons
+      edit_inline: Cambia pulsanti
       original: Vedi versione originale
       clear_caption: Rimuovi didascalia
       save: Salva modifiche
