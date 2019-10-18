@@ -224,6 +224,8 @@ post:
         <pre>Texte bouton 1 - http://www.example.com/ | Texte bouton 2 - http://www.example2.com/
         Texte bouton 3 - http://www.example3.com/
         </pre>
+        ${current ? '\nCurrent buttons:\n' + current : ''}
+
         choisissez 'Annuler' pour revenir à la création du message.
       error: |
         Erreurs dans la liste des boutons URL: <code>${error}</code>
@@ -333,7 +335,7 @@ posts:
     editing: |
       Message type: ${type_text}.${type == 'text' ? '\nStyle de formatage: ' + parse_mode : ''}
 
-      Envoyer un nouveau texte pour l\'éditer ${type == 'text' ? 'message' : 'caption. Pas plus de 200 caractères sont autorisés'}.
+      Envoyer un nouveau texte pour l\'éditer ${type == 'text' ? 'message' : 'caption. Pas plus de 1024 caractères sont autorisés'}.
     not_changed: Une erreur s\'est produite :( S\'il vous plaît essayez à nouveau.
     edited: Opération éffectuée! Le message a été modifié.
     continue_edit: Vous pouvez continuer à modifier le message.
@@ -579,6 +581,7 @@ btn:
 
   posts:
     edit:
+      edit_inline: Changer les bouttons URL
       original: Voir l\'original
       clear_caption: Supprimer Caption
       save: Sauvegarder

@@ -14,7 +14,7 @@ common:
 
     Puedes controlarme enviando estos comandos:
 
-    /web - create a new post via web
+    /web - crear un nuevo post via web
     /newpost - crear una nueva publicación
 
     /addchannel - agrega un nuevo canal
@@ -34,11 +34,11 @@ common:
     /lang - cambiar idioma
 
   web: |
-    🦠 <b>Controller Web</b>
+    🦠 <b>Controlador Web</b>
+    
+    Toque el botón de abajo para abrir el controlador web y crear publicaciones enriquecidas a través del navegador.
 
-    Tap on the button below to Open Controller Web and create rich posts via the browser.
-
-    <i>For security reasons, the login link will be available for 5 minutes. Tap </i>/web <i>to get a new one.</i>
+    <i>Por razones de seguridad, el enlace de inicio de sesión estará disponible durante 5 minutos. Tque </i>/web <i>para iniciar una nueva.</i>
 
 bots:
   add: |
@@ -225,6 +225,8 @@ post:
         <pre>Botón 1 - http://www.example.com/ | Botón 2 - http://www.example2.com/
         Botón 3 - http://www.example3.com/
         </pre>
+        ${current ? '\nBotones actuales:\n' + current : ''}
+
         Elija 'Cancelar' para volver a la creación de la publicación.
       error: |
         Errores en la lista de botones de URL: <code>${error}</code>
@@ -334,7 +336,7 @@ posts:
     editing: |
       Tipo de mensaje: ${type_text}.${type == 'text' ? '\nEstilo de formato: ' + parse_mode : ''}
 
-      Envía un nuevo texto para editar este ${type == 'text' ? 'mensaje' : 'No se permiten más 200 caracteres'}.
+      Envía un nuevo texto para editar este ${type == 'text' ? 'mensaje' : 'No se permiten más 1024 caracteres'}.
     not_changed: 'Algo salió mal :( Por favor, vuelva a intentarlo.'
     edited: ¡Éxito! El mensaje ha sido editado.
     continue_edit: Puede continuar editando el mensaje.
@@ -473,7 +475,7 @@ btn:
     help: Ayuda
     yes: Sí
     no: No
-    open_web: Open Controller Web
+    open_web: Abrir Controlador Web
 
   menu:
     create_post: Crear publicación
@@ -579,6 +581,7 @@ btn:
 
   posts:
     edit:
+      edit_inline: Cambiar botones URL
       original: Ver versión anterior
       clear_caption: Borrar captura
       save: Guardar cambios
