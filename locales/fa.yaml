@@ -355,6 +355,7 @@ posts:
     location: location
     venue: venue
     video_note: video message
+    poll: poll
   types_emoji:
     text: 📃
     audio: 🎧
@@ -367,6 +368,7 @@ posts:
     location: 📍
     venue: 🕹
     video_note: 📹
+    poll: 📊
   welcome_schedule: Choose a channel to manage scheduled posts.
   not_schedule_posts: There is no scheduled posts for this channel in yet.
   choose_scheduled_post: Choose a scheduled post you want to view or delete.

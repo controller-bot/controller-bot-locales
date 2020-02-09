@@ -355,6 +355,7 @@ posts:
     location: localização
     venue: local
     video_note: video mensagem
+    poll: enquete
   types_emoji:
     text: 📃
     audio: 🎧
@@ -367,6 +368,7 @@ posts:
     location: 📍
     venue: 🕹
     video_note: 📹
+    poll: 📊
   welcome_schedule: Escolha um canal para gerenciar as postagens agendadas.
   not_schedule_posts: Ainda não há postagens agendadas para este canal.
   choose_scheduled_post: Escolha uma postagem agendada que você deseja visualizar ou excluir.
