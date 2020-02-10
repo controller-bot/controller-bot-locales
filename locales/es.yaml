@@ -183,6 +183,7 @@ post:
       <pre>${description}</pre>
       
       Por favor <a href="http://telegra.ph/Parsing-Error-Fix-Controller-FAQ-03-28">corrige todos los errores</a> y envia el mensaje de nuevo.
+    error_poll_not_anonymous: Sorry, but you can\'t send non-anonymous polls to channels.
     continue_collect: Puedes continuar enviándome mensajes.
     html: |
       <b>negrita</b>

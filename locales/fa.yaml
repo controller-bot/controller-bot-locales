@@ -177,6 +177,7 @@ post:
 
       You have <b>${pluralize(posts, 'message', 'messages', 'messages')}</b> in this post:
       ${messages}
+    error_poll_not_anonymous: Sorry, but you can\'t send non-anonymous polls to channels.
     error_parse: |
       Errors in formatting text:
       

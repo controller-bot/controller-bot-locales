@@ -177,6 +177,7 @@ post:
 
       لديك <b>${pluralize(posts, 'رسالة', 'رسائل', 'رسالة')}</b> في المنشور:
       ${messages}
+    error_poll_not_anonymous: Sorry, but you can\'t send non-anonymous polls to channels.
     error_parse: |
       أخطاء في تنسيق النصّ:
 

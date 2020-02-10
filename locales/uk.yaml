@@ -177,6 +177,7 @@ post:
 
       У цій публікації ви маєте <b>${pluralize(posts, 'повідомлення', 'повідомлення', 'повідомлень')}</b>:
       ${messages}
+    error_poll_not_anonymous: Sorry, but you can\'t send non-anonymous polls to channels.
     error_parse: |
       Помилки форматування тексту:
 
