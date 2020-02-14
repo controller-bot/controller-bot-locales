@@ -1,0 +1,578 @@
+language_name: Türkçe
+is_enabled: true
+
+move: |
+  Gönderi oluşturma ve düzenleme, istatistik görme ve gönderi zamanlama gibi tüm ana özellikler bağlı botlara taşındı, böylece artık botunuz ve Controller Bot arasında gidip gelmenize gerek kalmadı!
+  Bağlı botunuza gidin ve /start komutunu yazın.
+common:
+  choose_language: Lütfen dilinizi seçin.
+
+  start: |
+    Telegram kanallarınızı yönetmene yardım edebilirim.
+    Bu komutlarla beni kontrol edebilirsiniz:
+    /web - web ile yeni gönderi oluşturun
+    /newpost - yeni gönderi oluşturun
+    /addchannel - yeni kanal ekleyin
+    /mychannels - kanallarınızı düzenleyin
+    /settings - diğer ayarlar
+  help: |
+    Sorularınız varsa, <a href="http://telegra.ph/Controller-Help-03-20">Controller Help</a> sayfasına bakın.
+    Bu komutları göndererek beni kontrol edebilirsiniz:
+    
+    /newpost - yeni gönderi oluşturun
+    /addchannel - yeni kanal ekleyin
+    /mychannels - kanallarınızı düzenleyin
+    /settings - diğer ayarlar
+    /lang - dil değiştirin
+  web: |
+    🦠 <b>Controller Web</b>
+    Controller Web'i açmak ve tarayıcıda gönderi oluşturmak için aşağıdaki butona dokunun.
+    <i>Güvenlik sebepleri için, bağlantı 5 dakika kullanılabilir olacak. Yeni bir tane almak için </i>/web <i>komutuna dokunun.</i>
+bots:
+  add: |
+    <b>Bot Bağlama</b>
+    Bot bağlamak için, bu iki adımı takip edin:
+    
+    1. @BotFather'ı açın ve <a href="http://telegra.ph/Create-Bot-Controller-FAQ-03-28">yeni bir bot oluşturun</a>.
+    2. Bir token alacaksınız (örn. 12345:6789ABCDEF) — sadece onu bana iletin veya kopyalayıp yapıştırın.
+    
+    <b>Uyarı!</b> Halihazırda Chatfuel, Manybot vb. servisler tarafından kullanılan botları bağlamayın.
+  wrong_token: Benimle ilgili değil gibi. Lütfen bana botunuzun tokenını gönderin.
+  error_add: Geçersiz token. Yeni bir token alın ya da başka bir botun tokenını kullanın.
+  bot_already_added: Bana benziyor gibi. Bu botu zaten bağladınız.
+
+channels:
+  welcome: |
+    <b>Kanal Yönetimi</b>
+    ${count
+      ? 'Listeden bir kanal seçin:'
+      : 'Henüz ekli kanal yok.'
+    }
+  add:
+    select_bot: |
+      Kanal gönderileri gönderece botu seçin.
+    welcome: |
+      <b>Kanal Ekleme</b>
+      Kanal eklemek için, bu iki adımı takip edin:
+    
+      1. <a href="http://telegra.ph/Add-Bot-to-Admins-Controller-FAQ-03-28">@${username} botu yöneticilere ekleyin</a>. 
+      2. Sonra bana kanaldan bir mesaj iletin (ayrıca kullanıcı adı veya ID de gönderebilirsiniz).
+    added: |
+      Başarılı! ${channel.username ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>' : '<b>' + channel.name + '</b>'} adlı kanal eklendi.
+      Gönderi oluşturmak için @${bot_username} bota gidin.
+      Ayrıca kanaldaki tüm yöneticiler bu botu kullanabilir.
+      Yeni yönetici eklerseniz, kanal ayarlarına gidin ve "Veri Güncelle" butonuna dokunun.
+    error:
+      data: |
+        Lütfen bana kanaldan bir mesaj iletin. Ya da kullanıcı adı veya ID gönderin.
+      channel_not_found: Kanal bulunamadı.
+      you_are_not_administrator: Kanalda yönetici değilsiniz.
+      you_do_not_have_rights: Kanalda mesaj gönderme izniniz yok.
+      bot_is_not_admin: Bu @${username} botu kanal yöneticilerine ekleyin. Lütfen her şeyi iki kez kontrol edin ve tekrar deneyin.
+      bot_is_not_admin_in_group: Bu @${username} botu grup yöneticilerine ekleyin ve tekrar deneyin.
+      bot_was_deleted: |
+        Kanal eklenemiyor. @${username} bot artık yok veya tokenı sıfırlandı. Bu botu tekrar bağlayın veya başka birini seçin.
+      channel_already_added: Bu kanal zaten eklendi. Gönderi oluşturmak için @${bot_username} bota gidin.
+      group_already_added: |
+        Bu kanal zaten ${admin.first_name}${admin.last_name ? ' ' + admin.last_name : ''}${admin.username ? ' @' + admin.username : ''} tarafından eklendi.
+  control:
+    options: |
+      Kanal: ${channel.name}. Bu kanalla ne yapmak istiyorsunuz?
+    delete_confirm: |
+      Bu kanalı silmek istediğinize emin misiniz?
+      
+      Bu kanal için tüm zamanlanmış gönderiler ve kayıtlı istatistikler silinecek.
+    channel_deleted: Tamam! Kanal gitti.
+    select_bot: |
+      ${count
+        ? 'Kanala gönderileri göndermek için kullanılacak bir bot seçin.'
+        : 'Henüz bağlı bot yok. Yeni bir tane bağlamak için /addchannel yazın.'
+      }
+    bot_is_not_admin: Botu kanalın yöneticilerine ekleyin.
+    current_bot: Şu an kullanılan bot seçilemez.
+    sync_ok: 👌 Tamam. Veri senkronize edildi.
+    set_timezone: |
+      <b>Zaman Dilimi Ayarlama</b>
+      Bana şehrinizin adını gönderin, bu sayede zaman diliminizi belirleyeceğim. Zaman dilimi, zamanlanmış gönderilerin yönetimi için gerekli.
+    timezone: |
+      Şu anki zaman dilimi:
+      ${city ? '🔹 GMT ' + (gmt > 0 ? '+' + gmt : gmt) + '\n🔹 ' + timezone_id + ' – ' + city : '🔹 None'}
+      Zaman dilimini değiştirmek için, bana size yakın olan bir şehir adını gönderin.
+    check_timezone: |
+      · GMT ${timezone.gmtOffset > 0 ? '+' + timezone.gmtOffset : timezone.gmtOffset} (${timezone.timeZoneId})
+      · ${countryName}, ${name}
+      Doğru mu? Değilse, size yakın olan başka bir şehir adı göndermeyi deneyin.
+    error_timezone: Üzgünüm, bu şehri bulamıyorum. Size yakın olan başka bir şehir adı göndermeyi deneyin.
+    error_request_timezone: Bir şey ters gitti :( Lütfen tekrar deneyin. Değişmeyen bir şeyler varsa, @ControllerSupportBot ile bize mesaj gönderin.
+    save_timezone: Tamam, zaman diliminiz kaydedildi.
+
+post:
+  select_channel: Yeni gönderi oluşturmak için bir kanal seçin.
+  no_channels: |
+    Henüz bağlı kanal yok.
+    Yeni bir tane eklemek için /addchannel yazın.
+  error_check_channel: Bir şey ters gitti :( Lütfen tekrar deneyin. Değişmeyen bir şeyler varsa, @ControllerSupportBot ile bize mesaj gönderin.
+  channel_not_found: Kanal artık yok ya da ona erişiminiz yok. @ControllerBot'a geri dönün ve tekrar deneyin.
+  problems: |
+    ${channel.name} kanalında yeni gönderi oluşturulamaz. Şu sorunlar bulundu:
+    ${problems}
+    ${from.id == channel.owner_id
+      ? 'Sorunları düzeltmek için kanal ayarlarına gidin.'
+      : 'Kanal sahibi, kanal ayarlarına gitmeli ve sorunları düzeltmeli.'
+    }
+  problem_items: 
+    timezone_is_not_set: 🔹 zaman dilimi ayarlı değil
+    bot_is_not_connection: 🔹 kanal bir bota bağlı değil
+    channel_not_found: 🔹 kanal artık yok
+    bot_is_not_admin: 🔹 bağlı bot kanal yöneticilerine ekli değil
+    bot_was_deleted: 🔹 bağlı bot artık yok ya da onun tokenı sıfırlandı
+
+  start: |
+    Yeni bir kanal bağlamak ve gönderi oluşturmaya başlamak için @ControllerBot'a gidin.
+  make:
+    set_formatting: |
+      İlk olarak, varsayılan olarak kullanılacak bir format tarzı ayarlamanız gerekiyor.
+      Bir ipucu almak için /markdown veya /HTML yazın.
+      Çoğu kullanıcı Markdown kullanır, çünkü daha kısa ve kolaydır. Ayrıca yerel formatlamaya da izin verilir.
+    start: |
+      Kanal: <b>"${channel.name}"</b>${channel.username ? ' @' + channel.username : ''}.
+      Gönderiye dahil etmek istediğiniz bir veya birden fazla mesaj gönderin. Her şey olabilir — a metin, fotoğraf, video, çıkartma bile.
+    clear: Başarılı! Tüm mesajlar silindi.
+    message_deleted: Tamam! Mesaj silindi.
+    not_posts: Henüz mesaj yok.
+    not_posts_for_done: Henüz mesaj yok.
+    preview_sent: |
+      Gönderi önizlemesi yukarıda.
+      Gönderide <b>${pluralize(posts, 'message', 'messages', 'messages')}</b> kadar mesajınız var:
+      ${messages}
+    error_poll_not_anonymous: Üzgünüm, ama kanallara herkese açık anketler gönderemezsiniz.
+    error_parse: |
+      Metin formatlamada hatalar:
+      
+      <pre>${description}</pre>
+      
+      Lütfen <a href="http://telegra.ph/Parsing-Error-Fix-Controller-FAQ-03-28">tüm hataları çözün</a> ve tekrar gönderin.
+    continue_collect: Mesaj göndermeye devam edebilirsiniz. 
+    html: |
+      <b>kalın</b>
+      &lt;b&gt;kalın&lt;/b&gt;
+      
+      <i>eğik</i>
+      &lt;i&gt;eğik&lt;/i&gt;
+      
+      <a href="http://www.example.com/">bağlantı</a>
+      &lt;a href=&quot;http://www.example.com/&quot;&gt;bağlantı&lt;/a&gt;
+      
+      <code>tek satırlı kod</code>
+      &lt;code&gt;tek satırlı kod&lt;/code&gt;
+      
+      <pre>kod bloğu</pre>
+      &lt;pre&gt;kod bloğu&lt;/pre&gt;
+    markdown: |
+      <b>kalın metin</b>
+      *kalın metin*
+      
+      <i>eğik metin</i>
+      _eğik metin_
+      
+      <a href="http://www.example.com/">bağlantı</a>
+      [bağlantı](http://www.example.com/)
+      
+      <code>tek satırlı kod</code>
+      `tek satırlı kod`
+      
+      <pre>metin 
+      kod bloğu</pre>
+      ```metin 
+      kod bloğu
+      ```
+    canceled: Gönderi oluşturma iptal edildi.
+    inline:
+      welcome: |
+        Mesaj için bağlantı buton listesi gönderin. Lütfen bu formatı kullanın:
+        <pre>Buton metni 1 - http://www.example.com/ | Buton metni 2 - http://www.example2.com/
+        Buton metni 3 - http://www.example3.com/
+        </pre>
+        ${current ? '\nŞu anki butonlar:\n' + current : ''}
+        Gönderi oluşturmaya geri dönmek için 'İptal Et' butonunu seçin.
+      error: |
+        Bağlantı buton listesinde hatalar: <code>${error}</code>
+        
+        Lütfen tüm hataları düzeltin ve tekrar gönderin.
+      not_keyboard: |
+        Gönderdiğiniz mesaj, bağlantı buton listesi formatına uymuyor. Lütfen her şeyi iki kez kontrol edin ve tekrar deneyin.
+      save: Bağlantı butonları kaydedildi. Mesaj göndermeye devam edebilirsiniz.
+      cleared: Başarılı! Bağlantı butonları temizlendi.
+    reactions:
+      welcome: |
+        <a href="http://telegra.ph/file/dd1fcbdd1ebb1ce76ab59.jpg">&#8203;</a>Tepkiler eklemek için ifadeleri veya ayırıcı olarak <b>/</b> ekleyerek metni gönderin.
+        Örneğin:
+      not_found_smiles: |
+        Bir veya daha fazla ifade gönderin. Örneğin: 👍👎
+      save: Tepkiler kaydedildi. Mesaj göndermeye devam edebilirsiniz.
+      cleared: Başarılı! Tepkiler temizlendi.
+      notify: Sayaçlar, gönderdikten sonra kullanılabilir olacak.
+      default_reactions:
+        welcome: |
+          Tepkilerin yeni gönderilere otomatik olarak eklenmesini de ayarlayabilirsiniz. Bir veya daha fazla ifade gönderin. Örneğin: 👍👎
+          ${reactions.length ? 'Şu anki varsayılan tepkiler: ' + reactions.join(' ') : ''}
+        saved: Varsayılan tepkiler kaydedildi.
+        deleted: Varsayılan tepkiler devredışı bırakıldı.
+        canceled: Varsayılan tepkileri ayarlama iptal edildi.
+    image:
+      welcome: |
+        Bir bağlantı, fotoğraf, GIF veya video gönderin (5 MB'a kadar).
+      only_link_or_photo: Bir bağlantı, fotoğraf, GIF veya video gönderin (5 MB'a kadar).
+      error: |
+        Yüklenirken bir hata oluştu.
+        Sorun bildirmek için @ControllerSupportBot'a mesaj gönderin.
+      save: Medya eklendi.
+      cleared: Ekli medya silindi.
+
+  send:
+    count_posts: |
+      ${pluralize(count, 'message', 'messages', 'messages')}, <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''} kanalına gönderilmeye hazır.
+    choose_type: Gönderiyi ne zaman göndermek istiyorsunuz?
+    problems: |
+      ${channel.name} kanalında yeni gönderi oluşturulamaz. Şu sorunlar bulundu:
+      ${problems}
+      ${from.id == channel.owner_id
+        ? 'Sorunları düzeltmek için kanal ayarlarına gidin.'
+        : 'Kanal sahibi, kanal ayarlarına gitmeli ve sorunları düzeltmeli.'
+      }
+    cancel_send: Gönderi oluşturma iptal edildi.
+    continue_send: Mesaj göndermeye devam edebilirsiniz.
+    confirm_send: >
+      <b>${pluralize(posts, 'message', 'messages', 'messages')}</b>,
+      <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''} kanalına göndermek istediğinize emin misiniz?
+    waiting: 🕒 Gönderiliyor...
+    ok: Tamam!
+
+  schedule:
+    day:
+      today: bugün
+      tomorrow: yarın
+      after_tomorrow: ertesi gün
+    welcome: |
+      Gönderiyi ${day} göndermek istediğiniz zamanı gönderin.
+      Diğer günlere ayarlamak için zaman+tarih gönderin.
+      
+    help: |
+      <b>Desteklenen zaman formatları:</b>
+      <pre>"6" → 06:00
+      "5 3" → 05:03
+      "15:30" → 15:30
+      "1530" → 15:30</pre>
+      
+      <b>Desteklenen tarih formatları:</b>
+      <pre>"6" → şu anki ayın 6'sı
+      "9 12" → 9 Aralık
+      "8 7 18" → 8 Temmuz 2018</pre>
+      
+      Ayrıca ayırmak için boşluklar yerine iki nokta üst üste ve noktayı da kullanabilirsiniz. 
+      
+      Sadece zaman gönderirseniz, gönderi varsayılan olarak bugün o zaman için ayarlanacak. Başka bir güne zamanlamak için, zaman+tarih gönderin. Örneğin, <code>16 30 6 8 -> 16:30, 6 Ağustos</code>
+    error_date: Yanlış tarih veya zaman. Bir ipucu almak için 'Yardım' butonunu seçin.
+    invalid_date: Yanlış tarih.
+    limit: Şu anki zamandan 1 dakika veya daha fazla bir zaman seçmeniz gerekiyor. Şu anki tarih ve zaman, ${current_date}.
+    limit_year: 'Şu anki zamandan 1 yıl veya daha fazla bir zaman seçilemez. O gün ne olacağını kim bilir... :)'
+    ok: |
+       Zamanlanmış gönderi oluşturuldu. Gönderi, <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''} kanalına <b>${date}</b> tarihinde gönderilecek.
+  timer:
+    welcome: Gönderinin kendini imha edeceği bir saat aralığı seçin veya gönderin.
+    wrong_hour: Yanlış zaman. Sadece 1 - 48 saat aralığına izin verilir.
+    save_timer: İmha zamanlayıcısı kaydedildi.
+    timer_off: İmha zamanlayıcısı devredışı bırakıldı.
+posts:
+  edit:
+    welcome: Kanaldan düzenlemek istediğiniz bir mesajı bana iletin.
+    only_channel_post: |
+      Üzgünüm, sadece kanal mesajları düzenleme için uygundur.
+    channel_not_found: |
+      Bu kanal kullanılamaz. Kanal ve bot, Controller Bot'a bağlı olmalı. Lütfen her şeyi iki kez kontrol edin ve tekrar deneyin.
+    unsupported_type: |
+      Bu mesaj düzenlenemez. Sadece metin mesajlarını ve fotoğraf yazılarını düzenleyebilirsiniz.
+    post_not_found: |
+      Bu gönderi kullanılamaz. Kanal ve bot, Controller Bot'a bağlı olmalı. Lütfen her şeyi iki kez kontrol edin ve tekrar deneyin.
+    editing: |
+      Mesaj tipi: ${type_text}.${type == 'text' ? '\nFormatlama tarzı: ' + parse_mode : ''}
+      Bu tipi ${type == 'text' ? 'message' : 'caption. No more 1024 characters are allowed'} düzenlemek için yeni metin gönderin.
+    not_changed: 'Bir şeyler ters gitti :( Lütfen tekrar deneyin.'
+    edited: Başarılı! Mesaj düzenlendi.
+    continue_edit: Mesajı düzenlemeye devam edebilirsiniz.
+
+  edit_time: Gönderiyi başka bir güne tekrar zamanlamak için zaman+tarih gönderin.
+
+  types:
+    text: metin
+    audio: ses
+    document: dosya
+    photo: fotoğraf
+    sticker: çıkartma
+    video: video
+    voice: sesli mesaj
+    contact: kişi
+    location: konum
+    venue: nesne
+    video_note: video mesaj
+    poll: anket
+  types_emoji:
+    text: 📃
+    audio: 🎧
+    document: 📎
+    photo: 📷
+    sticker: 😊
+    video: 📹
+    voice: 🎙
+    contact: ☎️
+    location: 📍
+    venue: 🕹
+    video_note: 📹
+    poll: 📊
+  welcome_schedule: Zamanlanmış gönderileri yönetmek için bir kanal seçin.
+  not_schedule_posts: Henğz bu kanal için zamanlanmış gönderi yok.
+  choose_scheduled_post: Görmek veya silmek istediğiniz zamanlanmış gönderiyi seçin.
+  view_scheduled_post: |
+    ${messages}
+    🕘 ${date} › ${channel.username
+      ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>'
+      : channel.name
+    }
+    ${date_delete ? '🗑 ' + date_delete : ''}
+  confirm_delete_post: Bu zamanlanmış gönderiyi silmek istediğinize emin misiniz?
+  scheduled_post_was_deleted: Tamam! Zamanlanmış gönderi silindi.
+
+settings:
+  welcome: Değiştirmek istediğiniz şeyi seçin.
+
+  bots:
+    select_bot: |
+      ${count
+        ? 'Silmek istediğiniz botu seçin.'
+        : 'Henüz bağlı bot yok.'
+      }
+    channel_item: |
+      ${index}. ${name}
+    confirm_delete: |
+      ${count 
+        ? 'Bot bu kanallara bağlı:\n\n' + channels 
+        : 'Bot bir kanala bağlı değil.\n'
+      }
+      Bu botu silmek istediğinize emin misiniz?
+    bot_deleted: Tamam! Bot gitti.
+
+statistics:
+  select_channel: İstatistiklerini görmek istediğiniz bir kanalı seçin.
+  no_channels: |
+    Henüz ekli kanal yok.
+    
+    Yeni bir tane eklemek için /addchannel yazın.
+  selected_channel: 'Kanal: ${channel.name}. What do you want to do with stats?'
+  channel_not_found: Bu kanal kullanılamaz.
+  select_periods: İstatistikleri almak için bir aralık seçin.
+  loading_data: 🕒 Veri işleniyor ve grafik oluşturuluyor...
+  error_load_data: |
+    Veri işlenirken bir hata oluştu.
+     
+    Sorunu bildirmek için @ControllerSupportBot'a mesaj gönderin.
+  not_found_data: Bu kanal için henüz istatistik verisi yok. Daha sonra tekrar gel.
+  share_text: |
+    ${channel.name}${channel.username ? ' @' + channel.username : ''} kanalının istatistiklerini görmek için bağlantı
+  data: |
+    ${channel.username ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>' : channel.name} kanalının ${period == 'week'
+      ? 'son 7 gün'
+      : 'son 31 gün'
+    } için istatistikleri.
+    ${data}
+  chart:
+    title: |
+      ${channel.name}${channel.username ? ' @' + channel.username : ''} kanalı için istatistikler
+    copyright: Sağlayan @ControllerBot
+    label: aboneler
+
+bot:
+  start:
+    welcome: Burada zengin gönderiler oluşturabilir, istatistikleri görebilir ve diğer şeyleri yapabilirsiniz.
+
+  is_not_user: |
+    Bu botu kullanmaya başlamak için, @ControllerBot'a /start komutunu göndermeniz gerekiyor, sonra bu bota geri dönün ve "Devam Et" butonuna dokunun.
+  channels:
+    controller_updates_join_link: https://t.me/joinchat/AAAAAFNNAyKG1y7GopROHg
+    controller_updates_id: '-1001397556002'
+    controller_updates: |
+      🍀 Diğer haber ve yeni güncellemelerini kaçırmamak için Controller Bot'un <a href="https://t.me/joinchat/AAAAAFNNAyKG1y7GopROHg">resmi kanalına</a> katılın.
+      Kanala katılırsanız, bu mesaj bir daha görünmeyecek.
+    secretship_join_link: https://t.me/joinchat/AAAAAD63ENxmBG7CW3RG7A
+    secretship_id: '-1001052184796'
+    secretship: |
+      🍀 Bu botun geliştiricisi ve kurucusunun <a href="https://t.me/joinchat/AAAAAD63ENxmBG7CW3RG7A">kanalına</a> katılın.
+      Kanala katılırsanız, bu mesaj bir daha görünmeyecek.
+    bot_updates_join_link: https://t.me/joinchat/AAAAAD3PQl5OvYEEjS6RJw
+    bot_updates_id: '-1001036993118'
+    bot_updates: |
+      🍀 Bu botun geliştiricisi ve kurucusunun <a href="https://t.me/joinchat/AAAAAD3PQl5OvYEEjS6RJw">kanalına</a> katılın.
+      Kanala katılırsanız, bu mesaj bir daha görünmeyecek.
+  settings:
+    posting:
+      open: |
+        Burada varsayılan olarak kullanılacak formatlama tarzını ayarlayabilirsiniz. İpucu almak için /markdown veya /HTML yazın.
+        Ve tepkilerin yeni gönderilerdeki mesajlara otomatik olarak eklenmesini de ayarlayabilirsiniz.
+donate:
+  welcome: |
+    ☘️ <b>Bağış Yapın</b>
+    Bağışlarınız sayesinde, Yeni özellikleri ekleyebilecek, botların kararlılıklarını geliştirebilecek ve sunucu ücretlerini ödeyebileceğiz.
+    Bu mesaj ödeme sonrasında gizlenecek.
+    <i>Yardımlarınız için çok minnettarız,</i>
+    <a href="https://t.me/BotUpdates">Controller Bot Ekibi</a>
+  other_sum: Diğer miktar
+  enter_sum: Bağış miktarını girin.
+  incorrect_sum: Miktarı ruble cinsinden girin.
+
+  continue_use_bot: Sonra bağış yapacağım 😦
+  donate_controller: ☘️ Bağış Yap
+
+  select_price: |
+    Controller Bot Ekibi'ne bağış olarak <b>${sum} ₽</b> göndermek için "Öde" butonuna tıklayın.
+    Ödeme sonrasında, bu mesajı gizlemek için "Ödemeyi Kontrol Et" butonuna tıklayın.
+  pay: Öde
+  completed: Ödemeyi Kontrol Et
+  not_pay: Ödeme bulunamadı 😔
+  success_pay: Controller Bot Ekibi'ne bağışınız için teşekkürler! 😍
+
+  problem: Ödeme Sorunları
+  help: Bağış gönderme konusunda sorun yaşıyorsanız veya uygun bir ödeme yöntemi yoksa @ControllerSupportBot'a e-posta gönderin.
+
+btn:
+  common:
+    continue: Devam Et »
+    true: Evet, doğru
+    back: « Geri
+    cancel: İptal Et
+    off: Devredışı Bırak
+    help: Yardım
+    yes: Evet
+    no: Hayır
+    open_web: Controller Web'i Aç
+
+  menu:
+    create_post: Gönderi Oluştur
+    edit_sent_posts: Gönderi Düzenle
+    scheduled_posts: Zamanlanmış Gönderiler
+    channels: Kanallar
+    statistics: Kanal İstatistikleri
+    settings: Ayarlar
+
+  channels:
+    add_channel: Kanal Ekle
+    add_bot: Bot Bağla
+    add_change_bot: Bot Değiştir
+    channel_added: Gönderi Oluştur
+
+    how_to_create_bot: Nasıl bot oluşturulur?
+    how_to_create_bot_url: http://telegra.ph/Create-Bot-Controller-FAQ-03-28
+
+    control:
+      how_to_add_admin: Nasıl bir yönetici eklenir?
+      how_to_add_admin_url: http://telegra.ph/Admins-Controller-FAQ-03-28
+
+      update: Veri Güncelle
+      bot: Bağlı Botu Değiştir
+      timezone: Zaman Dilimini Değiştir
+      delete: Kanalı Sil
+
+      confirm_delete_yes: Evet
+      confirm_delete_no: Hayır
+
+  post:
+    settings: 
+      disable_notification_disable: 'Sessiz Yayın: KAPALI'
+      disable_notification_enable: 'Sessiz Yayın: AÇIK'
+      
+      disable_web_page_preview_disable: 'Bağlantı önizlemeleri: AÇIK'
+      disable_web_page_preview_enable: 'Bağlantı önizlemeleri: KAPALI'
+      
+      parse_mode_markdown: 'Formatlama Tarzı: Markdown'
+      parse_mode_html: 'Formatlama Tarzı: HTML'
+
+      default_reactions_disable: 'Varsayılan Tepkiler: KAPALI'
+      default_reactions_enable: 'Varsayılan Tepkiler: AÇIK'
+
+    faq: Controller Yardım
+    
+    control_channel: Kanal Ayarlarına Git
+    return_to_channels: « Kanal Listesine Dön
+
+    continue: Devam Et »
+
+    add_image: Medya Ekle
+    clear_image: Ekli Medyayı Sil
+
+    open_comments: Yorumları Aç
+    add_comments: Yorumları Ekle
+    delete_comments: Yorumları Sil
+    
+    add_inline: Bağlantı Butonları Ekle
+    clear_inline: Bağlantı Butonları Sil
+    
+    add_reactions: Tepkileri Ekle
+    clear_reactions: Tepkileri Sil
+
+    clear: Tümünü Sil 
+    preview: Önizle
+    done: Gönder
+    cancel: İptal Et
+
+    more: ⇣ Eylemleri Göster
+
+    delete: Mesajı Sil
+    silent_enable: 'Bildirim: AÇIK'
+    silent_disable: 'Bildirim: KAPALI'
+    preview_enable: 'Bağlantı Önizlemeleri: AÇIK'
+    preview_disable: 'Bağlantı Önizlemeleri: KAPALI'
+
+    send:
+      self_destruct_timer: "${+hours
+        ? 'İmha Zamanlayıcısı: ' + hours + 'h'
+        : 'İmha Zamanlayıcısı Ayarla'
+      }"
+      hours: ${hour}h
+      send_now: Şimdi Gönder
+      sent: Gönderiyi Kanalda Gör
+      create_scheduled: Zamanla
+      
+      send: Gönder
+      cancel: İptal Et
+
+    schedule:
+      today: |-
+        ${active ? '🔹 ' : ''}Bugün
+      tomorrow: |-
+        ${active ? '🔹 ' : ''}Yarın
+      after_tomorrow: |-
+        ${active ? '🔹 ' : ''}Ertesi Gün
+  settings:
+    bots: Bağlı Botları Yönet
+    delete_bot: Botu Sil
+    language: Dili Değiştir
+
+  posts:
+    edit:
+      edit_inline: Bağlantı Butonlarını Değiştir
+      original: Önceki Sürümünü Gör
+      clear_caption: fotoğraf Yazısını Sil
+      save: Değişiklikleri Kaydet
+      cancel: İptal Et
+      open_edited_post: Gönderiyi Kanalda Gör
+
+    view: Gönderiyi Gör
+    copy: Kopya Oluştur
+    edit_time: Zamanı Düzenle
+    delete: Gönderiyi Sil
+
+  statistics:
+    view_periods: Gör
+    view_via_web: Web Sayfası ile Gör
+    
+    periods:
+      one_week: Hafta
+      one_month: Ay
