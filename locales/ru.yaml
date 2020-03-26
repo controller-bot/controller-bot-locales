@@ -524,7 +524,6 @@ btn:
     help: Помощь
     yes: Да
     no: Нет
-    
 
   menu:
     create_post: Создать пост
