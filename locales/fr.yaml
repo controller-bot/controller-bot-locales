@@ -14,7 +14,6 @@ common:
 
     Vous pouvez me contrôller en envoyant ces commandes:
 
-    /web - create a new post via web
     /newpost - créer une nouvelle publication
 
     /addchannel - ajouter une nouvelle chaîne
@@ -32,13 +31,6 @@ common:
     /mychannels - editer vos chaînes
     /settings - autres réglages
     /lang - changer la langue
-
-  web: |
-    🦠 <b>Controller Web</b>
-
-    Tap on the button below to Open Controller Web and create rich posts via the browser.
-
-    <i>For security reasons, the login link will be available for 5 minutes. Tap </i>/web <i>to get a new one.</i>
 
 bots:
   add: |
@@ -477,7 +469,6 @@ btn:
     help: Aide
     yes: Yes
     no: No
-    open_web: Open Controller Web
 
   menu:
     create_post: Créer Publication
