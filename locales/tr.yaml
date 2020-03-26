@@ -136,7 +136,7 @@ post:
       Çoğu kullanıcı Markdown kullanır, çünkü daha kısa ve kolaydır. Ayrıca yerel formatlamaya da izin verilir.
     start: |
       Kanal: <b>"${channel.name}"</b>${channel.username ? ' @' + channel.username : ''}.
-      Gönderiye dahil etmek istediğiniz bir veya birden fazla mesaj gönderin. Her şey olabilir — a metin, fotoğraf, video, çıkartma bile.
+      Gönderiye dahil etmek istediğiniz bir veya birden fazla mesaj gönderin. Her şey olabilir — bir metin, fotoğraf, video, çıkartma bile.
     clear: Başarılı! Tüm mesajlar silindi.
     message_deleted: Tamam! Mesaj silindi.
     not_posts: Henüz mesaj yok.
