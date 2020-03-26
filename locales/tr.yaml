@@ -143,7 +143,7 @@ post:
     not_posts_for_done: Henüz mesaj yok.
     preview_sent: |
       Gönderi önizlemesi yukarıda.
-      Gönderide <b>${pluralize(posts, 'message', 'messages', 'messages')}</b> kadar mesajınız var:
+      Gönderide <b>${pluralize(posts, 'mesaj', 'mesaj', 'mesaj')}</b> kadar mesajınız var:
       ${messages}
     error_poll_not_anonymous: Üzgünüm, ama kanallara herkese açık anketler gönderemezsiniz.
     error_parse: |
