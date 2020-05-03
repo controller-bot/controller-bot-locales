@@ -10,7 +10,6 @@ common:
   start: |
     Telegram kanallarınızı yönetmene yardım edebilirim.
     Bu komutlarla beni kontrol edebilirsiniz:
-    /web - web ile yeni gönderi oluşturun
     /newpost - yeni gönderi oluşturun
     /addchannel - yeni kanal ekleyin
     /mychannels - kanallarınızı düzenleyin
@@ -24,10 +23,6 @@ common:
     /mychannels - kanallarınızı düzenleyin
     /settings - diğer ayarlar
     /lang - dil değiştirin
-  web: |
-    🦠 <b>Controller Web</b>
-    Controller Web'i açmak ve tarayıcıda gönderi oluşturmak için aşağıdaki butona dokunun.
-    <i>Güvenlik sebepleri için, bağlantı 5 dakika kullanılabilir olacak. Yeni bir tane almak için </i>/web <i>komutuna dokunun.</i>
 bots:
   add: |
     <b>Bot Bağlama</b>
@@ -452,7 +447,6 @@ btn:
     help: Yardım
     yes: Evet
     no: Hayır
-    open_web: Controller Web'i Aç
 
   menu:
     create_post: Gönderi Oluştur
