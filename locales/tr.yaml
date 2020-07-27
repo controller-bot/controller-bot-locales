@@ -316,6 +316,7 @@ posts:
     venue: nesne
     video_note: video mesaj
     poll: anket
+    album: albüm
   types_emoji:
     text: 📃
     audio: 🎧
@@ -329,6 +330,7 @@ posts:
     venue: 🕹
     video_note: 📹
     poll: 📊
+    album: 🖼
   welcome_schedule: Zamanlanmış gönderileri yönetmek için bir kanal seçin.
   not_schedule_posts: Henğz bu kanal için zamanlanmış gönderi yok.
   choose_scheduled_post: Görmek veya silmek istediğiniz zamanlanmış gönderiyi seçin.
