@@ -345,6 +345,7 @@ posts:
     venue: sede
     video_note: videomessaggio
     poll: sondaggio
+    album: album
   types_emoji:
     text: 📃
     audio: 🎧
@@ -358,6 +359,7 @@ posts:
     venue: 🕹
     video_note: 👁‍🗨
     poll: 📊
+    album: 🖼
   welcome_schedule: Scegli il canale di cui gestire i post programmati.
   not_schedule_posts: "Non c'è ancora alcun post programmato in questo canale."
   choose_scheduled_post: Scegli un post programmato che vuoi vedere.
