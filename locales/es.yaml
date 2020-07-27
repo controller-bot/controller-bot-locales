@@ -348,6 +348,7 @@ posts:
     venue: lugar de encuentro
     video_note: video mensaje
     poll: encuesta
+    album: álbum
   types_emoji:
     text: 📃
     audio: 🎧
@@ -361,6 +362,7 @@ posts:
     venue: 🕹
     video_note: 📹
     poll: 📊
+    album: 🖼
   welcome_schedule: Elija un canal para administrar las publicaciones programadas.
   not_schedule_posts: No hay publicaciones programadas todavía para este canal.
   choose_scheduled_post: Elija una publicación programada que desee ver o eliminar.
