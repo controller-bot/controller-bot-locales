@@ -1,0 +1,669 @@
+language_name: Chinese 
+is_enabled: true
+	
+
+move: |
+  所有主要功能（创建和编辑帖子、查看统计数据和定时发帖）均已被移至已连接机器人，不需要在机器人和Controller Bot之间不断切换。
+	
+	  请前往已连接机器人发送指令/start。
+	
+	common:
+	  choose_language: 请选择语言
+	
+
+	  start: |
+    我可以帮你管理Telegram频道。
+	
+	    你可以通过以下指令来控制我：
+	
+	    /newpost - 创建新帖
+	
+	    /addchannel - 添加频道
+	    /mychannels - 编辑频道
+	
+	    /settings - 其他设置
+	
+	  help: |
+如有疑问，请查看<a href="http://telegra.ph/Controller-Help-03-20">Controller Help</a>。
+
+    你可以通过以下指令来控制我：
+
+    /newpost - 创建新帖
+    /addchannel - 添加频道
+    /mychannels - 编辑频道
+    /settings - 其他设置
+    /lang -切换语言
+bots:
+  add: |
+    <b>Connecting a bot</b>
+	
+	    请遵循以下两步来连接机器人：
+	
+	    1. 打开@BotFather和<a href="http://telegra.ph/Create-Bot-Controller-FAQ-03-28">来创建新机器人</a>.
+	2. 你会得到一个令牌（比如：12345:6789ABCDEF），把它转发给我或复制粘贴给我即可。
+	    
+	<b>警告！</b>不要连接Chatfuel、Manybot等其他平台已经使用的机器人 
+	
+	  wrong_token: 无法识别。请发给我你的机器人的令牌。
+	  error_add: 无效令牌。请获取新令牌或使用另一个机器人的令牌。
+	  bot_already_added: 看着眼熟。你已经连接了这个机器人。
+	
+
+	channels:
+	  welcome: |
+    <b>频道管理</b>
+	
+	    ${count
+	      ? '请从下面的列表中选择频道:'
+	      : '暂无已添加频道。' 
+	    }
+	  add:
+	    select_bot: |
+      请选择一个将用于在频道发帖的机器人
+	    welcome: |
+      <b>添加频道</b> 
+	
+	      请遵循以下两步来添加频道：
+	    
+	      1.  <a href="http://telegra.ph/Add-Bot-to-Admins-Controller-FAQ-03-28">添加 @${username} 为频道管理员</a>
+
+	      2. 然后从你的频道转发给我任意信息（也可发给我频道的用户名或ID）。
+	    added: |
+      频道${channel.username ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>' : '<b>' + channel.name + '</b>'}添加成功。
+	
+	      前往@${bot_username}创建新帖。
+	
+	      你的频道的全体管理员都可用该机器人在频道创建新帖。
+	
+	      添加新管理员后，请去频道设置点击“更新资料”来更新管理员名单
+	
+	    error:
+	      data: |
+        请从你的频道任意转发一条信息给我，或者把频道的用户名或ID发给我。
+	      channel_not_found: 没有找到该频道。
+	      you_are_not_administrator: 你不是该频道的管理员。
+	      you_do_not_have_rights: 你无权在该频道发布消息。
+	      bot_is_not_admin: 添加@${username}为频道管理员。请复查后重试。
+	      bot_is_not_admin_in_group: @${username}添加为群组管理员后重试。
+	      bot_was_deleted: |
+        无法添加频道。@${username} 不存在或令牌已被撤销。重新连接这个机器人或选择另一个机器人。
+	      channel_already_added: 该频道已被添加。前往@${bot_username}创建新帖。
+	      group_already_added: |
+        该频道已被${admin.first_name}${admin.last_name ? ' ' + admin.last_name : ''}${admin.username ? ' @' + admin.username : ''}添加
+	
+	  control:
+	    options: |
+      这是${channel.name}。你想对该频道进行什么操作？
+	    delete_confirm: |
+      确定要删除该频道吗？
+	      
+	      该频道的所有定时帖和统计记录都会被一并删除。
+	    channel_deleted: 频道删除完毕。
+	    select_bot: |
+      ${count
+	        ? '选择一个你想用来在该频道发贴机器人。' 
+	        : '没有已连接的机器人。请发送/addchannel来连接机器人。' 
+	      }
+	    bot_is_not_admin: 把该机器人添加为你的频道的管理员。
+	    current_bot: 无法选择当前使用的机器人。
+	    sync_ok: 👌数据已同步。
+	    set_timezone: |
+      <b>设置时区</b> 
+	
+	      发给我你所在城市的名称，我就可以判断你的时区。设置时区后才能管理定时贴。
+	    timezone: |
+      Current time zone: 当前时区
+	      ${city ? '🔹 GMT ' + (gmt > 0 ? '+' + gmt : gmt) + '\n🔹 ' + timezone_id + ' – ' + city : '🔹未设置'} 
+	
+	      请发给我附近城市的名称以便更改时区。
+	    check_timezone: |
+      · GMT ${timezone.gmtOffset > 0 ? '+' + timezone.gmtOffset : timezone.gmtOffset} (${timezone.timeZoneId})
+	      · ${countryName}, ${name}
+	
+	      时区是否正确？如果不正确，请发给我另一个附近城市的名称。
+	    error_timezone: 抱歉，我没有找到该城市。请发给我另一个附近城市的名称。
+	    error_request_timezone: 发生错误:(请重试。如果问题仍未消除，请联系@ControllerSupportBot。
+	    save_timezone: 时区设置已保存。
+	
+
+	post:
+	  select_channel: 请选择一个频道来创建新帖。
+	  no_channels: |
+    暂没有已添加的频道。
+	
+	    要添加频道请发送/addchannel。
+	  error_check_channel: 发生错误:(请重试。如果问题仍未消除，请联系@ControllerSupportBot。
+	  channel_not_found: 频道不存在或者你没有访问权限。请退回@ControllerBot重试。
+	  problems: |
+    无法在${channel.name}创建新帖。发现问题：${problems}
+	
+	
+	
+	${from.id == channel.owner_id
+	      ? '请前往频道设置解决问题。' 
+	      : '频道创建者应前往频道设置解决问题。' 
+	    }
+	  problem_items: 
+	    timezone_is_not_set: 🔹 未设置时区
+	    bot_is_not_connection: 🔹 频道没有与任何机器人连接
+	    channel_not_found: 🔹 频道已不存在
+	    bot_is_not_admin: 🔹 已连接机器人没有被添加为频道管理员
+	    bot_was_deleted: 🔹 该已连接机器人已不存在，或者它的令牌被撤销。
+	
+
+	  start: |
+    前往@ControllerBot连接新频道并开始创建帖子。
+	
+	  make:
+	    set_formatting: |
+      首先请设置默认格式化风格。
+	
+	      请发送/markdown或/HTML来获取提示。
+	
+	      大多数用户选择Markdown，因为它更短、更简单。
+	    start: |
+      这是<b>"${channel.name}"</b>${channel.username ? ' @' + channel.username : ''}。
+	
+	      用一条或多条消息发给我你想加到帖子里的文字、照片、视频或贴纸。
+	    clear: 成功删除全部消息。
+	    message_deleted: 这条消息被删除。
+	    not_posts: 尚没有任何消息。
+	    not_posts_for_done: 尚没有任何消息。
+	    preview_sent: |
+      帖子预览请见上方。
+	
+	      该贴含有<b>${pluralize(posts, '条消息', '条消息', '条消息')}</b>：
+	      ${messages} 条消息
+	    error_poll_not_anonymous: Sorry, but you can\'t send non-anonymous polls to channels. 抱歉，你不能向频道发送非匿名意见调查。
+	    error_parse: |
+      文本格式化出错：
+	      
+	      <pre>${description}</pre>
+	      
+	      请<a href="http://telegra.ph/Parsing-Error-Fix-Controller-FAQ-03-28">修复所有错误后</a>再发送消息。
+	    continue_collect: You can continue to send me messages. 你可以继续向我发送消息。
+	    html: |
+      <b>加粗</b>  
+	      &lt;b&gt;加粗&lt;/b&gt;
+	      
+	      <i>斜体</i>   
+	      &lt;i&gt;斜体&lt;/i&gt;  
+	      
+	      <a href="http://www.example.com/">内联 URL</a>
+	      &lt;a href=&quot;http://www.example.com/&quot;&gt; 内联URL&lt;/a&gt;  
+	      
+	      <code>内联固定宽度代码</code> 
+	      &lt;code&gt; 内联固定宽度代码&lt;/code&gt; 
+	      
+	      <pre>预格式化的固定宽度代码块</pre> 
+	      &lt;pre&gt; 预格式化的固定宽度
+	      代码块&lt;/pre&gt;  
+	    markdown: |
+      <b>粗体文本</b> 
+	      *粗体文本*   
+	      
+	      <i>斜体文本</i>  
+	      _斜体文本_  
+	      
+	      <a href="http://www.example.com/">text</a>
+	      [text](http://www.example.com/)
+	      
+	      <code>内联固定宽度代码</code>  
+	      `内联固定宽度代码`  
+	       
+	      <pre>text  文本
+	      预格式化的固定宽度代码块</pre>  
+	      ```预格式化的固定宽度
+	      代码块
+	      ```
+	    canceled: 帖子创建被取消。
+	    inline:
+	      welcome: |
+        请发给我用于本消息的URL按钮列表。请使用该格式：
+	        <pre>按钮文本1 - http://www.example.com/ |按钮文本2 - http://www.example2.com/
+	        按钮文本 3 - http://www.example3.com/   
+
+	        </pre>
+	        ${current ? '\n当前按钮:\n' + current : ''} 
+
+	
+	        选择“取消”继续创建帖子。
+	      error: |
+        URL按钮列表错误: <code>${error}</code>   
+	        
+	        请修复所有错误并重新发送消息。
+	      not_keyboard: |
+        你发送的消息与URL按钮列表的格式不符。请复查后重试。
+	      save: URL按钮保存成功。可以继续向我发送消息。
+	      cleared: URL按钮清除完毕。
+	    reactions:
+	      welcome: |
+        <a href="http://telegra.ph/file/dd1fcbdd1ebb1ce76ab59.jpg">&#8203;</a>发给我用 <b>/</b> 间隔的表情或文本，以便添加反应。
+	
+	        比如： 
+	      not_found_smiles: |
+        请发给我一个或多个表情，比如：👍👎  
+	      save: 表情保存成功。可以继续向我发送消息。
+	      cleared: 反应清除完毕。
+	      notify: 反应计数器将在发布后启动。
+	      default_reactions:
+	        welcome: |
+          你可以设置将自动添加到新贴消息中的反应。请发给我一个或多个表情，比如：👍👎
+	
+	          ${reactions.length ? '当前默认反应: ' + reactions.join(' ') : ''}  
+	        saved: 默认反应保存成功。
+	        deleted: 默认反应已关闭。
+	        canceled: 默认反应的设置已被取消。
+	    image:
+	      welcome: |
+	        请发给我一个链接、图像或视频（不超过5 MB）。
+	      only_link_or_photo: 请发给我一个链接、图像、GIF或视频（不超过5 MB）。
+	      error: |
+	        上传时发生错误。
+	
+	        请联系@ControllerSupportBot报告问题。
+	      save: 媒体文件附加成功。
+	      cleared: 附加媒体文件已删除。
+	
+
+	  send:
+	    count_posts: |
+	      ${pluralize(count, '消息', '消息', '消息')} 已可以发布到<b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''}。
+
+
+	    choose_type: When you want to send the post? 你想在什么时间发布该贴？
+	    problems: |
+      无法在${channel.name}创建新帖。发现以下问题：
+	
+	      ${problems}
+	
+	      ${from.id == channel.owner_id
+	        ? '请前往频道设置解决问题。' 
+	        : '频道创建者应前往频道设置解决问题。' 
+	      }
+	    cancel_send: 帖子发布被取消。
+	    continue_send: 可以继续向我发送消息。
+	    confirm_send: >
+      确定要将<b>${pluralize(帖子, '消息', '消息', '消息')}</b>发到<b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''}吗？
+	
+	    waiting: 🕒 发送中……
+	    ok: 完成！
+	
+
+	  schedule:
+	    day:
+	      today: 今天
+	      tomorrow: 明天
+	      after_tomorrow: 后天
+	    welcome: |
+      请发给我发帖时间${day}。
+	      如非当天发帖请发给我发帖的时间+日期。
+	      
+	    help: |
+      <b>支持以下时间格式:</b> 
+	      <pre>"6" → 06:00
+	      "5 3" → 05:03
+	      "15:30" → 15:30
+	      "1530" → 15:30</pre>
+	      
+	      <b>支持以下日期格式:</b> 
+	      <pre>"6" → 本月6日
+	      "9 12" → 12月9日
+	      "8 7 18" → 2018年6月8日</pre> 
+	     
+	      除空格外你也可以用冒号和点号来进行间隔。 
+	      如果你只发送时间，帖子将默认在当天发布。如非当天发帖请发给我发帖的时间+日期。比如<code>16 30 6 8 -> 16:30, 8月6日</code>
+
+	    error_date: 错误日期或时间。请选择“帮助”来获取提示。
+	    invalid_date: 错误日期。
+	    limit: 定时发布时间必须至少比当前时间晚一分钟。当前日期和时间是${current_date}. 
+	    limit_year: '定时发帖时间距离现在不能超过一年。以后的事谁能知道…… :)' 
+	    ok: |
+       已创建定时帖。帖子将于<b>${date}</b>发布到<b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''}。
+	
+	  timer:
+	    welcome: 帖子应在几小时后自动删除？请选择或发送倒计时小时数。
+	    wrong_hour: 选择1至48小时。
+	    save_timer: 自动删帖倒计时器已保存。
+	    timer_off: 自动删贴倒计时已停止。
+	posts:
+	  edit:
+	    welcome: 请从你的频道把需要编辑的帖子转发给我。
+	    only_channel_post: |
+      抱歉，只能编辑来自频道的消息。
+	    channel_not_found: |
+      没有找到该频道。请检查频道和用来发送消息的机器人是否都与Controller Bot连接。
+	    unsupported_type: |
+      无法编辑此消息。只能编辑文本消息和图片及视频的说明文字。
+	    post_not_found: |
+      没有找到该贴。请检查频道和用来发消息的机器人是否都与Controller Bot连接。
+	    editing: |
+      消息格式：${type_text}.${type == 'text' ? '\n格式化风格: ' + parse_mode : ''}
+	
+	      发送新文本，编辑${type == 'text' ? '消息' : '说明文字。不得超过1024个字符'}。
+	    not_changed: '出错了:( 请重试。'
+	    edited: Success! 消息编辑成功。
+	    continue_edit: 可以继续编辑这条消息。
+	
+
+	  edit_time: 发送时间+日期来修改非当日定时贴的发布时间
+	
+
+	  types:
+	    text: 文本
+	    audio: 音频
+	    document: 文件
+	    photo: 照片
+	    sticker: 贴纸
+	    video: 视频
+	    voice: 语音消息
+	    contact: 联系方式
+	    location: 地点
+	    venue: 场所
+	    video_note: 视频消息
+	    poll: 意见调查
+	    album: 相册
+	  types_emoji:
+	    text: 📃
+	    audio: 🎧
+	    document: 📎
+	    photo: 📷
+	    sticker: 😊
+	    video: 📹
+	    voice: 🎙
+	    contact: ☎️
+	    location: 📍
+	    venue: 🕹
+	    video_note: 📹
+	    poll: 📊
+	    album: 🖼
+	  welcome_schedule: 选择频道来管理定时贴。
+	  not_schedule_posts: 该频道暂没有定时贴。
+	  choose_scheduled_post: 选择你想浏览或删除的定时贴。
+	  view_scheduled_post: |
+    ${messages}
+	    🕘 ${date} › ${channel.username
+	      ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>'
+	      : channel.name
+	    }
+	    ${date_delete ? '🗑 ' + date_delete : ''}
+	  confirm_delete_post: 确定要删除该定时贴吗？
+	  scheduled_post_was_deleted: 定时贴删除成功。
+	
+
+	settings:
+	  welcome: 选择你想修改的设置。
+	
+
+	  bots:
+	    select_bot: |
+      ${count
+	        ? '选择你想删除的机器人。' 
+	        : '没有已连接的机器人。' 
+	      }
+	    channel_item: |
+      ${index}. ${name}
+	    confirm_delete: |
+      ${count 
+	        ? '该机器人已与这些频道连接:\n\n' + channels  ? 
+	        : '该机器人没有与任何频道连接。\n'  
+	      }
+	      确定要删除该机器人吗？
+	    bot_deleted: 机器人删除成功。
+	
+
+	statistics:
+	  select_channel: 你想浏览哪个频道的统计数据？请选择。
+	  no_channels: |
+    没有已添加频道。
+	    发送/addchannel来添加新频道。
+	  selected_channel: 这是${channel.name}。你希望对统计数据进行什么操作？
+	  channel_not_found: 没有找到该频道。
+	  select_periods: 你希望浏览哪个时期的统计数据？请选择。
+	  loading_data: 🕒 正在处理数据并绘制图表……
+	  error_load_data: |
+    处理数据时出错。
+	    请联系@ControllerSupportBot报告问题。
+	  not_found_data: 该频道暂没有统计数据。请晚些时候再来查看。
+	  share_text: |
+    ${channel.name}${channel.username ? ' @' + channel.username : ''}统计数据的链接
+	  data: |
+${channel.username ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>' : channel.name} ${period == 'week'的统计数据
+	      ? '过去7天'  
+	      : '过去31天'  
+	    }.
+	
+	    ${data}
+	  chart:
+	    title: |
+      ${channel.name}${channel.username ? ' @' + channel.username : ''}的统计数  
+	    copyright: 基于@ControllerBot
+	    label: 订阅者
+	
+
+	bot:
+	  start:
+	    welcome: 你可在此这里创建帖子、浏览统计数据或完成其他任务。
+	
+
+	  is_not_user: |
+    如想启用该机器人，请向@ControllerBot发送/start指令，然后回到该机器人点击“继续”按钮。
+	
+	  channels:
+	    controller_updates_join_link: https://t.me/joinchat/AAAAAFNNAyKG1y7GopROHg
+	    controller_updates_id: '-1001397556002'
+	    controller_updates: |
+      🍀 订阅 <a href="https://t.me/joinchat/AAAAAFNNAyKG1y7GopROHg">official channel</a> Controller Bot的官方频道</a>，以便了解最新更新和其他消息。
+	
+	      订阅该频道后这则消息将被隐藏。
+	
+	    secretship_join_link: https://t.me/joinchat/AAAAAD63ENxmBG7CW3RG7A
+	    secretship_id: '-1001052184796'
+	    secretship: |
+      🍀 订阅<a href="https://t.me/joinchat/AAAAAD63ENxmBG7CW3RG7A">the channel该机器人创始人和开发员创建的频道</a>。
+	
+	      这则消息将在你订阅该频道后隐藏。
+	
+	    bot_updates_join_link: https://t.me/joinchat/AAAAAD3PQl5OvYEEjS6RJw
+	    bot_updates_id: '-1001036993118'
+	    bot_updates: |
+      🍀 订阅<a href="https://t.me/joinchat/AAAAAD3PQl5OvYEEjS6RJw">该机器人创始人和开发员创建的频道</a>。 
+	
+	      订阅该频道后这则消息将被隐藏。
+	
+	  settings:
+	    posting:
+	      open: |
+        你可在此设置默认格式化风格。发送/markdown或/HTML来获取提示。
+	
+	        也可设置将被自动加入新帖的反应。
+	
+	donate:
+	  welcome: |
+    ☘️ <b>捐款</b> 
+	
+	    借助您的捐款，我们将能够添加新功能、增强机器人稳定性并支付服务器费用。
+	
+	    捐款后这则消息将被隐藏。
+	
+	    <i>非常感谢你的帮助，</i>
+	<a href="https://t.me/BotUpdates">Controller Bot团队</a>
+
+	
+	  other_sum: 其他金额
+	  enter_sum: 输入捐款金额。
+	  incorrect_sum: 输入卢布金额。
+	
+
+	  continue_use_bot: 我想晚些时候再捐款。😦  
+	  donate_controller: ☘️ 捐款
+	
+
+	  select_price: |
+    点击“支付”按钮将<b>${sum} ₽</b>以捐款形式发给Controller Bot团队
+	
+	    支付后请点击“检查付款”按钮来隐藏该消息。
+	  pay: 支付
+	  completed: 检查付款  
+	  not_pay: 没有查到款项。😔  
+	  success_pay: 感谢你对Controller Bot团队的捐助！😍
+	
+	  problem: 付款出现问题
+	  help: 如果无法发送捐款或者没有合适的付款方式，请联系@ControllerSupportBot。
+	
+
+	btn:
+	  common:
+	    continue: 继续» 
+	    true: Yes, It's Right 没错
+	    back: « 返回
+	    cancel: 取消
+	    off: 关闭
+	    help: 帮助
+	    yes: 是
+	    no: 否
+	
+
+	  menu:
+	    create_post: 创建帖子
+	    edit_sent_posts: 编辑帖子
+	    scheduled_posts: 定时贴
+	    channels: 频道
+	    statistics: 频道统计数据
+	    settings: 设置
+	
+
+	  channels:
+	    add_channel: 添加频道
+	    add_bot: 连接机器人
+	    add_change_bot: 更换机器人
+	    channel_added: 创建帖子
+	
+
+	    how_to_create_bot: 如何创建机器人？
+	    how_to_create_bot_url: http://telegra.ph/Create-Bot-Controller-FAQ-03-28
+	
+
+	    control:
+	      how_to_add_admin: 如何添加管理员？
+	      how_to_add_admin_url: http://telegra.ph/Admins-Controller-FAQ-03-28
+	
+
+	      update: 更新数据
+	      bot: 更换已连接机器人
+	      timezone: 更改时区
+	      delete: 删除频道
+	
+
+	      confirm_delete_yes: 是
+	      confirm_delete_no: 否
+	
+
+	  post:
+	    settings: 
+	      disable_notification_disable: '无声消息：关闭' 
+	      disable_notification_enable: '无声消息：开启' 
+	      
+	      disable_web_page_preview_disable: '链接预览：开启' 
+	      disable_web_page_preview_enable: '链接预览：关闭' 
+	      
+	      parse_mode_markdown: '格式化风格：Markdown' 
+	      parse_mode_html: '格式化风格：HTML' 
+	
+
+	      default_reactions_disable: '默认反应：关闭' 
+	      default_reactions_enable: '默认反应：开启' 
+	
+
+	    faq: Controller Help  帮助
+	    
+	    control_channel: 前往频道设置
+	    return_to_channels: « 返回频道列表
+	
+
+	    continue: 继续 »  
+	
+
+	    add_image: 附加媒体文件
+	    clear_image: 删除附加媒体文件
+	
+
+	    open_comments: 打开评论
+	    add_comments: 添加评论
+	    delete_comments: 删除评论
+	    
+	    add_inline: 添加URL按钮
+	    clear_inline: 删除URL按钮
+	    
+	    add_reactions: 添加反应
+	    clear_reactions: 删除反应
+	
+
+	    clear: 全部清除
+	    preview: 预览
+	    done: Send 发布
+	    cancel: 取消
+	
+
+	    more: ⇣ 显示反应
+	
+
+	    delete: 删除消息
+	    silent_enable: '通知：开启' 
+	    silent_disable: '通知：关闭' 
+	    preview_enable: '链接预览：开启' 
+	    preview_disable: '链接预览：关闭' 
+	
+
+	    send:
+	      self_destruct_timer: "${+hours
+	        ? 'Self-Destruct Timer: ' + hours + 'h'
+	        : '设置自动删除倒计时器'  
+	      }"
+	      hours: ${hour}h
+	      send_now: 立即发布
+	      sent: 在频道内查看帖子
+	      create_scheduled: Enqueue 定时
+	      
+	      send: 发布
+	      cancel: 取消
+	
+
+	    schedule:
+	      today: |-
+        ${active ? '🔹 ' : ''}今天
+	      tomorrow: |-
+        ${active ? '🔹 ' : ''}明天
+	      after_tomorrow: |-
+        ${active ? '🔹 ' : ''}后天
+	
+	  settings:
+	    bots: 管理已连接的机器人
+	    delete_bot: 删除机器人
+	    language:更换语言
+	
+
+	  posts:
+	    edit:
+	      edit_inline: 更换URL按钮
+	      original:查看先前版本
+	      clear_caption: 删除说明文字
+	      save: 保存改动
+	      cancel: 取消
+	      open_edited_post:在频道内查看帖子
+	
+
+	    view:查看帖子
+	    copy:建立副本
+	    edit_time:编辑时间
+	    delete:删除帖子
+	
+
+	  statistics:
+	    view_periods: 查看
+	    view_via_web: 通过网页查看
+	    
+	    periods:
+	      one_week: 一周
+	      one_month: 一个月
+
