@@ -348,6 +348,7 @@ posts:
     venue: venue
     video_note: video message
     poll: sondage
+    album: album
   types_emoji:
     text: 📃
     audio: 🎧
@@ -361,6 +362,7 @@ posts:
     venue: 🕹
     video_note: 📹
     poll: 📊
+    album: 🖼
   welcome_schedule: Choisissez une chaîne pour gérer les publications programmés.
   not_schedule_posts: Il n\'y a pas encore de publication planifiée pour cette chaîne.
   choose_scheduled_post: choisissez une publication planifiée que vous souhaitez afficher ou supprimer.
