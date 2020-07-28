@@ -190,8 +190,10 @@ post:
       <code>testo a larghezza fissa</code>
       &lt;code&gt;testo a larghezza fissa&lt;/code&gt;
       
-      <pre>blocco di testo a larghezza fissa</pre>
-      &lt;pre&gt;blocco di testo a larghezza fissa&lt;/pre&gt;
+      <pre>blocco di testo
+      a larghezza fissa</pre>
+      &lt;pre&gt;blocco di testo
+      a larghezza fissa&lt;/pre&gt;
     markdown: |
       <b>grassetto</b>
       *grassetto*
@@ -205,8 +207,10 @@ post:
       <code>testo a larghezza fissa</code>
       `testo a larghezza fissa`
       
-      <pre>blocco di testo a larghezza fissa</pre>
-      ```blocco di testo a larghezza fissa```
+      <pre>blocco di testo
+      a larghezza fissa</pre>
+      ```blocco di testo
+      a larghezza fissa```
     canceled: La creazione del post è stata annullata.
     inline:
       welcome: |
