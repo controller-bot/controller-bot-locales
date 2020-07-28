@@ -83,7 +83,7 @@ channels:
       you_are_not_administrator: 你不是该频道的管理员。
       you_do_not_have_rights: 你无权在该频道发布消息。
       bot_is_not_admin: 添加@${username}为频道管理员。请复查后重试。
-      bot_is_not_admin_in_group: @${username}添加为群组管理员后重试。
+      bot_is_not_admin_in_group: '@${username} 添加为群组管理员后重试。'
       bot_was_deleted: |
         无法添加频道。@${username} 不存在或令牌已被撤销。重新连接这个机器人或选择另一个机器人。
       channel_already_added: 该频道已被添加。前往@${bot_username}创建新帖。
@@ -403,7 +403,7 @@ settings:
       ${index}. ${name}
     confirm_delete: |
       ${count
-         ? '该机器人已与这些频道连接:\n\n' + channels  ?
+         ? '该机器人已与这些频道连接:\n\n' + channels
          : '该机器人没有与任何频道连接。\n'
        }
        确定要删除该机器人吗？
@@ -636,16 +636,16 @@ btn:
   posts:
     edit:
       edit_inline: 更换URL按钮
-      original:查看先前版本
+      original: 查看先前版本
       clear_caption: 删除说明文字
       save: 保存改动
       cancel: 取消
-      open_edited_post:在频道内查看帖子
+      open_edited_post: 在频道内查看帖子
 
-    view:查看帖子
-    copy:建立副本
-    edit_time:编辑时间
-    delete:删除帖子
+    view: 查看帖子
+    copy: 建立副本
+    edit_time: 编辑时间
+    delete: 删除帖子
 
   statistics:
     view_periods: 查看
