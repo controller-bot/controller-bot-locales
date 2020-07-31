@@ -329,7 +329,8 @@ posts:
       Message type: ${type_text}.${type == 'text' ? '\nFormatting style: ' + parse_mode : ''}
 
       Send a new text to edit this ${type == 'text' ? 'message' : 'caption. No more 1024 characters are allowed'}.
-    not_changed: 'Something went wrong :( Please try again.'
+    not_changed: |-
+      Message isn't changed.
     edited: Success! Message has been edited.
     continue_edit: You can continue to edit the message.
 
