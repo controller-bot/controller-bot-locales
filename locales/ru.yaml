@@ -564,8 +564,9 @@ btn:
       disable_web_page_preview_disable: 'Предпросмотр ссылок: вкл.'
       disable_web_page_preview_enable: 'Предпросмотр ссылок: выкл.'
 
-      parse_mode_markdown: 'Форматирование: Markdown'
-      parse_mode_html: 'Форматирование: HTML'
+      parse_mode_markdown: 'Автоформатирование: Markdown'
+      parse_mode_html: 'Автоформатирование: HTML'
+      parse_mode_none: 'Автоформатирование: выкл.'
 
       default_reactions_disable: 'Реакции по умолчанию: выкл.'
       default_reactions_enable: 'Реакции по умолчанию: вкл.'

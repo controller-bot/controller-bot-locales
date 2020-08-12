@@ -540,8 +540,9 @@ btn:
       disable_web_page_preview_disable: 'Link Previews: ON'
       disable_web_page_preview_enable: 'Link Previews: OFF'
       
-      parse_mode_markdown: 'Formatting Style: Markdown'
-      parse_mode_html: 'Formatting Style: HTML'
+      parse_mode_markdown: 'Auto Formatting: Markdown'
+      parse_mode_html: 'Auto Formatting: HTML'
+      parse_mode_none: 'Auto Formatting: OFF'
 
       default_reactions_disable: 'Default Reactions: OFF'
       default_reactions_enable: 'Default Reactions: ON'
