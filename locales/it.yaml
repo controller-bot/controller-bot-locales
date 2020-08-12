@@ -536,8 +536,9 @@ btn:
       disable_web_page_preview_disable: 'Anteprima link: Sì'
       disable_web_page_preview_enable: 'Anteprima link: No'
       
-      parse_mode_markdown: 'Formattazione: Markdown'
-      parse_mode_html: 'Formattazione: HTML'
+      parse_mode_markdown: 'Formattazione automatica: Markdown'
+      parse_mode_html: 'Formattazione automatica: HTML'
+      parse_mode_none: 'Formattazione automatica: No'
 
       default_reactions_disable: 'Reazioni predefinite: No'
       default_reactions_enable: 'Reazioni predefinite: Sì'
