@@ -109,7 +109,7 @@ channels:
 
       Ora inviami il nome della tua città, così potrò determinare il tuo fuso orario. Il fuso orario è necessario per gestire i post programmati.
     timezone: |
-      Fuso orario corrente:
+      Fuso orario attuale:
       ${city ? '🔹 GMT ' + (gmt > 0 ? '+' + gmt : gmt) + '\n🔹 ' + timezone_id + ' – ' + city : '🔹 None'}
 
       Inviami il nome di una città vicina a te per cambiare il fuso orarip.
@@ -401,9 +401,9 @@ statistics:
   selected_channel: 'Eccoci: ${channel.name}. Cosa vuoi fare con le statistiche?'
   channel_not_found: Questo canale non è stato trovato.
   select_periods: Scegli il periodo di tempo di cui vuoi vedere le statistiche.
-  loading_data: 🕒 Processo i dati e creo il grafico...
+  loading_data: 🕒 Elaboro i dati e creo il grafico...
   error_load_data: |
-    È stato riscontrato un errore durante il processo dei dati.
+    È stato riscontrato un errore durante l'elaborazione dei dati.
      
     Scrivici a @ControllerSupportBot per segnalare un problema.
   not_found_data: Non ci sono ancora abbastanza dati. Torna più tardi.
@@ -464,22 +464,30 @@ donate:
 
     Grazie alle tue donazioni, potremo aggiungere nuove funzioni, migliorare la stabilità del bot e pagare i server.
 
-    Questo messaggio sarà nascosto dopo la donazione.
+    Questo messaggio sarà nascosto dopo aver donato.
 
     <i>Il tuo aiuto è molto apprezzato,</i>
     <a href="https://t.me/BotUpdates">Il team di Controller Bot</a>
 
   other_sum: Altro importo
-  enter_sum: "Inserisci l'importo della donazione."
-  incorrect_sum: "Inserisci l'importo in rubli (1 euro è circa 75 rubli)."
+  enter_sum: |
+    Importo non valido. Inserisci l'importo della donazione in rubli.
+
+    1 € equivale a circa 80 ₽, ma il tasso di cambio può variare.
+    Prima di donare, assicurati di aver controllato <a href="https://mercati.ilsole24ore.com/tassi-e-valute/valute/contro-euro/cambio/RUBVS.FX">il valore attuale dell'euro rispetto al rublo</a>.
+  incorrect_sum: |
+    Importo non valido. Inserisci l'importo della donazione in rubli.
+
+    1 € equivale a circa 80 ₽, ma il tasso di cambio può variare.
+    Prima di donare, assicurati di aver controllato <a href="https://mercati.ilsole24ore.com/tassi-e-valute/valute/contro-euro/cambio/RUBVS.FX">il valore attuale dell'euro rispetto al rublo</a>.
 
   continue_use_bot: Donerò più tardi 😦
   donate_controller: ☘️ Dona
 
   select_price: |
-    Clicca il tasto "Dona" per inviare <b>${sum} ₽</b> come donazione al team di Controller Bot.
+    Premi il pulsante "Dona" per inviare <b>${sum} ₽</b> come donazione al team di Controller Bot.
 
-    Dopo la donazione, clicca "Controlla" per nascondere questo messaggio.
+    Dopo la donazione, premi il pulsante "Controlla" per nascondere questo messaggio.
   pay: Dona
   completed: Controlla
   not_pay: Donazione non trovata 😔
