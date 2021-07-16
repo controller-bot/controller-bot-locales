@@ -1,12 +1,12 @@
 ---
-language_name: English
+language_name: Англійская
 is_enabled: true
 move: |
   All the main functions like creating and editing posts, view stats and scheduled posts were moved to connected bots, so you no longer need to switch between your bot and Controller Bot every time!
 
   Go to your connected bot and send the command /start.
 common:
-  choose_language: Please choose your language.
+  choose_language: Абярыце мову.
   start: |
     I can help you manage Telegram channels.
 
@@ -39,8 +39,8 @@ bots:
 
     <b>Warning!</b> Don't connect bots already used by other services like Chatfuel, Manybot, ect.
   wrong_token: Doesn't look like anything to me. Please send me a token of your bot.
-  error_add: Invalid token. Try to get a new one or use a token of another bot.
-  bot_already_added: Looks familiar to me. You already have this bot connected.
+  error_add: Хібны токен. Паспрабуйце атрымаць новы токен або выкарыстайце токен іншага бота.
+  bot_already_added: Гэты бот ужо падлучаны.
 channels:
   welcome: |2
     <b>Channel managment</b>
@@ -264,11 +264,11 @@ post:
     confirm_send: >
       Are you sure you want to send <b>${pluralize(posts, 'message', 'messages', 'messages')}</b> to <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''}?
     waiting: '🕒 Sending...'
-    ok: Done!
+    ok: Завершана!
   schedule:
     day:
-      today: today
-      tomorrow: tomorrow
+      today: сёння
+      tomorrow: заўтра
       after_tomorrow: overmorrow
     welcome: |
       Send time at which you want to send the post ${day}.
@@ -320,19 +320,19 @@ posts:
     continue_edit: You can continue to edit the message.
   edit_time: Send time+date to re-enqueue the post at any other day.
   types:
-    text: text
-    audio: audio
-    document: file
-    photo: photo
+    text: тэкст
+    audio: аўдыё
+    document: файл
+    photo: фотаздымкі
     sticker: sticker
-    video: video
+    video: відэа
     voice: voice message
-    contact: contact
-    location: location
+    contact: кантакт
+    location: размяшчэнне
     venue: venue
     video_note: video message
     poll: poll
-    album: album
+    album: альбом
   types_emoji:
     text: '📃'
     audio: '🎧'
@@ -454,7 +454,7 @@ donate:
     Click the "Pay" button to send <b>${sum} ₽</b> as a donation to the Controller Bot Team.
 
     After payment, click the "Check Payment" button to hide this message.
-  pay: Pay
+  pay: Заплаціць
   completed: Check Payment
   not_pay: Payment not found 😔
   success_pay: Thank you for your donation to the Controller Bot Team! 😍
@@ -463,23 +463,23 @@ donate:
 btn:
   common:
     continue: Continue »
-    true: Yes, It's Right
-    back: '« Back'
-    cancel: Cancel
-    off: Disable
-    help: Help
+    true: Так
+    back: '« Назад'
+    cancel: Скасаваць
+    off: Выключыць
+    help: Даведка
     yes: true
     no: false
   menu:
     create_post: Create Post
     edit_sent_posts: Edit Post
     scheduled_posts: Scheduled Posts
-    channels: Channels
+    channels: Каналы
     statistics: Channel Stats
-    settings: Settings
+    settings: Налады
   channels:
     add_channel: Add Channel
-    add_bot: Connect Bot
+    add_bot: Падлучыць бота
     add_change_bot: Change Bot
     channel_added: Create Post
     how_to_create_bot: How to create bot?
@@ -489,8 +489,8 @@ btn:
       how_to_add_admin_url: http://telegra.ph/Admins-Controller-FAQ-03-28
       update: Update Data
       bot: Change Connected Bot
-      timezone: Change Time Zone
-      delete: Delete Channel
+      timezone: Змяніць часавы пояс
+      delete: Выдаліць канал
       confirm_delete_yes: true
       confirm_delete_no: false
   post:
@@ -517,12 +517,12 @@ btn:
     clear_inline: Delete URL Buttons
     add_reactions: Add Reactions
     clear_reactions: Delete Reactions
-    clear: Delete All
-    preview: Preview
-    done: Send
-    cancel: Cancel
+    clear: Выдаліць усё
+    preview: Папярэдні прагляд
+    done: Адправіць
+    cancel: Скасаваць
     more: '⇣ Show Actions'
-    delete: Delete Message
+    delete: Выдаліць паведамленне
     silent_enable: 'Notify: ON'
     silent_disable: 'Notify: OFF'
     preview_enable: 'Link Previews: ON'
@@ -530,11 +530,11 @@ btn:
     send:
       self_destruct_timer: "${+hours ? 'Self-Destruct Timer: ' + hours + 'h' : 'Set Self-Destruct Timer' }"
       hours: '${hour}h'
-      send_now: Send Now
+      send_now: Адправіць зараз
       sent: View Post in Channel
-      create_scheduled: Enqueue
-      send: Send
-      cancel: Cancel
+      create_scheduled: У канец чаргі
+      send: Адправіць
+      cancel: Скасаваць
     schedule:
       today: |-
         ${active ? '🔹 ' : ''}Today
@@ -544,23 +544,23 @@ btn:
         ${active ? '🔹 ' : ''}Overmorrow
   settings:
     bots: Manage Connected Bots
-    delete_bot: Delete Bot
-    language: Change Language
+    delete_bot: Выдаліць бота
+    language: Падлучыць мову
   posts:
     edit:
       edit_inline: Change URL-buttons
       original: View Previous Version
       clear_caption: Delete Caption
-      save: Save Changes
-      cancel: Cancel
+      save: Захаваць змены
+      cancel: Скасаваць
       open_edited_post: View Post in Channel
     view: View Post
     copy: Create Copy
     edit_time: Edit Time
     delete: Delete Post
   statistics:
-    view_periods: View
+    view_periods: Агляд
     view_via_web: View via Webpage
     periods:
-      one_week: Week
-      one_month: Month
+      one_week: Тыдзень
+      one_month: Месяц
