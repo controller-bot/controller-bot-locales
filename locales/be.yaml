@@ -1,5 +1,5 @@
 ---
-language_name: Англійская
+language_name: Беларуская
 is_enabled: true
 move: |
   All the main functions like creating and editing posts, view stats and scheduled posts were moved to connected bots, so you no longer need to switch between your bot and Controller Bot every time!
@@ -466,7 +466,7 @@ btn:
     true: Так
     back: '« Назад'
     cancel: Скасаваць
-    off: Выключыць
+    off: Адключыць
     help: Даведка
     yes: true
     no: false
@@ -545,7 +545,7 @@ btn:
   settings:
     bots: Manage Connected Bots
     delete_bot: Выдаліць бота
-    language: Падлучыць мову
+    language: Змяніць мову
   posts:
     edit:
       edit_inline: Change URL-buttons
