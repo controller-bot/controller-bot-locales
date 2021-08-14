@@ -38,16 +38,16 @@ bots:
     2. Вы атрымаеце токен (кшталту 12345:6789ABCDEF) — скапіюйце і ўстаўце яго сюды.
 
     <b>Увага!</b> Не падлучайце боты, якія ўжо выкарыстоўваюцца іншымі ботамі кшталту Chatfuel, Manybot і інш.
-  wrong_token: Doesn't look like anything to me. Please send me a token of your bot.
+  wrong_token: Гэта не токен бота. Адпраўце мне токен вашага бота.
   error_add: Хібны токен. Паспрабуйце атрымаць новы токен або выкарыстайце токен іншага бота.
   bot_already_added: Гэты бот ужо падлучаны.
 channels:
   welcome: |2
-    <b>Channel managment</b>
+    <b>Кіраванне каналамі</b>
 
     ${count
-      ? 'Choose a channel from the list below:'
-      : 'There is no added channels yet.'
+      ? 'Абярыце канал са спіса:'
+      : 'Вы пакуль што не дадалі каналаў.'
     }
   add:
     select_bot: |
