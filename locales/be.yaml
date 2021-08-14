@@ -2,42 +2,42 @@
 language_name: Беларуская
 is_enabled: true
 move: |
-  All the main functions like creating and editing posts, view stats and scheduled posts were moved to connected bots, so you no longer need to switch between your bot and Controller Bot every time!
+  Усе асноўныя функцыі кшталту стварэння і рэдагавання допісаў, прагляду статыстыкі і стварэння адтэрмінаваных допісаў былі перамешчаныя ў падлучаных ботаў, каб у вас не было патрэбы штораз пераключацца паміж падлучанымі ботамі і Controller Bot!
 
-  Go to your connected bot and send the command /start.
+  Перайдзіце ў падлучанага бота і ўвядзіце загад "/start".
 common:
   choose_language: Абярыце мову.
   start: |
-    I can help you manage Telegram channels.
+    Я дапамагаю вам кіраваць каналамі Telegram.
 
-    You can control me by sending these commands:
+    Я магу выконваць наступныя загады:
 
-    /newpost - create a new post
+    /newpost - стварыць новы допіс
 
-    /addchannel - add a new channel
-    /mychannels - edit your channels
+    /addchannel - дадаць новы канал
+    /mychannels - рэдагаванне вашых каналаў
 
-    /settings - other settings
+    /settings - іншыя налады
   help: |
-    If you have any questions, take a look at the <a href="http://telegra.ph/Controller-Help-03-20">Controller Help</a>.
+    Калі ў вас ёсць пытанні, звярніцеся да<a href="http://telegra.ph/Controller-Help-03-20">Даведкі</a>.
 
-    You can control me by sending these commands:
+    Вы можаце кіраваць мною з дапамогай наступных загадаў:
 
-    /newpost - create a new post
-    /addchannel - add a new channel
-    /mychannels - edit your channels
-    /settings - other settings
-    /lang - change language
+    /newpost - стварыць новы допіс
+    /addchannel - дадаць новы канал
+    /mychannels - рэдагаванне вашых каналаў
+    /settings - іншыя налады
+    /lang - змяніць мову
 bots:
   add: |
-    <b>Connecting a bot</b>
+    <b>Падлучэнне бота</b>
 
-    To connect a bot, you should follow these two steps:
+    Каб падлучыць бота, выканайце наступныя дзеянні:
 
-    1. Open @BotFather and <a href="http://telegra.ph/Create-Bot-Controller-FAQ-03-28">create a new bot</a>.
-    2. You’ll get a token (e.g. 12345:6789ABCDEF) — just forward or copy-paste it to me.
+    1. Адкрыйце @BotFather і <a href="http://telegra.ph/Create-Bot-Controller-FAQ-03-28">стварыце новага бота</a>.
+    2. Вы атрымаеце токен (кшталту 12345:6789ABCDEF) — скапіюйце і ўстаўце яго сюды.
 
-    <b>Warning!</b> Don't connect bots already used by other services like Chatfuel, Manybot, ect.
+    <b>Увага!</b> Не падлучайце боты, якія ўжо выкарыстоўваюцца іншымі ботамі кшталту Chatfuel, Manybot і інш.
   wrong_token: Doesn't look like anything to me. Please send me a token of your bot.
   error_add: Хібны токен. Паспрабуйце атрымаць новы токен або выкарыстайце токен іншага бота.
   bot_already_added: Гэты бот ужо падлучаны.
