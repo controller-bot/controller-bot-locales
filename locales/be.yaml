@@ -235,8 +235,8 @@ post:
         canceled: Даданне прадвызначаных рэакцый скасавана.
     image:
       welcome: |
-        Send me a link, image, GIF or video (up to 5 MB).
-      only_link_or_photo: Send me a link, image, GIF or video (up to 5 MB).
+        Адпраўце мне спасылку, выяву, GIF або відэа (не больш за 5 Мб).
+      only_link_or_photo: Адпраўце мне спасылку, выяву, GIF або відэа (не больш за 5 Мб).
       error: |
         An error occurred while uploading.
 
