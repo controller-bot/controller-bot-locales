@@ -454,7 +454,7 @@ donate:
   pay: Заплаціць
   completed: Праверыць плацеж
   not_pay: Плацеж не знойдзены 😔
-  success_pay: Thank you for your donation to the Controller Bot Team! 😍
+  success_pay: Дзякуй за падтрымку каманды Controller Bot! 😍
   problem: Праблемы з аплатай
   help: Калі ў вас ёсць праблемы з адпраўленнем ахвяравання або няма патрэбнага спосабу аплаты, напішыце нам у @ControllerSupportBot.
 btn:
@@ -469,10 +469,10 @@ btn:
     no: false
   menu:
     create_post: Стварыць допіс
-    edit_sent_posts: Edit Post
+    edit_sent_posts: Рэдагаваць допіс
     scheduled_posts: Адтэрмінаваныя допісы
     channels: Каналы
-    statistics: Channel Stats
+    statistics: Статыстыка канала
     settings: Налады
   channels:
     add_channel: Дадаць канал
@@ -482,20 +482,20 @@ btn:
     how_to_create_bot: Як стварыць бота?
     how_to_create_bot_url: http://telegra.ph/Create-Bot-Controller-FAQ-03-28
     control:
-      how_to_add_admin: How to add an admin?
+      how_to_add_admin: Як дадаць адміністратара?
       how_to_add_admin_url: http://telegra.ph/Admins-Controller-FAQ-03-28
-      update: Update Data
-      bot: Change Connected Bot
+      update: Абнавіць даныя
+      bot: Змяніць бота
       timezone: Змяніць часавы пояс
       delete: Выдаліць канал
       confirm_delete_yes: true
       confirm_delete_no: false
   post:
     settings:
-      disable_notification_disable: 'Silent Broadcast: OFF'
-      disable_notification_enable: 'Silent Broadcast: ON'
-      disable_web_page_preview_disable: 'Link Previews: ON'
-      disable_web_page_preview_enable: 'Link Previews: OFF'
+      disable_notification_disable: 'Гукавое апавяшчэнне: адкл.'
+      disable_notification_enable: 'Гукавое апавяшчэнне: укл.'
+      disable_web_page_preview_disable: 'Папярэдні прагляд спасылак: укл.'
+      disable_web_page_preview_enable: 'Папярэдні прагляд спасылак: адкл.'
       parse_mode_markdown: 'Auto Formatting: Markdown'
       parse_mode_html: 'Auto Formatting: HTML'
       parse_mode_none: 'Auto Formatting: OFF'
