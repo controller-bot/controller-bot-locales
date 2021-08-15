@@ -308,27 +308,27 @@ posts:
     post_not_found: |
       Гэты допіс недаступны. Канал і бот, праз які публікуюцца допісы, мусяць быць падлучаныя да Controller Bot. Яшчэ раз усё праверце і паўтарыце спробу.
     editing: |
-      Message type: ${type_text}.${type == 'text' ? '\nFormatting style: ' + parse_mode : ''}
+      Тып паведамлення: ${type_text}.${type == 'text' ? '\nСтыль фарматавання: ' + parse_mode : ''}
 
-      Send a new text to edit this ${type == 'text' ? 'message' : 'caption. No more 1024 characters are allowed'}.
+      Адпраўце тэкст, каб змяніць ${type == 'text' ? 'паведамленне' : 'апісанне. Не больш за 1024 сімвалы'}.
     not_changed: |-
-      Message isn't changed.
-    edited: Success! Message has been edited.
-    continue_edit: You can continue to edit the message.
-  edit_time: Send time+date to re-enqueue the post at any other day.
+      Паведамленне не зменена.
+    edited: Паведамленне зменена.
+    continue_edit: Вы можаце працягнуць рэдагаванне паведамлення.
+  edit_time: Адпраўце час і дату, на якую хочаце перанесці публікацыю допіса.
   types:
     text: тэкст
     audio: аўдыё
     document: файл
     photo: фотаздымкі
-    sticker: sticker
+    sticker: налепка
     video: відэа
-    voice: voice message
+    voice: галасавое паведамленне
     contact: кантакт
     location: размяшчэнне
-    venue: venue
-    video_note: video message
-    poll: poll
+    venue: элемент
+    video_note: відэапаведамленне
+    poll: апытанне
     album: альбом
   types_emoji:
     text: '📃'
@@ -344,9 +344,9 @@ posts:
     video_note: '📹'
     poll: '📊'
     album: '🖼'
-  welcome_schedule: Choose a channel to manage scheduled posts.
-  not_schedule_posts: There is no scheduled posts for this channel in yet.
-  choose_scheduled_post: Choose a scheduled post you want to view or delete.
+  welcome_schedule: Абярыце канал, у якім хочаце кіраваць адтэрмінаванымі допісамі.
+  not_schedule_posts: Для гэтага канала няма адтэрмінаваных допісаў.
+  choose_scheduled_post: Абярыце адтэрмінаваны допіс, які хочаце паглядзець або выдаліць.
   view_scheduled_post: |2
     ${messages}
     🕘 ${date} › ${channel.username
@@ -354,112 +354,112 @@ posts:
       : channel.name
     }
     ${date_delete ? '🗑 ' + date_delete : ''}
-  confirm_delete_post: Are you sure you want to delete this scheduled post?
-  scheduled_post_was_deleted: Done! Scheduled post has been deleted.
+  confirm_delete_post: Сапраўды хочаце выдаліць гэты адтэрмінаваны допіс?
+  scheduled_post_was_deleted: Адтэрмінаваны допіс выдалены.
 settings:
-  welcome: Choose what you want to change.
+  welcome: Што вы хочаце наладзіць?
   bots:
     select_bot: |2
       ${count
-        ? 'Choose a bot you want to delete.'
-        : 'There is no connected bots yet.'
+        ? 'Абярыце бота, якога хочаце выдаліць.'
+        : 'У вас няма падлучаных ботаў.'
       }
     channel_item: |
       ${index}. ${name}
     confirm_delete: |2
       ${count
-        ? 'The bot is connected with these channels:\n\n' + channels
-        : 'The bot is not connected with any channels.\n'
+        ? 'Гэты бот падлучаны да наступных каналаў:\n\n' + channels
+        : 'Бот не падлучаны да каналаў.\n'
       }
-      Are you sure you want to delete this bot?
-    bot_deleted: Done! The bot is gone.
+      Сапраўды хочаце выдаліць гэтага бота?
+    bot_deleted: Бот выдалены.
 statistics:
-  select_channel: Choose a channel to view stats.
+  select_channel: Абярыце канал, для якога хочаце паглядзець статыстыку.
   no_channels: |
-    There is no added channels yet.
+    У вас няма дададзеных каналаў.
 
-    Send /addchannel to add a new one.
-  selected_channel: 'Here it is: ${channel.name}. What do you want to do with stats?'
-  channel_not_found: This channel is not available.
-  select_periods: Choose a period you want to get stats.
-  loading_data: '🕒 Processing the data and rendering graphs...'
+    Увядзіце "/addchannel", каб дадаць новы.
+  selected_channel: 'Вы абралі канал "${channel.name}". Што вы хочаце зрабіць з статыстычнымі звесткамі?'
+  channel_not_found: Гэты канал недаступны.
+  select_periods: Абярыце перыяд, за які хочаце паглядзець статыстыку.
+  loading_data: '🕒 Апрацоўванне даных і стварэнне графіка...'
   error_load_data: |
-    An error occurred while data processing.
+    Падчас апрацоўвання даных адбылася памылка.
 
-    Message us at @ControllerSupportBot to report an issue.
-  not_found_data: There is no stats data for this channel yet. Come back later.
+    Напішыце ў @ControllerSupportBot.
+  not_found_data: Няма даных. Паспрабуйце пазней.
   share_text: |
-    Here is the link to view stats of ${channel.name}${channel.username ? ' @' + channel.username : ''}
+    Гэта спасылка для прагляду статыстыкі канала ${channel.name}${channel.username ? ' @' + channel.username : ''}
   data: |2
-    Stats of ${channel.username ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>' : channel.name} for ${period == 'week'
-      ? 'the last 7 days'
-      : 'the last 31 day'
+    Статыстыка канала ${channel.username ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>' : channel.name} за ${period == 'week'
+      ? 'апошнія 7 дзён'
+      : 'апошні 31 дзень'
     }.
 
     ${data}
   chart:
     title: |
-      Stats for ${channel.name}${channel.username ? ' @' + channel.username : ''}
-    copyright: Powered by @ControllerBot
-    label: subscribers
+      Статыстыка канала ${channel.name}${channel.username ? ' @' + channel.username : ''}
+    copyright: Створана з дапамогай @ControllerBot
+    label: падпісанты
 bot:
   start:
-    welcome: Here you can create rich posts, view stats and accomplish other tasks.
+    welcome: Тут вы можаце ствараць допісы, праглядаць статыстыку і выконваць іншыя задачы.
   is_not_user: |
-    To start using this bot, you need to send the command /start to @ControllerBot, then go back to this bot and tap the "Continue" button.
+    Каб пачаць выкарыстоўваць гэтага бота, неабходна адправіць у @ControllerBot загад "/start", вярнуцца сюды і націснуць "Працягнуць".
   channels:
     controller_updates_join_link: https://t.me/joinchat/AAAAAFNNAyKG1y7GopROHg
     controller_updates_id: '-1001397556002'
     controller_updates: |
-      🍀 Join on the <a href="https://t.me/joinchat/AAAAAFNNAyKG1y7GopROHg">official channel</a> of Controller Bot to be aware of new updates and other news of the bot.
+      🍀 Падпішыцеся на <a href="https://t.me/joinchat/AAAAAFNNAyKG1y7GopROHg">афіцыйны канал</a> Controller Bot, каб сачыць за навінамі.
 
-      This message will not show if you join the channel.
+      Паведамленне знікне пасля таго, як вы падпішацеся на канал.
     secretship_join_link: https://t.me/joinchat/AAAAAD63ENxmBG7CW3RG7A
     secretship_id: '-1001052184796'
     secretship: |
-      🍀 Join on <a href="https://t.me/joinchat/AAAAAD63ENxmBG7CW3RG7A">the channel</a> of the founder and developer of this bot.
+      🍀 Падпішыцеся на <a href="https://t.me/joinchat/AAAAAD63ENxmBG7CW3RG7A">канал</a> распрацоўніка Controller Bot, каб сачыць за навінамі.
 
-      This message will not show if you join the channel.
+      Паведамленне знікне пасля таго, як вы падпішацеся на канал.
     bot_updates_join_link: https://t.me/joinchat/AAAAAD3PQl5OvYEEjS6RJw
     bot_updates_id: '-1001036993118'
     bot_updates: |
-      🍀 Join on <a href="https://t.me/joinchat/AAAAAD3PQl5OvYEEjS6RJw">the channel</a> of the founder and developer of this bot.
+      🍀 Падпішыцеся на <a href="https://t.me/joinchat/AAAAAD3PQl5OvYEEjS6RJw">канал</a> распрацоўніка Controller Bot, каб сачыць за навінамі.
 
-      This message will not show if you join the channel.
+      Паведамленне знікне пасля таго, як вы падпішацеся на канал.
   settings:
     posting:
       open: |
-        Here you can set the formatting style that will be used by default. Send /markdown or /HTML to get a hint.
+        Тут вы можаце абраць прадвызначанае фарматаванне. Адпраўце /markdown або /HTML, каб паглядзець апісанне.
 
-        And set reactions that will be automatically added to messages in new posts as well.
+        Таксама тут можна наладзіць прадвызначаныя рэакцыі, якія будуць дадавацца падчас стварэння новых допісаў.
 donate:
   welcome: |
-    ☘️ <b>Donate</b>
+    ☘️ <b>Ахвяраванне</b>
 
-    Thanks to your donations, we will be able to add new features, improve the stability of bots and pay for servers.
+    Дзякуй за ваша ахвяраванне. Сродкі пойдуць на развіццё бота і аплату сервераў.
 
-    This message will be hidden after paid.
+    Гэтае паведамленне знікне пасля аплаты.
 
-    <i>Your help is greatly appreciated,</i>
-    <a href="https://t.me/BotUpdates">Controller Bot Team</a>
-  other_sum: Other amount
-  enter_sum: Enter amount of donation.
-  incorrect_sum: Enter the amount in rubles.
-  continue_use_bot: I will donate later 😦
-  donate_controller: '☘️ Donate'
+    <i>Мы вельмі ўдзячныя за дапамогу,</i>
+    <a href="https://t.me/BotUpdates">каманда Controller Bot</a>
+  other_sum: Іншая сума
+  enter_sum: Увядзіце суму ахвяравання.
+  incorrect_sum: Увядзіце суму ў расійскіх рублях.
+  continue_use_bot: Я ахвярую пазней 😦
+  donate_controller: '☘️ Ахвяраваць'
   select_price: |
-    Click the "Pay" button to send <b>${sum} ₽</b> as a donation to the Controller Bot Team.
+    Націсніце "Аплаціць", каб азвяраваць <b>${sum} ₽</b> для каманды Controller Bot.
 
-    After payment, click the "Check Payment" button to hide this message.
+    Пасля аплаты націсніце "Праверыць плацеж", каб схаваць гэтае паведамленне.
   pay: Заплаціць
-  completed: Check Payment
-  not_pay: Payment not found 😔
+  completed: Праверыць плацеж
+  not_pay: Плацеж не знойдзены 😔
   success_pay: Thank you for your donation to the Controller Bot Team! 😍
-  problem: Проблемы с оплатой
-  help: Напишите нам в @ControllerSupportBot, если у вас есть проблемы с отправкой пожертвования или нет подходящего способа оплаты.
+  problem: Праблемы з аплатай
+  help: Калі ў вас ёсць праблемы з адпраўленнем ахвяравання або няма патрэбнага спосабу аплаты, напішыце нам у @ControllerSupportBot.
 btn:
   common:
-    continue: Continue »
+    continue: Працягнуць »
     true: Так
     back: '« Назад'
     cancel: Скасаваць
@@ -468,18 +468,18 @@ btn:
     yes: true
     no: false
   menu:
-    create_post: Create Post
+    create_post: Стварыць допіс
     edit_sent_posts: Edit Post
-    scheduled_posts: Scheduled Posts
+    scheduled_posts: Адтэрмінаваныя допісы
     channels: Каналы
     statistics: Channel Stats
     settings: Налады
   channels:
-    add_channel: Add Channel
+    add_channel: Дадаць канал
     add_bot: Падлучыць бота
     add_change_bot: Змяніць бота
     channel_added: Стварыць допіс
-    how_to_create_bot: How to create bot?
+    how_to_create_bot: Як стварыць бота?
     how_to_create_bot_url: http://telegra.ph/Create-Bot-Controller-FAQ-03-28
     control:
       how_to_add_admin: How to add an admin?
@@ -504,12 +504,12 @@ btn:
     faq: Controller Help
     control_channel: Go to Channel Settings
     return_to_channels: '« Back to Channels List'
-    continue: Continue »
+    continue: Працягнуць »
     add_image: Attach Media
     clear_image: Delete Attached Media
-    open_comments: Open Comments
-    add_comments: Add Comments
-    delete_comments: Delete Comments
+    open_comments: Адкрыць каментары
+    add_comments: Дадаць каментары
+    delete_comments: Выдаліць каментары
     add_inline: Add URL Buttons
     clear_inline: Delete URL Buttons
     add_reactions: Add Reactions
@@ -554,7 +554,7 @@ btn:
     view: View Post
     copy: Create Copy
     edit_time: Edit Time
-    delete: Delete Post
+    delete: Выдаліць допіс
   statistics:
     view_periods: Агляд
     view_via_web: View via Webpage
