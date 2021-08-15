@@ -97,54 +97,54 @@ channels:
     current_bot: Нельга дадаць бота, які ўжо выкарыстоўваецца.
     sync_ok: '👌. Даныя сінхранізаваныя.'
     set_timezone: |
-      <b>Setting the time zone</b>
+      <b>Налады часавага пояса</b>
 
-      Now send me the name of your city, so I will be able to determine your time zone. Your time zone is required for the management of scheduled posts.
+      Адпраўце мне назву вашага горада, каб я мог вызначыць ваш часавы пояс. Гэта неабходна для стварэння адтэрмінаваных допісаў.
     timezone: |
-      Current time zone:
+      Бягучы часавы пояс:
       ${city ? '🔹 GMT ' + (gmt > 0 ? '+' + gmt : gmt) + '\n🔹 ' + timezone_id + ' – ' + city : '🔹 None'}
 
-      Send me the name of the city close to you to change the time zone.
+      Адпраўце назву горада, каб змяніць часавы пояс.
     check_timezone: |
       · GMT ${timezone.gmtOffset > 0 ? '+' + timezone.gmtOffset : timezone.gmtOffset} (${timezone.timeZoneId})
       · ${countryName}, ${name}
 
-      Is it right? If not, try to send me the name of another city close to you.
-    error_timezone: Sorry, I can't find this city. Try to send me the name of another city close to you.
-    error_request_timezone: Something went wrong :( Please try again. Send us a message to @ControllerSupportBot if for some reason it doesn't change anything.
-    save_timezone: OK, your timezone saved.
+      Правільна? Калі не, паспрабуйце адправіць мне назву іншага горада побач з вамі.
+    error_timezone: Выбачайце, я не змог знайсці гэты горад. Паспрабуйце адправіць мне назву іншага горада побач з вамі.
+    error_request_timezone: Нешта пайшло не так :( Паспрабуйце пазней або напішыце ў @ControllerSupportBot, калі праблема не вырашаецца.
+    save_timezone: Часавы пояс захаваны.
 post:
-  select_channel: Choose a channel to create a new post.
+  select_channel: Абярыце канал, у якім хочаце стварыць новы допіс.
   no_channels: |
-    There is no added channels yet.
+    У вас няма дададзеных каналаў.
 
-    Send /addchannel to add a new one.
-  error_check_channel: Something went wrong :( Please try again. Send us a message to @ControllerSupportBot if for some reason it doesn't change anything.
-  channel_not_found: The channel doesn't exist, or you don't have access to it. Go back to @ControllerBot and try again.
+    Увядзіце "/addchannel", каб дадаць новы.
+  error_check_channel: Нешта пайшло не так :( Паспрабуйце пазней або напішыце ў @ControllerSupportBot, калі праблема не вырашаецца.
+  channel_not_found: Такога канала няма або вы не маеце доступу да яго. Вярніцеся ў @ControllerBot і паспрабуйце зноў.
   problems: |2
-    Unable to create a new post in ${channel.name}. The next issues found:
+    Не атрымалася стварыць допіс на канале "${channel.name}". Выяўлены наступныя праблемы:
 
     ${problems}
 
     ${from.id == channel.owner_id
-      ? 'Go to the channel settings to fix the issues.'
-      : 'The creator of the channel should go to the channel settings and fix the issues.'
+      ? 'Перайдзіце ў канал і выпраўце праблемы.'
+      : 'Стваральніку канала патрэбна перайсці ў налады канала і выправіць праблемы.'
     }
   problem_items:
-    timezone_is_not_set: '🔹 the time zone is not set'
-    bot_is_not_connection: '🔹 the channel is not connected to a bot'
-    channel_not_found: '🔹 the channel is no longer exist'
-    bot_is_not_admin: '🔹 the connected bot is not added to the channel admins'
-    bot_was_deleted: '🔹 the connected bot is no longer exist, or its token was revoked'
+    timezone_is_not_set: '🔹 часавы пояс не вызначаны'
+    bot_is_not_connection: '🔹 бот не падлучаны да канала'
+    channel_not_found: '🔹 канал больш не існуе'
+    bot_is_not_admin: '🔹 падлучаны бот не ёсць адміністратарам гэтага канала'
+    bot_was_deleted: '🔹 падлучаны бот выдалены або ў яго быў зменены токен'
   start: |
-    Go to @ControllerBot to connect a new channel and start creating posts.
+    Перайдзіце ў @ControllerBot, каб падлучыць канал і пачаць публікаваць допісы.
   make:
     set_formatting: |
-      First, you need to set the formatting style that will be used by default.
+      Спачатку вам неабходна абраць прадвызначанае фарматаванне.
 
-      Send /markdown or /HTML to get a hint.
+      Адпраўце /markdown або /HTML, каб паглядзець апісанне.
 
-      Most users prefer Markdown because it is shorter and easier. Native formatting is allowed as well.
+      Большасць карыстальнікаў выкарыстоўвае markdown, бо яно прасцейшае. Таксама бот падтрымлівае натыўнае фарматаванне.
     start: |
       Here it is: <b>"${channel.name}"</b>${channel.username ? ' @' + channel.username : ''}.
 
@@ -263,7 +263,7 @@ post:
     continue_send: You can continue to send me messages.
     confirm_send: >
       Are you sure you want to send <b>${pluralize(posts, 'message', 'messages', 'messages')}</b> to <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''}?
-    waiting: '🕒 Sending...'
+    waiting: '🕒 Адпраўленне...'
     ok: Завершана!
   schedule:
     day:
