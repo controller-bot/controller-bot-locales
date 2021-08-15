@@ -146,96 +146,93 @@ post:
 
       Большасць карыстальнікаў выкарыстоўвае markdown, бо яно прасцейшае. Таксама бот падтрымлівае натыўнае фарматаванне.
     start: |
-      Here it is: <b>"${channel.name}"</b>${channel.username ? ' @' + channel.username : ''}.
+      Вы абралі <b>"${channel.name}"</b>${channel.username ? ' @' + channel.username : ''}.
 
-      Send me one or multiple messages you want to include in the post. It can be anything — a text, photo, video, even a sticker.
-    clear: Success! All messages have been deleted.
-    message_deleted: Done! The message has been deleted.
-    not_posts: There is no any messages yet.
-    not_posts_for_done: There is no any messages yet.
+      Адпраўце мне адно або некалькі паведамленняў, якія патрэбна ўключыць у допіс. Гэта можа быць тэкст, фота, відэа, налепка.
+    clear: Усе паведамленні паспяхова выдаленыя.
+    message_deleted: Паведамленне паспяхова выдалена.
+    not_posts: Няма паведамленняў.
+    not_posts_for_done: Няма паведамленняў.
     preview_sent: |
-      The post preview sent above.
+      Паведамленні адпраўленыя для папярэдняга прагляду.
 
-      You have <b>${pluralize(posts, 'message', 'messages', 'messages')}</b> in this post:
+      У вашым допісе <b>${pluralize(posts, 'паведамленне', 'паведамленні', 'паведамленняў')}</b>:
       ${messages}
-    error_poll_not_anonymous: Sorry, but you can\'t send non-anonymous polls to channels.
+    error_poll_not_anonymous: У каналы нельга адпраўляць ананімныя апытанні.
     error_parse: |
-      Errors in formatting text:
+      У фарматаванні выяўленыя памылкі:
 
       <pre>${description}</pre>
 
-      Please <a href="http://telegra.ph/Parsing-Error-Fix-Controller-FAQ-03-28">fix all errors</a> and send message again.
-    continue_collect: You can continue to send me messages.
+      Калі ласка, <a href="http://telegra.ph/Parsing-Error-Fix-Controller-FAQ-03-28">выпраўце ўсе памылкі</a> і адпраўце паведамленне нанова.
+    continue_collect: Вы можаце працягнуць адпраўляць паведамленні.
     html: |
-      <b>bold</b>
-      &lt;b&gt;bold&lt;/b&gt;
+      <b>тлусты</b>
+      &lt;b&gt;тлусты&lt;/b&gt;
 
-      <i>italic</i>
-      &lt;i&gt;italic&lt;/i&gt;
+      <i>курсіў</i>
+      &lt;i&gt;курсіў&lt;/i&gt;
 
-      <a href="http://www.example.com/">inline URL</a>
-      &lt;a href=&quot;http://www.example.com/&quot;&gt;inline URL&lt;/a&gt;
+      <a href="http://www.example.com/">назва URL</a>
+      &lt;a href=&quot;http://www.example.com/&quot;&gt;назва URL&lt;/a&gt;
 
-      <code>inline fixed-width code</code>
-      &lt;code&gt;inline fixed-width code&lt;/code&gt;
+      <code>код у выглядзе радка</code>
+      &lt;code&gt;код у выглядзе радка&lt;/code&gt;
 
-      <pre>pre-formatted fixed-width code block</pre>
-      &lt;pre&gt;pre-formatted fixed-width
-      code block&lt;/pre&gt;
+      <pre>код у выглядзе блока</pre>
+      &lt;pre&gt;код у выглядзе блока&lt;/pre&gt;
     markdown: |
-      <b>bold text</b>
-      *bold text*
+      <b>тлусты</b>
+      *тлусты*
 
-      <i>italic text</i>
-      _italic text_
+      <i>курсіў</i>
+      _курсіў_
 
-      <a href="http://www.example.com/">text</a>
+      <a href="http://www.example.com/">назва URL</a>
       [text](http://www.example.com/)
 
-      <code>inline fixed-width code</code>
-      `inline fixed-width code`
+      <code>код у выглядзе радка</code>
+      `код у выглядзе радка`
 
-      <pre>text
-      pre-formatted fixed-width code block</pre>
-      ```pre-formatted fixed-width
-      code block
+      <pre>код у выглядзе блока</pre>
+      ```код у выглядзе блока
       ```
-    canceled: Creating of the post has been canceled.
+    canceled: Стварэнне допіса скасавана.
     inline:
       welcome: |
-        Send me a list of URL buttons for the message. Please use this format:
-        <pre>Button text 1 - http://www.example.com/ | Button text 2 - http://www.example2.com/
-        Button text 3 - http://www.example3.com/
+        Адпраўце мне спіс URL-кнопак у адным паведамленні. Пільнуйцеся наступнага фармату:
+        <pre>Тэкст кнопкі 1 - http://www.example.com/ | Тэкст кнопкі 2 - http://www.example2.com/
+        Тэкст кнопкі 3 - http://www.example3.com/
         </pre>
-        ${current ? '\nCurrent buttons:\n' + current : ''}
+        ${current ? '\nБягучыя кнопкі:\n' + current : ''}
 
-        Choose 'Cancel' to back to creating of the post.
+        Абярыце "Скасаваць", каб вярнуцца назад.
       error: |
-        Errors in URL buttons list: <code>${error}</code>
+        Выяўлены памылкі: <code>${error}</code>
 
-        Please fix all errors and send message again.
+        Выпраўце памылкі і паўтарыце спробу.
       not_keyboard: |
-        The message sent by you does not fit the format of URL buttons list. Please check everything twice and try again.
-      save: URL buttons saved. You can continue to send me messages.
-      cleared: Success! URL buttons cleared.
+        Паведамленне не адпавядае фармату спіса URL-кнопак. Праверце правільнасць і паўтарыце спробу.
+      save: URL-кнопкі захаваныя. Вы можаце працягнуць адпраўляць паведамленні.
+      cleared: URL-кнопкі ачышчаныя.
     reactions:
       welcome: |
-        <a href="http://telegra.ph/file/dd1fcbdd1ebb1ce76ab59.jpg">&#8203;</a>Send me emojies or a text with <b>/</b> as separator to add reactions.
+        <a href="http://telegra.ph/file/dd1fcbdd1ebb1ce76ab59.jpg">&#8203;</a>Адпраўце мне эмаджы або тэкст, падзяляючы <b>/</b>, каб стварыць рэакцыі.
 
-        For example:
+        Прыклады:
       not_found_smiles: |
-        Send me one or more emoticons. For example: 👍👎
-      save: Reactions saved. You can continue to send me messages.
-      cleared: Success! Reactions cleared.
-      notify: Counters will be available after sending.
+        Адпраўце мне эмаджы. Прыклад: 👍👎
+      save: Рэакцыі захаваныя. Вы можаце працягнуць адпраўляць паведамленні.
+      cleared: Рэакцыі выдаленыя.
+      notify: Лічыльнікі пачнуць працаваць пасля адпраўлення.
       default_reactions:
         welcome: |
-          You can set reactions that will be automatically added to messages in new posts. Send me one or more emoticons. For example: 👍👎
+          Вы можаце вызначыць рэакцыі, якія будуць аўтаматычна дадавацца да паведамленняў у новых допісах. Прыклад: 👍👎
 
-          ${reactions.length ? 'Current default reactions: ' + reactions.join(' ') : ''}
-        saved: Default reactions saved.
-        deleted: Default reactions disabled.
-        canceled: Setting of the default reactions has been canceled.
+          ${reactions.length ? 'Бягучыя рэакцыі: ' + reactions.join(' ') : ''}
+        saved: Прадвызначаныя рэакцыі захаваныя.
+        deleted: Прадвызначаныя рэакцыі адключаныя.
+        canceled: Даданне прадвызначаных рэакцый скасавана.
     image:
       welcome: |
         Send me a link, image, GIF or video (up to 5 MB).
