@@ -51,7 +51,7 @@ channels:
     }
   add:
     select_bot: |
-      Choose a bot that will be used to send posts in the channel.
+      Абярыце бота, які будзе выкарыстоўвацца для публікацыі допісаў.
     welcome: |
       <b>Adding a channel</b>
 
