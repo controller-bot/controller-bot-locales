@@ -53,49 +53,49 @@ channels:
     select_bot: |
       Абярыце бота, які будзе выкарыстоўвацца для публікацыі допісаў.
     welcome: |
-      <b>Adding a channel</b>
+      <b>Даданне канала</b>
 
-      To add a channel you should follow these two steps:
+      Каб дадаць канал, выканайце наступныя дзеянні:
 
-      1. <a href="http://telegra.ph/Add-Bot-to-Admins-Controller-FAQ-03-28">Add @${username} to admins</a> of your channel.
-      2. Then forward to me any message from your channel (you can also send me its username or ID).
+      1. <a href="http://telegra.ph/Add-Bot-to-Admins-Controller-FAQ-03-28">Зрабіце @${username} адміністратарам</a> вашага канала.
+      2. Перашліце любое паведамленне з вашага канала (таксама вы можаце адправіць @username або ідэнтыфікатар).
     added: |
-      Success! The channel ${channel.username ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>' : '<b>' + channel.name + '</b>'} has been added.
+      Канал ${channel.username ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>' : '<b>' + channel.name + '</b>'} паспяхова дададзены.
 
-      Go to @${bot_username} to create a new post.
+      Перайдзіце ў @${bot_username}, каб стварыць новы допіс.
 
-      All administrators of your channel can also use this bot to create posts in this channel.
+      Усе адміністратары вашага канала таксама могуць выкарыстоўваць гэтага бота для публікацыі допісаў.
 
-      If you add a new administrator, go to the channel settings and choose "Update Data" to update the list of administrators.
+      Калі вы будзеце дадаваць новых адміністратараў, неабходна будзе перайсці ў налады канала і абраць "Абнавіць даныя", каб абнавіць спіс адміністратараў.
     error:
       data: |
-        Please forward to me any message from your channel. Or send me its username or ID instead.
-      channel_not_found: The channel not found.
-      you_are_not_administrator: You aren't an administrator in the channel.
-      you_do_not_have_rights: You don't have rights to post messages in the channel.
-      bot_is_not_admin: Add @${username} to admins of your channel. Please check everything twice and try again.
-      bot_is_not_admin_in_group: Add @${username} to admins of your group and try again.
+        Перашліце мне любое паведамленне з вашага канала або @username (ідэнтыфікатар) канала.
+      channel_not_found: Канал не знойдзены.
+      you_are_not_administrator: У вас няма правоў адміністратара на гэтым канале.
+      you_do_not_have_rights: У вас няма правоў на публікацыю допісаў на гэтым канале.
+      bot_is_not_admin: Зрабіце @${username} адміністратарам вашага канала.
+      bot_is_not_admin_in_group: Зрабіце @${username} адміністратарам вашай суполкі і паспрабуйце зноў.
       bot_was_deleted: |
-        Unable to add a channel. @${username} is no longer exist, or its token was revoked. Reconnect this bot or choose another.
-      channel_already_added: This channel is already added. Go to @${bot_username} to create a new post.
+        Не атрымалася дадаць канал. @${username} быў выдалены або ў яго быў зменены токен. Перападлучыце бота або падлучыце іншага.
+      channel_already_added: Гэты канал ужо дададзены. Перайдзіце ў @${bot_username}, каб стварыць новы допіс.
       group_already_added: |
-        This channel is already added by ${admin.first_name}${admin.last_name ? ' ' + admin.last_name : ''}${admin.username ? ' @' + admin.username : ''}
+        Гэты канал ужо дадаў ${admin.first_name}${admin.last_name ? ' ' + admin.last_name : ''}${admin.username ? ' @' + admin.username : ''}
   control:
     options: |
-      Here it is: ${channel.name}. What do you want to do with the channel?
+      Вы абралі "${channel.name}". Што вы хочаце зрабіць з гэтым каналам?
     delete_confirm: |
-      Are you sure you want to delete this channel?
+      Сапраўды хочаце выдаліць гэты канал?
 
-      All scheduled posts and saved stats for this channel will be also deleted.
-    channel_deleted: Done! The channel is gone.
+      Усе адтэрмінаваныя допісы і захаваная статыстыка таксама выдаляцца.
+    channel_deleted: Канал выдалены.
     select_bot: |2
       ${count
-        ? 'Choose a bot that will be used to send posts in the channel.'
-        : 'There is no connected bots yet. Send /addchannel to connect a new one.'
+        ? 'Абярыце бота, якога хочаце выкарыстоўваць для публікацыі допісаў на канале.'
+        : 'У вас пакуль што няма падлучаных ботаў. Увядзіце "/addchannel", каб падлучыць новага.'
       }
-    bot_is_not_admin: Add the bot to admins of your channel.
-    current_bot: Unable to choose currently used bot.
-    sync_ok: '👌 OK. The data has been synced.'
+    bot_is_not_admin: Зрабіце бота адміністратарам канала.
+    current_bot: Нельга дадаць бота, які ўжо выкарыстоўваецца.
+    sync_ok: '👌. Даныя сінхранізаваныя.'
     set_timezone: |
       <b>Setting the time zone</b>
 
@@ -480,8 +480,8 @@ btn:
   channels:
     add_channel: Add Channel
     add_bot: Падлучыць бота
-    add_change_bot: Change Bot
-    channel_added: Create Post
+    add_change_bot: Змяніць бота
+    channel_added: Стварыць допіс
     how_to_create_bot: How to create bot?
     how_to_create_bot_url: http://telegra.ph/Create-Bot-Controller-FAQ-03-28
     control:
