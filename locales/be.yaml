@@ -238,75 +238,75 @@ post:
         Адпраўце мне спасылку, выяву, GIF або відэа (не больш за 5 Мб).
       only_link_or_photo: Адпраўце мне спасылку, выяву, GIF або відэа (не больш за 5 Мб).
       error: |
-        An error occurred while uploading.
+        Падчас запампоўвання адбылася памылка.
 
-        Message us at @ControllerSupportBot to report an issue.
-      save: The media attached.
-      cleared: Attached media deleted.
+        Звярніцеся да @ControllerSupportBot.
+      save: Медыяфайл далучаны.
+      cleared: Далучаны медыяфайл выдалены.
   send:
     count_posts: |
-      ${pluralize(count, 'message', 'messages', 'messages')} ready to be sent to <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''}.
-    choose_type: When you want to send the post?
+      ${pluralize(count, 'паведамленне гатова', 'паведамленні гатовыя', 'паведамленняў гатова')} да публікацыі ў канал <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''}.
+    choose_type: Калі вы хочаце апублікаваць допіс?
     problems: |2
-      Unable to create a new post in ${channel.name}. The next issues found:
+      Не атрымалася стварыць допіс на канале "${channel.name}". Выяўлены наступныя праблемы:
 
       ${problems}
 
       ${from.id == channel.owner_id
-        ? 'Go to the channel settings to fix the issues.'
-        : 'The creator of the channel should go to the channel settings and fix the issues.'
+        ? 'Перайдзіце ў канал і выпраўце праблемы.'
+        : 'Стваральніку канала патрэбна перайсці ў налады канала і выправіць праблемы.'
       }
-    cancel_send: Sending of the post has been canceled.
-    continue_send: You can continue to send me messages.
+    cancel_send: Адпраўленне допіса скасавана.
+    continue_send: Вы можаце працягнуць адпраўляць паведамленні.
     confirm_send: >
-      Are you sure you want to send <b>${pluralize(posts, 'message', 'messages', 'messages')}</b> to <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''}?
+      Сапраўды хочаце адправіць <b>${pluralize(posts, 'паведамленне', 'паведамленні', 'паведамленняў')}</b> ў канал <b>"${channel.name}"</b>${channel.username ? ' @' + channel.username : ''}?
     waiting: '🕒 Адпраўленне...'
     ok: Завершана!
   schedule:
     day:
       today: сёння
       tomorrow: заўтра
-      after_tomorrow: overmorrow
+      after_tomorrow: паслязаўтра
     welcome: |
-      Send time at which you want to send the post ${day}.
-      Send time+date to enqueue the post at any other day.
+      Адпраўце час, каб апублікаваць допіс ${day}.
+      Адпраўце дату і час, каб апублікаваць у іншы дзень.
     help: |
-      <b>The following time formats are supported:</b>
+      <b>Падтрымліваюцца наступныя фарматы часу:</b>
       <pre>"6" → 06:00
       "5 3" → 05:03
       "15:30" → 15:30
       "1530" → 15:30</pre>
 
-      <b>The following date formats are supported:</b>
-      <pre>"6" → 6 of the current month
-      "9 12" → December 9
-      "8 7 18" → Jule 8, 2018</pre>
+      <b>Падтрымліваюцца наступныя фарматы даты:</b>
+      <pre>"6" → 6 дзень бягучага месяца
+      "9 12" → Снежань 9
+      "8 7 18" → Ліпень 8, 2018</pre>
 
-      You can also use colons and dots instead of spaces for separation.
+      Замест прагалаў можна выкарыстоўваць кропкі.
 
-      If you send only time, the post will be enqueued at the current day by default. To enqueue the post at any other day send time+date. For example, <code>16 30 6 8 -> 16:30, Aug 6</code>
-    error_date: Incorrect date or time. Choose 'Help' to get a hint.
-    invalid_date: Incorrect date.
-    limit: You need to choose a time more than the current by 1 minute or more. The current date and time is ${current_date}.
-    limit_year: 'Unable to choose a time over than the current by 1 year or more. Who knows what is going to happen... :)'
+      Калі вы адправіце толькі час, допіс апублікуецца сёння. Каб апублікаваць допіс у іншы дзень, трэба адправіць дату і час. Напрыклад, <code>16 30 6 8 -> 16:30, Жні 6</code>
+    error_date: Хібныя дата ці час. Абярыце "Даведка", каб паглядзець падказку.
+    invalid_date: Хібная дата.
+    limit: Патрэбна ўвесці час, большы за бягучы прынамсі на 1 хвіліну. Бягучыя дата і час - ${current_date}.
+    limit_year: 'Нельга адтэрміноўваць допісы больш чым на год. Хто ведае, што тады будзе… :)'
     ok: |
-      Scheduled post has been сreated. The post will be sent to <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''} on <b>${date}</b>.
+      Адтэрмінаваны допіс створаны. Ён будзе адпраўлены ў канал <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''} <b>${date}</b>.
   timer:
-    welcome: Choose or send a period of time in hours after which the post will self-destruct.
-    wrong_hour: Incorrect time. Only periods from 1 to 48 hours are allowed.
-    save_timer: The self-destruct timer saved.
-    timer_off: The self-destruct timer disabled.
+    welcome: Абярыце або ўвядзіце перыяд часу ў гадзінах, пасля сканчэння якога допіс аўтаматычна выдаліцца.
+    wrong_hour: Хібнае значэнне. Падтрымліваецца ад 1 да 48 гадзін.
+    save_timer: Таймер аўтаматычнага выдалення захаваны.
+    timer_off: Таймер аўтаматычнага выдалення адключаны.
 posts:
   edit:
-    welcome: Forward to me a message from your channel you want to edit.
+    welcome: Перашліце мне паведамленне з вашага канала, якое хочаце адрэдагаваць.
     only_channel_post: |
-      Sorry, only messages from channels are available for editing.
+      Можна рэдагаваць толькі паведамленні з канала.
     channel_not_found: |
-      This channel is not available. The channel and the bot via which message was sent must be connected to Controller Bot. Please check everything twice and try again.
+      Гэты канал недаступны. Канал і бот, праз які публікуюцца допісы, мусяць быць падлучаныя да Controller Bot. Яшчэ раз усё праверце і паўтарыце спробу.
     unsupported_type: |
-      Unable to edit this message. You can edit only text messages and captions.
+      Гэтае паведамленне немагчыма адрэдагаваць. Вы можаце рэдагаваць толькі тэкставыя паведамленні і апісанні да медыяфайлаў.
     post_not_found: |
-      This post is not available. The channel and the bot via which message was sent must be connected to Controller Bot. Please check everything twice and try again.
+      Гэты допіс недаступны. Канал і бот, праз які публікуюцца допісы, мусяць быць падлучаныя да Controller Bot. Яшчэ раз усё праверце і паўтарыце спробу.
     editing: |
       Message type: ${type_text}.${type == 'text' ? '\nFormatting style: ' + parse_mode : ''}
 
