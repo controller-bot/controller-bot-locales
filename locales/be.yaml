@@ -448,7 +448,7 @@ donate:
   continue_use_bot: Я ахвярую пазней 😦
   donate_controller: '☘️ Ахвяраваць'
   select_price: |
-    Націсніце "Аплаціць", каб азвяраваць <b>${sum} ₽</b> для каманды Controller Bot.
+    Націсніце "Аплаціць", каб ахвяраваць <b>${sum} ₽</b> для каманды Controller Bot.
 
     Пасля аплаты націсніце "Праверыць плацеж", каб схаваць гэтае паведамленне.
   pay: Заплаціць
@@ -522,42 +522,42 @@ btn:
     delete: Выдаліць паведамленне
     silent_enable: 'Апавяшчэнне: укл.'
     silent_disable: 'Апавяшчэнне: адкл.'
-    preview_enable: 'Link Previews: ON'
-    preview_disable: 'Link Previews: OFF'
+    preview_enable: 'Папярэдні прагляд спасылак: укл.'
+    preview_disable: 'Папярэдні прагляд спасылак: адкл.'
     send:
-      self_destruct_timer: "${+hours ? 'Self-Destruct Timer: ' + hours + 'h' : 'Set Self-Destruct Timer' }"
-      hours: '${hour}h'
+      self_destruct_timer: "${+hours ? 'Выдаленне па таймеры: ' + hours + 'г' : 'Вызначыць таймер для выдалення' }"
+      hours: '${hour}г'
       send_now: Адправіць зараз
-      sent: View Post in Channel
+      sent: Паглядзець допіс у канале
       create_scheduled: У канец чаргі
       send: Адправіць
       cancel: Скасаваць
     schedule:
       today: |-
-        ${active ? '🔹 ' : ''}Today
+        ${active ? '🔹 ' : ''}Сёння
       tomorrow: |-
-        ${active ? '🔹 ' : ''}Tomorrow
+        ${active ? '🔹 ' : ''}Заўтра
       after_tomorrow: |-
-        ${active ? '🔹 ' : ''}Overmorrow
+        ${active ? '🔹 ' : ''}Паслязаўтра
   settings:
-    bots: Manage Connected Bots
+    bots: Кіраванне падлучанымі ботамі
     delete_bot: Выдаліць бота
     language: Змяніць мову
   posts:
     edit:
-      edit_inline: Change URL-buttons
-      original: View Previous Version
-      clear_caption: Delete Caption
+      edit_inline: Змяніць URL-кнопкі
+      original: Паглядзець папярэднюю версію
+      clear_caption: Выдаліць апісанне
       save: Захаваць змены
       cancel: Скасаваць
-      open_edited_post: View Post in Channel
-    view: View Post
-    copy: Create Copy
-    edit_time: Edit Time
+      open_edited_post: Паглядзець допіс у канале
+    view: Праглядзець допіс
+    copy: Стварыць копію
+    edit_time: Змяніць час
     delete: Выдаліць допіс
   statistics:
     view_periods: Агляд
-    view_via_web: View via Webpage
+    view_via_web: Праглядзець на сайце
     periods:
       one_week: Тыдзень
       one_month: Месяц
