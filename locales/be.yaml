@@ -496,32 +496,32 @@ btn:
       disable_notification_enable: 'Гукавое апавяшчэнне: укл.'
       disable_web_page_preview_disable: 'Папярэдні прагляд спасылак: укл.'
       disable_web_page_preview_enable: 'Папярэдні прагляд спасылак: адкл.'
-      parse_mode_markdown: 'Auto Formatting: Markdown'
-      parse_mode_html: 'Auto Formatting: HTML'
-      parse_mode_none: 'Auto Formatting: OFF'
-      default_reactions_disable: 'Default Reactions: OFF'
-      default_reactions_enable: 'Default Reactions: ON'
-    faq: Controller Help
-    control_channel: Go to Channel Settings
-    return_to_channels: '« Back to Channels List'
+      parse_mode_markdown: 'Аўтаматычнае фарматаванне: markdown'
+      parse_mode_html: 'Аўтаматычнае фарматаванне: html'
+      parse_mode_none: 'Аўтаматычнае фарматаванне: адкл.'
+      default_reactions_disable: 'Прадвызначаныя рэакцыі: адкл.'
+      default_reactions_enable: 'Прадвызначаныя рэакцыі: укл.'
+    faq: Даведка
+    control_channel: Налады канала
+    return_to_channels: '« Вярнуцца да спіса каналаў'
     continue: Працягнуць »
-    add_image: Attach Media
-    clear_image: Delete Attached Media
+    add_image: Далучыць медыяфайл
+    clear_image: Выдаліць далучаны медыяфайл
     open_comments: Адкрыць каментары
     add_comments: Дадаць каментары
     delete_comments: Выдаліць каментары
-    add_inline: Add URL Buttons
-    clear_inline: Delete URL Buttons
-    add_reactions: Add Reactions
-    clear_reactions: Delete Reactions
+    add_inline: Дадаць URL-кнопкі
+    clear_inline: Выдаліць URL-кнопкі
+    add_reactions: Дадаць рэакцыі
+    clear_reactions: Выдаліць рэакцыі
     clear: Выдаліць усё
     preview: Папярэдні прагляд
     done: Адправіць
     cancel: Скасаваць
-    more: '⇣ Show Actions'
+    more: '⇣ Паглядзець дзеянні'
     delete: Выдаліць паведамленне
-    silent_enable: 'Notify: ON'
-    silent_disable: 'Notify: OFF'
+    silent_enable: 'Апавяшчэнне: укл.'
+    silent_disable: 'Апавяшчэнне: адкл.'
     preview_enable: 'Link Previews: ON'
     preview_disable: 'Link Previews: OFF'
     send:
