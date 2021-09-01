@@ -546,6 +546,7 @@ btn:
       confirm_delete_no: No
 
       link_chat: Link Chat
+      unlink_chat: Unlink Chat
 
   post:
     settings:
