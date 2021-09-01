@@ -25,7 +25,7 @@ common:
     If you have any questions, take a look at the <a href="http://telegra.ph/Controller-Help-03-20">Controller Help</a>.
 
     You can control me by sending these commands:
-    
+
     /newpost - create a new post
     /addchannel - add a new channel
     /mychannels - edit your channels
@@ -36,11 +36,11 @@ bots:
     <b>Connecting a bot</b>
 
     To connect a bot, you should follow these two steps:
-    
+
     1. Open @BotFather and <a href="http://telegra.ph/Create-Bot-Controller-FAQ-03-28">create a new bot</a>.
     2. You’ll get a token (e.g. 12345:6789ABCDEF) — just forward or copy-paste it to me.
-    
-    <b>Warning!</b> Don't connect bots already used by other services like Chatfuel, Manybot, ect. 
+
+    <b>Warning!</b> Don't connect bots already used by other services like Chatfuel, Manybot, ect.
 
   wrong_token: Doesn't look like anything to me. Please send me a token of your bot.
   error_add: Invalid token. Try to get a new one or use a token of another bot.
@@ -61,8 +61,8 @@ channels:
       <b>Adding a channel</b>
 
       To add a channel you should follow these two steps:
-    
-      1. <a href="http://telegra.ph/Add-Bot-to-Admins-Controller-FAQ-03-28">Add @${username} to admins</a> of your channel. 
+
+      1. <a href="http://telegra.ph/Add-Bot-to-Admins-Controller-FAQ-03-28">Add @${username} to admins</a> of your channel.
       2. Then forward to me any message from your channel (you can also send me its username or ID).
     added: |
       Success! The channel ${channel.username ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>' : '<b>' + channel.name + '</b>'} has been added.
@@ -92,7 +92,7 @@ channels:
       Here it is: ${channel.name}. What do you want to do with the channel?
     delete_confirm: |
       Are you sure you want to delete this channel?
-      
+
       All scheduled posts and saved stats for this channel will be also deleted.
     channel_deleted: Done! The channel is gone.
     select_bot: |
@@ -120,6 +120,19 @@ channels:
     error_timezone: Sorry, I can't find this city. Try to send me the name of another city close to you.
     error_request_timezone: Something went wrong :( Please try again. Send us a message to @ControllerSupportBot if for some reason it doesn't change anything.
     save_timezone: OK, your timezone saved.
+    link_chat: |-
+      You can link the discussion group to Controller bot to enable native comments.
+
+      Please follow the instruction:
+      https://telegra.ph/How-to-link-the-discussion-group-to-Controller-bot-Controller-FAQ-08-18
+
+    chatIsNotLinked: |-
+      This chat is not linked to a channel
+
+    chatLinked: |-
+      Success! This chat is now linked to ${channelTitle}!
+
+      Go to the bot to create new posts with native comments.
 
 post:
   select_channel: Choose a channel to create a new post.
@@ -138,7 +151,7 @@ post:
       ? 'Go to the channel settings to fix the issues.'
       : 'The creator of the channel should go to the channel settings and fix the issues.'
     }
-  problem_items: 
+  problem_items:
     timezone_is_not_set: 🔹 the time zone is not set
     bot_is_not_connection: 🔹 the channel is not connected to a bot
     channel_not_found: 🔹 the channel is no longer exist
@@ -171,43 +184,43 @@ post:
     error_poll_not_anonymous: Sorry, but you can\'t send non-anonymous polls to channels.
     error_parse: |
       Errors in formatting text:
-      
+
       <pre>${description}</pre>
-      
+
       Please <a href="http://telegra.ph/Parsing-Error-Fix-Controller-FAQ-03-28">fix all errors</a> and send message again.
-    continue_collect: You can continue to send me messages. 
+    continue_collect: You can continue to send me messages.
     html: |
       <b>bold</b>
       &lt;b&gt;bold&lt;/b&gt;
-      
+
       <i>italic</i>
       &lt;i&gt;italic&lt;/i&gt;
-      
+
       <a href="http://www.example.com/">inline URL</a>
       &lt;a href=&quot;http://www.example.com/&quot;&gt;inline URL&lt;/a&gt;
-      
+
       <code>inline fixed-width code</code>
       &lt;code&gt;inline fixed-width code&lt;/code&gt;
-      
+
       <pre>pre-formatted fixed-width code block</pre>
-      &lt;pre&gt;pre-formatted fixed-width 
+      &lt;pre&gt;pre-formatted fixed-width
       code block&lt;/pre&gt;
     markdown: |
       <b>bold text</b>
       *bold text*
-      
+
       <i>italic text</i>
       _italic text_
-      
+
       <a href="http://www.example.com/">text</a>
       [text](http://www.example.com/)
-      
+
       <code>inline fixed-width code</code>
       `inline fixed-width code`
-      
-      <pre>text 
+
+      <pre>text
       pre-formatted fixed-width code block</pre>
-      ```pre-formatted fixed-width 
+      ```pre-formatted fixed-width
       code block
       ```
     canceled: Creating of the post has been canceled.
@@ -222,7 +235,7 @@ post:
         Choose 'Cancel' to back to creating of the post.
       error: |
         Errors in URL buttons list: <code>${error}</code>
-        
+
         Please fix all errors and send message again.
       not_keyboard: |
         The message sent by you does not fit the format of URL buttons list. Please check everything twice and try again.
@@ -286,21 +299,21 @@ post:
     welcome: |
       Send time at which you want to send the post ${day}.
       Send time+date to enqueue the post at any other day.
-      
+
     help: |
       <b>The following time formats are supported:</b>
       <pre>"6" → 06:00
       "5 3" → 05:03
       "15:30" → 15:30
       "1530" → 15:30</pre>
-      
+
       <b>The following date formats are supported:</b>
       <pre>"6" → 6 of the current month
       "9 12" → December 9
       "8 7 18" → Jule 8, 2018</pre>
-      
-      You can also use colons and dots instead of spaces for separation. 
-      
+
+      You can also use colons and dots instead of spaces for separation.
+
       If you send only time, the post will be enqueued at the current day by default. To enqueue the post at any other day send time+date. For example, <code>16 30 6 8 -> 16:30, Aug 6</code>
     error_date: Incorrect date or time. Choose 'Help' to get a hint.
     invalid_date: Incorrect date.
@@ -389,8 +402,8 @@ settings:
     channel_item: |
       ${index}. ${name}
     confirm_delete: |
-      ${count 
-        ? 'The bot is connected with these channels:\n\n' + channels 
+      ${count
+        ? 'The bot is connected with these channels:\n\n' + channels
         : 'The bot is not connected with any channels.\n'
       }
       Are you sure you want to delete this bot?
@@ -400,7 +413,7 @@ statistics:
   select_channel: Choose a channel to view stats.
   no_channels: |
     There is no added channels yet.
-    
+
     Send /addchannel to add a new one.
   selected_channel: 'Here it is: ${channel.name}. What do you want to do with stats?'
   channel_not_found: This channel is not available.
@@ -408,7 +421,7 @@ statistics:
   loading_data: 🕒 Processing the data and rendering graphs...
   error_load_data: |
     An error occurred while data processing.
-     
+
     Message us at @ControllerSupportBot to report an issue.
   not_found_data: There is no stats data for this channel yet. Come back later.
   share_text: |
@@ -532,14 +545,16 @@ btn:
       confirm_delete_yes: Yes
       confirm_delete_no: No
 
+      link_chat: Link Chat
+
   post:
-    settings: 
+    settings:
       disable_notification_disable: 'Silent Broadcast: OFF'
       disable_notification_enable: 'Silent Broadcast: ON'
-      
+
       disable_web_page_preview_disable: 'Link Previews: ON'
       disable_web_page_preview_enable: 'Link Previews: OFF'
-      
+
       parse_mode_markdown: 'Auto Formatting: Markdown'
       parse_mode_html: 'Auto Formatting: HTML'
       parse_mode_none: 'Auto Formatting: OFF'
@@ -548,7 +563,7 @@ btn:
       default_reactions_enable: 'Default Reactions: ON'
 
     faq: Controller Help
-    
+
     control_channel: Go to Channel Settings
     return_to_channels: « Back to Channels List
 
@@ -560,14 +575,16 @@ btn:
     open_comments: Open Comments
     add_comments: Add Comments
     delete_comments: Delete Comments
-    
+    add_native_comments: Add Native Comments
+    delete_native_comments: Delete Native Comments
+
     add_inline: Add URL Buttons
     clear_inline: Delete URL Buttons
-    
+
     add_reactions: Add Reactions
     clear_reactions: Delete Reactions
 
-    clear: Delete All 
+    clear: Delete All
     preview: Preview
     done: Send
     cancel: Cancel
@@ -589,7 +606,7 @@ btn:
       send_now: Send Now
       sent: View Post in Channel
       create_scheduled: Enqueue
-      
+
       send: Send
       cancel: Cancel
 
@@ -623,7 +640,7 @@ btn:
   statistics:
     view_periods: View
     view_via_web: View via Webpage
-    
+
     periods:
       one_week: Week
       one_month: Month
