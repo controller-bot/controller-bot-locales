@@ -114,16 +114,16 @@ channels:
     error_request_timezone: Нешта пайшло не так :( Паспрабуйце пазней або напішыце ў @ControllerSupportBot, калі праблема не вырашаецца.
     save_timezone: Часавы пояс захаваны.
     link_chat: |-
-      You can link the discussion group to Controller bot to enable native comments.
+      Вы можаце прывязаць суполку для абмеркаванняў да Controller bot, каб уключыць унутраныя каментары.
 
-      Please follow the instruction:
+      Глядзіце інструкцыю:
       https://telegra.ph/How-to-link-the-discussion-group-to-Controller-bot-Controller-FAQ-08-18
     chatIsNotLinked: |-
-      This chat is not linked to a channel
+      Гэты чат не прывязаны да канала
     chatLinked: |-
-      Success! This chat is now linked to ${channelTitle}!
+      Гатова! Гэты чат прывязаны да ${channelTitle}!
 
-      Go to the bot to create new posts with native comments.
+      Перайдзіце ў бота, каб ствараць допісы з унутранымі каментарамі.
 post:
   select_channel: Абярыце канал, у якім хочаце стварыць новы допіс.
   no_channels: |
@@ -501,8 +501,8 @@ btn:
       delete: Выдаліць канал
       confirm_delete_yes: true
       confirm_delete_no: false
-      link_chat: Link Chat
-      unlink_chat: Unlink Chat
+      link_chat: Прывязаць чат
+      unlink_chat: Адвязаць чат
   post:
     settings:
       disable_notification_disable: 'Гукавое апавяшчэнне: адкл.'
@@ -523,8 +523,8 @@ btn:
     open_comments: Адкрыць каментары
     add_comments: Дадаць каментары
     delete_comments: Выдаліць каментары
-    add_native_comments: Add Native Comments
-    delete_native_comments: Delete Native Comments
+    add_native_comments: Дадаць унутраныя каментары
+    delete_native_comments: Выдаліць унутраныя каментары
     add_inline: Дадаць URL-кнопкі
     clear_inline: Выдаліць URL-кнопкі
     add_reactions: Дадаць рэакцыі
