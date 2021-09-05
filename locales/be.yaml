@@ -481,7 +481,7 @@ btn:
   menu:
     create_post: Стварыць допіс
     edit_sent_posts: Рэдагаваць допіс
-    scheduled_posts: Адтэрмінаваныя допісы
+    scheduled_posts: Адтэрмінаваныя \nдопісы
     channels: Каналы
     statistics: Статыстыка канала
     settings: Налады
