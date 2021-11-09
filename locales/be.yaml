@@ -19,7 +19,7 @@ common:
 
     /settings - іншыя налады
   help: |
-    Калі ў вас ёсць пытанні, звярніцеся да<a href="http://telegra.ph/Controller-Help-03-20">Даведкі</a>.
+    Калі ў вас ёсць пытанні, звярніцеся да<a href="https://telegra.ph/Controller-Help-03-20">Даведкі</a>.
 
     Вы можаце кіраваць мною з дапамогай наступных загадаў:
 
@@ -34,7 +34,7 @@ bots:
 
     Каб падлучыць бота, выканайце наступныя дзеянні:
 
-    1. Адкрыйце @BotFather і <a href="http://telegra.ph/Create-Bot-Controller-FAQ-03-28">стварыце новага бота</a>.
+    1. Адкрыйце @BotFather і <a href="https://telegra.ph/Create-Bot-Controller-FAQ-03-28">стварыце новага бота</a>.
     2. Вы атрымаеце токен (кшталту 12345:6789ABCDEF) — скапіюйце і ўстаўце яго сюды.
 
     <b>Увага!</b> Не падлучайце боты, якія ўжо выкарыстоўваюцца іншымі ботамі кшталту Chatfuel, Manybot і інш.
@@ -57,7 +57,7 @@ channels:
 
       Каб дадаць канал, выканайце наступныя дзеянні:
 
-      1. <a href="http://telegra.ph/Add-Bot-to-Admins-Controller-FAQ-03-28">Зрабіце @${username} адміністратарам</a> вашага канала.
+      1. <a href="https://telegra.ph/Add-Bot-to-Admins-Controller-FAQ-03-28">Зрабіце @${username} адміністратарам</a> вашага канала.
       2. Перашліце любое паведамленне з вашага канала (таксама вы можаце адправіць @username або ідэнтыфікатар).
     added: |
       Канал ${channel.username ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>' : '<b>' + channel.name + '</b>'} паспяхова дададзены.
@@ -164,7 +164,7 @@ post:
 
       <pre>${description}</pre>
 
-      Калі ласка, <a href="http://telegra.ph/Parsing-Error-Fix-Controller-FAQ-03-28">выпраўце ўсе памылкі</a> і адпраўце паведамленне нанова.
+      Калі ласка, <a href="https://telegra.ph/Parsing-Error-Fix-Controller-FAQ-03-28">выпраўце ўсе памылкі</a> і адпраўце паведамленне нанова.
     continue_collect: Вы можаце працягнуць адпраўляць паведамленні.
     html: |
       <b>тлусты</b>
@@ -217,7 +217,7 @@ post:
       cleared: URL-кнопкі ачышчаныя.
     reactions:
       welcome: |
-        <a href="http://telegra.ph/file/dd1fcbdd1ebb1ce76ab59.jpg">&#8203;</a>Адпраўце мне эмаджы або тэкст, падзяляючы <b>/</b>, каб стварыць рэакцыі.
+        <a href="https://telegra.ph/file/dd1fcbdd1ebb1ce76ab59.jpg">&#8203;</a>Адпраўце мне эмаджы або тэкст, падзяляючы <b>/</b>, каб стварыць рэакцыі.
 
         Прыклады:
       not_found_smiles: |
@@ -480,10 +480,10 @@ btn:
     add_change_bot: Змяніць бота
     channel_added: Стварыць допіс
     how_to_create_bot: Як стварыць бота?
-    how_to_create_bot_url: http://telegra.ph/Create-Bot-Controller-FAQ-03-28
+    how_to_create_bot_url: https://telegra.ph/Create-Bot-Controller-FAQ-03-28
     control:
       how_to_add_admin: Як дадаць адміністратара?
-      how_to_add_admin_url: http://telegra.ph/Admins-Controller-FAQ-03-28
+      how_to_add_admin_url: https://telegra.ph/Admins-Controller-FAQ-03-28
       update: Абнавіць даныя
       bot: Змяніць бота
       timezone: Змяніць часавы пояс

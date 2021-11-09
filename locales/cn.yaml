@@ -24,7 +24,7 @@ common:
     /settings - 其他设置
 
   help: |
-    如有疑问，请查看<a href="http://telegra.ph/Controller-Help-03-20">Controller Help</a>。
+    如有疑问，请查看<a href="https://telegra.ph/Controller-Help-03-20">Controller Help</a>。
 
     你可以通过以下指令来控制我：
 
@@ -39,7 +39,7 @@ bots:
 
     请遵循以下两步来连接机器人：
 
-    1. 打开@BotFather和<a href="http://telegra.ph/Create-Bot-Controller-FAQ-03-28">来创建新机器人</a>.
+    1. 打开@BotFather和<a href="https://telegra.ph/Create-Bot-Controller-FAQ-03-28">来创建新机器人</a>.
     2. 你会得到一个令牌（比如：12345:6789ABCDEF），把它转发给我或复制粘贴给我即可。
 
     <b>警告！</b>不要连接Chatfuel、Manybot等其他平台已经使用的机器人
@@ -65,7 +65,7 @@ channels:
 
        请遵循以下两步来添加频道：
 
-       1.  <a href="http://telegra.ph/Add-Bot-to-Admins-Controller-FAQ-03-28">添加 @${username} 为频道管理员</a>
+       1.  <a href="https://telegra.ph/Add-Bot-to-Admins-Controller-FAQ-03-28">添加 @${username} 为频道管理员</a>
        2. 然后从你的频道转发给我任意信息（也可发给我频道的用户名或ID）。
     added: |
       频道${channel.username ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>' : '<b>' + channel.name + '</b>'}添加成功。
@@ -179,7 +179,7 @@ post:
 
        <pre>${description}</pre>
 
-       请<a href="http://telegra.ph/Parsing-Error-Fix-Controller-FAQ-03-28">修复所有错误后</a>再发送消息。
+       请<a href="https://telegra.ph/Parsing-Error-Fix-Controller-FAQ-03-28">修复所有错误后</a>再发送消息。
     continue_collect: You can continue to send me messages. 你可以继续向我发送消息。
     html: |
       <b>加粗</b>
@@ -237,7 +237,7 @@ post:
       cleared: URL按钮清除完毕。
     reactions:
       welcome: |
-        <a href="http://telegra.ph/file/dd1fcbdd1ebb1ce76ab59.jpg">&#8203;</a>发给我用 <b>/</b> 间隔的表情或文本，以便添加反应。
+        <a href="https://telegra.ph/file/dd1fcbdd1ebb1ce76ab59.jpg">&#8203;</a>发给我用 <b>/</b> 间隔的表情或文本，以便添加反应。
 
          比如：
       not_found_smiles: |
@@ -534,12 +534,12 @@ btn:
 
 
     how_to_create_bot: 如何创建机器人？
-    how_to_create_bot_url: http://telegra.ph/Create-Bot-Controller-FAQ-03-28
+    how_to_create_bot_url: https://telegra.ph/Create-Bot-Controller-FAQ-03-28
 
 
     control:
       how_to_add_admin: 如何添加管理员？
-      how_to_add_admin_url: http://telegra.ph/Admins-Controller-FAQ-03-28
+      how_to_add_admin_url: https://telegra.ph/Admins-Controller-FAQ-03-28
 
 
       update: 更新数据
@@ -609,7 +609,7 @@ btn:
     send:
       self_destruct_timer: "${+hours
 	        ? 'Self-Destruct Timer: ' + hours + 'h'
-	        : '设置自动删除倒计时器'  
+	        : '设置自动删除倒计时器'
 	      }"
       hours: ${hour}h
       send_now: 立即发布

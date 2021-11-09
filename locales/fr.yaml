@@ -22,10 +22,10 @@ common:
     /settings - réglages
 
   help: |
-    Pour plus de questions visitez <a href="http://telegra.ph/Controller-Help-03-20">Controller Help</a>.
+    Pour plus de questions visitez <a href="https://telegra.ph/Controller-Help-03-20">Controller Help</a>.
 
     Vous pouvez me contrôller en envoyant ces commandes:
-    
+
     /newpost - créer une nouvelle publication
     /addchannel - ajouter une nouvelle chaîne
     /mychannels - editer vos chaînes
@@ -37,11 +37,11 @@ bots:
     <b>Connecter un bot</b>
 
     Pour connecter un bot veuillez suivre ces deux étapes:
-    
+
     1. Ouvrir @BotFather, puis entrer <code>/newbot</code> et choisir un nom et un nom d'utilisateur pour votre bot.
     2. Vous obtiendrez un jeton (e.g. 12345:6789ABCDEF) — faire un copier-coller vers moi ou me le transferer.
-    
-    <b>Attention!</b> Ne pas connecter des bots déjà utilisés par d'autres services comme Chatfuel, Manybot, ect. 
+
+    <b>Attention!</b> Ne pas connecter des bots déjà utilisés par d'autres services comme Chatfuel, Manybot, ect.
 
   wrong_token: Ceci ne me dit rien. Veuillez m\'envoyer le jeton de votre bot.
   error_add: Jeton invalide. Essayez d\'en obtenir un nouveau ou utilisez celui d\'un autre bot.
@@ -62,8 +62,8 @@ channels:
       <b>Ajout d'une chaîne</b>
 
       Pour ajouter une chaîne veuillez suivre ces deux étapes:
-    
-      1. <a href="http://telegra.ph/Add-Bot-to-Admins-Controller-FAQ-03-28">Ajoutez @${username} to admins</a> de votre chaîne. 
+
+      1. <a href="https://telegra.ph/Add-Bot-to-Admins-Controller-FAQ-03-28">Ajoutez @${username} to admins</a> de votre chaîne.
       2. Puis transférez moi n'importe quel message depuis votre chaîne (vous pouvez aussi m'envoyez le nom d'utilisateur ou l'ID de votre chaîne).
     added: |
       Succès! La chaîne ${channel.username ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>' : '<b>' + channel.name + '</b>'} a été ajoutée.
@@ -93,7 +93,7 @@ channels:
       Ça y est: ${channel.name}. Que voulez vous faire de cette chaîne?
     delete_confirm: |
       Are you sure you want to delete this channel?
-      
+
       All scheduled posts and saved stats for this channel will be also deleted.
     channel_deleted: Opération éffectuée! La chaîne a été supprimée.
     select_bot: |
@@ -172,41 +172,41 @@ post:
     error_poll_not_anonymous: Sorry, but you can\'t send non-anonymous polls to channels.
     error_parse: |
       Erreurs lors du formatage du texte:
-      
+
       <pre>${description}</pre>
-      
-      Veuillez <a href="http://telegra.ph/Parsing-Error-Fix-Controller-FAQ-03-28">corriger toutes les erreurs</a> et envoyez le message à nouveau.
+
+      Veuillez <a href="https://telegra.ph/Parsing-Error-Fix-Controller-FAQ-03-28">corriger toutes les erreurs</a> et envoyez le message à nouveau.
     continue_collect: Vous pouvez continuer à m\'envoyer des messages.
     html: |
       <b>gras</b>
       &lt;b&gt;bold&lt;/b&gt;
-      
+
       <i>italique</i>
       &lt;i&gt;italic&lt;/i&gt;
-      
+
       <a href="http://www.example.com/">inline URL</a>
       &lt;a href=&quot;http://www.example.com/&quot;&gt;inline URL&lt;/a&gt;
-      
+
       <code>Code à largeur fixe</code>
       &lt;code&gt;inline fixed-width code&lt;/code&gt;
-      
+
       <pre>Bloc de code pré-formaté à largeur fixe</pre>
-      &lt;pre&gt;pre-formatted fixed-width 
+      &lt;pre&gt;pre-formatted fixed-width
       code block&lt;/pre&gt;
     markdown: |
       <b>texte en gras</b>
       *texte en gras*
-      
+
       <i>texte en italique</i>
       _texte en italique_
-      
+
       <a href="http://www.example.com/">texte</a>
       [texte](http://www.example.com/)
-      
+
       <code>Code à largeur fixe</code>
       `Code à largeur fixe`
-      
-      <pre>texte 
+
+      <pre>texte
       Bloc de code pré-formaté à largeur fixe</pre>
       ```bloc de code pré-formaté à largeur fixe
       ```
@@ -222,7 +222,7 @@ post:
         choisissez 'Annuler' pour revenir à la création du message.
       error: |
         Erreurs dans la liste des boutons URL: <code>${error}</code>
-        
+
         Veuillez corriger toutes les erreurs et envoyez le message à nouveau.
       not_keyboard: |
         Le message envoyé par vous ne correspond pas au format de la liste des boutons pour lien URL. Vérifiez le tout deux fois et réessayez de nouveau.
@@ -230,7 +230,7 @@ post:
       cleared: Opération éffectuée! Boutons URL effacés.
     reactions:
       welcome: |
-        <a href="http://telegra.ph/file/dd1fcbdd1ebb1ce76ab59.jpg">&#8203;</a>Send me emojies or a text with <b>/</b> as separator to add reactions.
+        <a href="https://telegra.ph/file/dd1fcbdd1ebb1ce76ab59.jpg">&#8203;</a>Send me emojies or a text with <b>/</b> as separator to add reactions.
 
         For example:
       not_found_smiles: |
@@ -399,7 +399,7 @@ statistics:
   select_channel: Choisissez une chaîne pour afficher les statistiques.
   no_channels: |
     Il n'y a aucune chaîne ajoutée pour l'instant.
-    
+
     Envoyez /addchannel pour en ajouter une nouvelle.
   selected_channel: 'Ça y est: ${channel.name}. Que voulez-vous faire de ces statistiques?'
   channel_not_found: Cette chaîne n\'est pas disponible.
@@ -407,7 +407,7 @@ statistics:
   loading_data: 🕒 Traitement de donnée et rendu des graphes...
   error_load_data: |
     Une erreur est survenu lors du traitement de donnée
-     
+
     Envoyez-nous un message à @ControllerSupportBot pour signaler le problème.
   not_found_data: Il n\'y a pas encore de données statistiques pour cette chaîne. Revenez plus tard.
   share_text: |
@@ -487,11 +487,11 @@ btn:
     channel_added: Créer une publication
 
     how_to_create_bot: Comment créer un bot?
-    how_to_create_bot_url: http://telegra.ph/Create-Bot-Controller-FAQ-03-28
+    how_to_create_bot_url: https://telegra.ph/Create-Bot-Controller-FAQ-03-28
 
     control:
       how_to_add_admin: Comment ajouter un administrateur?
-      how_to_add_admin_url: http://telegra.ph/Admins-Controller-FAQ-03-28
+      how_to_add_admin_url: https://telegra.ph/Admins-Controller-FAQ-03-28
 
       update: Mettre à jour les données
       bot: Changer le Bot connecté
@@ -502,7 +502,7 @@ btn:
       confirm_delete_no: No
 
   post:
-    settings: 
+    settings:
       disable_notification_disable: 'Diffusion silencieuse: Desactiver'
       disable_notification_enable: 'Diffusion silencieuse: Activer'
 
@@ -516,7 +516,7 @@ btn:
       default_reactions_enable: 'Reactions par défauts: Activer'
 
     faq: Aide sur Controller
-    
+
     control_channel: Aller aux paramètres de chaîne
     return_to_channels: « Retourner à la liste des chaînes
 
@@ -535,7 +535,7 @@ btn:
     add_reactions: Ajouter des réactions
     clear_reactions: Supprimer les réactions
 
-    clear: Tout supprimer 
+    clear: Tout supprimer
     preview: Aperçu
     done: Envoyer
     cancel: Annumer
@@ -558,7 +558,7 @@ btn:
       send_now: Maintenant
       sent: Voir le message dans la chaîne
       create_scheduled: File d\'attente
-      
+
       send: Envoyer
       cancel: Annuler
 
@@ -592,7 +592,7 @@ btn:
   statistics:
     view_periods: Voir
     view_via_web: Voir via page web
-    
+
     periods:
       one_week: Semaine
       one_month: Mois

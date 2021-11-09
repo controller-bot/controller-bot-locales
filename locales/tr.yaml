@@ -16,9 +16,9 @@ common:
     /mychannels - kanallarınızı düzenleyin
     /settings - diğer ayarlar
   help: |
-    Sorularınız varsa, <a href="http://telegra.ph/Controller-Help-03-20">Controller Help</a> sayfasına bakın.
+    Sorularınız varsa, <a href="https://telegra.ph/Controller-Help-03-20">Controller Help</a> sayfasına bakın.
     Bu komutları göndererek beni kontrol edebilirsiniz:
-    
+
     /newpost - yeni gönderi oluşturun
     /addchannel - yeni kanal ekleyin
     /mychannels - kanallarınızı düzenleyin
@@ -32,10 +32,10 @@ bots:
   add: |
     <b>Bot Bağlama</b>
     Bot bağlamak için, bu iki adımı takip edin:
-    
-    1. @BotFather'ı açın ve <a href="http://telegra.ph/Create-Bot-Controller-FAQ-03-28">yeni bir bot oluşturun</a>.
+
+    1. @BotFather'ı açın ve <a href="https://telegra.ph/Create-Bot-Controller-FAQ-03-28">yeni bir bot oluşturun</a>.
     2. Bir token alacaksınız (örn. 12345:6789ABCDEF) — sadece onu bana iletin veya kopyalayıp yapıştırın.
-    
+
     <b>Uyarı!</b> Halihazırda Chatfuel, Manybot vb. servisler tarafından kullanılan botları bağlamayın.
   wrong_token: Benimle ilgili değil gibi. Lütfen bana botunuzun tokenını gönderin.
   error_add: Geçersiz token. Yeni bir token alın ya da başka bir botun tokenını kullanın.
@@ -54,8 +54,8 @@ channels:
     welcome: |
       <b>Kanal Ekleme</b>
       Kanal eklemek için, bu iki adımı takip edin:
-    
-      1. <a href="http://telegra.ph/Add-Bot-to-Admins-Controller-FAQ-03-28">@${username} botu yöneticilere ekleyin</a>. 
+
+      1. <a href="https://telegra.ph/Add-Bot-to-Admins-Controller-FAQ-03-28">@${username} botu yöneticilere ekleyin</a>.
       2. Sonra bana kanaldan bir mesaj iletin (ayrıca kullanıcı adı veya ID de gönderebilirsiniz).
     added: |
       Başarılı! ${channel.username ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>' : '<b>' + channel.name + '</b>'} adlı kanal eklendi.
@@ -80,7 +80,7 @@ channels:
       Kanal: ${channel.name}. Bu kanalla ne yapmak istiyorsunuz?
     delete_confirm: |
       Bu kanalı silmek istediğinize emin misiniz?
-      
+
       Bu kanal için tüm zamanlanmış gönderiler ve kayıtlı istatistikler silinecek.
     channel_deleted: Tamam! Kanal gitti.
     select_bot: |
@@ -120,7 +120,7 @@ post:
       ? 'Sorunları düzeltmek için kanal ayarlarına gidin.'
       : 'Kanal sahibi, kanal ayarlarına gitmeli ve sorunları düzeltmeli.'
     }
-  problem_items: 
+  problem_items:
     timezone_is_not_set: 🔹 zaman dilimi ayarlı değil
     bot_is_not_connection: 🔹 kanal bir bota bağlı değil
     channel_not_found: 🔹 kanal artık yok
@@ -148,42 +148,42 @@ post:
     error_poll_not_anonymous: Üzgünüm, ama kanallara herkese açık anketler gönderemezsiniz.
     error_parse: |
       Metin formatlamada hatalar:
-      
+
       <pre>${description}</pre>
-      
-      Lütfen <a href="http://telegra.ph/Parsing-Error-Fix-Controller-FAQ-03-28">tüm hataları çözün</a> ve tekrar gönderin.
-    continue_collect: Mesaj göndermeye devam edebilirsiniz. 
+
+      Lütfen <a href="https://telegra.ph/Parsing-Error-Fix-Controller-FAQ-03-28">tüm hataları çözün</a> ve tekrar gönderin.
+    continue_collect: Mesaj göndermeye devam edebilirsiniz.
     html: |
       <b>kalın</b>
       &lt;b&gt;kalın&lt;/b&gt;
-      
+
       <i>eğik</i>
       &lt;i&gt;eğik&lt;/i&gt;
-      
+
       <a href="http://www.example.com/">bağlantı</a>
       &lt;a href=&quot;http://www.example.com/&quot;&gt;bağlantı&lt;/a&gt;
-      
+
       <code>tek satırlı kod</code>
       &lt;code&gt;tek satırlı kod&lt;/code&gt;
-      
+
       <pre>kod bloğu</pre>
       &lt;pre&gt;kod bloğu&lt;/pre&gt;
     markdown: |
       <b>kalın metin</b>
       *kalın metin*
-      
+
       <i>eğik metin</i>
       _eğik metin_
-      
+
       <a href="http://www.example.com/">bağlantı</a>
       [bağlantı](http://www.example.com/)
-      
+
       <code>tek satırlı kod</code>
       `tek satırlı kod`
-      
-      <pre>metin 
+
+      <pre>metin
       kod bloğu</pre>
-      ```metin 
+      ```metin
       kod bloğu
       ```
     canceled: Gönderi oluşturma iptal edildi.
@@ -197,7 +197,7 @@ post:
         Gönderi oluşturmaya geri dönmek için 'İptal Et' butonunu seçin.
       error: |
         Bağlantı buton listesinde hatalar: <code>${error}</code>
-        
+
         Lütfen tüm hataları düzeltin ve tekrar gönderin.
       not_keyboard: |
         Gönderdiğiniz mesaj, bağlantı buton listesi formatına uymuyor. Lütfen her şeyi iki kez kontrol edin ve tekrar deneyin.
@@ -205,7 +205,7 @@ post:
       cleared: Başarılı! Bağlantı butonları temizlendi.
     reactions:
       welcome: |
-        <a href="http://telegra.ph/file/dd1fcbdd1ebb1ce76ab59.jpg">&#8203;</a>Tepkiler eklemek için ifadeleri veya ayırıcı olarak <b>/</b> ekleyerek metni gönderin.
+        <a href="https://telegra.ph/file/dd1fcbdd1ebb1ce76ab59.jpg">&#8203;</a>Tepkiler eklemek için ifadeleri veya ayırıcı olarak <b>/</b> ekleyerek metni gönderin.
         Örneğin:
       not_found_smiles: |
         Bir veya daha fazla ifade gönderin. Örneğin: 👍👎
@@ -256,21 +256,21 @@ post:
     welcome: |
       Gönderiyi ${day} göndermek istediğiniz zamanı gönderin.
       Diğer günlere ayarlamak için zaman+tarih gönderin.
-      
+
     help: |
       <b>Desteklenen zaman formatları:</b>
       <pre>"6" → 06:00
       "5 3" → 05:03
       "15:30" → 15:30
       "1530" → 15:30</pre>
-      
+
       <b>Desteklenen tarih formatları:</b>
       <pre>"6" → şu anki ayın 6'sı
       "9 12" → 9 Aralık
       "8 7 18" → 8 Temmuz 2018</pre>
-      
-      Ayrıca ayırmak için boşluklar yerine iki nokta üst üste ve noktayı da kullanabilirsiniz. 
-      
+
+      Ayrıca ayırmak için boşluklar yerine iki nokta üst üste ve noktayı da kullanabilirsiniz.
+
       Sadece zaman gönderirseniz, gönderi varsayılan olarak bugün o zaman için ayarlanacak. Başka bir güne zamanlamak için, zaman+tarih gönderin. Örneğin, <code>16 30 6 8 -> 16:30, 6 Ağustos</code>
     error_date: Yanlış tarih veya zaman. Bir ipucu almak için 'Yardım' butonunu seçin.
     invalid_date: Yanlış tarih.
@@ -356,8 +356,8 @@ settings:
     channel_item: |
       ${index}. ${name}
     confirm_delete: |
-      ${count 
-        ? 'Bot bu kanallara bağlı:\n\n' + channels 
+      ${count
+        ? 'Bot bu kanallara bağlı:\n\n' + channels
         : 'Bot bir kanala bağlı değil.\n'
       }
       Bu botu silmek istediğinize emin misiniz?
@@ -367,7 +367,7 @@ statistics:
   select_channel: İstatistiklerini görmek istediğiniz bir kanalı seçin.
   no_channels: |
     Henüz ekli kanal yok.
-    
+
     Yeni bir tane eklemek için /addchannel yazın.
   selected_channel: 'Kanal: ${channel.name}. What do you want to do with stats?'
   channel_not_found: Bu kanal kullanılamaz.
@@ -375,7 +375,7 @@ statistics:
   loading_data: 🕒 Veri işleniyor ve grafik oluşturuluyor...
   error_load_data: |
     Veri işlenirken bir hata oluştu.
-     
+
     Sorunu bildirmek için @ControllerSupportBot'a mesaj gönderin.
   not_found_data: Bu kanal için henüz istatistik verisi yok. Daha sonra tekrar gel.
   share_text: |
@@ -471,11 +471,11 @@ btn:
     channel_added: Gönderi Oluştur
 
     how_to_create_bot: Nasıl bot oluşturulur?
-    how_to_create_bot_url: http://telegra.ph/Create-Bot-Controller-FAQ-03-28
+    how_to_create_bot_url: https://telegra.ph/Create-Bot-Controller-FAQ-03-28
 
     control:
       how_to_add_admin: Nasıl bir yönetici eklenir?
-      how_to_add_admin_url: http://telegra.ph/Admins-Controller-FAQ-03-28
+      how_to_add_admin_url: https://telegra.ph/Admins-Controller-FAQ-03-28
 
       update: Veri Güncelle
       bot: Bağlı Botu Değiştir
@@ -486,13 +486,13 @@ btn:
       confirm_delete_no: Hayır
 
   post:
-    settings: 
+    settings:
       disable_notification_disable: 'Sessiz Yayın: KAPALI'
       disable_notification_enable: 'Sessiz Yayın: AÇIK'
-      
+
       disable_web_page_preview_disable: 'Bağlantı önizlemeleri: AÇIK'
       disable_web_page_preview_enable: 'Bağlantı önizlemeleri: KAPALI'
-      
+
       parse_mode_markdown: 'Formatlama Tarzı: Markdown'
       parse_mode_html: 'Formatlama Tarzı: HTML'
 
@@ -500,7 +500,7 @@ btn:
       default_reactions_enable: 'Varsayılan Tepkiler: AÇIK'
 
     faq: Controller Yardım
-    
+
     control_channel: Kanal Ayarlarına Git
     return_to_channels: « Kanal Listesine Dön
 
@@ -512,14 +512,14 @@ btn:
     open_comments: Yorumları Aç
     add_comments: Yorumları Ekle
     delete_comments: Yorumları Sil
-    
+
     add_inline: Bağlantı Butonları Ekle
     clear_inline: Bağlantı Butonları Sil
-    
+
     add_reactions: Tepkileri Ekle
     clear_reactions: Tepkileri Sil
 
-    clear: Tümünü Sil 
+    clear: Tümünü Sil
     preview: Önizle
     done: Gönder
     cancel: İptal Et
@@ -541,7 +541,7 @@ btn:
       send_now: Şimdi Gönder
       sent: Gönderiyi Kanalda Gör
       create_scheduled: Zamanla
-      
+
       send: Gönder
       cancel: İptal Et
 
@@ -574,7 +574,7 @@ btn:
   statistics:
     view_periods: Gör
     view_via_web: Web Sayfası ile Gör
-    
+
     periods:
       one_week: Hafta
       one_month: Ay

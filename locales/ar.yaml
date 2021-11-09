@@ -22,7 +22,7 @@ common:
     /settings - إعدادات
 
   help: |
-    إذا كانت لديك أي أسئلة، ألقِ نظرةً هنا <a href="http://telegra.ph/Controller-Help-03-20">تعليمات بوت الإدارة</a>.
+    إذا كانت لديك أي أسئلة، ألقِ نظرةً هنا <a href="https://telegra.ph/Controller-Help-03-20">تعليمات بوت الإدارة</a>.
 
     يمكنك إرسال أحد الأوامر التالية:
 
@@ -38,7 +38,7 @@ bots:
 
     لربط بوت يجب عليك اتباع الخطوات التالية:
 
-    1. ِافتح @BotFather و<a href="http://telegra.ph/Create-Bot-Controller-FAQ-03-28">أنشِئ بوت جديد</a>.
+    1. ِافتح @BotFather و<a href="https://telegra.ph/Create-Bot-Controller-FAQ-03-28">أنشِئ بوت جديد</a>.
     2. ستحصل على رمز (توكن) (e.g. 12345:6789ABCDEF) — أعِد توجيه الرسالة أو انسخها ثم ألصقها هنا.
 
     <b>ِاحذر!</b> لا تربط أيّ بوتٍ متصل بالفعل مع أي خدمةٍ أخرى مثل Chatfuel, Manybot, إلخ.
@@ -63,7 +63,7 @@ channels:
 
       اتّبع الخطوات التّالية لإضافة قناة:
 
-      1. <a href="http://telegra.ph/Add-Bot-to-Admins-Controller-FAQ-03-28">أضف @${username} كمشرفٍ</a> في قناتك.
+      1. <a href="https://telegra.ph/Add-Bot-to-Admins-Controller-FAQ-03-28">أضف @${username} كمشرفٍ</a> في قناتك.
       2. ثم أعِد توجيه أيّ رسالةٍ من قناتك إليَّ (أو أرسل معرِّف القناة أو المعرف الرقمي ID للقناة).
     added: |
       تم! قناة ${channel.username ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>' : '<b>' + channel.name + '</b>'} أُضيفت.
@@ -175,7 +175,7 @@ post:
 
       <pre>${description}</pre>
 
-      رجاءً <a href="http://telegra.ph/Parsing-Error-Fix-Controller-FAQ-03-28">صحح الأخطاء</a> وأرسل الرسالة مرة أخرى
+      رجاءً <a href="https://telegra.ph/Parsing-Error-Fix-Controller-FAQ-03-28">صحح الأخطاء</a> وأرسل الرسالة مرة أخرى
     continue_collect: يمكنك الاستمرار في إرسال الرسائل.
     html: |
       <b>عريض</b>
@@ -231,7 +231,7 @@ post:
       cleared: تمّ مسح قائمة أزرار ذات روابط.
     reactions:
       welcome: |
-        <a href="http://telegra.ph/file/dd1fcbdd1ebb1ce76ab59.jpg">&#8203;</a>أرسل نصوصًا أو تعابير (فيسات، إيموجي) مفصولة بـ  <b>/</b> لتضيف ردود الفعل.
+        <a href="https://telegra.ph/file/dd1fcbdd1ebb1ce76ab59.jpg">&#8203;</a>أرسل نصوصًا أو تعابير (فيسات، إيموجي) مفصولة بـ  <b>/</b> لتضيف ردود الفعل.
 
         مثال:
       not_found_smiles: |
@@ -516,11 +516,11 @@ btn:
     channel_added: إنشاء منشور
 
     how_to_create_bot: كيف تنشئ بوت؟
-    how_to_create_bot_url: http://telegra.ph/Create-Bot-Controller-FAQ-03-28
+    how_to_create_bot_url: https://telegra.ph/Create-Bot-Controller-FAQ-03-28
 
     control:
       how_to_add_admin: كيف تضيف مشرفًا؟
-      how_to_add_admin_url: http://telegra.ph/Admins-Controller-FAQ-03-28
+      how_to_add_admin_url: https://telegra.ph/Admins-Controller-FAQ-03-28
 
       update: تحديث البيانات
       bot: تغيير بوت مرتبط

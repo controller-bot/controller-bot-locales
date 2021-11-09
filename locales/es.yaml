@@ -22,10 +22,10 @@ common:
     /settings - otras configuraciones
 
   help: |
-    Si tiene alguna pregunta, eche un vistazo a la <a href="http://telegra.ph/Controller-Help-03-20">Ayuda</a>.
+    Si tiene alguna pregunta, eche un vistazo a la <a href="https://telegra.ph/Controller-Help-03-20">Ayuda</a>.
 
     Puedes controlarme enviando estos comandos:
-    
+
     /newpost - crear una nueva publicación
     /addchannel - agrega un nuevo canal
     /mychannels - edita tus canales
@@ -36,10 +36,10 @@ bots:
     <b>Conectando un bot</b>
 
     Para conectar un bot, debes seguir estos dos pasos:
-    
-    1. Abre @BotFather y <a href="http://telegra.ph/Create-Bot-Controller-FAQ-03-28">crea un nuevo bot</a>.
+
+    1. Abre @BotFather y <a href="https://telegra.ph/Create-Bot-Controller-FAQ-03-28">crea un nuevo bot</a>.
     2. Obtendras un token (por ej. 12345:6789ABCDEF) — solo reenvíamelo o copia y pegamelo.
-    
+
     <b>¡Cuidado!</b> No conectes bots ya utilizados por otros servicios como Chatfuel, Manybot, ect.
 
   wrong_token: No se parece a nada para mí. Por favor envíeme el token de su bot.
@@ -61,8 +61,8 @@ channels:
       <b>Agregar un canal</b>
 
       Para agregar un canal, debe seguir estos dos pasos:
-    
-      1. <a href="http://telegra.ph/Add-Bot-to-Admins-Controller-FAQ-03-28">Añada @${username} a los administradores</a> de tu canal. 
+
+      1. <a href="https://telegra.ph/Add-Bot-to-Admins-Controller-FAQ-03-28">Añada @${username} a los administradores</a> de tu canal.
       2. Luego envíeme cualquier mensaje de su canal (también puede enviarme su nombre de usuario o ID).
     added: |
       ¡Éxito! El canal ${channel.username ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>' : '<b>' + channel.name + '</b>'} ha sido añadido.
@@ -92,7 +92,7 @@ channels:
       Aquí está: ${channel.name}. ¿Qué quieres hacer con el canal?
     delete_confirm: |
       ¿Seguro que quieres eliminar este canal?
-      
+
       Todas las publicaciones programadas y las estadísticas guardadas para este canal también se eliminarán.
     channel_deleted: ¡Hecho! El canal se ha ido.
     select_bot: |
@@ -138,7 +138,7 @@ post:
       ? 'Ve a la configuración del canal para solucionar los problemas.'
       : 'El creador del canal debe ir a la configuración del canal y solucionar los problemas.'
     }
-  problem_items: 
+  problem_items:
     timezone_is_not_set: 🔹 la zona horaria no está configurada
     bot_is_not_connection: 🔹 el canal no está conectado a un bot
     channel_not_found: 🔹 el canal ya no existe
@@ -170,44 +170,44 @@ post:
       ${messages}
     error_parse: |
       Errores en el formato del texto:
-      
+
       <pre>${description}</pre>
-      
-      Por favor <a href="http://telegra.ph/Parsing-Error-Fix-Controller-FAQ-03-28">corrige todos los errores</a> y envia el mensaje de nuevo.
+
+      Por favor <a href="https://telegra.ph/Parsing-Error-Fix-Controller-FAQ-03-28">corrige todos los errores</a> y envia el mensaje de nuevo.
     error_poll_not_anonymous: Sorry, but you can\'t send non-anonymous polls to channels.
     continue_collect: Puedes continuar enviándome mensajes.
     html: |
       <b>negrita</b>
       &lt;b&gt;negrita&lt;/b&gt;
-      
+
       <i>cursiva</i>
       &lt;i&gt;cursiva&lt;/i&gt;
-      
+
       <a href="http://www.example.com/">inline URL</a>
       &lt;a href=&quot;http://www.example.com/&quot;&gt;inline URL&lt;/a&gt;
-      
+
       <code>inline fixed-width code</code>
       &lt;code&gt;inline fixed-width code&lt;/code&gt;
-      
+
       <pre>pre-formatted fixed-width code block</pre>
-      &lt;pre&gt;pre-formatted fixed-width 
+      &lt;pre&gt;pre-formatted fixed-width
       code block&lt;/pre&gt;
     markdown: |
       <b>texto en negrita</b>
       *texto en negrita*
-      
+
       <i>texto en cursiva</i>
       _texto en cursiva_
-      
+
       <a href="http://www.example.com/">text</a>
       [text](http://www.example.com/)
-      
+
       <code>inline fixed-width code</code>
       `inline fixed-width code`
-      
-      <pre>text 
+
+      <pre>text
       pre-formatted fixed-width code block</pre>
-      ```pre-formatted fixed-width 
+      ```pre-formatted fixed-width
       code block
       ```
     canceled: La publicación ha sido cancelada.
@@ -222,7 +222,7 @@ post:
         Elija 'Cancelar' para volver a la creación de la publicación.
       error: |
         Errores en la lista de botones de URL: <code>${error}</code>
-        
+
         Por favor, corrija todos los errores y envíe mensajes de nuevo.
       not_keyboard: |
         El mensaje enviado por usted no se ajusta al formato de la lista de botones de URL. Por favor revise todo dos veces y vuelva a intentarlo.
@@ -230,7 +230,7 @@ post:
       cleared: ¡Éxito! Botones de URL borrados
     reactions:
       welcome: |
-        <a href="http://telegra.ph/file/dd1fcbdd1ebb1ce76ab59.jpg">&#8203;</a>Envíame emojis o un texto con <b>/</b> como separación para añadir reacciones.
+        <a href="https://telegra.ph/file/dd1fcbdd1ebb1ce76ab59.jpg">&#8203;</a>Envíame emojis o un texto con <b>/</b> como separación para añadir reacciones.
 
         Por ejemplo:
       not_found_smiles: |
@@ -286,21 +286,21 @@ post:
     welcome: |
       Envía la hora a la que desea publicar la publicación ${day}.
       Envía hora + fecha para encolar la publicación cualquier otro día.
-      
+
     help: |
       <b>Los siguientes formatos de tiempo son compatibles:</b>
       <pre>"6" → 06:00
       "5 3" → 05:03
       "15:30" → 15:30
       "1530" → 15:30</pre>
-      
+
       <b>Los siguientes formatos de fecha son compatibles:</b>
       <pre>"6" → 6 del mes actual
       "9 12" → 9 de Diciembre
       "8 7 18" → 8 Julio, 2018</pre>
-      
+
       También puede usar dos puntos y puntos en lugar de espacios para la separación.
-      
+
       Si envía solo el tiempo, la publicación se pondrá en cola en el día actual de forma predeterminada. Para poner en cola la publicación en cualquier otro día, envíe hora + fecha. Por ejemplo, <code>16 30 6 8 -> 16:30, 6 Agosto</code>
     error_date: Fecha o hora incorrecta. Elija 'Ayuda' para obtener una pista.
     invalid_date: Fecha incorrecta.
@@ -324,7 +324,7 @@ posts:
     unsupported_type: |
       No se puede editar este mensaje. Puede editar solo mensajes de texto y subtítulos.
     post_not_found: |
-      Esta publicación no está disponible. El canal y el bot a través del cual se envió el mensaje deben estar conectados a Controller Bot. Por favor revise todo dos veces y vuelva a intentarlo.    
+      Esta publicación no está disponible. El canal y el bot a través del cual se envió el mensaje deben estar conectados a Controller Bot. Por favor revise todo dos veces y vuelva a intentarlo.
     editing: |
       Tipo de mensaje: ${type_text}.${type == 'text' ? '\nEstilo de formato: ' + parse_mode : ''}
 
@@ -388,8 +388,8 @@ settings:
     channel_item: |
       ${index}. ${name}
     confirm_delete: |
-      ${count 
-        ? 'El bot está conectado con estos canales:\n\n' + channels 
+      ${count
+        ? 'El bot está conectado con estos canales:\n\n' + channels
         : 'El bot no está conectado con ningún canal.\n'
       }
       ¿Seguro que quieres eliminar este bot?
@@ -399,7 +399,7 @@ statistics:
   select_channel: Elige un canal para ver las estadísticas.
   no_channels: |
     No hay canales agregados todavía
-    
+
     Enviar /addchannel canal para agregar uno nuevo.
   selected_channel: 'Aquí está: ${channel.name}. ¿Qué quieres hacer con las estadísticas?'
   channel_not_found: Este canal no está disponible.
@@ -407,7 +407,7 @@ statistics:
   loading_data: 🕒 Procesando los datos y renderizando gráficos...
   error_load_data: |
     Se produjo un error durante el procesamiento de datos.
-     
+
     Envíenos un mensaje a @ControllerSupportBot para informar del problema.
   not_found_data: There is no stats data for this channel yet. Come back later.
   share_text: |
@@ -487,11 +487,11 @@ btn:
     channel_added: Crear publicación
 
     how_to_create_bot: ¿Cómo crear un bot?
-    how_to_create_bot_url: http://telegra.ph/Create-Bot-Controller-FAQ-03-28
+    how_to_create_bot_url: https://telegra.ph/Create-Bot-Controller-FAQ-03-28
 
     control:
       how_to_add_admin: ¿Cómo agregar un administrador?
-      how_to_add_admin_url: http://telegra.ph/Admins-Controller-FAQ-03-28
+      how_to_add_admin_url: https://telegra.ph/Admins-Controller-FAQ-03-28
 
       update: Actualizar datos
       bot: Cambiar el bot conectado
@@ -502,13 +502,13 @@ btn:
       confirm_delete_no: No
 
   post:
-    settings: 
+    settings:
       disable_notification_disable: 'Noticifación silenciosa: OFF'
       disable_notification_enable: 'Noticifación silenciosa: ON'
-      
+
       disable_web_page_preview_disable: 'Vista previa de enlaces: ON'
       disable_web_page_preview_enable: 'Vista previa de enlaces: OFF'
-      
+
       parse_mode_markdown: 'Estilo de formato: Markdown'
       parse_mode_html: 'Estilo de formato: HTML'
 
@@ -516,7 +516,7 @@ btn:
       default_reactions_enable: 'Reacciones predeterminadas: ON'
 
     faq: Ayuda de Controller
-    
+
     control_channel: Ir a la configuración del canal
     return_to_channels: « Volver a la lista de canales
 
@@ -528,10 +528,10 @@ btn:
     open_comments: Abrir Comentarios
     add_comments: Añadir Comentarios
     delete_comments: Borrar Comentarios
-    
+
     add_inline: Añadir botones de URL
     clear_inline: Borrar botones de URL
-    
+
     add_reactions: Añadir Reaccioens
     clear_reactions: Borrar Reacciones
 
@@ -557,7 +557,7 @@ btn:
       send_now: Enviar ahora
       sent: Ver publicación en el canal
       create_scheduled: Encolar
-      
+
       send: Enviar
       cancel: Cancelar
 
@@ -591,7 +591,7 @@ btn:
   statistics:
     view_periods: Ver
     view_via_web: Ver a través de la página web
-    
+
     periods:
       one_week: Semana
       one_month: Mes

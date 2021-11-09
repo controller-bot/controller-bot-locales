@@ -20,7 +20,7 @@ common:
     /settings - настройки бота
 
   help: |
-    Изучите <a href="http://telegra.ph/Controller-Help-03-22">справку</a>, если вам нужна помощь или обратитесь в <a href="https://t.me/ControllerSupportBot">техподдержку</a>, если не нашли ответа на свой вопрос в справке.
+    Изучите <a href="https://telegra.ph/Controller-Help-03-22">справку</a>, если вам нужна помощь или обратитесь в <a href="https://t.me/ControllerSupportBot">техподдержку</a>, если не нашли ответа на свой вопрос в справке.
 
     /newpost - создать пост
     /addchannel - добавить канал
@@ -60,7 +60,7 @@ channels:
       Чтобы добавить канал, вы должны выполнить два следующих шага:
 
       1. Добавьте @${username} в администраторы вашего канала.
-      2. Перешлите мне любое сообщение из вашего канала (вы также можете отправить @username или <a href="http://telegra.ph/How-to-add-a-chat-Controller-FAQ-10-12">Group ID</a>).
+      2. Перешлите мне любое сообщение из вашего канала (вы также можете отправить @username или <a href="https://telegra.ph/How-to-add-a-chat-Controller-FAQ-10-12">Group ID</a>).
     added: |
       Канал ${channel.username ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>' : '<b>' + channel.name + '</b>'} успешно добавлен.
 
@@ -72,7 +72,7 @@ channels:
 
     error:
       data: |
-        Перешлите мне любое сообщение из вашего канала (вы также можете отправить @username или <a href="http://telegra.ph/How-to-add-a-chat-Controller-FAQ-10-12">Group ID</a>).
+        Перешлите мне любое сообщение из вашего канала (вы также можете отправить @username или <a href="https://telegra.ph/How-to-add-a-chat-Controller-FAQ-10-12">Group ID</a>).
       channel_not_found: Канал не найден.
       you_are_not_administrator: Вы не являетесь администратором этого канала.
       you_do_not_have_rights: Вы не имеете прав на постинг сообщений в этот канал.
@@ -176,7 +176,7 @@ post:
 
       Исправьте их и отправьте сообщение еще раз.
 
-      <a href="http://telegra.ph/Parsing-Error-Fix-Controller-FAQ-03-22">Как исправить эту ошибку?</a>
+      <a href="https://telegra.ph/Parsing-Error-Fix-Controller-FAQ-03-22">Как исправить эту ошибку?</a>
     continue_collect: Продолжайте отправлять сообщения.
     html: |
       <b>жирный</b>
@@ -240,7 +240,7 @@ post:
       cleared: URL-кнопки удалены.
     reactions:
       welcome: |
-        <a href="http://telegra.ph/file/dd1fcbdd1ebb1ce76ab59.jpg">&#8203;</a>Пришлите смайлы или текст с разделителем <b>/</b> для создания реакций.
+        <a href="https://telegra.ph/file/dd1fcbdd1ebb1ce76ab59.jpg">&#8203;</a>Пришлите смайлы или текст с разделителем <b>/</b> для создания реакций.
 
         Например:
       not_found_smiles: |
@@ -542,11 +542,11 @@ btn:
     channel_added: Создать новый пост
 
     how_to_create_bot: Как создать бот?
-    how_to_create_bot_url: http://telegra.ph/Add-Bot-to-Admins-Controller-FAQ-03-22
+    how_to_create_bot_url: https://telegra.ph/Add-Bot-to-Admins-Controller-FAQ-03-22
 
     control:
       how_to_add_admin: Как добавить администратора?
-      how_to_add_admin_url: http://telegra.ph/Admins-Controller-Bot-03-22
+      how_to_add_admin_url: https://telegra.ph/Admins-Controller-Bot-03-22
 
       update: Обновить данные
       bot: Изменить бот

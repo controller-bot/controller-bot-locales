@@ -22,7 +22,7 @@ common:
     /settings - other settings
 
   help: |
-    If you have any questions, take a look at the <a href="http://telegra.ph/Controller-Help-03-20">Controller Help</a>.
+    If you have any questions, take a look at the <a href="https://telegra.ph/Controller-Help-03-20">Controller Help</a>.
 
     You can control me by sending these commands:
 
@@ -37,7 +37,7 @@ bots:
 
     To connect a bot, you should follow these two steps:
 
-    1. Open @BotFather and <a href="http://telegra.ph/Create-Bot-Controller-FAQ-03-28">create a new bot</a>.
+    1. Open @BotFather and <a href="https://telegra.ph/Create-Bot-Controller-FAQ-03-28">create a new bot</a>.
     2. You’ll get a token (e.g. 12345:6789ABCDEF) — just forward or copy-paste it to me.
 
     <b>Warning!</b> Don't connect bots already used by other services like Chatfuel, Manybot, ect.
@@ -62,7 +62,7 @@ channels:
 
       To add a channel you should follow these two steps:
 
-      1. <a href="http://telegra.ph/Add-Bot-to-Admins-Controller-FAQ-03-28">Add @${username} to admins</a> of your channel.
+      1. <a href="https://telegra.ph/Add-Bot-to-Admins-Controller-FAQ-03-28">Add @${username} to admins</a> of your channel.
       2. Then forward to me any message from your channel (you can also send me its username or ID).
     added: |
       Success! The channel ${channel.username ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>' : '<b>' + channel.name + '</b>'} has been added.
@@ -187,7 +187,7 @@ post:
 
       <pre>${description}</pre>
 
-      Please <a href="http://telegra.ph/Parsing-Error-Fix-Controller-FAQ-03-28">fix all errors</a> and send message again.
+      Please <a href="https://telegra.ph/Parsing-Error-Fix-Controller-FAQ-03-28">fix all errors</a> and send message again.
     continue_collect: You can continue to send me messages.
     html: |
       <b>bold</b>
@@ -243,7 +243,7 @@ post:
       cleared: Success! URL buttons cleared.
     reactions:
       welcome: |
-        <a href="http://telegra.ph/file/dd1fcbdd1ebb1ce76ab59.jpg">&#8203;</a>Send me emojies or a text with <b>/</b> as separator to add reactions.
+        <a href="https://telegra.ph/file/dd1fcbdd1ebb1ce76ab59.jpg">&#8203;</a>Send me emojies or a text with <b>/</b> as separator to add reactions.
 
         For example:
       not_found_smiles: |
@@ -531,11 +531,11 @@ btn:
     channel_added: Create Post
 
     how_to_create_bot: How to create bot?
-    how_to_create_bot_url: http://telegra.ph/Create-Bot-Controller-FAQ-03-28
+    how_to_create_bot_url: https://telegra.ph/Create-Bot-Controller-FAQ-03-28
 
     control:
       how_to_add_admin: How to add an admin?
-      how_to_add_admin_url: http://telegra.ph/Admins-Controller-FAQ-03-28
+      how_to_add_admin_url: https://telegra.ph/Admins-Controller-FAQ-03-28
 
       update: Update Data
       bot: Change Connected Bot

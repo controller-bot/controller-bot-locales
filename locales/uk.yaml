@@ -22,7 +22,7 @@ common:
     /settings - інші налаштування
 
   help: |
-    Якщо є якісь запитання, перегляньте <a href="http://telegra.ph/Controller-Help-03-20">Довідку Controller</a>.
+    Якщо є якісь запитання, перегляньте <a href="https://telegra.ph/Controller-Help-03-20">Довідку Controller</a>.
 
     Керувати мною можна, надсилаючи такі команди:
 
@@ -37,7 +37,7 @@ bots:
 
     Щоб під'єднати бота, виконайте такі два кроки:
 
-    1. Перейдіть до @BotFather та <a href="http://telegra.ph/Create-Bot-Controller-FAQ-03-28">створіть нового бота</a>.
+    1. Перейдіть до @BotFather та <a href="https://telegra.ph/Create-Bot-Controller-FAQ-03-28">створіть нового бота</a>.
     2. Ви одержите токен (напр. 12345:6789ABCDEF) — просто перешліть чи скопіюйте-вставте його мені.
 
     <b>Увага!</b> Не під'єднуйте ботів, які використовуються іншими сервісами як-от Chatfuel, Manybot, та ін.
@@ -62,7 +62,7 @@ channels:
 
       Щоб додати канал, виконайте два таких кроки:
 
-      1. <a href="http://telegra.ph/Add-Bot-to-Admins-Controller-FAQ-03-28">Додайте @${username} до адмінів</a> вашого каналу.
+      1. <a href="https://telegra.ph/Add-Bot-to-Admins-Controller-FAQ-03-28">Додайте @${username} до адмінів</a> вашого каналу.
       2. Потім перешліть мені будь-яке повідомлення з вашого каналу (або можете надіслати його псевдонім чи ID).
     added: |
       Успіх! Канал ${channel.username ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>' : '<b>' + channel.name + '</b>'} додано.
@@ -174,7 +174,7 @@ post:
 
       <pre>${description}</pre>
 
-      Будь ласка, <a href="http://telegra.ph/Parsing-Error-Fix-Controller-FAQ-03-28">виправте всі помилки</a> та надішліть повідомлення ще раз.
+      Будь ласка, <a href="https://telegra.ph/Parsing-Error-Fix-Controller-FAQ-03-28">виправте всі помилки</a> та надішліть повідомлення ще раз.
     continue_collect: Ви можете продовжити надсилати мені повідомлення.
     html: |
       <b>жирний</b>
@@ -228,7 +228,7 @@ post:
       cleared: Успіх! Кнопки-посилання очищено.
     reactions:
       welcome: |
-        <a href="http://telegra.ph/file/dd1fcbdd1ebb1ce76ab59.jpg">&#8203;</a>Send me emojies or a text with <b>/</b> as separator to add reactions.
+        <a href="https://telegra.ph/file/dd1fcbdd1ebb1ce76ab59.jpg">&#8203;</a>Send me emojies or a text with <b>/</b> as separator to add reactions.
 
         For example:
       not_found_smiles: |
@@ -485,11 +485,11 @@ btn:
     channel_added: Створити публікацію
 
     how_to_create_bot: Як створити бота?
-    how_to_create_bot_url: http://telegra.ph/Create-Bot-Controller-FAQ-03-28
+    how_to_create_bot_url: https://telegra.ph/Create-Bot-Controller-FAQ-03-28
 
     control:
       how_to_add_admin: Як додати адміна?
-      how_to_add_admin_url: http://telegra.ph/Admins-Controller-FAQ-03-28
+      how_to_add_admin_url: https://telegra.ph/Admins-Controller-FAQ-03-28
 
       update: Оновити дані
       bot: Змінити під'єднаного бота
