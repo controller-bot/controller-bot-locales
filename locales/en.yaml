@@ -626,6 +626,7 @@ btn:
 
   posts:
     edit:
+      add_inline: Add URL-buttons
       edit_inline: Change URL-buttons
       remove_inline: Remove URL-buttons
       original: View Previous Version

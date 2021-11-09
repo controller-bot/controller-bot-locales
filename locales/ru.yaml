@@ -632,6 +632,7 @@ btn:
 
   posts:
     edit:
+      add_inline: Добавить URL-кнопки
       edit_inline: Изменить URL-кнопки
       remove_inline: Удалить URL-кнопки
       original: Показать оригинал
