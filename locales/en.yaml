@@ -327,6 +327,10 @@ post:
     wrong_hour: Incorrect time. Only periods from 1 to 48 hours are allowed.
     save_timer: The self-destruct timer saved.
     timer_off: The self-destruct timer disabled.
+
+  inline:
+    removed: URL-buttons removed
+
 posts:
   edit:
     welcome: Forward to me a message from your channel you want to edit.
