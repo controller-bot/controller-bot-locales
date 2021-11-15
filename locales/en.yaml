@@ -133,6 +133,79 @@ channels:
       Success! This chat is now linked to ${channelTitle}!
 
       Go to the bot to create new posts with native comments.
+  subscription:
+      subscription_not_configured: Subscription not configured
+      enter_channel_description: |
+       Send channel description ${ description ? 'or "-" send "-" to keep the default description (' + description + ')' : ''}
+      settings_complete: The basic setup is complete, go to editing tariffs
+      list_tariffs: To change the tariff, select it from the list below
+      enter_tariff_name: |
+        Enter the name of the tariff or enter "-" to leave it blank. ${name ? 'Current: ' + name : ''}
+      enter_tariff_currency: |
+        Select currency. ${currency ? 'Current: ' + currency : ''}
+      enter_tariff_period: |
+        Select tariff period. ${period ? 'Current: ' + period : ''}
+      enter_tariff_price: |
+        Enter tariff price. (Currency: ${currency}, Period: ${localizedPeriod} )${price ? 'Current: ' + price + ' ' + currency : ''}
+      tariff_complete: Tariff creation completed
+      start_subscription_process: |
+        Subscribe to a channel: *${name}*
+
+        ${description}
+
+        Subscribe?
+      select_tariff: Select tariff
+      subscription_increased: |
+        The current subscription has been extended to *${date}*.
+
+        Follow the link to join the channel: ${link}
+      subscription_created: |
+        Subscription has been successfully completed. Subscription end date
+        *${date}*.
+
+        Follow the link to join the channel: ${link}
+      payment_link_created: |
+        Link for payment: ${link}
+      list: |
+        List of subscriptions:
+
+        Subscribtion End  -  Channel  -  Link
+        ${list}
+      select_currency_for_withdraw: |
+        Select currency for withdraw
+      enter_amount_for_withdraw: |
+        Enter amount for withdraw
+      withdraw_link_created: |
+        Link for withdraw created successfully.
+        Link life time 24 hours.
+
+        Link: ${link}
+      subscription_closely_expired:
+        Your subscription to the channel (${channelName}) will expire tomorrow, would you like to renew it?
+      statistics: |
+        Statistics of: ${month}
+
+        Subscriptions expired: ${expiredSubscriptions}
+        New subscriptions: ${newSubscriptions}
+        Active subscriptions: ${activeSubscriptions}
+      periods:
+        daily: per day
+        weekly: per week
+        monthly: per month
+        monthly_3: every 3 month
+        monthly_6: every 6 month
+        yearly: per year
+        yearly_2: every 2 years
+        yearly_3: every 3 years
+      errors:
+        not_found_channel: Channel not found
+        tariff_already_exists: A tariff with the specified period (${localizedPeriod}) already exists.
+        payment_error: Payment error
+        insufficient_funds: Insufficient funds
+        invalid_amount: |
+          Invalid amount. Minimum: ${minimumAmount} ${currency}
+        not_found_tariff: Tariff not found
+        empty_price: Empty price
 
 post:
   select_channel: Choose a channel to create a new post.
@@ -551,6 +624,17 @@ btn:
 
       link_chat: Link Chat
       unlink_chat: Unlink Chat
+
+      subscription: Subscription Control
+
+  subscription:
+    settings: Subscription settings
+    configure_tariffs: Setting tariffs
+    create_tariff: Create tariff
+    create_subscribe_link: Create subscribe link
+    show_balances: Show balances
+    withdraw: Withdraw funds
+    statistics: Statistics
 
   post:
     settings:
