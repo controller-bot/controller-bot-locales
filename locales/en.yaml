@@ -147,6 +147,7 @@ channels:
         Select tariff period. ${period ? 'Current: ' + period : ''}
       enter_tariff_price: |
         Enter tariff price. (Currency: ${currency}, Period: ${localizedPeriod} )${price ? 'Current: ' + price + ' ' + currency : ''}
+        Minimum: ${minimum} ${currency}
       tariff_complete: Tariff creation completed
       start_subscription_process: |
         Subscribe to a channel: *${name}*
@@ -206,6 +207,7 @@ channels:
           Invalid amount. Minimum: ${minimumAmount} ${currency}
         not_found_tariff: Tariff not found
         empty_price: Empty price
+        empty_currency: Empty currency
 
 post:
   select_channel: Choose a channel to create a new post.
