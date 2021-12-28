@@ -216,6 +216,8 @@ channels:
         Enter the tag name to create a link. This is for tracking traffic sources.
       no_have_subscription_link: |
         You have not subscription links
+      choose_language: |
+        Choose channel language. The selected language will be used to notify users.
       periods:
         daily: per day
         weekly: per week

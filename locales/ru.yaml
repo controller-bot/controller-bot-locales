@@ -121,6 +121,11 @@ channels:
     error_request_timezone: Что-то пошло не так :( Повторите попытку установки временной зоны позже или напишите нам в @ControllerSupportBot, если проблема сохраняется.
     save_timezone: Часовой пояс сохранен.
 
+  subscription:
+    subscription_increased: |
+      Текущая подписка продлена до *${date}*.
+
+      Перейдите по ссылке чтобы присоединиться к каналу: ${link}
 post:
   select_channel: Выберите канал, в который вы хотите создать пост.
   no_channels: |
