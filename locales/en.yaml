@@ -136,7 +136,7 @@ channels:
   subscription:
       subscription_not_configured: Subscription not configured
       enter_channel_description: |
-       Send channel description ${ description ? 'or "-" send "-" to keep the default description (' + description + ')' : ''}
+       Send channel description. ${ description ? ' Send "-" to keep the default description (' + description + ')' : ''}
       settings_complete: The basic setup is complete, go to editing tariffs
       list_tariffs: To change the tariff, select it from the list below
       enter_tariff_name: |
@@ -155,6 +155,7 @@ channels:
         ${description}
 
         Subscribe?
+        ${photo ? '[\u200B](' + photo + ')' : '' }
       select_tariff: Select tariff
       subscription_increased: |
         The current subscription has been extended to *${date}*.
@@ -189,6 +190,20 @@ channels:
         Subscriptions expired: ${expiredSubscriptions}
         New subscriptions: ${newSubscriptions}
         Active subscriptions: ${activeSubscriptions}
+      list_tariffs_for_delete: |
+        Select tariff
+      no_have_subscriptions: |
+        You have no subscriptions at the moment.
+      no_funds_on_balances: |
+        There are no funds on your balance for withdrawal.
+      attach_photo: |
+        Attach an image for the channel, users will see it when they subscribe.
+        If you don't want to add or change an image just send a "-"
+        ${ photo ? 'Current Image: ' + photo : ''}
+      create_subscription_link: |
+        Enter the tag name to create a link. This is for tracking traffic sources.
+      no_have_subscription_link: |
+        You have not subscription links
       periods:
         daily: per day
         weekly: per week
@@ -208,6 +223,11 @@ channels:
         not_found_tariff: Tariff not found
         empty_price: Empty price
         empty_currency: Empty currency
+        invalid_text: Invalid text
+        unknown_error: |
+          An error occurred. 
+          
+          Message us at @ControllerSupportBot to report an issue.
 
 post:
   select_channel: Choose a channel to create a new post.
@@ -594,6 +614,7 @@ btn:
     help: Help
     yes: Yes
     no: No
+    confirm: Confirm
 
   menu:
     create_post: Create Post
@@ -634,9 +655,12 @@ btn:
     configure_tariffs: Setting tariffs
     create_tariff: Create tariff
     create_subscribe_link: Create subscribe link
+    show_subscribe_links: Show subscribe links
     show_balances: Show balances
     withdraw: Withdraw funds
     statistics: Statistics
+    delete_tariff: Delete tariff
+    edit_subscription_settings: Edit settings
 
   post:
     settings:
