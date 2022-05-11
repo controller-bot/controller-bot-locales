@@ -184,12 +184,24 @@ channels:
         Link: ${link}
       subscription_closely_expired:
         Your subscription to the channel (${channelName}) will expire tomorrow, would you like to renew it?
-      statistics: |
-        Statistics of: ${month}
+      total_statistics: |
+        Statistics by channel *${channelName}* of: *${month}*
 
-        Subscriptions expired: ${expiredSubscriptions}
-        New subscriptions: ${newSubscriptions}
-        Active subscriptions: ${activeSubscriptions}
+        Total:
+        Subscribers: *${totalSubscribersCount}*
+        New subscribers: *${newSubscribersCount}*
+        Subscribers who renew subscription: *${renewSubscribersCount}*
+        Kicked subscribers: *${kickedUsersCount}*
+        Entrances by links: *${entrancesCount}*
+        Conversion: *${conversion}*
+      tagged_statistics: |
+        Tag: *${tagName}*
+        Subscribers: *${totalSubscribersCount}*
+        New subscribers: *${newSubscribersCount}*
+        Subscribers who renew subscription: *${renewSubscribersCount}*
+        Kicked subscribers: *${kickedUsersCount}*
+        Entrances by links: *${entrancesCount}*
+        Conversion: *${conversion}*
       list_tariffs_for_delete: |
         Select tariff
       no_have_subscriptions: |
@@ -204,6 +216,8 @@ channels:
         Enter the tag name to create a link. This is for tracking traffic sources.
       no_have_subscription_link: |
         You have not subscription links
+      choose_language: |
+        Choose channel language. The selected language will be used to notify users.
       periods:
         daily: per day
         weekly: per week
@@ -659,6 +673,7 @@ btn:
     show_balances: Show balances
     withdraw: Withdraw funds
     statistics: Statistics
+    full_statistics_report: Full report
     delete_tariff: Delete tariff
     edit_subscription_settings: Edit settings
 
