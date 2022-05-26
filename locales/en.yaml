@@ -233,15 +233,17 @@ channels:
         payment_error: Payment error
         insufficient_funds: Insufficient funds
         invalid_amount: |
-          Invalid amount. Minimum: ${minimumAmount} ${currency}
+          Invalid amount. 
+          Minimum: ${minimumAmount} ${currency}
+          Maximum: ${maximumAmount} ${currency}
         not_found_tariff: Tariff not found
         empty_price: Empty price
         empty_currency: Empty currency
         invalid_text: Invalid text
         unknown_error: |
-          An error occurred. 
+          An error occurred. ${code ? '(Code: ' + code +')' : ''}
           
-          Message us at @ControllerSupportBot to report an issue.
+          Message us at @ControllerSupportBot to report an issue. Type /start for renew. 
 
 post:
   select_channel: Choose a channel to create a new post.
@@ -629,6 +631,7 @@ btn:
     yes: Yes
     no: No
     confirm: Confirm
+    ok: Ok
 
   menu:
     create_post: Create Post
