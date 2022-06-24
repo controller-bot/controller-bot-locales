@@ -120,6 +120,14 @@ channels:
     error_timezone: Не можем найти такой город. Попробуйте ввести другой ближайший к вам город.
     error_request_timezone: Что-то пошло не так :( Повторите попытку установки временной зоны позже или напишите нам в @ControllerSupportBot, если проблема сохраняется.
     save_timezone: Часовой пояс сохранен.
+    link_chat: |-
+      Вы должны привязать discussion group Контроллер боту чтобы подключить нативные комментарии.
+      
+      Следуйте инструкциям:
+      https://telegra.ph/How-to-link-the-discussion-group-to-Controller-bot-Controller-FAQ-08-18
+
+    chatIsNotLinked: |-
+      Этот чат не прилинкован к каналу
 
   subscription:
     subscription_increased: |

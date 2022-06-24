@@ -202,8 +202,8 @@ channels:
         Kicked subscribers: *${kickedUsersCount}*
         Entrances by links: *${entrancesCount}*
         Conversion: *${conversion}*
-      list_tariffs_for_delete: |
-        Select tariff
+      last_tariff_no_enable_for_delete: |
+        The last tariff is not available for deletion
       no_have_subscriptions: |
         You have no subscriptions at the moment.
       no_funds_on_balances: |
@@ -240,10 +240,11 @@ channels:
         empty_price: Empty price
         empty_currency: Empty currency
         invalid_text: Invalid text
+        only_private_channel: Only a private channel can have a paid subscription
         unknown_error: |
           An error occurred. ${code ? '(Code: ' + code +')' : ''}
           
-          Message us at @ControllerSupportBot to report an issue. Type /start for renew. 
+          Message us at @ControllerSupportBot to report an issue. Type /start for renew.
 
 post:
   select_channel: Choose a channel to create a new post.
