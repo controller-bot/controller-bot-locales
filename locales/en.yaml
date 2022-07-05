@@ -618,8 +618,8 @@ donate:
   not_pay: Payment not found 😔
   success_pay: Thank you for your donation to the Controller Bot Team! 😍
 
-  problem: Проблемы с оплатой
-  help: Напишите нам в @ControllerSupportBot, если у вас есть проблемы с отправкой пожертвования или нет подходящего способа оплаты.
+  problem: Troubles with payment
+  help: Message us at @ControllerSupportBot to report an issue.
 
 btn:
   common:
