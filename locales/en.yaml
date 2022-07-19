@@ -160,12 +160,12 @@ channels:
       subscription_increased: |
         The current subscription has been extended to *${date}*.
 
-        Follow the link to join the channel: ${link}
+        Follow [the link](${link}) to join the channel
       subscription_created: |
         Subscription has been successfully completed. Subscription end date
         *${date}*.
 
-        Follow the link to join the channel: ${link}
+        Follow [the link](${link}) to join the channel
       payment_link_created: |
         Link for payment: ${link}
       list: |
