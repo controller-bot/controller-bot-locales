@@ -134,6 +134,11 @@ channels:
 
       Go to the bot to create new posts with native comments.
   subscription:
+      channels_with_unavailable_subscription: |
+        Channel with unconfigured subscription.
+      channels_with_available_subscription: |
+        Channels with configured subscription.
+        *ATTENTION* At the moment, payments are accepted only from the CIS
       subscription_not_configured: Subscription not configured
       enter_channel_description: |
        Send channel description. ${ description ? ' Send "-" to keep the default description (' + description + ')' : ''}
