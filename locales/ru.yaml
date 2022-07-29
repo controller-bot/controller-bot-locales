@@ -231,7 +231,7 @@ channels:
       yearly_2: каждые 2 года
       yearly_3: каждые 3 года
     errors:
-      feature_disabled: Эта функция временно отключена
+      feature_disabled: Эта функция временно отключена. Выполните команду /start для возврата в основное меню.
       not_found_channel: Канал не найден
       tariff_already_exists: Тариф для периода (${localizedPeriod}) уже существует.
       payment_error: Ошибка платежа
