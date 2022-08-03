@@ -233,6 +233,7 @@ channels:
         yearly_2: every 2 years
         yearly_3: every 3 years
       errors:
+        unavailable_delete_all_tariffs: ❌ Can't delete all tariffs
         feature_disabled: This feature is temporarily disabled. Execute the /start command to return to the main menu.
         not_found_channel: Channel not found
         tariff_already_exists: A tariff with the specified period (${localizedPeriod}) already exists.
