@@ -223,6 +223,8 @@ channels:
       У Вас нет ссылок на подписки
     choose_language: |
       Укажите язык канала/группы. Выбранный язык буден использован для уведомлений подписчикам.
+    regenerated_link: |
+      Перейдите [по ссылке](${link}), чтобы вступить в приватный канал/группу
     periods:
       daily: каждый день
       weekly: каждую неделю
@@ -709,6 +711,7 @@ btn:
     full_statistics_report: Полный отчёт
     delete_tariff: Удалить тариф
     edit_subscription_settings: Редактировать настройки подписки
+    regenerateJoinLink: Пересоздать ссылку
 
   post:
     settings:

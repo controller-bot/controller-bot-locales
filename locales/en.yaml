@@ -225,6 +225,8 @@ channels:
         You have not subscription links
       choose_language: |
         Choose channel language. The selected language will be used to notify users.
+      regenerated_link: |
+        Follow [the link](${link}) to join the channel
       periods:
         daily: per day
         weekly: per week
@@ -689,6 +691,7 @@ btn:
     full_statistics_report: Full report
     delete_tariff: Delete tariff
     edit_subscription_settings: Edit settings
+    regenerateJoinLink: Recreate join link
 
   post:
     settings:
