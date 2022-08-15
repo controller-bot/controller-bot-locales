@@ -217,6 +217,8 @@ channels:
       ${ photo ? 'Выбранная картинка: ' + photo : ''}
     create_subscription_link: |
       Для создания ссылки придумайте тег. Это поможет Вам отслеживать источники трафика.
+    confirm_create_subscription_link: |
+      Вы действительно хотите создать ссылку с тэгом (${tag})?
     no_have_subscription_link: |
       У Вас нет ссылок на подписки
     choose_language: |

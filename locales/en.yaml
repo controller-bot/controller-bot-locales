@@ -219,6 +219,8 @@ channels:
         ${ photo ? 'Current Image: ' + photo : ''}
       create_subscription_link: |
         Enter the tag name to create a link. This is for tracking traffic sources.
+      confirm_create_subscription_link: |
+        Are you sure you want to link with the tag (${tag})?
       no_have_subscription_link: |
         You have not subscription links
       choose_language: |
