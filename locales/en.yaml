@@ -228,14 +228,31 @@ channels:
       regenerated_link: |
         Follow [the link](${link}) to join the channel
       periods:
-        daily: per day
-        weekly: per week
-        monthly: per month
-        monthly_3: every 3 month
-        monthly_6: every 6 month
-        yearly: per year
-        yearly_2: every 2 years
-        yearly_3: every 3 years
+        daily: Day
+        weekly: Week
+        monthly: Month
+        monthly_3: 3 months
+        monthly_6: 6 months
+        yearly: year
+        yearly_2: 2 years
+        yearly_3: 3 years
+      subcontrol_description: |
+        Bot controller opens up new ways to monetize your channels!
+        
+        We see that the authors of unique content are increasingly looking towards its distribution through private Telegram channels, the subscription to which is carried out on a paid basis. And we feel their “pain” caused by the daily updating of the list of those who paid for the subscription.
+        
+        Manual moderation is a thing of the past - meet the paid subscriptions feature from @ControllerBot!
+        
+        *Follow 3 easy steps:*
+        1. Activate the feature on your private channel
+        2. Set up a "butler bot" according to detailed instructions, which will meet potential subscribers and offer them your rates
+        3. Pass the Butler Bot Link to Your Audience
+        
+        *We'll take care of the rest:*
+        1. Accepting payments for a subscription
+        2. Adding paid subscribers to the channel
+        3. Reminders about the close expiration date of the subscription
+        4. Exclusion of non-renewing users
       errors:
         unavailable_delete_all_tariffs: ❌ Can't delete all tariffs
         feature_disabled: This feature is temporarily disabled. Execute the /start command to return to the main menu.
@@ -692,6 +709,7 @@ btn:
     delete_tariff: Delete tariff
     edit_subscription_settings: Edit settings
     regenerateJoinLink: Recreate join link
+    dont_show_again: Don't show again
 
   post:
     settings:
