@@ -218,7 +218,11 @@ channels:
         If you don't want to add or change an image just send a "-"
         ${ photo ? 'Current Image: ' + photo : ''}
       create_subscription_link: |
-        Enter the tag name to create a link. This is for tracking traffic sources.
+        Enter the tag name to create a link.
+        
+        As a tag, you can use the name of the platform on which you want to place a link for a paid subscription to your channel, or any other sign that will help you distinguish this link from others when there are several.
+
+        For example: “Advertising in channel XX”, “Test XX - 08/13/1941”
       confirm_create_subscription_link: |
         Are you sure you want to link with the tag (${tag})?
       no_have_subscription_link: |
