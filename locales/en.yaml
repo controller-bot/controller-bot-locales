@@ -700,14 +700,14 @@ btn:
     settings: Subscription settings
     configure_tariffs: Setting tariffs
     create_tariff: Create tariff
-    create_subscribe_link: Create subscribe link
-    show_subscribe_links: Show subscribe links
+    create_subscribe_link: Create link
+    show_subscribe_links: Subscribe links
     show_balances: Show balances
     withdraw: Withdraw funds
     statistics: Statistics
     full_statistics_report: Full report
     delete_tariff: Delete tariff
-    edit_subscription_settings: Edit settings
+    edit_subscription_settings: Greeting settings
     regenerateJoinLink: Recreate join link
     dont_show_again: Don't show again
 

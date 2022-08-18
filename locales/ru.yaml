@@ -719,14 +719,14 @@ btn:
     settings: Настройки подписок
     configure_tariffs: Настройка тарифов
     create_tariff: Создать тариф
-    create_subscribe_link: Создать ссылку на подписку
-    show_subscribe_links: Показать ссылки на подписки
+    create_subscribe_link: Добавить ссылку
+    show_subscribe_links: Ссылки на подписку
     show_balances: Показать баланс
     withdraw: Вывести средства
     statistics: Статистика
     full_statistics_report: Полный отчёт
     delete_tariff: Удалить тариф
-    edit_subscription_settings: Редактировать настройки подписки
+    edit_subscription_settings: Настройки привествия
     regenerateJoinLink: Пересоздать ссылку
     dont_show_again: Больше не показывать
 
