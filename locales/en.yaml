@@ -138,8 +138,12 @@ channels:
         Channel with unconfigured subscription.
       channels_with_available_subscription: |
         Channels with configured subscription.
-        *ATTENTION* At the moment, payments are accepted only from the CIS
-      subscription_not_configured: Subscription not configured
+        *ATTENTION*
+        At the moment, payments are accepted only from the CIS
+      subscription_not_configured: |
+        At the moment you do not have paid channels configured.
+        *ATTENTION*
+        At the moment, payments are accepted only from the CIS
       enter_channel_description: |
        Send channel description. ${ description ? ' Send "-" to keep the default description (' + description + ')' : ''}
       settings_complete: The basic setup is complete, go to editing tariffs
@@ -701,7 +705,7 @@ btn:
       subscription: Subscription Control
 
   subscription:
-    settings: Subscription settings
+    settings: Paid subscription settings
     configure_tariffs: Setting tariffs
     create_tariff: Create tariff
     create_subscribe_link: Create link
