@@ -148,6 +148,8 @@ channels:
        Send channel description. ${ description ? ' Send "-" to keep the default description (' + description + ')' : ''}
       settings_complete: The basic setup is complete, go to editing tariffs
       list_tariffs: To change the tariff, select it from the list below
+      current_tariffs: |
+        Current list of tariffs:
       enter_tariff_name: |
         Enter the name of the tariff or enter "-" to leave it blank. ${name ? 'Current: ' + name : ''}
       enter_tariff_currency: |
@@ -158,6 +160,7 @@ channels:
         Enter tariff price. (Currency: ${currency}, Period: ${localizedPeriod} )${price ? 'Current: ' + price + ' ' + currency : ''}
         Minimum: ${minimum} ${currency}
       tariff_complete: Tariff creation completed
+      manage_tariff: Manage tariff "${name}"
       start_subscription_process: |
         Subscribe to a channel: *${name}*
 
@@ -166,6 +169,7 @@ channels:
         Subscribe?
         ${photo ? '[\u200B](' + photo + ')' : '' }
       select_tariff: Select tariff
+      confirm_delete_tariff: Are you sure you want to remove the tariff?
       subscription_increased: |
         The current subscription has been extended to *${date}*.
 
@@ -261,6 +265,12 @@ channels:
         2. Adding paid subscribers to the channel
         3. Reminders about the close expiration date of the subscription
         4. Exclusion of non-renewing users
+      first_link_text: |
+        Tariffs have been created, the channel setup has been completed - it's time to start attracting an audience!
+        
+        *You can buy a subscription to your channel [following the link](${link})*
+        
+        ***Tip:* If you have several different traffic sources, you can create additional links and monitor their statistics separately. This will help you understand which source works best *
       errors:
         unavailable_delete_all_tariffs: ❌ Can't delete all tariffs
         feature_disabled: This feature is temporarily disabled. Execute the /start command to return to the main menu.
@@ -669,6 +679,9 @@ btn:
     no: No
     confirm: Confirm
     ok: Ok
+    next: Next
+    edit: Edit
+    delete: Delete
 
   menu:
     create_post: Create Post
@@ -708,6 +721,7 @@ btn:
     settings: Paid subscription settings
     configure_tariffs: Setting tariffs
     create_tariff: Create tariff
+    add_tariff: Add tariff
     create_subscribe_link: Create link
     show_subscribe_links: Subscribe links
     show_balances: Show balances
@@ -718,6 +732,7 @@ btn:
     edit_subscription_settings: Greeting settings
     regenerateJoinLink: Recreate join link
     dont_show_again: Don't show again
+    add_additional_links: Create additional subscription link
 
   post:
     settings:
