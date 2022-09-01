@@ -22,10 +22,10 @@ common:
     /settings - altre impostazioni
 
   help: |
-    Per ogni tipo di domanda, dai un'occhiata al <a href="https://telegra.ph/Controller-Help-03-20">Controller Help</a>.
+    Per qualsiasi domanda, dai un'occhiata al <a href="https://telegra.ph/Controller-Help-03-20">Controller Help</a>.
 
     Puoi controllarmi usando questi comandi:
-    
+
     /newpost - crea un nuovo post
     /addchannel - aggiungi un nuovo canale
     /mychannels - modifica i tuoi canali
@@ -37,10 +37,10 @@ bots:
     <b>Connettere un bot</b>
 
     Per connettere un bot, segui questi passaggi:
-    
+
     1. Avvia @BotFather e <a href="https://telegra.ph/Create-Bot-Controller-FAQ-03-28">crea un nuovo bot</a>.
-    2. Riceverai un token (es. 12345:6789ABCDEF) — inviamelo o copialo e incollalo qui.
-    
+    2. Riceverai un token (es. 123456789:ABCd1DefG2H3IJ45k6LmnOp7QrSTuVw8XyZ) — inviamelo o copialo e incollalo qui.
+
     <b>Attenzione!</b> Non connettere bot già usati da altri servizi come Chatfuel, Manybot... 
 
   wrong_token: Non riconosco ciò che hai inviato. Inviami il token del tuo bot.
@@ -62,7 +62,7 @@ channels:
       <b>Aggiungere un canale</b>
 
       Per aggiungere un canale, segui questi passaggi:
-    
+
       1. <a href="https://telegra.ph/Add-Bot-to-Admins-Controller-FAQ-03-28">Aggiungi @${username} agli amministratori</a> del tuo canale. 
       2. Inoltrami un messaggio dal canale o inviami il suo username o ID.
     added: |
@@ -93,7 +93,7 @@ channels:
       Eccoci: ${channel.name}. Cosa vuoi fare con questo canale?
     delete_confirm: |
       Sei sicuro di voler eliminare questo canale?
-      
+
       Insieme a lui, verranno eliminati tutte le statistiche salvate e i post programmati non verranno inviati.
     channel_deleted: Fatto! Il canale è andato.
     select_bot: |
@@ -103,7 +103,7 @@ channels:
       }
     bot_is_not_admin: Aggiungi il bot agli amministratori del canale.
     current_bot: Impossible scegliere il bot attualmente in uso.
-    sync_ok: 👌 Ok. I dati sono stati sincronizzati.
+    sync_ok: 👌 OK. I dati sono stati sincronizzati.
     set_timezone: |
       <b>Impostare il fuso orario</b>
 
@@ -120,7 +120,20 @@ channels:
       Giusto? Se no, inviami il nome di un'altra città vicina a te.
     error_timezone: Scusa, ma non riesco a trovare questa città. Prova a inviarmi il nome di un'altra città vicina a te.
     error_request_timezone: Qualcosa è andato storto ☹️. Per favore, riprova. Scrivici a @ControllerSupportBot se per qualche motivo non cambia nulla.
-    save_timezone: Ok, ho salvato il tuo fuso orario.
+    save_timezone: OK. Il fuso orario è stato salvato.
+    link_chat: |-
+      Puoi collegare il gruppo di discussione al bot per abilitare i commenti nativi.
+
+      Segui le istruzioni:
+      https://telegra.ph/How-to-link-the-discussion-group-to-Controller-bot-Controller-FAQ-08-18
+
+    chatIsNotLinked: |-
+      Questa chat non è collegata a un canale
+
+    chatLinked: |-
+      Successo! Questa chat è ora collegata a ${channelTitle}!
+
+      Vai al bot per creare nuovi post con commenti nativi.
 
 post:
   select_channel: Scegli il canale dove creare un nuovo post.
@@ -172,41 +185,43 @@ post:
     error_poll_not_anonymous: Scusa, ma non si possono inviare sondaggi non anonimi nei canali.
     error_parse: |
       Errori nel formattare il testo:
-      
+
       <pre>${description}</pre>
-      
+
       Per favore, <a href="https://telegra.ph/Parsing-Error-Fix-Controller-FAQ-03-28">risolvi tutti gli errori</a> e rinviami il messaggio.
     continue_collect: Puoi continuare a inviarmi messaggi. 
     html: |
       <b>grassetto</b>
       &lt;b&gt;grassetto&lt;/b&gt;
-      
+
       <i>corsivo</i>
       &lt;i&gt;corsivo&lt;/i&gt;
-      
+
       <a href="https://www.esempio.it/">testo con link</a>
       &lt;a href=&quot;https://www.esempio.it/&quot;&gt;testo con link&lt;/a&gt;
-      
+
       <code>testo a larghezza fissa</code>
       &lt;code&gt;testo a larghezza fissa&lt;/code&gt;
-      
+
       <pre>blocco di testo a larghezza fissa</pre>
       &lt;pre&gt;blocco di testo a larghezza fissa&lt;/pre&gt;
     markdown: |
       <b>grassetto</b>
       *grassetto*
-      
+
       <i>corsivo</i>
       _corsivo_
-      
+
       <a href="https://www.esempio.it/">testo con link</a>
       [testo con link](https://www.esempio.it/)
-      
+
       <code>testo a larghezza fissa</code>
       `testo a larghezza fissa`
-      
-      <pre>blocco di testo a larghezza fissa</pre>
-      ```blocco di testo a larghezza fissa```
+
+      <pre>blocco di testo
+      a larghezza fissa</pre>
+      ```blocco di testo
+      a larghezza fissa```
     canceled: La creazione del post è stata annullata.
     inline:
       welcome: |
@@ -219,7 +234,7 @@ post:
         Scegli "Annulla" per tornare alla creazione del post.
       error: |
         Errori nella lista dei pulsanti: <code>${error}</code>
-        
+
         Per favore, risolvi tutti gli errori e rinviami il messaggio.
       not_keyboard: |
         Il messaggio inviato non segue il formato dei pulsanti. Per favore, verifica ancora e riprova.
@@ -283,21 +298,21 @@ post:
     welcome: |
       Inviami l'orario in cui vuoi che ${day} sia inviato il messaggio.
       Invia orario+data per programmare il post in un altro giorno.
-      
+
     help: |
       <b>I seguenti formati per l'orario sono accettati:</b>
       <pre>"6" → 06:00
       "5 3" → 05:03
       "15:30" → 15:30
       "1530" → 15:30</pre>
-      
+
       <b>I seguenti formati per la data sono accettati:</b>
       <pre>"6" → 6 di questo mese
       "9 12" → 9 dicembre
       "8 7 18" → 8 luglio 2018</pre>
-      
+
       Puoi anche usare i due punti e il punto al posto degli spazi. 
-      
+
       Se mi invii solo l'orario, il post sarà programmato oggi di predefinito. Per programmare il post in un altro giorno, invia orario+data. Per esempio, <code>16 30 6 8 -> 16:30 del 6 agosto</code>
     error_date: Data o ora non corretta. Premi "Aiuto" per avere un suggerimento.
     invalid_date: Data non corretta.
@@ -311,6 +326,10 @@ post:
     wrong_hour: Data non corretta. Sono accettati solo periodi tra 1 e 48 ore.
     save_timer: Il timer di autodistruzione è stato salvato.
     timer_off: Il timer di autodistruzione è stato disattivato.
+
+  inline:
+    removed: Pulsanti rimossi
+
 posts:
   edit:
     welcome: Inviami un messaggio che vuoi modificare.
@@ -326,7 +345,8 @@ posts:
       Tipo di messaggio: ${type_text}.${type == 'text' ? '\nStile di formattazione: ' + parse_mode : ''}
 
       Invia un nuovo testo per modificare ${type == 'text' ? 'questo messaggio' : 'questa didascalia'}.
-    not_changed: Qualcosa è andato storto ☹️. Per favore, riprova.
+    not_changed: |-
+      Il messaggio non è stato modificato.
     edited: Perfetto! Il messaggio è stato modificato.
     continue_edit: Puoi continuare a modificare il messaggio.
 
@@ -396,7 +416,7 @@ statistics:
   select_channel: Scegli il canale di cui vedere le statistiche.
   no_channels: |
     Non è ancora stato aggiunto nessun canale.
-    
+
     Invia /addchannel per aggiungerne uno.
   selected_channel: 'Eccoci: ${channel.name}. Cosa vuoi fare con le statistiche?'
   channel_not_found: Questo canale non è stato trovato.
@@ -404,7 +424,7 @@ statistics:
   loading_data: 🕒 Processo i dati e creo il grafico...
   error_load_data: |
     È stato riscontrato un errore durante il processo dei dati.
-     
+
     Scrivici a @ControllerSupportBot per segnalare un problema.
   not_found_data: Non ci sono ancora abbastanza dati. Torna più tardi.
   share_text: |
@@ -427,7 +447,7 @@ bot:
     welcome: Qui puoi creare post ricchi, vedere le statistiche e svolgere altri compiti.
 
   is_not_user: |
-    Per iniziare a usare il bot, devi inviare il comando /start a @ControllerBot, quindi torna qui e premi il pulsante "Continue".
+    Per iniziare a usare il bot, devi inviare il comando /start a @ControllerBot, quindi torna qui e premi il pulsante "Continua".
 
   channels:
     controller_updates_join_link: https://t.me/joinchat/AAAAAFNNAyKG1y7GopROHg
@@ -494,7 +514,7 @@ btn:
     true: Sì, è giusto
     back: « Indietro
     cancel: Annulla
-    off: Disabilita
+    off: Disattiva
     help: Aiuto
     yes: Sì 
     no: No
@@ -528,24 +548,28 @@ btn:
       confirm_delete_yes: Sì
       confirm_delete_no: No
 
+      link_chat: Collega chat
+      unlink_chat: Scollega chat
+
   post:
     settings: 
       disable_notification_disable: 'Silenzioso: No'
       disable_notification_enable: 'Silenzioso: Sì'
-      
+
       disable_web_page_preview_disable: 'Anteprima link: Sì'
       disable_web_page_preview_enable: 'Anteprima link: No'
-      
+
       parse_mode_markdown: 'Formattazione: Markdown'
       parse_mode_html: 'Formattazione: HTML'
+      parse_mode_none: 'Formattazione: No'
 
       default_reactions_disable: 'Reazioni predefinite: No'
       default_reactions_enable: 'Reazioni predefinite: Sì'
 
     faq: Controller Help
-    
+
     control_channel: Vai alle impostazioni del canale
-    return_to_channels: « Torna alla lista canali
+    return_to_channels: « Torna alla lista dei canali
 
     continue: Continua »
 
@@ -555,10 +579,12 @@ btn:
     open_comments: Apri i commenti
     add_comments: Aggiungi i commenti
     delete_comments: Rimuovi i commenti
-    
+    add_native_comments: Aggiungi i commenti nativi
+    delete_native_comments: Rimuovi i commenti nativi
+
     add_inline: Aggiungi pulsanti
     clear_inline: Rimuovi pulsanti
-    
+
     add_reactions: Aggiungi reazioni
     clear_reactions: Rimuovi reazioni
 
@@ -584,7 +610,7 @@ btn:
       send_now: Invia ora
       sent: Vedi post nel canale
       create_scheduled: Programma
-      
+
       send: Invia
       cancel: Annulla
 
@@ -603,8 +629,10 @@ btn:
 
   posts:
     edit:
+      add_inline: Aggiungi pulsanti
       edit_inline: Cambia pulsanti
-      original: Vedi versione originale
+      remove_inline: Rimuovi pulsanti
+      original: Vedi versione precedente
       clear_caption: Rimuovi didascalia
       save: Salva modifiche
       cancel: Annulla
@@ -617,8 +645,8 @@ btn:
 
   statistics:
     view_periods: Vedi
-    view_via_web: Vedi su pagina web
-    
+    view_via_web: Vedi come pagina web
+
     periods:
       one_week: Settimana
       one_month: Mese
