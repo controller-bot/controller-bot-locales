@@ -113,6 +113,17 @@ channels:
     error_timezone: Выбачайце, я не змог знайсці гэты горад. Паспрабуйце адправіць мне назву іншага горада побач з вамі.
     error_request_timezone: Нешта пайшло не так :( Паспрабуйце пазней або напішыце ў @ControllerSupportBot, калі праблема не вырашаецца.
     save_timezone: Часавы пояс захаваны.
+    link_chat: |-
+      Вы можаце прывязаць суполку для абмеркаванняў да Controller bot, каб уключыць унутраныя каментары.
+
+      Глядзіце інструкцыю:
+      https://telegra.ph/How-to-link-the-discussion-group-to-Controller-bot-Controller-FAQ-08-18
+    chatIsNotLinked: |-
+      Гэты чат не прывязаны да канала
+    chatLinked: |-
+      Гатова! Гэты чат прывязаны да ${channelTitle}!
+
+      Перайдзіце ў бота, каб ствараць допісы з унутранымі каментарамі.
 post:
   select_channel: Абярыце канал, у якім хочаце стварыць новы допіс.
   no_channels: |
@@ -470,7 +481,7 @@ btn:
   menu:
     create_post: Стварыць допіс
     edit_sent_posts: Рэдагаваць допіс
-    scheduled_posts: Адтэрмінаваныя допісы
+    scheduled_posts: Адтэрмінаваныя \nдопісы
     channels: Каналы
     statistics: Статыстыка канала
     settings: Налады
@@ -490,6 +501,8 @@ btn:
       delete: Выдаліць канал
       confirm_delete_yes: true
       confirm_delete_no: false
+      link_chat: Прывязаць чат
+      unlink_chat: Адвязаць чат
   post:
     settings:
       disable_notification_disable: 'Гукавое апавяшчэнне: адкл.'
@@ -510,6 +523,8 @@ btn:
     open_comments: Адкрыць каментары
     add_comments: Дадаць каментары
     delete_comments: Выдаліць каментары
+    add_native_comments: Дадаць унутраныя каментары
+    delete_native_comments: Выдаліць унутраныя каментары
     add_inline: Дадаць URL-кнопкі
     clear_inline: Выдаліць URL-кнопкі
     add_reactions: Дадаць рэакцыі
