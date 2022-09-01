@@ -10,7 +10,6 @@ common:
   start: |
     Telegram kanallarınızı yönetmene yardım edebilirim.
     Bu komutlarla beni kontrol edebilirsiniz:
-    /web - web ile yeni gönderi oluşturun
     /newpost - yeni gönderi oluşturun
     /addchannel - yeni kanal ekleyin
     /mychannels - kanallarınızı düzenleyin
@@ -24,10 +23,6 @@ common:
     /mychannels - kanallarınızı düzenleyin
     /settings - diğer ayarlar
     /lang - dil değiştirin
-  web: |
-    🦠 <b>Controller Web</b>
-    Controller Web'i açmak ve tarayıcıda gönderi oluşturmak için aşağıdaki butona dokunun.
-    <i>Güvenlik sebepleri için, bağlantı 5 dakika kullanılabilir olacak. Yeni bir tane almak için </i>/web <i>komutuna dokunun.</i>
 bots:
   add: |
     <b>Bot Bağlama</b>
@@ -136,14 +131,14 @@ post:
       Çoğu kullanıcı Markdown kullanır, çünkü daha kısa ve kolaydır. Ayrıca yerel formatlamaya da izin verilir.
     start: |
       Kanal: <b>"${channel.name}"</b>${channel.username ? ' @' + channel.username : ''}.
-      Gönderiye dahil etmek istediğiniz bir veya birden fazla mesaj gönderin. Her şey olabilir — a metin, fotoğraf, video, çıkartma bile.
+      Gönderiye dahil etmek istediğiniz bir veya birden fazla mesaj gönderin. Her şey olabilir — bir metin, fotoğraf, video, çıkartma bile.
     clear: Başarılı! Tüm mesajlar silindi.
     message_deleted: Tamam! Mesaj silindi.
     not_posts: Henüz mesaj yok.
     not_posts_for_done: Henüz mesaj yok.
     preview_sent: |
       Gönderi önizlemesi yukarıda.
-      Gönderide <b>${pluralize(posts, 'message', 'messages', 'messages')}</b> kadar mesajınız var:
+      Gönderide <b>${pluralize(posts, 'mesaj', 'mesaj', 'mesaj')}</b> kadar mesajınız var:
       ${messages}
     error_poll_not_anonymous: Üzgünüm, ama kanallara herkese açık anketler gönderemezsiniz.
     error_parse: |
@@ -332,7 +327,7 @@ posts:
     poll: 📊
     album: 🖼
   welcome_schedule: Zamanlanmış gönderileri yönetmek için bir kanal seçin.
-  not_schedule_posts: Henğz bu kanal için zamanlanmış gönderi yok.
+  not_schedule_posts: Henüz bu kanal için zamanlanmış gönderi yok.
   choose_scheduled_post: Görmek veya silmek istediğiniz zamanlanmış gönderiyi seçin.
   view_scheduled_post: |
     ${messages}
@@ -454,7 +449,6 @@ btn:
     help: Yardım
     yes: Evet
     no: Hayır
-    open_web: Controller Web'i Aç
 
   menu:
     create_post: Gönderi Oluştur
