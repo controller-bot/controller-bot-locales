@@ -133,6 +133,163 @@ channels:
       Success! This chat is now linked to ${channelTitle}!
 
       Go to the bot to create new posts with native comments.
+  subscription:
+    channels_with_unavailable_subscription: |
+      Channels with an unavailable subscription.
+    channels_with_available_subscription: |
+      Channels with an available subscription. 
+      *ATTENTION*
+      At the current moment payments can be received only from the CIS countries
+    subscription_not_configured: |
+      You don't have channels with a paid subscription.
+      *ATTENTION* 
+      At the current moment, payments can be received only from the CIS countries
+    enter_channel_description: |
+      Send a short description of a channel/group. Your potential subscribers will see it before buying a subscription. ${ description ? ' Send "-" to use a standard description (' + description + ')' : ''}
+    settings_complete: Basic setting up is complete, now you need to create/edit tariffs
+    list_tariffs: Select a tariff which you want to edit from the list
+    current_tariffs: |
+      Current list of tariffs:
+    enter_tariff_name: |
+      Enter the tariff name or send "-" to leave it blank. ${name ? 'Current name: ' + name : ''}
+    enter_tariff_currency: |
+      Select currency. ${currency ? 'Current currency: ' + currency : ''}
+    enter_tariff_period: |
+      Enter tariff period. ${period ? 'Current period: ' + period : ''}
+    enter_tariff_price: |
+      Enter tariff price. (Currency: ${currency}, Period: ${localizedPeriod} )${price ? 'Current price: ' + price + ' ' + currency : ''}
+      Minimum price: ${minimum} ${currency}
+    tariff_complete: Tariff has been created successfully!
+    manage_tariff: Manage the tariff "${name}"
+    start_subscription_process: |
+      Subscription for a channel/group *${name}*
+      
+      ${description}
+      
+      Subscribe?
+      ${photo ? '[\u200B](' + photo + ')' : '' }
+    select_tariff: Select a tariff
+    confirm_delete_tariff: Are you sure that you want to delete the tariff?
+    subscription_increased: |
+      The current subscription is renewed until *${date}*
+      
+      Click on [the link](${link}) to join the channel
+    subscription_created: |
+      The subscription is valid until
+      *${date}*.
+      
+      Click on [the link](${link}) to join a private channel/group
+    payment_link_created: |
+      Payment link: ${link}
+    list: |
+      List of active subscriptions:
+      
+      Paid until  -  Channel
+      ${list}
+    select_currency_for_withdraw: |
+      Select currency to withdraw
+    enter_amount_for_withdraw: |
+      Enter withdrawal amount
+    withdraw_link_created: |
+      A link for withdrawal has been successfully created.
+      It will be active for 24 hours.
+      
+      Link: ${link}
+    subscription_closely_expired:
+      Subscription for a channel/group (${channelName}) will expire tomorrow. Would you like to renew?
+    total_statistics: |
+      Statistics for a channel/group *${channelName}* for *${month}*
+      
+      Total:
+      Total number of subscribers: *${totalSubscribersCount}*
+      Number of new subscribers: *${newSubscribersCount}*
+      Number of renewed subscribers : *${renewSubscribersCount}*
+      Number of kicked subscribers: *${kickedUsersCount}*
+      Number of users who came by clicking the links: *${entrancesCount}*
+      Conversion: *${conversion}*
+    tagged_statistics: |
+      Tag: *${tagName}*
+      Total number of subscribers: *${totalSubscribersCount}*
+      Number of new subscribers: *${newSubscribersCount}*
+      Number of renewed subscribers : *${renewSubscribersCount}*
+      Number of kicked subscribers: *${kickedUsersCount}*
+      Number of users who came by clicking the links: *${entrancesCount}*
+      Conversion: *${conversion}*
+    last_tariff_no_enable_for_delete: |
+      It's not possible to delete the last tariff
+    no_have_subscriptions: |
+      At the current moment you don't have subscriptions
+    no_funds_on_balances: |
+      You don't have enough funds for withdrawal on your balance
+    attach_photo: |
+      A photo can be attached to the description of the channel. Send a file or "-" if you don't want to add or change the photo.
+      ${ photo ? 'Selected photo: ' + photo : ''}
+    create_subscription_link: |
+      Think of a tag to create a link.
+      
+      As a tag name, you can use the name of the platform where you want to put a link for a paid subscription for your channel or any other description which will help you identify this particular link among the others when you will have several of them.
+      
+      For example: " Advertisement in channel XX", Test XX - 13.08.1941"
+    confirm_create_subscription_link: |
+      Are you sure that you want to create a link with a tag (${tag})?
+    no_have_subscription_link: |
+      You don't have subscription links
+    choose_language: |
+      Choose the language for a channel/group The chosen language will be used to notify subscribers about the upcoming expiration date of the subscription.
+    regenerated_link: |
+      Click on [the link](${link}) to join a private channel/group
+    periods:
+      daily: A day
+      weekly: A week
+      monthly: A Month
+      monthly_3: 3 months
+      monthly_6: 6 months
+      yearly: A year
+      early_2: 2 years
+      yearly_3: 3 years
+    subcontrol_description: |
+      Controller bot opens new ways for monetization of your channels!
+      
+      We see that authors of the unique content more often seek ways to spread it via private Telegram channels which are channels with a paid subscription. And we can feel their "pain" caused by the daily actualization of the list of subscribers who paid for the subscription.
+      
+      Manual moderation is in the past now - try a new feature of paid subscriptions offered by @ControllerBot!
+      
+      *Just do 3 simple steps:*
+      1. Activate the feature on your private channel
+      2. Following detailed instructions set up a butler bot that will deal with potential subscribers and offer them your tariffs
+      3. Send the butler bot link to your audience
+      
+      *And we'll take care of the rest:*
+      1. Receiving payments for the subscription
+      2. Adding paid subscribers to the channel
+      3. Notifying about the close date of the subscription expiration
+      4. Deleting users who haven't renewed the subscription
+    first_link_text: |
+      Tariffs have been created, and the channel set-up is completed \- it's time to start attracting the audience! 
+      
+      *It's possible to buy a subscription for your channel* [follow the link](${link})
+      
+      _A tip: If you have several different sources of traffic, you can create additional links and monitor their statistics separately. It can help you understand which of the sources works better_
+    errors:
+      unavailable_delete_all_tariffs: ❌ It's not possible to delete all tariffs
+      feature_disabled: This feature is temporarily disabled. Click on /start to return to the main menu.
+      not_found_channel: The channel is not found
+      tariff_already_exists: Tariff for the period (${localizedPeriod}) already exists.
+      payment_error: Payment error
+      insufficient_funds: Insufficient funds
+      invalid_amount: |
+        The amount is invalid. 
+        Minimum amount: ${minimumAmount} ${currency}
+        Maximum amount: ${maximumAmount} ${currency}
+      not_found_tariff: Tariff is not found
+      empty_price: Price isn't specified
+      empty_currency: Currency isn't specified
+      invalid_text: Error in the text
+      only_private_channel: Only private channels and groups can have private subscriptions!
+      unknown_error: |
+        Error is found. ${code ? '(Code: ' + code +')' : ''}
+        
+        Report about this in @ControllerSupportBot. Write/start to try again.
 
 post:
   select_channel: Choose a channel to create a new post.
@@ -506,8 +663,8 @@ donate:
   not_pay: Payment not found 😔
   success_pay: Thank you for your donation to the Controller Bot Team! 😍
 
-  problem: Проблемы с оплатой
-  help: Напишите нам в @ControllerSupportBot, если у вас есть проблемы с отправкой пожертвования или нет подходящего способа оплаты.
+  problem: Troubles with payment
+  help: Message us at @ControllerSupportBot to report an issue.
 
 btn:
   common:
@@ -519,6 +676,11 @@ btn:
     help: Help
     yes: Yes
     no: No
+    confirm: Confirm
+    ok: Ok
+    next: Next
+    edit: Edit
+    delete: Delete
 
   menu:
     create_post: Create Post
@@ -551,6 +713,25 @@ btn:
 
       link_chat: Link Chat
       unlink_chat: Unlink Chat
+
+      subscription: Subscription Control
+
+  subscription:
+    settings: Set up a paid subscription
+    configure_tariffs: Setting up tariffs
+    create_tariff: Create a tariff
+    add_tariff: Add a tariff
+    create_subscribe_link: Add a link
+    show_subscribe_links: Subscription links
+    show_balances: Show balance
+    withdraw: Withdraw
+    statistics: Statistics
+    full_statistics_report: Full report
+    delete_tariff: Delete a tariff
+    edit_subscription_settings: Setting up welcome message
+    regenerateJoinLink: Regenerate a link
+    dont_show_again: Don't show again
+    add_additional_links: Create an additional subscription link
 
   post:
     settings:
