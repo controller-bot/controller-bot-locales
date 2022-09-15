@@ -187,7 +187,7 @@ channels:
       Оплачена до  -  Канал
       ${list}
     select_currency_for_withdraw: |
-      Выберите валюту для снятия
+      Выберите валюту для снятия. Максимально можно вывести около 30 000 рублей за раз
     enter_amount_for_withdraw: |
       Введите сумму снятия
     withdraw_link_created: |
