@@ -272,6 +272,10 @@ channels:
       *It's possible to buy a subscription for your channel* [follow the link](${link})
       
       _A tip: If you have several different sources of traffic, you can create additional links and monitor their statistics separately. It can help you understand which of the sources works better_
+    list_balances: |
+      *ATTENTION!* In some cases, withdrawal is possible only after 24 hours from the moment of enrollment!
+      
+      ${balances}
     errors:
       unavailable_delete_all_tariffs: ❌ It's not possible to delete all tariffs
       feature_disabled: This feature is temporarily disabled. Click on /start to return to the main menu.
