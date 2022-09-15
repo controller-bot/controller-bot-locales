@@ -154,6 +154,7 @@ channels:
       Enter the tariff name or send "-" to leave it blank. ${name ? 'Current name: ' + name : ''}
       
       The title may be truncated if it is longer than 20 characters.
+      We charge ~10% commission on every deposit.
     enter_tariff_currency: |
       Select currency. ${currency ? 'Current currency: ' + currency : ''}
     enter_tariff_period: |
@@ -274,6 +275,7 @@ channels:
       _A tip: If you have several different sources of traffic, you can create additional links and monitor their statistics separately. It can help you understand which of the sources works better_
     list_balances: |
       *ATTENTION!* In some cases, withdrawal is possible only after 24 hours from the moment of enrollment!
+      We charge ~10% commission on every deposit.
       
       ${balances}
     errors:
