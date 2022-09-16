@@ -146,6 +146,8 @@ channels:
       At the current moment, payments can be received only from the CIS countries
     enter_channel_description: |
       Send a short description of a channel/group. Your potential subscribers will see it before buying a subscription. ${ description ? ' Send "-" to use a standard description (' + description + ')' : ''}
+      
+      If the description is longer than 3793 characters, it will be truncated.
     settings_complete: Basic setting up is complete, now you need to create/edit tariffs
     list_tariffs: Select a tariff which you want to edit from the list
     current_tariffs: |
