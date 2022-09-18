@@ -146,12 +146,17 @@ channels:
       At the current moment, payments can be received only from the CIS countries
     enter_channel_description: |
       Send a short description of a channel/group. Your potential subscribers will see it before buying a subscription. ${ description ? ' Send "-" to use a standard description (' + description + ')' : ''}
+      
+      If the description is longer than 3793 characters, it will be truncated.
     settings_complete: Basic setting up is complete, now you need to create/edit tariffs
     list_tariffs: Select a tariff which you want to edit from the list
     current_tariffs: |
       Current list of tariffs:
     enter_tariff_name: |
       Enter the tariff name or send "-" to leave it blank. ${name ? 'Current name: ' + name : ''}
+      
+      The title may be truncated if it is longer than 20 characters.
+      We charge ~10% commission on every deposit.
     enter_tariff_currency: |
       Select currency. ${currency ? 'Current currency: ' + currency : ''}
     enter_tariff_period: |
@@ -270,6 +275,11 @@ channels:
       *It's possible to buy a subscription for your channel* [follow the link](${link})
       
       _A tip: If you have several different sources of traffic, you can create additional links and monitor their statistics separately. It can help you understand which of the sources works better_
+    list_balances: |
+      *ATTENTION!* In some cases, withdrawal is possible only after 24 hours from the moment of enrollment!
+      We charge ~10% commission on every deposit.
+      
+      ${balances}
     errors:
       unavailable_delete_all_tariffs: ❌ It's not possible to delete all tariffs
       feature_disabled: This feature is temporarily disabled. Click on /start to return to the main menu.
