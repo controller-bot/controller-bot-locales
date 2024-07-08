@@ -7,7 +7,7 @@ move: |
   Vai dal tuo bot connesso e invia il comando /start.
 
 common:
-  choose_language: Per favore, scegli la tua lingua.
+  choose_language: Scegli la tua lingua.
 
   start: |
     Posso aiutarti a gestire i tuoi canali di Telegram.
@@ -22,10 +22,10 @@ common:
     /settings - altre impostazioni
 
   help: |
-    Per ogni tipo di domanda, dai un'occhiata al <a href="https://telegra.ph/Controller-Help-03-20">Controller Help</a>.
+    Per qualsiasi domanda, dai un'occhiata al <a href="https://telegra.ph/Controller-Help-03-20">Controller Help</a>.
 
     Puoi controllarmi usando questi comandi:
-    
+
     /newpost - crea un nuovo post
     /addchannel - aggiungi un nuovo canale
     /mychannels - modifica i tuoi canali
@@ -37,15 +37,15 @@ bots:
     <b>Connettere un bot</b>
 
     Per connettere un bot, segui questi passaggi:
-    
+
     1. Avvia @BotFather e <a href="https://telegra.ph/Create-Bot-Controller-FAQ-03-28">crea un nuovo bot</a>.
     2. Riceverai un token (es. 12345:6789ABCDEF) — inviamelo o copialo e incollalo qui.
-    
+
     <b>Attenzione!</b> Non connettere bot già usati da altri servizi come Chatfuel, Manybot... 
 
   wrong_token: Non riconosco ciò che hai inviato. Inviami il token del tuo bot.
   error_add: Token non valido. Prova a richiederne uno nuovo o usa il token di un altro bot.
-  bot_already_added: Ho già visto questo token. Questo bot è già connesso.
+  bot_already_added: Ho già visto questo token. Hai già connesso questo bot.
 
 channels:
   welcome: |
@@ -62,11 +62,11 @@ channels:
       <b>Aggiungere un canale</b>
 
       Per aggiungere un canale, segui questi passaggi:
-    
+
       1. <a href="https://telegra.ph/Add-Bot-to-Admins-Controller-FAQ-03-28">Aggiungi @${username} agli amministratori</a> del tuo canale. 
       2. Inoltrami un messaggio dal canale o inviami il suo username o ID.
     added: |
-      Perfetto! Il canale ${channel.username ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>' : '<b>' + channel.name + '</b>'} è stato aggiunto.
+      Perfetto! Hai aggiunto il canale ${channel.username ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>' : '<b>' + channel.name + '</b>'}.
 
       Vai da @${bot_username} per creare un nuovo post.
 
@@ -76,15 +76,15 @@ channels:
 
     error:
       data: |
-        Per favore, inoltrami un qualsiasi messaggio dal tuo canale, o inviamo il suo username o ID.
-      channel_not_found: Il canale non è stato trovato.
+        Inoltrami un qualsiasi messaggio dal tuo canale o inviami il suo username o ID.
+      channel_not_found: Canale non trovato.
       you_are_not_administrator: Non sei un amministratore nel canale.
       you_do_not_have_rights: Non hai il permesso di scrivere nel canale
-      bot_is_not_admin: Aggiungi @${username} agli amministratori del tuo canale. Per favore, verifica ancora e riprova.
+      bot_is_not_admin: Aggiungi @${username} agli amministratori del tuo canale. Verifica ancora e riprova.
       bot_is_not_admin_in_group: Aggiungi @${username} agli amministratori del tuo canale e riprova.
       bot_was_deleted: |
-        Impossibile aggiungere il canale. @${username} non esiste più, o il suo token è stato revocato. Connetti nuovamente questo bot e riprova.
-      channel_already_added: Questo canale è stato già aggiunto. Vai da @${bot_username} per creare un nuovo post.
+        Impossibile aggiungere il canale. @${username} non esiste più o il suo token è stato revocato. Connetti nuovamente questo bot e riprova.
+      channel_already_added: Hai già aggiunto questo canale. Vai da @${bot_username} per creare un nuovo post.
       group_already_added: |
         Questo canale è stato già aggiunto da ${admin.first_name}${admin.last_name ? ' ' + admin.last_name : ''}${admin.username ? ' @' + admin.username : ''}
 
@@ -92,44 +92,224 @@ channels:
     options: |
       Eccoci: ${channel.name}. Cosa vuoi fare con questo canale?
     delete_confirm: |
-      Sei sicuro di voler eliminare questo canale?
-      
-      Insieme a lui, verranno eliminati tutte le statistiche salvate e i post programmati non verranno inviati.
-    channel_deleted: Fatto! Il canale è andato.
+      Vuoi davvero eliminare questo canale?
+
+      Insieme a esso, saranno eliminati tutti i post programmati non saranno inviati e le statistiche salvate.
+    channel_deleted: Fatto! Il canale è stato eliminato.
     select_bot: |
       ${count
         ? 'Scegli il bot che sarà usato per inviare post nel canale.'
-        : "Non c'è ancora alcun bot connesso. Invia /addchannel per connetterne uno."
+        : "Non hai connesso ancora nessun bot. Invia /addchannel per connetterne uno."
       }
     bot_is_not_admin: Aggiungi il bot agli amministratori del canale.
     current_bot: Impossible scegliere il bot attualmente in uso.
-    sync_ok: 👌 Ok. I dati sono stati sincronizzati.
+    sync_ok: 👌 OK. I dati sono stati sincronizzati.
     set_timezone: |
       <b>Impostare il fuso orario</b>
 
       Ora inviami il nome della tua città, così potrò determinare il tuo fuso orario. Il fuso orario è necessario per gestire i post programmati.
     timezone: |
-      Fuso orario corrente:
+      Fuso orario attuale:
       ${city ? '🔹 GMT ' + (gmt > 0 ? '+' + gmt : gmt) + '\n🔹 ' + timezone_id + ' – ' + city : '🔹 None'}
 
-      Inviami il nome di una città vicina a te per cambiare il fuso orarip.
+      Inviami il nome di una città vicina a te per cambiare il fuso orario.
     check_timezone: |
       · GMT ${timezone.gmtOffset > 0 ? '+' + timezone.gmtOffset : timezone.gmtOffset} (${timezone.timeZoneId})
       · ${countryName}, ${name}
 
-      Giusto? Se no, inviami il nome di un'altra città vicina a te.
+      È corretto? Altrimenti, inviami il nome di un'altra città vicina a te.
     error_timezone: Scusa, ma non riesco a trovare questa città. Prova a inviarmi il nome di un'altra città vicina a te.
-    error_request_timezone: Qualcosa è andato storto ☹️. Per favore, riprova. Scrivici a @ControllerSupportBot se per qualche motivo non cambia nulla.
-    save_timezone: Ok, ho salvato il tuo fuso orario.
+    error_request_timezone: Qualcosa è andato storto ☹️. Riprova. Se il problema persiste, scrivici a @ControllerSupportBot.
+    save_timezone: OK. Il fuso orario è stato salvato.
+    link_chat: |-
+      Puoi collegare il gruppo di discussione al bot per abilitare i commenti nativi.
+
+      Segui le istruzioni:
+      https://telegra.ph/How-to-link-the-discussion-group-to-Controller-bot-Controller-FAQ-08-18
+
+    chatIsNotLinked: |-
+      Questa chat non è collegata a un canale
+
+    chatLinked: |-
+      Successo! Questa chat è ora collegata a ${channelTitle}!
+
+      Vai al bot per creare nuovi post con commenti nativi.
+  subscription:
+    channels_with_unavailable_subscription: |
+      Canali con abbonamento non disponibile.
+    channels_with_available_subscription: |
+      Canali con abbonamento disponibile. 
+      *ATTENZIONE*
+      Al momento, è possibile ricevere pagamenti soltanto dai Paesi della Comunità degli Stati Indipendenti (CSI)
+    subscription_not_configured: |
+      Non hai canali con un abbonamento a pagamento.
+      *ATTENZIONE* 
+      Al momento, è possibile ricevere pagamenti soltanto dai Paesi della Comunità degli Stati Indipendenti (CSI)
+    enter_channel_description: |
+      Invia una breve descrizione del canale o gruppo. I tuoi possibili abbonati la vedranno prima di acquistare l'abbonamento. ${ description ? ' Invia "-" per usare una descrizione base (' + description + ')' : ''}
+      
+      Se la descrizione supera i 3793 caratteri, sarà troncata.
+    settings_complete: Configurazione di base completata, ora devi creare o modificare le tariffe
+    list_tariffs: Scegli la tariffa che vuoi modificare dalla lista
+    current_tariffs: |
+      Lista delle tariffe:
+    enter_tariff_name: |
+      Inserisci il nome della tariffa o invia "-" per lasciarlo vuoto. ${name ? 'Nome attuale: ' + name : ''}
+      
+      Il titolo potrebbe essere troncato se supera i 20 caratteri.
+      Addebitiamo una commissione del ~10% su ogni deposito.
+    enter_tariff_currency: |
+      Scegli la valuta. ${currency ? 'Valuta attuale: ' + currency : ''}
+    enter_tariff_period: |
+      Inserisci il periodo della tariffa. ${period ? 'Periodo attuale: ' + period : ''}
+    enter_tariff_price: |
+      Inserisci il prezzo della tariffa. (Valuta: ${currency}, periodo: ${localizedPeriod})${price ? 'Prezzo attuale: ' + price + ' ' + currency : ''}
+      Prezzo minimo: ${minimum} ${currency}
+    tariff_complete: La tariffa è stata creata!
+    manage_tariff: Gestisci la tariffa "${name}"
+    start_subscription_process: |
+      Abbonamento al canale o gruppo *${name}*
+      
+      ${description}
+      
+      Vuoi abbonarti?
+      ${photo ? '[\u200B](' + photo + ')' : '' }
+    select_tariff: Scegli una tariffa
+    confirm_delete_tariff: Vuoi davvero eliminare la tariffa?
+    subscription_increased: |
+      L'abbonamento attuale è rinnovato fino al *${date}*
+      
+      Clicca sul [link](${link}) per unirti al canale
+    subscription_created: |
+      L'abbonamento attuale è rinnovato fino al
+      *${date}*.
+      
+      Clicca sul [link](${link}) per unirti a un canale o gruppo privato
+    payment_link_created: |
+      Link al pagamento: ${link}
+    list: |
+      List degli abbonamenti attivi:
+      
+      Pagato fino al  -  Canale
+      ${list}
+    select_currency_for_withdraw: |
+      Scegli la valuta da prelevare
+    enter_amount_for_withdraw: |
+      Inserisci la l'importo del prelievo
+    withdraw_link_created: |
+      Il link per il prelievo è stato creato.
+      Sarà attivo per 24 ore.
+      
+      Link: ${link}
+    subscription_closely_expired:
+      Un abbonamento a un canale o gruppo (${channelName}) scadrà domani. Vuoi rinnovarlo?
+    total_statistics: |
+      Statistiche per un canale o gruppo *${channelName}* per il mese di *${month}*
+      
+      Totale:
+      Numero totale d'iscritti: *${totalSubscribersCount}*
+      Numero di nuovi iscritti: *${newSubscribersCount}*
+      Numero d'iscritti rinnovati: *${renewSubscribersCount}*
+      Numero di utenti rimossi: *${kickedUsersCount}*
+      Numero di utenti che sono arrivati cliccando sui link: *${entrancesCount}*
+      Conversione: *${conversion}*
+    tagged_statistics: |
+      Etichetta: *${tagName}*
+      Numero totale d'iscritti: *${totalSubscribersCount}*
+      Numero di nuovi iscritti: *${newSubscribersCount}*
+      Numero d'iscritti rinnovati: *${renewSubscribersCount}*
+      Numero di utenti rimossi: *${kickedUsersCount}*
+      Numero di utenti che sono arrivati cliccando sui link: *${entrancesCount}*
+      Conversione: *${conversion}*
+    last_tariff_no_enable_for_delete: |
+      Impossibile eliminare l'ultima tariffa
+    no_have_subscriptions: |
+      Non hai abbonamenti attivi al momento
+    no_funds_on_balances: |
+      Non hai fondi sufficienti per prelevare sul tuo saldo
+    attach_photo: |
+      Puoi allegare una foto alla descrizione del canale. Invia un file o invia "-" se non vuoi aggiungere o cambiare la foto.
+      ${ photo ? 'Foto selezionata: ' + photo : ''}
+    create_subscription_link: |
+      Pensa a un'etichetta per creare un link.
+      
+      Come nome dell'etichetta, puoi usare il nome della piattaforma in cui vuoi inserire un link a un abbonamento a pagamento al tuo canale o qualsiasi altra descrizione che ti aiuterà a identificare questo particolare link tra gli altri quando ne avrai diversi.
+      
+      Per esempio: "Annuncio nel canale XX", prova XX - 13.08.1941"
+    confirm_create_subscription_link: |
+      Vuoi davvero creare un link con l'etichetta (${tag})?
+    no_have_subscription_link: |
+      Non hai nessun link agli abbonamenti
+    choose_language: |
+      Scegli la lingua per un canale o gruppo. La lingua scelta sarà usata per notificare agli abbonati l'imminente data di scadenza dell'abbonamento.
+    regenerated_link: |
+      Clicca sul [link](${link}) per unirti a un canale o gruppo privato
+    periods:
+      daily: 1 giorno
+      weekly: 1 settimana
+      monthly: 1 mese
+      monthly_3: 3 mesi
+      monthly_6: 6 mesi
+      yearly: 1 anno
+      early_2: 2 anni
+      yearly_3: 3 anni
+    subcontrol_description: |
+      Controller Bot apre nuove strade per la monetizzazione dei tuoi canali!
+      
+      Vediamo che gli autori di contenuti autentici cercano sempre più spesso modi per diffonderli tramite canali Telegram privati, ovvero canali con abbonamento a pagamento. E possiamo sentire il loro "dolore" causato dall'aggiornamento quotidiano dell'elenco degli iscritti che hanno pagato per l'abbonamento.
+      
+      La moderazione manuale fa parte del passato: prova la nuova funzione degli abbonamenti a pagamento offerta da @ControllerBot!
+      
+      *Bastano 3 semplici passi:*
+      1. Attiva la funzione sul vostro canale privato
+      2. Seguendo le istruzioni dettagliate, crea un bot di gestione che si occuperà dei potenziali abbonati e offrirà loro le vostre tariffe.
+      3. Inviate il link del bot di gestione al vostro pubblico
+      
+      *E noi ci occuperemo del resto:*
+      1. Ricevere i pagamenti per l'abbonamento
+      2. Aggiungere gli abbonati pagati al canale
+      3. Notificare la data di scadenza dell'abbonamento
+      4. Eliminare gli utenti che non hanno rinnovato l'abbonamento
+    first_link_text: |
+      Le tariffe sono state create e la configurazione del canale è stata completata: è il momento d'iniziare ad attirare il pubblico!
+      
+      *È possibile acquistare un abbonamento per il proprio canale* [seguendo il link](${link})
+      
+      _Un consiglio: se hai diverse fonti di traffico, puoi creare link aggiuntivi e monitorare le loro statistiche separatamente. Questo può aiutarti a capire quale delle fonti funziona meglio._
+    list_balances: |
+      *ATTENZIONE!* In alcuni casi, il ritiro è possibile solo dopo 24 ore dal momento della registrazione.!
+      Addebitiamo una commissione del ~10% su ogni deposito.
+      
+      ${balances}
+    errors:
+      unavailable_delete_all_tariffs: ❌ Impossibile eliminare tutte le tariffe
+      feature_disabled: Questa funzione è temporaneamente disattivata. Clicca su /start per tornare al menu principale.
+      not_found_channel: Canale non trovato
+      tariff_already_exists: Esiste già una tariffa per il periodo (${localizedPeriod}).
+      payment_error: Errore del pagamento
+      insufficient_funds: Fondi insufficienti
+      invalid_amount: |
+        L'importo non è valido.
+        Importo minimo: ${minimumAmount} ${currency}
+        Importo massimo: ${maximumAmount} ${currency}
+      not_found_tariff: Tariffa non trovata
+      empty_price: Prezzo non specificato
+      empty_currency: Valuta non specificata
+      invalid_text: Errore nel testo
+      only_private_channel: Solo canali e gruppi privati possono avere abbonamenti privati.!
+      unknown_error: |
+        Errore. ${code ? '(Code: ' + code +')' : ''}
+        
+        Segnalalo in @ControllerSupportBot. Scrivi /start per riprovare.
 
 post:
   select_channel: Scegli il canale dove creare un nuovo post.
   no_channels: |
-    Non c'è ancora nessun canale aggiunto.
+    Non hai aggiunto ancora nessun canale.
 
     Invia /addchannel per aggiungerne uno.
-  error_check_channel: Qualcosa è andato storto ☹️. Per favore, riprova. Scrivici a @ControllerSupportBot se per qualche motivo non cambia nulla.
-  channel_not_found: Il canale non esiste, o non ne hai accesso. Torna da @ControllerBot e riprova.
+  error_check_channel: Qualcosa è andato storto ☹️. Riprova. Se il problema persiste, scrivici a @ControllerSupportBot.
+  channel_not_found: Il canale non esiste o non ne hai accesso. Torna da @ControllerBot e riprova.
   problems: |
     Impossibile creare un nuovo post in ${channel.name}. Di seguito, i problemi riscontrati:
 
@@ -144,7 +324,7 @@ post:
     bot_is_not_connection: 🔹 il canale non è connesso a un bot
     channel_not_found: 🔹 il canale non esiste più
     bot_is_not_admin: 🔹 il bot connesso non è più amministratore del canale
-    bot_was_deleted: 🔹 il bot connesso non esiste più, o il suo token è stato revocato
+    bot_was_deleted: 🔹 il bot connesso non esiste più o il suo token è stato revocato
 
   start: |
     Vai da @ControllerBot per connettere un nuovo canale e iniziare a creare post.
@@ -162,8 +342,8 @@ post:
       Inviami uno o più messaggi che vuoi includere nel post. Può essere qualsiasi cosa — del testo, una foto, un video, anche uno sticker.
     clear: Perfetto! Tutti i messaggi sono stati eliminati.
     message_deleted: Fatto! Il messaggio è stato eliminato.
-    not_posts: "Non c'è ancora nessun messaggio."
-    not_posts_for_done: "Non c'è ancora nessun messaggio."
+    not_posts: "Nessun messaggio disponibile."
+    not_posts_for_done: "Nessun messaggio disponibile."
     preview_sent: |
       Qui sopra, l'anteprima del post.
 
@@ -172,41 +352,43 @@ post:
     error_poll_not_anonymous: Scusa, ma non si possono inviare sondaggi non anonimi nei canali.
     error_parse: |
       Errori nel formattare il testo:
-      
+
       <pre>${description}</pre>
-      
+
       Per favore, <a href="https://telegra.ph/Parsing-Error-Fix-Controller-FAQ-03-28">risolvi tutti gli errori</a> e rinviami il messaggio.
     continue_collect: Puoi continuare a inviarmi messaggi. 
     html: |
       <b>grassetto</b>
       &lt;b&gt;grassetto&lt;/b&gt;
-      
+
       <i>corsivo</i>
       &lt;i&gt;corsivo&lt;/i&gt;
-      
+
       <a href="https://www.esempio.it/">testo con link</a>
       &lt;a href=&quot;https://www.esempio.it/&quot;&gt;testo con link&lt;/a&gt;
-      
+
       <code>testo a larghezza fissa</code>
       &lt;code&gt;testo a larghezza fissa&lt;/code&gt;
-      
+
       <pre>blocco di testo a larghezza fissa</pre>
       &lt;pre&gt;blocco di testo a larghezza fissa&lt;/pre&gt;
     markdown: |
       <b>grassetto</b>
       *grassetto*
-      
+
       <i>corsivo</i>
       _corsivo_
-      
+
       <a href="https://www.esempio.it/">testo con link</a>
       [testo con link](https://www.esempio.it/)
-      
+
       <code>testo a larghezza fissa</code>
       `testo a larghezza fissa`
-      
-      <pre>blocco di testo a larghezza fissa</pre>
-      ```blocco di testo a larghezza fissa```
+
+      <pre>blocco di testo
+      a larghezza fissa</pre>
+      ```blocco di testo
+      a larghezza fissa```
     canceled: La creazione del post è stata annullata.
     inline:
       welcome: |
@@ -219,7 +401,7 @@ post:
         Scegli "Annulla" per tornare alla creazione del post.
       error: |
         Errori nella lista dei pulsanti: <code>${error}</code>
-        
+
         Per favore, risolvi tutti gli errori e rinviami il messaggio.
       not_keyboard: |
         Il messaggio inviato non segue il formato dei pulsanti. Per favore, verifica ancora e riprova.
@@ -237,7 +419,7 @@ post:
       notify: "Potrai votare solo dopo l'invio."
       default_reactions:
         welcome: |
-          Puoi impostare delle reazioni che verranno messe di predefinito sotto i post. Inviami una o più emoji. Ad esempio: 👍👎
+          Puoi impostare delle reazioni che saranno messe di predefinito sotto i post. Inviami una o più emoji. Ad esempio: 👍👎
 
           ${reactions.length ? 'Reazioni predefinite attuali: ' + reactions.join(' ') : ''}
         saved: Reazioni predefinite salvate.
@@ -270,7 +452,7 @@ post:
     cancel_send: "L'invio del post è stato annullato."
     continue_send: Puoi continuare a inviarmi messaggi.
     confirm_send: >
-      Sei sicuro di voler inviare <b>${pluralize(posts, 'messaggio', 'messaggi', 'messaggi')}</b> in
+      Vuoi davvero inviare <b>${pluralize(posts, 'messaggio', 'messaggi', 'messaggi')}</b> in
       <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''}?
     waiting: 🕒 Invio...
     ok: Fatto!
@@ -283,34 +465,38 @@ post:
     welcome: |
       Inviami l'orario in cui vuoi che ${day} sia inviato il messaggio.
       Invia orario+data per programmare il post in un altro giorno.
-      
+
     help: |
       <b>I seguenti formati per l'orario sono accettati:</b>
       <pre>"6" → 06:00
       "5 3" → 05:03
       "15:30" → 15:30
       "1530" → 15:30</pre>
-      
+
       <b>I seguenti formati per la data sono accettati:</b>
       <pre>"6" → 6 di questo mese
       "9 12" → 9 dicembre
       "8 7 18" → 8 luglio 2018</pre>
-      
+
       Puoi anche usare i due punti e il punto al posto degli spazi. 
-      
-      Se mi invii solo l'orario, il post sarà programmato oggi di predefinito. Per programmare il post in un altro giorno, invia orario+data. Per esempio, <code>16 30 6 8 -> 16:30 del 6 agosto</code>
+
+      Se m'invii solo l'orario, il post sarà programmato oggi di predefinito. Per programmare il post in un altro giorno, invia orario+data. Per esempio, <code>16 30 6 8 -> 16:30 del 6 agosto</code>
     error_date: Data o ora non corretta. Premi "Aiuto" per avere un suggerimento.
     invalid_date: Data non corretta.
     limit: "Devi scegliere un orario che sia avanti di almeno un minuto. Al momento, la data e l'orario è ${current_date}."
     limit_year: Impossibile scegliere una data oltre un anno. Chissà cosa potrebbe accadere... 😁
     ok: |
-       Il post programmato è stato creato. Verrà inviato in <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''} in data <b>${date}</b>.
+       Il post programmato è stato creato. Sarà inviato in <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''} in data <b>${date}</b>.
 
   timer:
     welcome: Invia un periodo di tempo in ore dopo il quale il post si autodistriggerà.
     wrong_hour: Data non corretta. Sono accettati solo periodi tra 1 e 48 ore.
     save_timer: Il timer di autodistruzione è stato salvato.
     timer_off: Il timer di autodistruzione è stato disattivato.
+
+  inline:
+    removed: Pulsanti rimossi
+
 posts:
   edit:
     welcome: Inviami un messaggio che vuoi modificare.
@@ -326,7 +512,8 @@ posts:
       Tipo di messaggio: ${type_text}.${type == 'text' ? '\nStile di formattazione: ' + parse_mode : ''}
 
       Invia un nuovo testo per modificare ${type == 'text' ? 'questo messaggio' : 'questa didascalia'}.
-    not_changed: Qualcosa è andato storto ☹️. Per favore, riprova.
+    not_changed: |-
+      Il messaggio non è stato modificato.
     edited: Perfetto! Il messaggio è stato modificato.
     continue_edit: Puoi continuare a modificare il messaggio.
 
@@ -342,7 +529,7 @@ posts:
     voice: messaggio vocale
     contact: contatto
     location: posizione
-    venue: sede
+    venue: luogo
     video_note: videomessaggio
     poll: sondaggio
     album: album
@@ -361,7 +548,7 @@ posts:
     poll: 📊
     album: 🖼
   welcome_schedule: Scegli il canale di cui gestire i post programmati.
-  not_schedule_posts: "Non c'è ancora alcun post programmato in questo canale."
+  not_schedule_posts: "Non hai programmato ancora nessun post in questo canale."
   choose_scheduled_post: Scegli un post programmato che vuoi vedere.
   view_scheduled_post: |
     ${messages}
@@ -370,7 +557,7 @@ posts:
       : channel.name
     }
     ${date_delete ? '🗑 ' + date_delete : ''}
-  confirm_delete_post: Sei sicuro di voler eliminare questo post?
+  confirm_delete_post: Vuoi davvero eliminare questo post?
   scheduled_post_was_deleted: Fatto! Il post programmato è stato eliminato.
 
 settings:
@@ -389,22 +576,22 @@ settings:
         ? 'Il bot è connesso con questi canali:\n\n' + channels 
         : 'Il bot non è connesso con nessun canale.\n'
       }
-      Sei sicuro di voler rimuovere questo bot?
-    bot_deleted: Fatto! Il bot è andato.
+      Vuoi davvero rimuovere questo bot?
+    bot_deleted: Fatto! Il bot è stato eliminato.
 
 statistics:
   select_channel: Scegli il canale di cui vedere le statistiche.
   no_channels: |
     Non è ancora stato aggiunto nessun canale.
-    
+
     Invia /addchannel per aggiungerne uno.
   selected_channel: 'Eccoci: ${channel.name}. Cosa vuoi fare con le statistiche?'
-  channel_not_found: Questo canale non è stato trovato.
+  channel_not_found: Questo canale non è disponibile.
   select_periods: Scegli il periodo di tempo di cui vuoi vedere le statistiche.
   loading_data: 🕒 Processo i dati e creo il grafico...
   error_load_data: |
     È stato riscontrato un errore durante il processo dei dati.
-     
+
     Scrivici a @ControllerSupportBot per segnalare un problema.
   not_found_data: Non ci sono ancora abbastanza dati. Torna più tardi.
   share_text: |
@@ -427,7 +614,7 @@ bot:
     welcome: Qui puoi creare post ricchi, vedere le statistiche e svolgere altri compiti.
 
   is_not_user: |
-    Per iniziare a usare il bot, devi inviare il comando /start a @ControllerBot, quindi torna qui e premi il pulsante "Continue".
+    Per iniziare a usare il bot, devi inviare il comando /start a @ControllerBot, quindi torna qui e premi il pulsante "Continua".
 
   channels:
     controller_updates_join_link: https://t.me/joinchat/AAAAAFNNAyKG1y7GopROHg
@@ -456,7 +643,7 @@ bot:
       open: |
         Qui puoi impostare lo stile di formattazione che sarà usato di predefinito. Invia /markdown o /HTML per avere un suggerimento.
 
-        Puoi anche impostare le reazioni che verranno usate di predefinito per i nuovi post.
+        Puoi anche impostare le reazioni che saranno usate di predefinito per i nuovi post.
 
 donate:
   welcome: |
@@ -485,19 +672,24 @@ donate:
   not_pay: Donazione non trovata 😔
   success_pay: Grazie per la tua donazione al team di Controller Bot! 😍
 
-  problem: Problemi con la donazione
-  help: "Scrivici a @ControllerSupportBot se hai problemi con l'invio della donazione o se non c'è un metodo di pagamento disponibile."
+  problem: Problemi con il pagamento
+  help: Scrivici a @ControllerSupportBot per segnalare il problema.
 
 btn:
   common:
-    continue: Continua »
-    true: Sì, è giusto
-    back: « Indietro
+    continue: Continua →
+    true: Sì, è corretto
+    back: ← Indietro
     cancel: Annulla
-    off: Disabilita
+    off: Disattiva
     help: Aiuto
     yes: Sì 
     no: No
+    confirm: Conferma
+    ok: OK
+    next: Avanti
+    edit: Modifica
+    delete: Elimina
 
   menu:
     create_post: Crea post
@@ -528,26 +720,48 @@ btn:
       confirm_delete_yes: Sì
       confirm_delete_no: No
 
+      link_chat: Collega chat
+      unlink_chat: Scollega chat
+
+      subscription: Controllo abbonamento
+  subscription:
+    settings: Configura un abbonamento
+    configure_tariffs: Configura le tariffe
+    create_tariff: Crea una tariffa
+    add_tariff: Aggiungi una tariffa
+    create_subscribe_link: Aggiungi un link
+    show_subscribe_links: Link agli abbonamenti
+    show_balances: Mostra saldo
+    withdraw: Preleva
+    statistics: Statistiche
+    full_statistics_report: Resoconto completo
+    delete_tariff: Elimina una tariffa
+    edit_subscription_settings: Configura il messaggio di benvenuto
+    regenerateJoinLink: Rigenera un link
+    dont_show_again: Non mostrare più
+    add_additional_links: Crea un link all'abbonamento aggiuntivo
+
   post:
     settings: 
       disable_notification_disable: 'Silenzioso: No'
       disable_notification_enable: 'Silenzioso: Sì'
-      
+
       disable_web_page_preview_disable: 'Anteprima link: Sì'
       disable_web_page_preview_enable: 'Anteprima link: No'
-      
+
       parse_mode_markdown: 'Formattazione: Markdown'
       parse_mode_html: 'Formattazione: HTML'
+      parse_mode_none: 'Formattazione: No'
 
       default_reactions_disable: 'Reazioni predefinite: No'
       default_reactions_enable: 'Reazioni predefinite: Sì'
 
     faq: Controller Help
-    
-    control_channel: Vai alle impostazioni del canale
-    return_to_channels: « Torna alla lista canali
 
-    continue: Continua »
+    control_channel: Vai alle impostazioni del canale
+    return_to_channels: ← Torna alla lista dei canali
+
+    continue: Continua →
 
     add_image: Allega
     clear_image: Rimuovi allegato
@@ -555,10 +769,12 @@ btn:
     open_comments: Apri i commenti
     add_comments: Aggiungi i commenti
     delete_comments: Rimuovi i commenti
-    
+    add_native_comments: Aggiungi i commenti nativi
+    delete_native_comments: Rimuovi i commenti nativi
+
     add_inline: Aggiungi pulsanti
     clear_inline: Rimuovi pulsanti
-    
+
     add_reactions: Aggiungi reazioni
     clear_reactions: Rimuovi reazioni
 
@@ -584,7 +800,7 @@ btn:
       send_now: Invia ora
       sent: Vedi post nel canale
       create_scheduled: Programma
-      
+
       send: Invia
       cancel: Annulla
 
@@ -603,8 +819,10 @@ btn:
 
   posts:
     edit:
+      add_inline: Aggiungi pulsanti
       edit_inline: Cambia pulsanti
-      original: Vedi versione originale
+      remove_inline: Rimuovi pulsanti
+      original: Vedi versione precedente
       clear_caption: Rimuovi didascalia
       save: Salva modifiche
       cancel: Annulla
@@ -617,8 +835,8 @@ btn:
 
   statistics:
     view_periods: Vedi
-    view_via_web: Vedi su pagina web
-    
+    view_via_web: Vedi sul web
+
     periods:
       one_week: Settimana
       one_month: Mese
