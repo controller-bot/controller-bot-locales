@@ -107,17 +107,24 @@ channels:
     set_timezone: |
       <b>Impostare il fuso orario</b>
 
-      Ora inviami il nome della tua città, così potrò determinare il tuo fuso orario. Il fuso orario è necessario per gestire i post programmati.
+      Invia il nome della tua città per impostare il fuso orario. Questo è necessario affinché i post in ritardo vengano pubblicati esattamente in orario, in base all'ora locale.
+      Puoi anche inviare al bot una geolocalizzazione in modo che cerchi di trovare la città più vicina a te, in base alla quale verrà impostato il fuso orario.
     timezone: |
       Fuso orario corrente:
       ${city ? '🔹 GMT ' + (gmt > 0 ? '+' + gmt : gmt) + '\n🔹 ' + timezone_id + ' – ' + city : '🔹 None'}
 
       Inviami il nome di una città vicina a te per cambiare il fuso orarip.
+      Oppure puoi inviare al bot una geolocalizzazione in modo che provi a trovare la città più vicina a te, in base alla quale verrà impostato il fuso orario.
     check_timezone: |
       · GMT ${timezone.gmtOffset > 0 ? '+' + timezone.gmtOffset : timezone.gmtOffset} (${timezone.timeZoneId})
       · ${countryName}, ${name}
 
-      Giusto? Se no, inviami il nome di un'altra città vicina a te.
+      Per cambiare il fuso orario, invia il nome della tua città.
+      Oppure puoi inviare al bot una geolocalizzazione in modo che cerchi di trovare la città più vicina a te su cui impostare il fuso orario.
+      
+      Corretto? In caso contrario, prova a inserire un'altra città principale più vicina a te.
+    select_nearest: |
+      Seleziona la città più vicina.
     error_timezone: Scusa, ma non riesco a trovare questa città. Prova a inviarmi il nome di un'altra città vicina a te.
     error_request_timezone: Qualcosa è andato storto ☹️. Per favore, riprova. Scrivici a @ControllerSupportBot se per qualche motivo non cambia nulla.
     save_timezone: Ok, ho salvato il tuo fuso orario.
@@ -139,7 +146,7 @@ post:
       ? 'Vai nelle impostazioni del canale per risolvere gli errori.'
       : 'Il creatore del canale dovrebbe andare nelle impostazioni del canale per risolvere gli errori.'
     }
-  problem_items: 
+  problem_items:
     timezone_is_not_set: 🔹 non è stato impostato un fuso orario
     bot_is_not_connection: 🔹 il canale non è connesso a un bot
     channel_not_found: 🔹 il canale non esiste più
@@ -176,7 +183,7 @@ post:
       <pre>${description}</pre>
       
       Per favore, <a href="https://telegra.ph/Parsing-Error-Fix-Controller-FAQ-03-28">risolvi tutti gli errori</a> e rinviami il messaggio.
-    continue_collect: Puoi continuare a inviarmi messaggi. 
+    continue_collect: Puoi continuare a inviarmi messaggi.
     html: |
       <b>grassetto</b>
       &lt;b&gt;grassetto&lt;/b&gt;
@@ -283,7 +290,7 @@ post:
     welcome: |
       Inviami l'orario in cui vuoi che ${day} sia inviato il messaggio.
       Invia orario+data per programmare il post in un altro giorno.
-      
+
     help: |
       <b>I seguenti formati per l'orario sono accettati:</b>
       <pre>"6" → 06:00
@@ -496,7 +503,7 @@ btn:
     cancel: Annulla
     off: Disabilita
     help: Aiuto
-    yes: Sì 
+    yes: Sì
     no: No
 
   menu:
@@ -529,13 +536,13 @@ btn:
       confirm_delete_no: No
 
   post:
-    settings: 
+    settings:
       disable_notification_disable: 'Silenzioso: No'
       disable_notification_enable: 'Silenzioso: Sì'
-      
+
       disable_web_page_preview_disable: 'Anteprima link: Sì'
       disable_web_page_preview_enable: 'Anteprima link: No'
-      
+
       parse_mode_markdown: 'Formattazione: Markdown'
       parse_mode_html: 'Formattazione: HTML'
 
@@ -543,7 +550,7 @@ btn:
       default_reactions_enable: 'Reazioni predefinite: Sì'
 
     faq: Controller Help
-    
+
     control_channel: Vai alle impostazioni del canale
     return_to_channels: « Torna alla lista canali
 
@@ -555,10 +562,10 @@ btn:
     open_comments: Apri i commenti
     add_comments: Aggiungi i commenti
     delete_comments: Rimuovi i commenti
-    
+
     add_inline: Aggiungi pulsanti
     clear_inline: Rimuovi pulsanti
-    
+
     add_reactions: Aggiungi reazioni
     clear_reactions: Rimuovi reazioni
 
@@ -584,7 +591,7 @@ btn:
       send_now: Invia ora
       sent: Vedi post nel canale
       create_scheduled: Programma
-      
+
       send: Invia
       cancel: Annulla
 
@@ -618,7 +625,7 @@ btn:
   statistics:
     view_periods: Vedi
     view_via_web: Vedi su pagina web
-    
+
     periods:
       one_week: Settimana
       one_month: Mese

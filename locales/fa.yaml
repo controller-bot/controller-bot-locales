@@ -107,17 +107,25 @@ channels:
     set_timezone: |
       <b>Setting the time zone</b>
 
-      Now send me the name of your city, so I will be able to determine your time zone. Your time zone is required for the management of scheduled posts.
+      Send the name of your city to set the time zone. This is necessary so that the delayed posts are published exactly on time according to your local time.
+
+      You can also send the bot a geolocation so that it tries to find the city closest to you, according to which the time zone will be set.
     timezone: |
       Current time zone:
       ${city ? '🔹 GMT ' + (gmt > 0 ? '+' + gmt : gmt) + '\n🔹 ' + timezone_id + ' – ' + city : '🔹 None'}
 
       Send me the name of the city close to you to change the time zone.
+      Or you can send the bot a geolocation so that it will try to find the closest city to you, according to which the time zone will be set.
     check_timezone: |
       · GMT ${timezone.gmtOffset > 0 ? '+' + timezone.gmtOffset : timezone.gmtOffset} (${timezone.timeZoneId})
       · ${countryName}, ${name}
 
-      Is it right? If not, try to send me the name of another city close to you.
+      To change the time zone, send the name of your city.
+      Or you can send the bot a geolocation so that it tries to find the closest city to you to set the time zone to.
+
+      Correct? If not, try entering another major city closest to you.
+    select_nearest: |
+      Select the nearest city.
     error_timezone: Sorry, I can't find this city. Try to send me the name of another city close to you.
     error_request_timezone: Something went wrong :( Please try again. Send us a message to @ControllerSupportBot if for some reason it doesn't change anything.
     save_timezone: OK, your timezone saved.

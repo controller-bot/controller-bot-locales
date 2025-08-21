@@ -109,17 +109,25 @@ channels:
     set_timezone: |
       <b>设置时区</b>
 
-       发给我你所在城市的名称，我就可以判断你的时区。设置时区后才能管理定时贴。
+      发送您所在城市的名称来设置时区。这很重要，这样延迟的帖子才能按照您当地的时间准时发布。
+  
+      您还可以向机器人发送地理位置信息，以便它尝试查找离您最近的城市，并根据该城市设置时区。
     timezone: |
       Current time zone: 当前时区
        ${city ? '🔹 GMT ' + (gmt > 0 ? '+' + gmt : gmt) + '\n🔹 ' + timezone_id + ' – ' + city : '🔹未设置'}
 
        请发给我附近城市的名称以便更改时区。
+      或者您可以向机器人发送地理位置，以便它尝试找到离您最近的城市，并根据该城市设置时区。
     check_timezone: |
       · GMT ${timezone.gmtOffset > 0 ? '+' + timezone.gmtOffset : timezone.gmtOffset} (${timezone.timeZoneId})
        · ${countryName}, ${name}
 
-       时区是否正确？如果不正确，请发给我另一个附近城市的名称。
+       要更改时区，请发送您所在城市的名称。
+      或者，您可以向机器人发送地理位置信息，以便它尝试查找距离您最近的城市来设置时区。
+  
+      正确吗？如果不正确，请尝试输入另一个距离您最近的主要城市。
+    select_nearest: |
+      选择最近的城市。
     error_timezone: 抱歉，我没有找到该城市。请发给我另一个附近城市的名称。
     error_request_timezone: 发生错误:(请重试。如果问题仍未消除，请联系@ControllerSupportBot。
     save_timezone: 时区设置已保存。

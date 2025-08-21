@@ -106,17 +106,24 @@ channels:
     set_timezone: |
       <b>Establecer la zona horaria</b>
 
-      Ahora envíame el nombre de tu ciudad, así podré determinar tu zona horaria. Su zona horaria es necesaria para la gestión de publicaciones programadas.
+      Envía el nombre de tu ciudad para configurar la zona horaria. Esto es necesario para que las publicaciones retrasadas se publiquen exactamente a la hora local.
+  
+      También puedes enviar al bot la geolocalización para que intente encontrar la ciudad más cercana, según la cual se configurará la zona horaria.
     timezone: |
       Zona horaria actual:
       ${ciudad ? '🔹 GMT ' + (gmt > 0 ? '+' + gmt : gmt) + '\n🔹 ' + timezone_id + ' – ' + ciudad : '🔹 None'}
 
-      Envíame el nombre de la ciudad más cercana para cambiar la zona horaria.
+      O puedes enviarle al bot una geolocalización para que intente encontrar la ciudad más cercana a ti, según la cual se fijará la zona horaria.
     check_timezone: |
       · GMT ${timezone.gmtOffset > 0 ? '+' + timezone.gmtOffset : timezone.gmtOffset} (${timezone.timeZoneId})
       · ${countryName}, ${name}
 
-      ¿Es correcto? Si no, intenta enviarme el nombre de otra ciudad cercana a ti.
+      Para cambiar la zona horaria, envía el nombre de tu ciudad.
+      O puedes enviarle al bot una geolocalización para que busque la ciudad más cercana y así establecer la zona horaria.
+      
+      ¿Correcto? Si no es así, prueba a introducir otra ciudad importante cercana.
+    select_nearest: |
+      Seleccione la ciudad más cercana.
     error_timezone: Lo siento, no puedo encontrar esta ciudad. Intenta enviarme el nombre de otra ciudad cercana a ti.
     error_request_timezone: Algo salió mal :( Por favor, inténtelo de nuevo. Envíenos un mensaje a @ControllerSupportBot si por alguna razón no cambia nada.
     save_timezone: OK, tu zona horaria se ha guardado.

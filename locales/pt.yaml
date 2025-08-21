@@ -106,17 +106,24 @@ channels:
     set_timezone: |
       <b>Configurações do fuso horário</b>
 
-      Agora me enviar o nome de sua cidade, para que eu seja capaz de determinar o seu fuso horário. O fuso horário é necessária para o gerenciamento de postagens agendadas.
+      Envie o nome da sua cidade para definir o fuso horário. Isso é necessário para que as postagens atrasadas sejam publicadas exatamente no horário local. 
+      Você também pode enviar ao bot uma geolocalização para que ele tente encontrar a cidade mais próxima de você, de acordo com a qual o fuso horário será definido.
     timezone: |
       Fuso horário atual:
       ${city ? '🔹 GMT ' + (gmt > 0 ? '+' + gmt : gmt) + '\n🔹 ' + timezone_id + ' – ' + city : '🔹 None'}
 
       Envie-me o nome da capital do seu estado para alterar o fuso horário.
+      Ou você pode enviar ao bot uma geolocalização para que ele tente encontrar a cidade mais próxima de você, de acordo com a qual o fuso horário será definido.
     check_timezone: |
       · GMT ${timezone.gmtOffset > 0 ? '+' + timezone.gmtOffset : timezone.gmtOffset} (${timezone.timeZoneId})
       · ${countryName}, ${name}
 
-      Tudo certo? Se não, tente me enviar o nome de outra cidade da sua região.
+      Para alterar o fuso horário, envie o nome da sua cidade.
+      Ou você pode enviar uma geolocalização ao bot para que ele tente encontrar a cidade mais próxima de você para definir o fuso horário.
+      
+      Correto? Caso contrário, tente inserir outra cidade grande mais próxima de você.
+    select_nearest: |
+      Selecione a cidade mais próxima.
     error_timezone: Desculpe, não consigo encontrar esta cidade. Tente me enviar o nome de outra cidade da sua região.
     error_request_timezone: Ops! Algo deu errado :( Por favor, tente novamente. Envie uma mensagem para @ControllerSupportBot se por algum motivo o erro continuar.
     save_timezone: OK, seu fuso horário foi salvo.
