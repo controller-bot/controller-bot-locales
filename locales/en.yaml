@@ -122,7 +122,7 @@ channels:
       To change the time zone, send the name of your city.
       Or you can send the bot a geolocation so that it tries to find the closest city to you to set the time zone to.
   
-      Correct? If not, try entering another major city closest to you.
+      Correct? If not, try entering another city closest to you.
     select_nearest: |
       Select the nearest city.
     error_timezone: Sorry, I can't find this city. Try to send me the name of another city close to you.
