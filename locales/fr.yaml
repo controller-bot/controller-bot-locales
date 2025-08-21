@@ -107,17 +107,24 @@ channels:
     set_timezone: |
       <b>Réglage du fuseau horaire</b>
 
-      À présent, envoyez-moi le nom de votre ville, afin que je puisse déterminer votre fuseau horaire. Votre fuseau horaire est nécessaire pour la gestion des messages planifiés.
+      Envoyez le nom de votre ville pour définir le fuseau horaire. Ceci est nécessaire pour que les publications différées soient publiées exactement à l'heure locale.
+      Vous pouvez également envoyer une géolocalisation au bot afin qu'il trouve la ville la plus proche de chez vous, selon laquelle le fuseau horaire sera défini.
     timezone: |
       Fuseau horaire actuel:
       ${city ? '🔹 GMT ' + (gmt > 0 ? '+' + gmt : gmt) + '\n🔹 ' + timezone_id + ' – ' + city : '🔹 None'}
 
       Envoyez-moi le nom de la ville proche de chez vous pour changer le fuseau horaire.
+      Ou vous pouvez envoyer au bot une géolocalisation afin qu'il essaie de trouver la ville la plus proche de vous, en fonction de laquelle le fuseau horaire sera défini.
     check_timezone: |
       · GMT ${timezone.gmtOffset > 0 ? '+' + timezone.gmtOffset : timezone.gmtOffset} (${timezone.timeZoneId})
       · ${countryName}, ${name}
 
-      Est-ce correct? Si non, essayez de m'envoyer le nom d'une autre ville proche de chez vous.
+      Pour modifier le fuseau horaire, envoyez le nom de votre ville.
+      Vous pouvez également envoyer une géolocalisation au bot afin qu'il trouve la ville la plus proche de chez vous et ajuste le fuseau horaire.
+  
+      C'est correct? Sinon, essayez d'entrer une autre grande ville proche de chez vous.
+    select_nearest: |
+      Sélectionnez la ville la plus proche.
     error_timezone: Désolé, je ne peux pas trouver cette ville. Essayez de m\'envoyer le nom d\'une autre ville proche de chez vous.
     error_request_timezone: Une erreur s\'est produite :( S\'il vous plaît essayez à nouveau. Envoyez-nous un message à @ControllerSupportBot si pour une raison quelconque, cela n\'a rien changé.
     save_timezone: OK, Fuseau horaire sauvegardé.

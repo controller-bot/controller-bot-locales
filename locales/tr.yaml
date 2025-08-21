@@ -93,15 +93,25 @@ channels:
     sync_ok: 👌 Tamam. Veri senkronize edildi.
     set_timezone: |
       <b>Zaman Dilimi Ayarlama</b>
-      Bana şehrinizin adını gönderin, bu sayede zaman diliminizi belirleyeceğim. Zaman dilimi, zamanlanmış gönderilerin yönetimi için gerekli.
+      
+      Saat dilimini ayarlamak için şehrinizin adını gönderin. Bu, geciken gönderilerin yerel saatinize göre tam zamanında yayınlanması için gereklidir.
+      Bota, size en yakın şehri bulmaya çalışması için bir coğrafi konum da gönderebilirsiniz; böylece saat dilimi buna göre ayarlanacaktır.
     timezone: |
       Şu anki zaman dilimi:
       ${city ? '🔹 GMT ' + (gmt > 0 ? '+' + gmt : gmt) + '\n🔹 ' + timezone_id + ' – ' + city : '🔹 None'}
+      
       Zaman dilimini değiştirmek için, bana size yakın olan bir şehir adını gönderin.
+      Veya bota coğrafi konumunuzu gönderebilirsiniz, böylece size en yakın şehri bulmaya çalışır ve saat dilimini de buna göre ayarlar.
     check_timezone: |
       · GMT ${timezone.gmtOffset > 0 ? '+' + timezone.gmtOffset : timezone.gmtOffset} (${timezone.timeZoneId})
       · ${countryName}, ${name}
-      Doğru mu? Değilse, size yakın olan başka bir şehir adı göndermeyi deneyin.
+      
+      Saat dilimini değiştirmek için şehrinizin adını gönderin.
+      Ya da bota coğrafi konum bilgisi göndererek saat dilimini ayarlamak için size en yakın şehri bulmaya çalışmasını sağlayabilirsiniz.
+
+      Doğru mu? Değilse, size en yakın başka bir büyük şehir girmeyi deneyin.
+    select_nearest: |
+      En yakın şehri seçin.
     error_timezone: Üzgünüm, bu şehri bulamıyorum. Size yakın olan başka bir şehir adı göndermeyi deneyin.
     error_request_timezone: Bir şey ters gitti :( Lütfen tekrar deneyin. Değişmeyen bir şeyler varsa, @ControllerSupportBot ile bize mesaj gönderin.
     save_timezone: Tamam, zaman diliminiz kaydedildi.
