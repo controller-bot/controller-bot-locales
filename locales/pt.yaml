@@ -224,6 +224,20 @@ post:
         <pre>Botão texto 1 - http://www.example.com/ | Botão texto 2 - http://www.example2.com/
         Botão texto 3 - http://www.example3.com/
         </pre>
+        
+        Você também pode definir uma cor opcional para os botões:
+        <pre>
+        Botão 1 - http://example1.com - estilo:verde
+        Botão 2 - http://example2.com - estilo:azul
+        Botão 3 - http://example3.com - estilo:vermelho
+        </pre>
+        
+        Use o separador <b>|</b> para adicionar até três botões em uma linha. Exemplo:
+        <pre>
+        Botão 1 - http://example1.com | Botão 2 - http://example2.com
+        Botão 3 - http://example3.com - estilo:vermelho | Botão 4 - http://example4.com
+        </pre>
+        
         ${current ? '\nCurrent buttons:\n' + current : ''}
 
         Escolha 'Cancelar' e volte para criação de post.
@@ -613,12 +627,13 @@ btn:
 
   posts:
     edit:
-      edit_inline: Change URL-buttons
+      edit_inline: Alterar botões de URL
       original: Visualizar Versão Anterior
       clear_caption: Deletar Legenda
       save: Salvar Alterações
       cancel: Cancelar
       open_edited_post: Visualizar Post no Canal
+      edit_scheduled_post: Editar uma publicação agendada
 
     view: Visualizar Post
     copy: Criar Cópia

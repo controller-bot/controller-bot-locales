@@ -221,6 +221,20 @@ post:
         <pre>Pulsante 1 - https://www.link1.it/ | Pulsante 2 - https://www.link2.it/
         Pulsante 3 - https://www.link3.it/
         </pre>
+        
+        Puoi anche specificare un colore facoltativo per il pulsante:
+        <pre>
+        Pulsante 1 - http://example1.com - style:green
+        Pulsante 2 - http://example2.com - style:blue
+        Pulsante 3 - http://example3.com - style:red
+        </pre>
+        
+        Utilizza il separatore <b>|</b> per aggiungere fino a tre pulsanti di seguito. Esempio:
+        <pre>
+        Pulsante 1 - http://example1.com | Pulsante 2 - http://example2.com
+        Pulsante 3 - http://example3.com - style:red | Pulsante 4 - http://example4.com
+        </pre>
+        
         ${current ? '\nPulsanti attuali:\n' + current : ''}
 
         Scegli "Annulla" per tornare alla creazione del post.
@@ -616,6 +630,7 @@ btn:
       save: Salva modifiche
       cancel: Annulla
       open_edited_post: Vedi post nel canale
+      edit_scheduled_post: Modifica un post programmato
 
     view: Vedi post
     copy: Crea copia

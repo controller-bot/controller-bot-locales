@@ -224,6 +224,20 @@ post:
         <pre>Texte bouton 1 - http://www.example.com/ | Texte bouton 2 - http://www.example2.com/
         Texte bouton 3 - http://www.example3.com/
         </pre>
+        
+        Vous pouvez également spécifier une couleur pour les boutons:
+  
+        <pre> Bouton 1 - http://example1.com - style:green
+        Bouton 2 - http://example2.com - style:blue
+        Bouton 3 - http://example3.com - style:red
+        </pre> 
+        
+        Utilisez le séparateur <b>|</b> pour ajouter jusqu'à trois boutons à la suite. Exemple:
+        <pre>
+        Bouton 1 - http://example1.com | Bouton 2 - http://example2.com
+        Bouton 3 - http://example3.com - style:red | Bouton 4 - http://example4.com
+        </pre>
+        
         ${current ? '\nCurrent buttons:\n' + current : ''}
 
         choisissez 'Annuler' pour revenir à la création du message.
@@ -590,6 +604,7 @@ btn:
       save: Sauvegarder
       cancel: Annuler
       open_edited_post: Voir le message dans la chaîne
+      edit_scheduled_post: Modifier une publication programmée
 
     view: Voir publication
     copy: Créer une copie

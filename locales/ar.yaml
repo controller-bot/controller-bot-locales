@@ -227,6 +227,14 @@ post:
         <pre>نص الزّر الأول - http://www.example.com/ | نص الزّر الثاني - http://www.example2.com/
         نص الزر الثالث - http://www.example3.com/
         </pre>
+        
+        يمكنك أيضًا تحديد لون اختياري للزر:
+        <pre>
+        الزر 1 - http://example1.com - style:green
+        الزر 2 - http://example2.com - style:blue
+        الزر 3 - http://example3.com - style:red
+        </pre>
+        
         ${current ? '\nCurrent buttons:\n' + current : ''}
 
         انقر «إلغاء» للرجوع إلى عملية إنشاء المنشور.
@@ -620,6 +628,7 @@ btn:
       save: حفظ التغييرات
       cancel: إلغاء
       open_edited_post: عرض المنشور في القناة
+      edit_scheduled_post: تعديل منشور مُجدول
 
     view: رُؤية المنشور
     copy: إنشاء نسخة

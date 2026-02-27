@@ -402,8 +402,19 @@ post:
     inline:
       welcome: |
         Send me a list of URL buttons for the message. Please use this format:
+        <pre>Button text 1 - http://www.example.com/
+        Button text 2 - http://www.example2.com/
+        </pre>
+
+        You can also pass an optional button color:
+        <pre>Button text 1 - http://www.example.com/ - style:green
+        Button text 2 - http://www.example2.com/ - style:blue
+        Button text 3 - http://www.example3.com/ - style:red
+        </pre>
+
+        Use <b>|</b> to add up to three buttons in one row. Example:
         <pre>Button text 1 - http://www.example.com/ | Button text 2 - http://www.example2.com/
-        Button text 3 - http://www.example3.com/
+        Button text 3 - http://www.example3.com/ - style:red
         </pre>
         ${current ? '\nCurrent buttons:\n' + current : ''}
 
@@ -562,7 +573,7 @@ posts:
   view_scheduled_post: |
     ${messages}
     🕘 ${date} › ${channel.username
-      ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>'
+      ? '@' + channel.username + ' (' + channel.name + ')'
       : channel.name
     }
     ${date_delete ? '🗑 ' + date_delete : ''}
@@ -837,6 +848,7 @@ btn:
       save: Save Changes
       cancel: Cancel
       open_edited_post: View Post in Channel
+      edit_scheduled_post: Edit Scheduled Post
 
     view: View Post
     copy: Create Copy

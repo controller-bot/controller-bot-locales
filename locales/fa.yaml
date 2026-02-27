@@ -226,6 +226,20 @@ post:
         <pre>Button text 1 - http://www.example.com/ | Button text 2 - http://www.example2.com/
         Button text 3 - http://www.example3.com/
         </pre>
+        
+        You can also pass an optional button color:
+        <pre>
+        Button 1 - http://example1.com - style:green
+        Button 2 - http://example2.com - style:blue
+        Button 3 - http://example3.com - style:red
+        </pre>
+        
+        Use the <b>|</b> separator to add up to three buttons in a row. Example:
+        <pre>
+        Button 1 - http://example1.com | Button 2 - http://example2.com
+        Button 3 - http://example3.com - style:red | Button 4 - http://example4.com
+        </pre>
+        
         ${current ? '\nCurrent buttons:\n' + current : ''}
 
         Choose 'Cancel' to back to creating of the post.
@@ -591,6 +605,7 @@ btn:
       save: Save Changes
       cancel: Cancel
       open_edited_post: View Post in Channel
+      edit_scheduled_post: Edit a scheduled post
 
     view: View Post
     copy: Create Copy

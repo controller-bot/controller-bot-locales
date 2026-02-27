@@ -229,8 +229,20 @@ post:
         请发给我用于本消息的URL按钮列表。请使用该格式：
          <pre>按钮文本1 - http://www.example.com/ |按钮文本2 - http://www.example2.com/
          按钮文本 3 - http://www.example3.com/
-
          </pre>
+        
+        您还可以传递一个可选的按钮颜色：
+        <pre>
+        按钮 1 - http://example1.com - style:green
+        按钮 2 - http://example2.com - style:blue
+        按钮 3 - http://example3.com - style:red
+        </pre>
+        
+        使用 <b>|</b> 分隔符可以连续添加最多三个按钮。例如：
+        <pre>
+        按钮 1 - http://example1.com | 按钮 2 - http://example2.com
+        按钮 3 - http://example3.com - style:red | 按钮 4 - http://example4.com
+        </pre>
          ${current ? '\n当前按钮:\n' + current : ''}
 
 
@@ -649,6 +661,7 @@ btn:
       save: 保存改动
       cancel: 取消
       open_edited_post: 在频道内查看帖子
+      edit_scheduled_post: 编辑已安排发布的帖子
 
     view: 查看帖子
     copy: 建立副本

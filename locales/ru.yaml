@@ -408,10 +408,17 @@ post:
         Кнопка 2 - http://example2.com
         </pre>
 
+        Также можно передать необязательный цвет кнопки:
+        <pre>
+        Кнопка 1 - http://example1.com - style:green
+        Кнопка 2 - http://example2.com - style:blue
+        Кнопка 3 - http://example3.com - style:red
+        </pre>
+
         Используйте разделитель <b>|</b>, чтобы добавить до трех кнопок в один ряд. Пример:
         <pre>
         Кнопка 1 - http://example1.com | Кнопка 2 - http://example2.com
-        Кнопка 3 - http://example3.com | Кнопка 4 - http://example4.com
+        Кнопка 3 - http://example3.com - style:red | Кнопка 4 - http://example4.com
         </pre>
         ${current ? '\nТекущие кнопки:\n' + current : ''}
 
@@ -581,7 +588,7 @@ posts:
   view_scheduled_post: |
     ${messages}
     🕘 ${date} › ${channel.username
-      ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>'
+      ? '@' + channel.username + ' (' + channel.name + ')'
       : channel.name
     }
     ${date_delete ? '🗑 ' + date_delete : ''}
@@ -856,6 +863,7 @@ btn:
       save: Сохранить изменения
       cancel: Выйти из редактирования
       open_edited_post: Посмотреть изменения
+      edit_scheduled_post: Редактировать отложенный пост
 
     view: Посмотреть все
     copy: Создать копию

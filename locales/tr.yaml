@@ -203,7 +203,22 @@ post:
         <pre>Buton metni 1 - http://www.example.com/ | Buton metni 2 - http://www.example2.com/
         Buton metni 3 - http://www.example3.com/
         </pre>
+        
+        İsteğe bağlı olarak düğme rengi de belirtebilirsiniz:
+        <pre>
+        Düğme 1 - http://example1.com - stil:yeşil
+        Düğme 2 - http://example2.com - stil:mavi
+        Düğme 3 - http://example3.com - stil:kırmızı
+        </pre>
+        
+        Ardışık üç düğmeye kadar eklemek için <b>|</b> ayırıcıyı kullanın. Örnek:
+        <pre>
+        Düğme 1 - http://example1.com | Düğme 2 - http://example2.com
+        Düğme 3 - http://example3.com - stil:kırmızı | Düğme 4 - http://example4.com
+        </pre>
+        
         ${current ? '\nŞu anki butonlar:\n' + current : ''}
+        
         Gönderi oluşturmaya geri dönmek için 'İptal Et' butonunu seçin.
       error: |
         Bağlantı buton listesinde hatalar: <code>${error}</code>
@@ -575,6 +590,7 @@ btn:
       save: Değişiklikleri Kaydet
       cancel: İptal Et
       open_edited_post: Gönderiyi Kanalda Gör
+      edit_scheduled_post: Planlanmış bir gönderiyi düzenle
 
     view: Gönderiyi Gör
     copy: Kopya Oluştur
