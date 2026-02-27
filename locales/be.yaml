@@ -211,6 +211,20 @@ post:
         <pre>Тэкст кнопкі 1 - http://www.example.com/ | Тэкст кнопкі 2 - http://www.example2.com/
         Тэкст кнопкі 3 - http://www.example3.com/
         </pre>
+        
+        Таксама можна перадаць неабавязковы колер кнопкі: 
+        <pre>
+        Кнопка 1 - http://example1.com - style:green
+        Кнопка 2 - http://example2.com - style:blue
+        Кнопка 3 - http://example3.com - style:red
+        </pre>
+        
+        Выкарыстоўвайце падзельнік <b>|</b>, каб дадаць да трох кнопак у адзін шэраг. Прыклад:
+        <pre>
+        Кнопка 1 - http://example1.com | Кнопка 2 - http://example2.com
+        Кнопка 3 - http://example3.com - style:red | Кнопка 4 - http://example4.com
+        </pre>
+        
         ${current ? '\nБягучыя кнопкі:\n' + current : ''}
 
         Абярыце "Скасаваць", каб вярнуцца назад.
@@ -558,6 +572,8 @@ btn:
       save: Захаваць змены
       cancel: Скасаваць
       open_edited_post: Паглядзець допіс у канале
+      edit_scheduled_post: Рэдагаваць адкладзеную пасаду
+
     view: Праглядзець допіс
     copy: Стварыць копію
     edit_time: Змяніць час

@@ -573,7 +573,7 @@ posts:
   view_scheduled_post: |
     ${messages}
     🕘 ${date} › ${channel.username
-      ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>'
+      ? '@' + channel.username + ' (' + channel.name + ')'
       : channel.name
     }
     ${date_delete ? '🗑 ' + date_delete : ''}

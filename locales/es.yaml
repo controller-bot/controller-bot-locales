@@ -224,6 +224,20 @@ post:
         <pre>Botón 1 - http://www.example.com/ | Botón 2 - http://www.example2.com/
         Botón 3 - http://www.example3.com/
         </pre>
+        
+        También puedes pasar un color de botón opcional:
+        <pre>
+        Botón 1 - http://example1.com - estilo:verde
+        Botón 2 - http://example2.com - estilo:azul
+        Botón 3 - http://example3.com - estilo:rojo
+        </pre>
+        
+        Usa el separador <b>|</b> para agregar hasta tres botones seguidos. Ejemplo:
+        <pre>
+        Botón 1 - http://example1.com | Botón 2 - http://example2.com
+        Botón 3 - http://example3.com - estilo:rojo | Botón 4 - http://example4.com
+        </pre>
+        
         ${current ? '\nBotones actuales:\n' + current : ''}
 
         Elija 'Cancelar' para volver a la creación de la publicación.
@@ -589,6 +603,7 @@ btn:
       save: Guardar cambios
       cancel: Cancelar
       open_edited_post: Ver publicación en el canal
+      edit_scheduled_post: Editar una publicación programada
 
     view: Ver publicación
     copy: Crear copia
