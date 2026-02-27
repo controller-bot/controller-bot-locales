@@ -368,10 +368,10 @@ posts:
   welcome_schedule: Абярыце канал, у якім хочаце кіраваць адтэрмінаванымі допісамі.
   not_schedule_posts: Для гэтага канала няма адтэрмінаваных допісаў.
   choose_scheduled_post: Абярыце адтэрмінаваны допіс, які хочаце паглядзець або выдаліць.
-  view_scheduled_post: |2
+  view_scheduled_post: |
     ${messages}
     🕘 ${date} › ${channel.username
-      ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>'
+      ? '@' + channel.username + ' (' + channel.name + ')'
       : channel.name
     }
     ${date_delete ? '🗑 ' + date_delete : ''}
