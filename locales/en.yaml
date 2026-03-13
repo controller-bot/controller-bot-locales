@@ -807,6 +807,7 @@ btn:
     more: ⇣ Show Actions
 
     delete: Delete Message
+    send_silent: Send Silently
     silent_enable: 'Notify: ON'
     silent_disable: 'Notify: OFF'
     preview_enable: 'Link Previews: ON'

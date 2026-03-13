@@ -822,6 +822,7 @@ btn:
     more: ↓ Показать больше
 
     delete: Удалить сообщение
+    send_silent: Отправить без звука
     silent_enable: 'Уведомление: вкл.'
     silent_disable: 'Уведомление: выкл.'
     preview_enable: 'Предпросмотр: вкл.'
