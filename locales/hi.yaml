@@ -1,0 +1,864 @@
+language_name: हिन्दी
+is_enabled: true
+
+move: |
+  पोस्ट बनाना/संपादित करना, आँकड़े देखना और शेड्यूल्ड पोस्ट जैसी सभी मुख्य सुविधाएँ अब आपके कनेक्टेड बॉट्स में उपलब्ध हैं, इसलिए अब आपको हर बार अपने बॉट और Controller Bot के बीच स्विच नहीं करना पड़ेगा।
+
+  अपने कनेक्टेड बॉट में जाएँ और /start कमांड भेजें।
+
+common:
+  choose_language: कृपया अपनी भाषा चुनें।
+
+  start: |
+    मैं आपके Telegram चैनलों को मैनेज करने में मदद कर सकता हूँ।
+
+    आप इन कमांड्स से मुझे नियंत्रित कर सकते हैं:
+
+    /newpost - नई पोस्ट बनाएँ
+
+    /addchannel - नया चैनल जोड़ें
+    /mychannels - अपने चैनल संपादित करें
+
+    /settings - अन्य सेटिंग्स
+
+  help: |
+    यदि आपके कोई प्रश्न हैं, तो <a href="https://telegra.ph/Controller-Help-03-20">Controller Help</a> देखें।
+
+    आप इन कमांड्स से मुझे नियंत्रित कर सकते हैं:
+
+    /newpost - नई पोस्ट बनाएँ
+    /addchannel - नया चैनल जोड़ें
+    /mychannels - अपने चैनल संपादित करें
+    /settings - अन्य सेटिंग्स
+    /lang - भाषा बदलें
+bots:
+  add: |
+    <b>बॉट कनेक्ट करना</b>
+
+    बॉट कनेक्ट करने के लिए ये दो चरण पूरा करें:
+
+    1. @BotFather खोलें और <a href="https://telegra.ph/Create-Bot-Controller-FAQ-03-28">नया बॉट बनाएँ</a>।
+    2. आपको एक टोकन मिलेगा (जैसे 12345:6789ABCDEF) — उसे मुझे फ़ॉरवर्ड करें या कॉपी-पेस्ट करें।
+
+    <b>चेतावनी!</b> Chatfuel, Manybot आदि अन्य सेवाओं में पहले से उपयोग हो रहे बॉट्स को कनेक्ट न करें।
+
+  wrong_token: यह वैध नहीं लग रहा। कृपया अपने बॉट का टोकन भेजें।
+  error_add: अमान्य टोकन। नया टोकन लें या किसी दूसरे बॉट का टोकन इस्तेमाल करें।
+  bot_already_added: यह बॉट पहले से कनेक्ट है।
+
+channels:
+  welcome: |
+    <b>चैनल प्रबंधन</b>
+
+    ${count
+      ? 'नीचे दी गई सूची से एक चैनल चुनें:'
+      : 'अभी तक कोई चैनल जोड़ा नहीं गया है।'
+    }
+  add:
+    select_bot: |
+      वह बॉट चुनें जो इस चैनल में पोस्ट भेजने के लिए उपयोग होगा।
+    welcome: |
+      <b>चैनल जोड़ना</b>
+
+      चैनल जोड़ने के लिए ये दो चरण पूरा करें:
+
+      1. अपने चैनल में <a href="https://telegra.ph/Add-Bot-to-Admins-Controller-FAQ-03-28">@${username} को एडमिन के रूप में जोड़ें</a>।
+      2. फिर अपने चैनल से कोई भी संदेश मुझे फ़ॉरवर्ड करें (या उसका username/ID भेजें)।
+    added: |
+      सफल! चैनल ${channel.username ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>' : '<b>' + channel.name + '</b>'} जोड़ दिया गया है।
+
+      नई पोस्ट बनाने के लिए @${bot_username} पर जाएँ।
+
+      आपके चैनल के सभी एडमिन भी इस चैनल में पोस्ट बनाने के लिए इस बॉट का उपयोग कर सकते हैं।
+
+      यदि आप नया एडमिन जोड़ते हैं, तो एडमिन सूची अपडेट करने के लिए चैनल सेटिंग्स में जाकर "Update Data" चुनें।
+
+    error:
+      data: |
+        कृपया अपने चैनल से कोई भी संदेश मुझे फ़ॉरवर्ड करें। या उसका username/ID भेजें।
+      channel_not_found: चैनल नहीं मिला।
+      you_are_not_administrator: आप इस चैनल के एडमिन नहीं हैं।
+      you_do_not_have_rights: आपके पास चैनल में संदेश पोस्ट करने के अधिकार नहीं हैं।
+      bot_is_not_admin: @${username} को अपने चैनल में एडमिन के रूप में जोड़ें। कृपया दोबारा जाँचकर फिर प्रयास करें।
+      bot_is_not_admin_in_group: @${username} को अपने समूह में एडमिन के रूप में जोड़ें और फिर प्रयास करें।
+      bot_was_deleted: |
+        चैनल जोड़ना संभव नहीं है। @${username} अब मौजूद नहीं है, या उसका टोकन रद्द कर दिया गया है। इस बॉट को फिर से कनेक्ट करें या दूसरा चुनें।
+      channel_already_added: यह चैनल पहले से जोड़ा गया है। नई पोस्ट बनाने के लिए @${bot_username} पर जाएँ।
+      group_already_added: |
+        यह चैनल पहले ही ${admin.first_name}${admin.last_name ? ' ' + admin.last_name : ''}${admin.username ? ' @' + admin.username : ''} द्वारा जोड़ा जा चुका है।
+
+  control:
+    options: |
+      चुना गया चैनल: ${channel.name}. आप इस चैनल के साथ क्या करना चाहते हैं?
+    delete_confirm: |
+      क्या आप वाकई इस चैनल को हटाना चाहते हैं?
+
+      इस चैनल के सभी शेड्यूल्ड पोस्ट और सेव किए गए आँकड़े भी हटा दिए जाएँगे।
+    channel_deleted: हो गया! चैनल हटा दिया गया।
+    select_bot: |
+      ${count
+        ? 'वह बॉट चुनें जो इस चैनल में पोस्ट भेजने के लिए उपयोग होगा।'
+        : 'अभी तक कोई बॉट कनेक्ट नहीं है। नया कनेक्ट करने के लिए /addchannel भेजें।'
+      }
+    bot_is_not_admin: बॉट को अपने चैनल के एडमिन में जोड़ें।
+    current_bot: वर्तमान में उपयोग हो रहे बॉट को चुनना संभव नहीं है।
+    sync_ok: 👌 ठीक है। डेटा सिंक हो गया है।
+    set_timezone: |
+      <b>समय क्षेत्र सेट करना</b>
+
+      समय क्षेत्र सेट करने के लिए अपने शहर का नाम भेजें। यह ज़रूरी है ताकि शेड्यूल्ड पोस्ट आपके स्थानीय समय के अनुसार सही समय पर प्रकाशित हों।
+  
+      आप बॉट को geolocation भी भेज सकते हैं, ताकि वह आपके सबसे नज़दीकी शहर को ढूँढकर उसी के अनुसार समय क्षेत्र सेट कर सके।
+    timezone: |
+      वर्तमान समय क्षेत्र:
+      ${city ? '🔹 GMT ' + (gmt > 0 ? '+' + gmt : gmt) + '\n🔹 ' + timezone_id + ' – ' + city : '🔹 नहीं'}
+
+      समय क्षेत्र बदलने के लिए अपने नज़दीकी शहर का नाम भेजें।
+      या बॉट को geolocation भेजें, ताकि वह आपके सबसे नज़दीकी शहर के आधार पर समय क्षेत्र सेट कर सके।
+    check_timezone: |
+      · GMT ${timezone.gmtOffset > 0 ? '+' + timezone.gmtOffset : timezone.gmtOffset} (${timezone.timeZoneId})
+      · ${countryName}, ${name}
+
+      समय क्षेत्र बदलने के लिए अपने शहर का नाम भेजें।
+      या बॉट को geolocation भेजें, ताकि वह आपके सबसे नज़दीकी शहर के आधार पर समय क्षेत्र सेट कर सके।
+  
+      क्या यह सही है? यदि नहीं, तो कोई दूसरा नज़दीकी शहर दर्ज करें।
+    select_nearest: |
+      सबसे नज़दीकी शहर चुनें।
+    error_timezone: क्षमा करें, मैं यह शहर नहीं ढूँढ पाया। कृपया कोई दूसरा नज़दीकी शहर भेजें।
+    error_request_timezone: कुछ गड़बड़ हो गई :( कृपया फिर प्रयास करें। यदि समस्या बनी रहे तो @ControllerSupportBot को संदेश भेजें।
+    save_timezone: ठीक है, आपका समय क्षेत्र सहेज लिया गया है।
+    link_chat: |-
+      नेटिव कमेंट्स सक्षम करने के लिए आप discussion group को Controller bot से लिंक कर सकते हैं।
+
+      कृपया यह निर्देश पालन करें:
+      https://telegra.ph/How-to-link-the-discussion-group-to-Controller-bot-Controller-FAQ-08-18
+
+    chatIsNotLinked: |-
+      यह चैट किसी चैनल से लिंक नहीं है
+
+    chatLinked: |-
+      सफल! यह चैट अब ${channelTitle} से लिंक हो गई है!
+
+      नेटिव कमेंट्स के साथ नई पोस्ट बनाने के लिए बॉट में जाएँ।
+  subscription:
+    channels_with_unavailable_subscription: |
+      जिन चैनलों में सदस्यता उपलब्ध नहीं है।
+    channels_with_available_subscription: |
+      जिन चैनलों में सदस्यता उपलब्ध है।
+      *ध्यान दें*
+      फिलहाल भुगतान केवल CIS देशों से स्वीकार किए जा सकते हैं।
+    subscription_not_configured: |
+      आपके पास अभी सशुल्क सदस्यता वाला कोई चैनल नहीं है।
+      *ध्यान दें*
+      फिलहाल भुगतान केवल CIS देशों से स्वीकार किए जा सकते हैं।
+    enter_channel_description: |
+      चैनल/समूह का छोटा विवरण भेजें। संभावित सदस्य खरीदने से पहले इसे देखेंगे। ${ description ? ' मानक विवरण उपयोग करने के लिए "-" भेजें (' + description + ')' : ''}
+      
+      यदि विवरण 3793 अक्षरों से अधिक होगा, तो उसे छोटा कर दिया जाएगा।
+    settings_complete: बुनियादी सेटअप पूरा हो गया है, अब आपको टैरिफ बनाने/संपादित करने हैं।
+    list_tariffs: सूची से वह टैरिफ चुनें जिसे आप संपादित करना चाहते हैं।
+    current_tariffs: |
+      वर्तमान टैरिफ सूची:
+    enter_tariff_name: |
+      टैरिफ का नाम दर्ज करें या खाली छोड़ने के लिए "-" भेजें। ${name ? 'वर्तमान नाम: ' + name : ''}
+      
+      यदि शीर्षक 20 अक्षरों से बड़ा है, तो उसे छोटा किया जा सकता है।
+      प्रत्येक भुगतान पर लगभग 10% कमीशन लिया जाता है।
+    enter_tariff_currency: |
+      मुद्रा चुनें। ${currency ? 'वर्तमान मुद्रा: ' + currency : ''}
+    enter_tariff_period: |
+      टैरिफ अवधि दर्ज करें। ${period ? 'वर्तमान अवधि: ' + period : ''}
+    enter_tariff_price: |
+      टैरिफ मूल्य दर्ज करें। (मुद्रा: ${currency}, अवधि: ${localizedPeriod})${price ? 'वर्तमान मूल्य: ' + price + ' ' + currency : ''}
+      न्यूनतम मूल्य: ${minimum} ${currency}
+    tariff_complete: टैरिफ सफलतापूर्वक बना दिया गया है!
+    manage_tariff: टैरिफ "${name}" प्रबंधित करें
+    start_subscription_process: |
+      चैनल/समूह *${name}* की सदस्यता
+      
+      ${description}
+      
+      सदस्यता लें?
+      ${photo ? '[\u200B](' + photo + ')' : '' }
+    select_tariff: टैरिफ चुनें
+    confirm_delete_tariff: क्या आप वाकई इस टैरिफ को हटाना चाहते हैं?
+    subscription_increased: |
+      वर्तमान सदस्यता *${date}* तक नवीनीकृत है।
+      
+      चैनल जॉइन करने के लिए [इस लिंक](${link}) पर क्लिक करें।
+    subscription_created: |
+      सदस्यता *${date}* तक वैध है।
+      
+      निजी चैनल/समूह जॉइन करने के लिए [इस लिंक](${link}) पर क्लिक करें।
+    payment_link_created: |
+      भुगतान लिंक: ${link}
+    list: |
+      सक्रिय सदस्यताओं की सूची:
+      
+      भुगतान तक  -  चैनल
+      ${list}
+    select_currency_for_withdraw: |
+      निकासी के लिए मुद्रा चुनें
+    enter_amount_for_withdraw: |
+      निकासी राशि दर्ज करें
+    withdraw_link_created: |
+      निकासी के लिए लिंक सफलतापूर्वक बना दिया गया है।
+      यह 24 घंटे तक सक्रिय रहेगा।
+      
+      लिंक: ${link}
+    subscription_closely_expired:
+      चैनल/समूह (${channelName}) की सदस्यता कल समाप्त हो जाएगी। क्या आप नवीनीकरण करना चाहते हैं?
+    total_statistics: |
+      चैनल/समूह *${channelName}* के लिए *${month}* की सांख्यिकी
+      
+      कुल:
+      कुल सदस्य: *${totalSubscribersCount}*
+      नए सदस्य: *${newSubscribersCount}*
+      नवीनीकृत सदस्य: *${renewSubscribersCount}*
+      हटाए गए सदस्य: *${kickedUsersCount}*
+      लिंक पर क्लिक करके आए उपयोगकर्ता: *${entrancesCount}*
+      रूपांतरण: *${conversion}*
+    tagged_statistics: |
+      टैग: *${tagName}*
+      कुल सदस्य: *${totalSubscribersCount}*
+      नए सदस्य: *${newSubscribersCount}*
+      नवीनीकृत सदस्य: *${renewSubscribersCount}*
+      हटाए गए सदस्य: *${kickedUsersCount}*
+      लिंक पर क्लिक करके आए उपयोगकर्ता: *${entrancesCount}*
+      रूपांतरण: *${conversion}*
+    last_tariff_no_enable_for_delete: |
+      अंतिम टैरिफ हटाया नहीं जा सकता।
+    no_have_subscriptions: |
+      फिलहाल आपके पास कोई सदस्यता नहीं है।
+    no_funds_on_balances: |
+      निकासी के लिए आपके बैलेंस में पर्याप्त धन नहीं है।
+    attach_photo: |
+      चैनल विवरण में फ़ोटो जोड़ी जा सकती है। यदि आप फ़ोटो जोड़ना/बदलना नहीं चाहते, तो फ़ाइल या "-" भेजें।
+      ${ photo ? 'चुनी गई फ़ोटो: ' + photo : ''}
+    create_subscription_link: |
+      लिंक बनाने के लिए एक टैग सोचें।
+      
+      टैग के रूप में आप उस प्लेटफ़ॉर्म का नाम दे सकते हैं जहाँ आप अपने चैनल की सशुल्क सदस्यता का लिंक रखना चाहते हैं, या कोई ऐसा विवरण लिख सकते हैं जिससे कई लिंक होने पर आप इस विशेष लिंक को पहचान सकें।
+      
+      उदाहरण: "चैनल XX में विज्ञापन", "टेस्ट XX - 13.08.1941"
+    confirm_create_subscription_link: |
+      क्या आप टैग (${tag}) के साथ लिंक बनाना चाहते हैं?
+    no_have_subscription_link: |
+      आपके पास सदस्यता लिंक नहीं हैं।
+    choose_language: |
+      चैनल/समूह की भाषा चुनें। चुनी गई भाषा का उपयोग सदस्यता समाप्ति तिथि के निकट आने पर सदस्यों को सूचित करने के लिए किया जाएगा।
+    regenerated_link: |
+      निजी चैनल/समूह जॉइन करने के लिए [इस लिंक](${link}) पर क्लिक करें।
+    periods:
+      daily: एक दिन
+      weekly: एक सप्ताह
+      monthly: एक महीना
+      monthly_3: 3 महीने
+      monthly_6: 6 महीने
+      yearly: एक वर्ष
+      early_2: 2 वर्ष
+      yearly_3: 3 वर्ष
+    subcontrol_description: |
+      Controller bot आपके चैनलों के मुद्रीकरण के नए रास्ते खोलता है!
+      
+      हम देखते हैं कि अनोखे कंटेंट के लेखक अक्सर उसे निजी Telegram चैनलों के माध्यम से फैलाना चाहते हैं, यानी ऐसे चैनल जिनमें सशुल्क सदस्यता होती है। और हम उनकी वह "समस्या" समझते हैं जिसमें रोज़ भुगतान करने वाले सदस्यों की सूची अपडेट करनी पड़ती है।
+      
+      मैनुअल मॉडरेशन अब पुरानी बात है - @ControllerBot की सशुल्क सदस्यता सुविधा आज़माएँ!
+      
+      *बस 3 आसान कदम उठाएँ:*
+      1. अपने निजी चैनल पर यह सुविधा सक्रिय करें
+      2. विस्तृत निर्देशों के अनुसार एक बटलर-बॉट सेट करें जो संभावित सदस्यों को आपके टैरिफ दिखाए
+      3. उस बटलर-बॉट का लिंक अपनी ऑडियंस को भेजें
+      
+      *बाकी हम संभालेंगे:*
+      1. सदस्यता का भुगतान प्राप्त करना
+      2. भुगतान करने वाले सदस्यों को चैनल में जोड़ना
+      3. सदस्यता समाप्ति तिथि के निकट होने पर सूचना देना
+      4. जिन उपयोगकर्ताओं ने सदस्यता नवीनीकृत नहीं की, उन्हें हटाना
+    first_link_text: |
+      टैरिफ बन चुके हैं और चैनल सेटअप पूरा हो गया है \- अब ऑडियंस आकर्षित करने का समय है!
+      
+      *आपके चैनल की सदस्यता खरीदी जा सकती है* [इस लिंक से जाएँ](${link})
+      
+      _सलाह: यदि आपके पास अलग-अलग ट्रैफिक स्रोत हैं, तो अतिरिक्त लिंक बनाएँ और उनकी सांख्यिकी अलग-अलग ट्रैक करें। इससे समझने में मदद मिलेगी कि कौन-सा स्रोत बेहतर काम कर रहा है।_
+    list_balances: |
+      *ध्यान दें!* कुछ मामलों में, क्रेडिट होने के 24 घंटे बाद ही निकासी संभव होती है।
+      प्रत्येक भुगतान पर लगभग 10% कमीशन लिया जाता है।
+      
+      ${balances}
+    errors:
+      unavailable_delete_all_tariffs: ❌ सभी टैरिफ हटाना संभव नहीं है।
+      feature_disabled: यह सुविधा अस्थायी रूप से बंद है। मुख्य मेनू में लौटने के लिए /start दबाएँ।
+      not_found_channel: चैनल नहीं मिला।
+      tariff_already_exists: अवधि (${localizedPeriod}) के लिए टैरिफ पहले से मौजूद है।
+      payment_error: भुगतान त्रुटि।
+      insufficient_funds: पर्याप्त धनराशि नहीं है।
+      invalid_amount: |
+        राशि अमान्य है।
+        न्यूनतम राशि: ${minimumAmount} ${currency}
+        अधिकतम राशि: ${maximumAmount} ${currency}
+      not_found_tariff: टैरिफ नहीं मिला।
+      empty_price: मूल्य निर्दिष्ट नहीं है।
+      empty_currency: मुद्रा निर्दिष्ट नहीं है।
+      invalid_text: टेक्स्ट में त्रुटि है।
+      only_private_channel: निजी सदस्यता केवल निजी चैनलों और समूहों के लिए उपलब्ध है!
+      unknown_error: |
+        त्रुटि पाई गई। ${code ? '(Code: ' + code +')' : ''}
+        
+        कृपया इसकी सूचना @ControllerSupportBot को दें। फिर से प्रयास करने के लिए /start भेजें।
+
+post:
+  select_channel: नई पोस्ट बनाने के लिए एक चैनल चुनें।
+  no_channels: |
+    अभी तक कोई चैनल जोड़ा नहीं गया है।
+
+    नया चैनल जोड़ने के लिए /addchannel भेजें।
+  error_check_channel: कुछ गड़बड़ हो गई :( कृपया फिर प्रयास करें। यदि समस्या बनी रहे तो @ControllerSupportBot को संदेश भेजें।
+  channel_not_found: चैनल मौजूद नहीं है, या आपको उस तक पहुँच नहीं है। @ControllerBot पर वापस जाएँ और फिर प्रयास करें।
+  problems: |
+    ${channel.name} में नई पोस्ट बनाना संभव नहीं है। निम्न समस्याएँ मिलीं:
+
+    ${problems}
+
+    ${from.id == channel.owner_id
+      ? 'समस्याएँ ठीक करने के लिए चैनल सेटिंग्स में जाएँ।'
+      : 'चैनल का मालिक चैनल सेटिंग्स में जाकर समस्याएँ ठीक करे।'
+    }
+  problem_items:
+    timezone_is_not_set: 🔹 समय क्षेत्र सेट नहीं है
+    bot_is_not_connection: 🔹 चैनल किसी बॉट से कनेक्ट नहीं है
+    channel_not_found: 🔹 चैनल अब मौजूद नहीं है
+    bot_is_not_admin: 🔹 कनेक्टेड बॉट चैनल एडमिन में नहीं जोड़ा गया है
+    bot_was_deleted: 🔹 कनेक्टेड बॉट अब मौजूद नहीं है, या उसका टोकन रद्द कर दिया गया है
+
+  start: |
+    नया चैनल कनेक्ट करने और पोस्ट बनाना शुरू करने के लिए @ControllerBot पर जाएँ।
+
+  make:
+    set_formatting: |
+      सबसे पहले, डिफ़ॉल्ट रूप से उपयोग होने वाली फ़ॉर्मेटिंग शैली सेट करें।
+
+      सहायता के लिए /markdown या /HTML भेजें।
+
+      अधिकतर उपयोगकर्ता Markdown पसंद करते हैं क्योंकि यह छोटा और आसान है। नेटिव फ़ॉर्मेटिंग भी समर्थित है।
+    start: |
+      चुना गया चैनल: <b>"${channel.name}"</b>${channel.username ? ' @' + channel.username : ''}।
+
+      पोस्ट में शामिल करने के लिए एक या अधिक संदेश भेजें। यह कुछ भी हो सकता है — टेक्स्ट, फोटो, वीडियो, यहाँ तक कि स्टिकर भी।
+    clear: सफल! सभी संदेश हटा दिए गए।
+    message_deleted: हो गया! संदेश हटा दिया गया।
+    not_posts: अभी तक कोई संदेश नहीं है।
+    not_posts_for_done: अभी तक कोई संदेश नहीं है।
+    preview_sent: |
+      पोस्ट का प्रीव्यू ऊपर भेजा गया है।
+
+      इस पोस्ट में <b>${pluralize(posts, 'message', 'messages', 'messages')}</b> हैं:
+      ${messages}
+    error_poll_not_anonymous: क्षमा करें, आप चैनलों में non-anonymous poll नहीं भेज सकते।
+    error_parse: |
+      फ़ॉर्मेटिंग टेक्स्ट में त्रुटियाँ:
+
+      <pre>${description}</pre>
+
+      कृपया <a href="https://telegra.ph/Parsing-Error-Fix-Controller-FAQ-03-28">सभी त्रुटियाँ ठीक करें</a> और संदेश फिर भेजें।
+    continue_collect: आप संदेश भेजना जारी रख सकते हैं।
+    html: |
+      <b>मोटा</b>
+      &lt;b&gt;मोटा&lt;/b&gt;
+
+      <i>तिरछा</i>
+      &lt;i&gt;तिरछा&lt;/i&gt;
+
+      <a href="http://www.example.com/">इनलाइन URL</a>
+      &lt;a href=&quot;http://www.example.com/&quot;&gt;इनलाइन URL&lt;/a&gt;
+
+      <code>इनलाइन fixed-width कोड</code>
+      &lt;code&gt;इनलाइन fixed-width कोड&lt;/code&gt;
+
+      <pre>पूर्व-स्वरूपित fixed-width कोड ब्लॉक</pre>
+      &lt;pre&gt;पूर्व-स्वरूपित fixed-width
+      कोड ब्लॉक&lt;/pre&gt;
+    markdown: |
+      <b>मोटा टेक्स्ट</b>
+      *मोटा टेक्स्ट*
+
+      <i>तिरछा टेक्स्ट</i>
+      _तिरछा टेक्स्ट_
+
+      <a href="http://www.example.com/">टेक्स्ट</a>
+      [टेक्स्ट](http://www.example.com/)
+
+      <code>इनलाइन fixed-width कोड</code>
+      `इनलाइन fixed-width कोड`
+
+      <pre>टेक्स्ट
+      पूर्व-स्वरूपित fixed-width कोड ब्लॉक</pre>
+      ```पूर्व-स्वरूपित fixed-width
+      कोड ब्लॉक
+      ```
+    canceled: पोस्ट बनाना रद्द कर दिया गया है।
+    inline:
+      welcome: |
+        संदेश के लिए URL बटन की सूची भेजें। कृपया यह फ़ॉर्मेट उपयोग करें:
+        <pre>Button text 1 - http://www.example.com/
+        Button text 2 - http://www.example2.com/
+        </pre>
+
+        आप वैकल्पिक बटन रंग भी दे सकते हैं:
+        <pre>Button text 1 - http://www.example.com/ - style:green
+        Button text 2 - http://www.example2.com/ - style:blue
+        Button text 3 - http://www.example3.com/ - style:red
+        </pre>
+
+        एक पंक्ति में अधिकतम तीन बटन जोड़ने के लिए <b>|</b> का उपयोग करें। उदाहरण:
+        <pre>Button text 1 - http://www.example.com/ | Button text 2 - http://www.example2.com/
+        Button text 3 - http://www.example3.com/ - style:red
+        </pre>
+        ${current ? '\nवर्तमान बटन:\n' + current : ''}
+
+        पोस्ट बनाने पर वापस जाने के लिए 'Cancel' चुनें।
+      error: |
+        URL बटन सूची में त्रुटियाँ: <code>${error}</code>
+
+        कृपया सभी त्रुटियाँ ठीक करें और संदेश फिर भेजें।
+      not_keyboard: |
+        आपका भेजा गया संदेश URL बटन सूची के फ़ॉर्मेट से मेल नहीं खाता। कृपया दोबारा जाँचें और फिर प्रयास करें।
+      save: URL बटन सहेज लिए गए। आप संदेश भेजना जारी रख सकते हैं।
+      cleared: सफल! URL बटन हटा दिए गए।
+    reactions:
+      welcome: |
+        <a href="https://telegra.ph/file/dd1fcbdd1ebb1ce76ab59.jpg">&#8203;</a>रिएक्शन जोड़ने के लिए इमोजी भेजें या <b>/</b> से अलग किया गया टेक्स्ट भेजें।
+
+        उदाहरण:
+      not_found_smiles: |
+        एक या अधिक इमोटिकॉन भेजें। उदाहरण: 👍👎
+      save: रिएक्शन सहेज लिए गए। आप संदेश भेजना जारी रख सकते हैं।
+      cleared: सफल! रिएक्शन हटा दिए गए।
+      notify: काउंटर भेजने के बाद उपलब्ध होंगे।
+      default_reactions:
+        welcome: |
+          आप ऐसे रिएक्शन सेट कर सकते हैं जो नई पोस्ट के संदेशों में अपने-आप जुड़ेंगे। एक या अधिक इमोटिकॉन भेजें। उदाहरण: 👍👎
+
+          ${reactions.length ? 'वर्तमान डिफ़ॉल्ट रिएक्शन: ' + reactions.join(' ') : ''}
+        saved: डिफ़ॉल्ट रिएक्शन सहेज लिए गए।
+        deleted: डिफ़ॉल्ट रिएक्शन निष्क्रिय कर दिए गए।
+        canceled: डिफ़ॉल्ट रिएक्शन सेट करना रद्द कर दिया गया।
+    image:
+      welcome: |
+        मुझे लिंक, इमेज, GIF या वीडियो भेजें (अधिकतम 5 MB)।
+      only_link_or_photo: मुझे लिंक, इमेज, GIF या वीडियो भेजें (अधिकतम 5 MB)।
+      error: |
+        अपलोड करते समय त्रुटि हुई।
+
+        समस्या रिपोर्ट करने के लिए @ControllerSupportBot पर संदेश भेजें।
+      save: मीडिया अटैच कर दिया गया।
+      cleared: अटैच किया गया मीडिया हटा दिया गया।
+
+  send:
+    count_posts: |
+      <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''} पर भेजने के लिए ${pluralize(count, 'message', 'messages', 'messages')} तैयार हैं।
+    choose_type: आप पोस्ट कब भेजना चाहते हैं?
+    problems: |
+      ${channel.name} में नई पोस्ट बनाना संभव नहीं है। निम्न समस्याएँ मिलीं:
+
+      ${problems}
+
+      ${from.id == channel.owner_id
+        ? 'समस्याएँ ठीक करने के लिए चैनल सेटिंग्स में जाएँ।'
+        : 'चैनल का मालिक चैनल सेटिंग्स में जाकर समस्याएँ ठीक करे।'
+      }
+    cancel_send: पोस्ट भेजना रद्द कर दिया गया।
+    continue_send: आप संदेश भेजना जारी रख सकते हैं।
+    confirm_send: >
+      क्या आप वाकई <b>${pluralize(posts, 'message', 'messages', 'messages')}</b> को
+      <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''}?
+    waiting: 🕒 भेजा जा रहा है...
+    ok: हो गया!
+
+  schedule:
+    day:
+      today: आज
+      tomorrow: कल
+      after_tomorrow: परसों
+    welcome: |
+      वह समय भेजें जब आप पोस्ट ${day} भेजना चाहते हैं।
+      किसी और दिन के लिए पोस्ट शेड्यूल करने हेतु समय+तारीख भेजें।
+
+    help: |
+      <b>निम्न समय फ़ॉर्मेट समर्थित हैं:</b>
+      <pre>"6" → 06:00
+      "5 3" → 05:03
+      "15:30" → 15:30
+      "1530" → 15:30</pre>
+
+      <b>निम्न तारीख फ़ॉर्मेट समर्थित हैं:</b>
+      <pre>"6" → 6 of the current month
+      "9 12" → December 9
+      "8 7 18" → Jule 8, 2018</pre>
+
+      आप विभाजन के लिए स्पेस की जगह कॉलन या डॉट भी इस्तेमाल कर सकते हैं।
+
+      यदि आप केवल समय भेजते हैं, तो पोस्ट डिफ़ॉल्ट रूप से आज के दिन शेड्यूल होगी। किसी और दिन के लिए समय+तारीख भेजें। उदाहरण: <code>16 30 6 8 -> 16:30, Aug 6</code>
+    error_date: गलत तारीख या समय। संकेत के लिए 'Help' चुनें।
+    invalid_date: गलत तारीख।
+    limit: आपको वर्तमान समय से कम-से-कम 1 मिनट आगे का समय चुनना होगा। वर्तमान तारीख और समय: ${current_date}।
+    limit_year: 'वर्तमान समय से 1 वर्ष या उससे अधिक आगे का समय चुनना संभव नहीं है। कौन जानता है क्या होगा... :)'
+    ok: |
+       शेड्यूल्ड पोस्ट बना दी गई है। पोस्ट <b>${date}</b> को <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''} पर भेजी जाएगी।
+
+  timer:
+    welcome: वह समयावधि (घंटों में) चुनें या भेजें जिसके बाद पोस्ट स्वयं हट जाएगी।
+    wrong_hour: गलत समय। केवल 1 से 48 घंटे तक की अवधि मान्य है।
+    save_timer: self-destruct टाइमर सहेज लिया गया।
+    timer_off: self-destruct टाइमर निष्क्रिय कर दिया गया।
+
+  inline:
+    removed: URL बटन हटा दिए गए
+
+posts:
+  edit:
+    welcome: जिस चैनल संदेश को आप संपादित करना चाहते हैं, उसे मुझे फ़ॉरवर्ड करें।
+    only_channel_post: |
+      क्षमा करें, संपादन के लिए केवल चैनल संदेश उपलब्ध हैं।
+    channel_not_found: |
+      यह चैनल उपलब्ध नहीं है। जिस चैनल और बॉट से संदेश भेजा गया था, दोनों का Controller Bot से कनेक्ट होना आवश्यक है। कृपया दोबारा जाँचें और फिर प्रयास करें।
+    unsupported_type: |
+      यह संदेश संपादित नहीं किया जा सकता। आप केवल टेक्स्ट संदेश और कैप्शन संपादित कर सकते हैं।
+    post_not_found: |
+      यह पोस्ट उपलब्ध नहीं है। जिस चैनल और बॉट से संदेश भेजा गया था, दोनों का Controller Bot से कनेक्ट होना आवश्यक है। कृपया दोबारा जाँचें और फिर प्रयास करें।
+    editing: |
+      संदेश प्रकार: ${type_text}.${type == 'text' ? '\nफ़ॉर्मेटिंग शैली: ' + parse_mode : ''}
+
+      इस ${type == 'text' ? 'संदेश' : 'कैप्शन (अधिकतम 1024 अक्षर)'} को संपादित करने के लिए नया टेक्स्ट भेजें।
+    not_changed: |-
+      संदेश में कोई बदलाव नहीं हुआ।
+    edited: सफल! संदेश संपादित कर दिया गया।
+    continue_edit: आप संदेश संपादन जारी रख सकते हैं।
+
+  edit_time: पोस्ट को किसी अन्य दिन पुनः शेड्यूल करने के लिए समय+तारीख भेजें।
+
+  types:
+    text: टेक्स्ट
+    audio: ऑडियो
+    document: फ़ाइल
+    photo: फ़ोटो
+    sticker: स्टिकर
+    video: वीडियो
+    voice: वॉइस संदेश
+    contact: संपर्क
+    location: लोकेशन
+    venue: स्थान
+    video_note: वीडियो संदेश
+    poll: पोल
+    album: एल्बम
+  types_emoji:
+    text: 📃
+    audio: 🎧
+    document: 📎
+    photo: 📷
+    sticker: 😊
+    video: 📹
+    voice: 🎙
+    contact: ☎️
+    location: 📍
+    venue: 🕹
+    video_note: 📹
+    poll: 📊
+    album: 🖼
+  welcome_schedule: शेड्यूल्ड पोस्ट प्रबंधित करने के लिए चैनल चुनें।
+  not_schedule_posts: इस चैनल में अभी कोई शेड्यूल्ड पोस्ट नहीं है।
+  choose_scheduled_post: देखने या हटाने के लिए शेड्यूल्ड पोस्ट चुनें।
+  view_scheduled_post: |
+    ${messages}
+    🕘 ${date} › ${channel.username
+      ? '@' + channel.username + ' (' + channel.name + ')'
+      : channel.name
+    }
+    ${date_delete ? '🗑 ' + date_delete : ''}
+  confirm_delete_post: क्या आप वाकई इस शेड्यूल्ड पोस्ट को हटाना चाहते हैं?
+  scheduled_post_was_deleted: हो गया! शेड्यूल्ड पोस्ट हटा दी गई।
+
+settings:
+  welcome: जो बदलना है, उसे चुनें।
+
+  bots:
+    select_bot: |
+      ${count
+        ? 'जिस बॉट को हटाना है, उसे चुनें।'
+        : 'अभी तक कोई बॉट कनेक्ट नहीं है।'
+      }
+    channel_item: |
+      ${index}. ${name}
+    confirm_delete: |
+      ${count
+        ? 'यह बॉट इन चैनलों से कनेक्ट है:\n\n' + channels
+        : 'यह बॉट किसी भी चैनल से कनेक्ट नहीं है।\n'
+      }
+      क्या आप वाकई इस बॉट को हटाना चाहते हैं?
+    bot_deleted: हो गया! बॉट हटा दिया गया।
+
+statistics:
+  select_channel: आँकड़े देखने के लिए चैनल चुनें।
+  no_channels: |
+    अभी तक कोई चैनल जोड़ा नहीं गया है।
+
+    नया चैनल जोड़ने के लिए /addchannel भेजें।
+  selected_channel: '${channel.name} चुना गया है। आँकड़ों के साथ क्या करना चाहते हैं?'
+  channel_not_found: यह चैनल उपलब्ध नहीं है।
+  select_periods: आँकड़े पाने के लिए अवधि चुनें।
+  loading_data: 🕒 डेटा प्रोसेस हो रहा है और ग्राफ़ तैयार किए जा रहे हैं...
+  error_load_data: |
+    डेटा प्रोसेसिंग के दौरान त्रुटि हुई।
+
+    समस्या रिपोर्ट करने के लिए @ControllerSupportBot पर संदेश भेजें।
+  not_found_data: इस चैनल के लिए अभी आँकड़े उपलब्ध नहीं हैं। बाद में फिर आएँ।
+  share_text: |
+    ${channel.name}${channel.username ? ' @' + channel.username : ''} के आँकड़े देखने का लिंक:
+  data: |
+    ${channel.username ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>' : channel.name} के आँकड़े ${period == 'week'
+      ? 'पिछले 7 दिनों'
+      : 'पिछले 31 दिनों'
+    }.
+
+    ${data}
+  chart:
+    title: |
+      ${channel.name}${channel.username ? ' @' + channel.username : ''} के आँकड़े
+    copyright: @ControllerBot द्वारा संचालित
+    label: सदस्य
+
+bot:
+  start:
+    welcome: यहाँ आप रिच पोस्ट बना सकते हैं, आँकड़े देख सकते हैं और अन्य कार्य कर सकते हैं।
+
+  is_not_user: |
+    इस बॉट का उपयोग शुरू करने के लिए पहले @ControllerBot को /start भेजें, फिर इस बॉट में वापस आकर "Continue" बटन दबाएँ।
+
+  channels:
+    controller_updates_join_link: https://t.me/joinchat/AAAAAFNNAyKG1y7GopROHg
+    controller_updates_id: '-1001397556002'
+    controller_updates: |
+      🍀 नए अपडेट और अन्य समाचार पाने के लिए Controller Bot के <a href="https://t.me/joinchat/AAAAAFNNAyKG1y7GopROHg">आधिकारिक चैनल</a> से जुड़ें।
+
+      चैनल जॉइन करने पर यह संदेश नहीं दिखेगा।
+
+    secretship_join_link: https://t.me/joinchat/AAAAAD63ENxmBG7CW3RG7A
+    secretship_id: '-1001052184796'
+    secretship: |
+      🍀 इस बॉट के संस्थापक और डेवलपर के <a href="https://t.me/joinchat/AAAAAD63ENxmBG7CW3RG7A">चैनल</a> से जुड़ें।
+
+      चैनल जॉइन करने पर यह संदेश नहीं दिखेगा।
+
+    bot_updates_join_link: https://t.me/joinchat/AAAAAD3PQl5OvYEEjS6RJw
+    bot_updates_id: '-1001036993118'
+    bot_updates: |
+      🍀 इस बॉट के संस्थापक और डेवलपर के <a href="https://t.me/joinchat/AAAAAD3PQl5OvYEEjS6RJw">चैनल</a> से जुड़ें।
+
+      चैनल जॉइन करने पर यह संदेश नहीं दिखेगा।
+
+  settings:
+    posting:
+      open: |
+        यहाँ आप डिफ़ॉल्ट फ़ॉर्मेटिंग शैली सेट कर सकते हैं। सहायता के लिए /markdown या /HTML भेजें।
+
+        साथ ही आप ऐसे रिएक्शन सेट कर सकते हैं जो नई पोस्ट के संदेशों में अपने-आप जुड़ जाएँ।
+
+donate:
+  welcome: |
+    ☘️ <b>सहयोग करें</b>
+
+    आपके सहयोग से हम नई सुविधाएँ जोड़ पाएँगे, बॉट की स्थिरता बेहतर कर पाएँगे और सर्वर खर्च वहन कर पाएँगे।
+
+    भुगतान के बाद यह संदेश छिपा दिया जाएगा।
+
+    <i>आपकी मदद के लिए हार्दिक धन्यवाद,</i>
+    <a href="https://t.me/BotUpdates">Controller Bot Team</a>
+
+  other_sum: अन्य राशि
+  enter_sum: सहयोग राशि दर्ज करें।
+  incorrect_sum: राशि रूबल में दर्ज करें।
+
+  continue_use_bot: मैं बाद में सहयोग करूँगा 😦
+  donate_controller: ☘️ सहयोग करें
+
+  select_price: |
+    Controller Bot Team को <b>${sum} ₽</b> सहयोग राशि भेजने के लिए "Pay" बटन दबाएँ।
+
+    भुगतान के बाद यह संदेश छिपाने के लिए "Check Payment" बटन दबाएँ।
+  pay: भुगतान
+  completed: भुगतान जाँचें
+  not_pay: भुगतान नहीं मिला 😔
+  success_pay: Controller Bot Team को सहयोग देने के लिए धन्यवाद! 😍
+
+  problem: भुगतान में समस्या
+  help: समस्या रिपोर्ट करने के लिए @ControllerSupportBot पर संदेश भेजें।
+
+btn:
+  common:
+    continue: जारी रखें »
+    true: हाँ, सही है
+    back: « वापस
+    cancel: रद्द करें
+    off: बंद करें
+    help: सहायता
+    yes: हाँ
+    no: नहीं
+    confirm: पुष्टि करें
+    ok: ठीक है
+    next: अगला
+    edit: संपादित करें
+    delete: हटाएँ
+
+  menu:
+    create_post: पोस्ट बनाएँ
+    edit_sent_posts: पोस्ट संपादित करें
+    scheduled_posts: शेड्यूल्ड पोस्ट
+    channels: चैनल
+    statistics: चैनल आँकड़े
+    settings: सेटिंग्स
+
+  channels:
+    add_channel: चैनल जोड़ें
+    add_bot: बॉट कनेक्ट करें
+    add_change_bot: बॉट बदलें
+    channel_added: पोस्ट बनाएँ
+
+    how_to_create_bot: बॉट कैसे बनाएँ?
+    how_to_create_bot_url: https://telegra.ph/Create-Bot-Controller-FAQ-03-28
+
+    control:
+      how_to_add_admin: एडमिन कैसे जोड़ें?
+      how_to_add_admin_url: https://telegra.ph/Admins-Controller-FAQ-03-28
+
+      update: डेटा अपडेट करें
+      bot: कनेक्टेड बॉट बदलें
+      timezone: समय क्षेत्र बदलें
+      delete: चैनल हटाएँ
+
+      confirm_delete_yes: हाँ
+      confirm_delete_no: नहीं
+
+      link_chat: चैट लिंक करें
+      unlink_chat: चैट अनलिंक करें
+
+      subscription: सदस्यता नियंत्रण
+
+  subscription:
+    settings: भुगतान सदस्यता सेट करें
+    configure_tariffs: टैरिफ सेटिंग
+    create_tariff: टैरिफ बनाएँ
+    add_tariff: टैरिफ जोड़ें
+    create_subscribe_link: लिंक जोड़ें
+    show_subscribe_links: सदस्यता लिंक
+    show_balances: बैलेंस देखें
+    withdraw: निकासी
+    statistics: आँकड़े
+    full_statistics_report: पूरी रिपोर्ट
+    delete_tariff: टैरिफ हटाएँ
+    edit_subscription_settings: स्वागत संदेश सेटिंग
+    regenerateJoinLink: लिंक पुनः बनाएँ
+    dont_show_again: दोबारा न दिखाएँ
+    add_additional_links: अतिरिक्त सदस्यता लिंक बनाएँ
+
+  post:
+    settings:
+      disable_notification_disable: 'साइलेंट प्रसारण: बंद'
+      disable_notification_enable: 'साइलेंट प्रसारण: चालू'
+
+      disable_web_page_preview_disable: 'लिंक प्रीव्यू: चालू'
+      disable_web_page_preview_enable: 'लिंक प्रीव्यू: बंद'
+
+      parse_mode_markdown: 'ऑटो फ़ॉर्मेटिंग: Markdown'
+      parse_mode_html: 'ऑटो फ़ॉर्मेटिंग: HTML'
+      parse_mode_none: 'ऑटो फ़ॉर्मेटिंग: बंद'
+
+      default_reactions_disable: 'डिफ़ॉल्ट रिएक्शन: बंद'
+      default_reactions_enable: 'डिफ़ॉल्ट रिएक्शन: चालू'
+
+    faq: Controller सहायता
+
+    control_channel: चैनल सेटिंग्स में जाएँ
+    return_to_channels: « चैनल सूची पर वापस
+
+    continue: जारी रखें »
+
+    add_image: मीडिया संलग्न करें
+    clear_image: संलग्न मीडिया हटाएँ
+
+    open_comments: टिप्पणियाँ खोलें
+    add_comments: टिप्पणियाँ जोड़ें
+    delete_comments: टिप्पणियाँ हटाएँ
+    add_native_comments: नेटिव टिप्पणियाँ जोड़ें
+    delete_native_comments: नेटिव टिप्पणियाँ हटाएँ
+
+    add_inline: URL बटन जोड़ें
+    clear_inline: URL बटन हटाएँ
+
+    add_reactions: रिएक्शन जोड़ें
+    clear_reactions: रिएक्शन हटाएँ
+
+    clear: सब हटाएँ
+    preview: प्रीव्यू
+    done: भेजें
+    cancel: रद्द करें
+
+    more: ⇣ विकल्प दिखाएँ
+
+    delete: संदेश हटाएँ
+    send_silent: बिना सूचना भेजें
+    silent_enable: 'सूचना: चालू'
+    silent_disable: 'सूचना: बंद'
+    preview_enable: 'लिंक प्रीव्यू: चालू'
+    preview_disable: 'लिंक प्रीव्यू: बंद'
+
+    send:
+      self_destruct_timer: "${+hours
+        ? 'Self-Destruct टाइमर: ' + hours + 'h'
+        : 'Self-Destruct टाइमर सेट करें'
+      }"
+      hours: ${hour}h
+      send_now: अभी भेजें
+      sent: चैनल में पोस्ट देखें
+      create_scheduled: शेड्यूल करें
+
+      send: भेजें
+      cancel: रद्द करें
+
+    schedule:
+      today: |-
+        ${active ? '🔹 ' : ''}आज
+      tomorrow: |-
+        ${active ? '🔹 ' : ''}कल
+      after_tomorrow: |-
+        ${active ? '🔹 ' : ''}परसों
+
+  settings:
+    bots: कनेक्टेड बॉट प्रबंधित करें
+    delete_bot: बॉट हटाएँ
+    language: भाषा बदलें
+
+  posts:
+    edit:
+      add_inline: URL बटन जोड़ें
+      edit_inline: URL बटन बदलें
+      remove_inline: URL बटन हटाएँ
+      original: पिछला संस्करण देखें
+      clear_caption: कैप्शन हटाएँ
+      save: बदलाव सहेजें
+      cancel: रद्द करें
+      open_edited_post: चैनल में पोस्ट देखें
+      edit_scheduled_post: शेड्यूल्ड पोस्ट संपादित करें
+
+    view: पोस्ट देखें
+    copy: कॉपी बनाएँ
+    edit_time: समय संपादित करें
+    delete: पोस्ट हटाएँ
+
+  statistics:
+    view_periods: देखें
+    view_via_web: वेबपेज पर देखें
+
+    periods:
+      one_week: सप्ताह
+      one_month: महीना
