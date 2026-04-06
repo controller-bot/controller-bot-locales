@@ -1,0 +1,865 @@
+language_name: O'zbek
+is_enabled: true
+
+move: |
+  Post yaratish va tahrirlash, statistika ko'rish hamda rejalashtirilgan postlar kabi barcha asosiy funksiyalar ulangan botlarga ko'chirildi, endi har safar botingiz va Controller Bot o'rtasida almashishingiz shart emas!
+
+  Ulangan botingizga o'ting va /start buyrug'ini yuboring.
+
+common:
+  choose_language: Iltimos, tilni tanlang.
+
+  start: |
+    Men sizga Telegram kanallarini boshqarishda yordam bera olaman.
+
+    Meni quyidagi buyruqlar orqali boshqarishingiz mumkin:
+
+    /newpost - yangi post yaratish
+
+    /addchannel - yangi kanal qo'shish
+    /mychannels - kanallaringizni tahrirlash
+
+    /settings - boshqa sozlamalar
+
+  help: |
+    Savollaringiz bo'lsa, <a href="https://telegra.ph/Controller-Help-03-20">Controller Help</a> sahifasini ko'ring.
+
+    Meni quyidagi buyruqlar orqali boshqarishingiz mumkin:
+
+    /newpost - yangi post yaratish
+    /addchannel - yangi kanal qo'shish
+    /mychannels - kanallaringizni tahrirlash
+    /settings - boshqa sozlamalar
+    /lang - tilni o'zgartirish
+bots:
+  add: |
+    <b>Bot ulash</b>
+
+    Bot ulash uchun quyidagi ikki qadamni bajaring:
+
+    1. @BotFather'ni oching va <a href="https://telegra.ph/Create-Bot-Controller-FAQ-03-28">yangi bot yarating</a>.
+    2. Siz token olasiz (masalan, 12345:6789ABCDEF) — uni menga forward qiling yoki copy-paste qiling.
+
+    <b>Diqqat!</b> Chatfuel, Manybot va boshqalar kabi xizmatlarda allaqachon ishlatilayotgan botlarni ulamang.
+
+  wrong_token: Bu to'g'ri ko'rinmayapti. Iltimos, bot tokenini yuboring.
+  error_add: Noto'g'ri token. Yangi token oling yoki boshqa bot tokenidan foydalaning.
+  bot_already_added: Bu bot allaqachon ulangan.
+
+channels:
+  welcome: |
+    <b>Kanal boshqaruvi</b>
+
+    ${count
+      ? 'Quyidagi ro''yxatdan kanalni tanlang:'
+      : 'Hali birorta kanal qo''shilmagan.'
+    }
+  add:
+    select_bot: |
+      Kanaldagi postlarni yuborish uchun ishlatiladigan botni tanlang.
+    welcome: |
+      <b>Kanal qo'shish</b>
+
+      Kanal qo'shish uchun quyidagi ikki qadamni bajaring:
+
+      1. Kanalingizga <a href="https://telegra.ph/Add-Bot-to-Admins-Controller-FAQ-03-28">@${username} ni admin qilib qo'shing</a>.
+      2. So'ng kanalingizdan istalgan xabarni menga forward qiling (yoki username/ID yuboring).
+    added: |
+      Muvaffaqiyatli! ${channel.username ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>' : '<b>' + channel.name + '</b>'} kanali qo'shildi.
+
+      Yangi post yaratish uchun @${bot_username} ga o'ting.
+
+      Kanalingizdagi barcha adminlar ham bu bot orqali ushbu kanalga post yaratishlari mumkin.
+
+      Yangi admin qo'shsangiz, adminlar ro'yxatini yangilash uchun kanal sozlamalariga kirib "Update Data" ni tanlang.
+
+    error:
+      data: |
+        Iltimos, kanalingizdan istalgan xabarni menga forward qiling. Yoki username/ID ni yuboring.
+      channel_not_found: Kanal topilmadi.
+      you_are_not_administrator: Siz bu kanalda admin emassiz.
+      you_do_not_have_rights: Sizda kanalda xabar joylash huquqi yo'q.
+      bot_is_not_admin: @${username} ni kanalingizga admin qilib qo'shing. Iltimos, yana bir bor tekshirib qayta urinib ko'ring.
+      bot_is_not_admin_in_group: @${username} ni guruhingizga admin qilib qo'shing va qayta urinib ko'ring.
+      bot_was_deleted: |
+        Kanalni qo'shib bo'lmadi. @${username} endi mavjud emas yoki tokeni bekor qilingan. Bu botni qayta ulang yoki boshqasini tanlang.
+      channel_already_added: Bu kanal allaqachon qo'shilgan. Yangi post yaratish uchun @${bot_username} ga o'ting.
+      group_already_added: |
+        Bu kanal allaqachon ${admin.first_name}${admin.last_name ? ' ' + admin.last_name : ''}${admin.username ? ' @' + admin.username : ''} tomonidan qo'shilgan.
+
+  control:
+    options: |
+      Tanlangan kanal: ${channel.name}. Kanal bilan nima qilmoqchisiz?
+    delete_confirm: |
+      Rostdan ham bu kanalni o'chirmoqchimisiz?
+
+      Bu kanalga tegishli barcha rejalashtirilgan postlar va saqlangan statistika ham o'chiriladi.
+    channel_deleted: Tayyor! Kanal o'chirildi.
+    select_bot: |
+      ${count
+        ? 'Kanaldagi postlarni yuborish uchun ishlatiladigan botni tanlang.'
+        : 'Hali ulangan bot yo''q. Yangisini ulash uchun /addchannel yuboring.'
+      }
+    bot_is_not_admin: Botni kanalingizga admin qilib qo'shing.
+    current_bot: Hozir ishlatilayotgan botni tanlab bo'lmadi.
+    sync_ok: 👌 OK. Ma'lumotlar sinxronlandi.
+    set_timezone: |
+      <b>Vaqt mintaqasini sozlash</b>
+
+      Vaqt mintaqasini sozlash uchun shahar nomini yuboring. Bu kechiktirilgan postlar mahalliy vaqtingiz bo'yicha aniq vaqtda chiqishi uchun kerak.
+  
+      Shuningdek, botga geolokatsiya yuborishingiz mumkin, bot sizga eng yaqin shaharni topib, vaqt mintaqasini shu asosda o'rnatadi.
+    timezone: |
+      Joriy vaqt mintaqasi:
+      ${city ? '🔹 GMT ' + (gmt > 0 ? '+' + gmt : gmt) + '\n🔹 ' + timezone_id + ' – ' + city : '🔹 None'}
+
+      Vaqt mintaqasini o'zgartirish uchun sizga yaqin shahar nomini yuboring.
+      Yoki botga geolokatsiya yuboring, u sizga eng yaqin shaharni topib, vaqt mintaqasini shu asosda o'rnatadi.
+    check_timezone: |
+      · GMT ${timezone.gmtOffset > 0 ? '+' + timezone.gmtOffset : timezone.gmtOffset} (${timezone.timeZoneId})
+      · ${countryName}, ${name}
+
+      Vaqt mintaqasini o'zgartirish uchun shahar nomini yuboring.
+      Yoki botga geolokatsiya yuboring, u sizga eng yaqin shaharni topib, vaqt mintaqasini shu asosda o'rnatadi.
+  
+      To'g'rimi? Agar yo'q bo'lsa, sizga yaqinroq boshqa shaharni kiriting.
+    select_nearest: |
+      Eng yaqin shaharni tanlang.
+    error_timezone: Kechirasiz, bu shahar topilmadi. Iltimos, boshqa yaqin shahar nomini yuboring.
+    error_request_timezone: Nimadir xato bo'ldi :( Iltimos, qayta urinib ko'ring. Muammo davom etsa, @ControllerSupportBot ga yozing.
+    save_timezone: OK, vaqt mintaqangiz saqlandi.
+    link_chat: |-
+      Native izohlarni yoqish uchun muhokama guruhini Controller botga ulashingiz mumkin.
+
+      Iltimos, quyidagi yo'riqnomaga amal qiling:
+      https://telegra.ph/How-to-link-the-discussion-group-to-Controller-bot-Controller-FAQ-08-18
+
+    chatIsNotLinked: |-
+      Bu chat kanalga ulanmagan
+
+    chatLinked: |-
+      Muvaffaqiyatli! Bu chat endi ${channelTitle} ga ulandi!
+
+      Native izohlar bilan yangi postlar yaratish uchun botga o'ting.
+  subscription:
+    channels_with_unavailable_subscription: |
+      Obuna mavjud bo'lmagan kanallar.
+    channels_with_available_subscription: |
+      Obuna mavjud bo'lgan kanallar. 
+      *DIQQAT*
+      Hozircha to'lovlar faqat MDH davlatlaridan qabul qilinadi
+    subscription_not_configured: |
+      Sizda pullik obunaga ega kanallar yo'q.
+      *DIQQAT* 
+      At the current moment, payments can be received only from the CIS countries
+    enter_channel_description: |
+      Kanal/guruh uchun qisqa tavsif yuboring. Potensial obunachilar obuna sotib olishdan oldin uni ko'rishadi. ${ description ? ' Standart tavsifdan foydalanish uchun "-" yuboring (' + description + ')' : ''}
+      
+      Agar tavsif 3793 belgidan uzun bo'lsa, u qisqartiriladi.
+    settings_complete: Asosiy sozlash yakunlandi, endi tariflarni yaratish/tahrirlash kerak.
+    list_tariffs: Ro'yxatdan tahrirlamoqchi bo'lgan tarifni tanlang.
+    current_tariffs: |
+      Joriy tariflar ro'yxati:
+    enter_tariff_name: |
+      Tarif nomini kiriting yoki bo'sh qoldirish uchun "-" yuboring. ${name ? 'Joriy nom: ' + name : ''}
+      
+      Sarlavha 20 belgidan uzun bo'lsa, qisqartirilishi mumkin.
+      Har bir to'lovdan taxminan 10% komissiya olinadi.
+    enter_tariff_currency: |
+      Valyutani tanlang. ${currency ? 'Joriy valyuta: ' + currency : ''}
+    enter_tariff_period: |
+      Tarif davrini kiriting. ${period ? 'Joriy davr: ' + period : ''}
+    enter_tariff_price: |
+      Tarif narxini kiriting. (Valyuta: ${currency}, Davr: ${localizedPeriod})${price ? 'Joriy narx: ' + price + ' ' + currency : ''}
+      Minimal narx: ${minimum} ${currency}
+    tariff_complete: Tarif muvaffaqiyatli yaratildi!
+    manage_tariff: "${name}" tarifini boshqarish
+    start_subscription_process: |
+      *${name}* kanal/guruh uchun obuna
+      
+      ${description}
+      
+      Obuna bo'lasizmi?
+      ${photo ? '[\u200B](' + photo + ')' : '' }
+    select_tariff: Tarifni tanlang
+    confirm_delete_tariff: Rostdan ham tarifni o'chirmoqchimisiz?
+    subscription_increased: |
+      Joriy obuna *${date}* gacha uzaytirildi
+      
+      Kanalga qo'shilish uchun [havola](${link}) ni bosing
+    subscription_created: |
+      Obuna quyidagi sanagacha amal qiladi:
+      *${date}*.
+      
+      Yopiq kanal/guruhga qo'shilish uchun [havola](${link}) ni bosing
+    payment_link_created: |
+      To'lov havolasi: ${link}
+    list: |
+      Faol obunalar ro'yxati:
+      
+      To'langan muddat  -  Kanal
+      ${list}
+    select_currency_for_withdraw: |
+      Yechib olish uchun valyutani tanlang
+    enter_amount_for_withdraw: |
+      Yechib olish summasini kiriting
+    withdraw_link_created: |
+      Yechib olish uchun havola muvaffaqiyatli yaratildi.
+      U 24 soat faol bo'ladi.
+      
+      Havola: ${link}
+    subscription_closely_expired:
+      (${channelName}) kanal/guruh obunasi ertaga tugaydi. Uzaytirmoqchimisiz?
+    total_statistics: |
+      *${month}* uchun *${channelName}* kanal/guruh statistikasi
+      
+      Jami:
+      Obunachilar umumiy soni: *${totalSubscribersCount}*
+      Yangi obunachilar soni: *${newSubscribersCount}*
+      Uzaytirilgan obunalar soni: *${renewSubscribersCount}*
+      Chiqarib yuborilgan obunachilar soni: *${kickedUsersCount}*
+      Havolani bosib kirgan foydalanuvchilar soni: *${entrancesCount}*
+      Konversiya: *${conversion}*
+    tagged_statistics: |
+      Teg: *${tagName}*
+      Obunachilar umumiy soni: *${totalSubscribersCount}*
+      Yangi obunachilar soni: *${newSubscribersCount}*
+      Uzaytirilgan obunalar soni: *${renewSubscribersCount}*
+      Chiqarib yuborilgan obunachilar soni: *${kickedUsersCount}*
+      Havolani bosib kirgan foydalanuvchilar soni: *${entrancesCount}*
+      Konversiya: *${conversion}*
+    last_tariff_no_enable_for_delete: |
+      Oxirgi tarifni o'chirib bo'lmaydi
+    no_have_subscriptions: |
+      Hozirda sizda obunalar yo'q
+    no_funds_on_balances: |
+      Balansingizda yechib olish uchun mablag' yetarli emas
+    attach_photo: |
+      Kanal tavsifiga rasm biriktirish mumkin. Rasm qo'shmoqchi yoki o'zgartirmoqchi bo'lmasangiz, fayl o'rniga "-" yuboring.
+      ${ photo ? 'Tanlangan rasm: ' + photo : ''}
+    create_subscription_link: |
+      Havola yaratish uchun teg o'ylab toping.
+      
+      Teg sifatida siz pullik obuna havolasini joylashtirmoqchi bo'lgan platforma nomini yoki keyinchalik bir nechta havolalar ichidan aynan shuni ajratib turadigan boshqa tavsifni ishlatishingiz mumkin.
+      
+      Masalan: "XX kanalda reklama", "Test XX - 13.08.1941"
+    confirm_create_subscription_link: |
+      (${tag}) tegi bilan havola yaratmoqchi ekanligingizga ishonchingiz komilmi?
+    no_have_subscription_link: |
+      Sizda obuna havolalari yo'q
+    choose_language: |
+      Kanal/guruh uchun tilni tanlang. Tanlangan til obunaning tugash sanasi yaqinlashganda obunachilarni xabardor qilish uchun ishlatiladi.
+    regenerated_link: |
+      Yopiq kanal/guruhga qo'shilish uchun [havola](${link}) ni bosing
+    periods:
+      daily: 1 kun
+      weekly: 1 hafta
+      monthly: 1 oy
+      monthly_3: 3 oy
+      monthly_6: 6 oy
+      yearly: 1 yil
+      early_2: 2 yil
+      yearly_3: 3 yil
+    subcontrol_description: |
+      Controller bot kanallaringizni monetizatsiya qilish uchun yangi imkoniyatlar ochadi!
+      
+      We see that authors of the unique content more often seek ways to spread it via private Telegram channels which are channels with a paid subscription. And we can feel their "pain" caused by the daily actualization of the list of subscribers who paid for the subscription.
+      
+      Qo'lda moderatsiya endi ortda qoldi - @ControllerBot taklif qilayotgan pullik obuna funksiyasini sinab ko'ring!
+      
+      *Faqat 3 oddiy qadam:*
+      1. Funksiyani yopiq kanalingizda yoqing
+      2. Batafsil yo'riqnoma asosida potensial obunachilar bilan ishlaydigan va tariflaringizni taklif qiladigan botni sozlang
+      3. Bot havolasini auditoriyangizga yuboring
+      
+      *Qolganini biz qilamiz:*
+      1. Obuna uchun to'lovlarni qabul qilish
+      2. To'lov qilgan obunachilarni kanalga qo'shish
+      3. Obuna tugash sanasi yaqinlashganda xabardor qilish
+      4. Obunani uzaytirmagan foydalanuvchilarni olib tashlash
+    first_link_text: |
+      Tariflar yaratildi va kanal sozlanishi yakunlandi \- endi auditoriyani jalb qilish vaqti! 
+      
+      *Kanalingiz uchun obuna sotib olish mumkin* [havolaga o'ting](${link})
+      
+      _Maslahat: Agar sizda bir nechta trafik manbasi bo'lsa, qo'shimcha havolalar yarating va ularning statistikasini alohida kuzating. Bu qaysi manba yaxshiroq ishlayotganini tushunishga yordam beradi._
+    list_balances: |
+      *DIQQAT!* Ba'zi hollarda mablag' yechish faqat tushumdan 24 soat o'tgach mumkin bo'ladi!
+      Har bir to'lovdan taxminan 10% komissiya olinadi.
+      
+      ${balances}
+    errors:
+      unavailable_delete_all_tariffs: ❌ Barcha tariflarni o'chirib bo'lmaydi
+      feature_disabled: Bu funksiya vaqtincha o'chirilgan. Asosiy menyuga qaytish uchun /start bosing.
+      not_found_channel: Kanal topilmadi
+      tariff_already_exists: (${localizedPeriod}) davri uchun tarif allaqachon mavjud.
+      payment_error: To'lov xatosi
+      insufficient_funds: Mablag' yetarli emas
+      invalid_amount: |
+        Noto'g'ri summa. 
+        Minimum amount: ${minimumAmount} ${currency}
+        Maximum amount: ${maximumAmount} ${currency}
+      not_found_tariff: Tarif topilmadi
+      empty_price: Narx ko'rsatilmagan
+      empty_currency: Valyuta ko'rsatilmagan
+      invalid_text: Matnda xatolik bor
+      only_private_channel: Pullik obuna faqat yopiq kanal va guruhlarda bo'lishi mumkin!
+      unknown_error: |
+        Xatolik aniqlandi. ${code ? '(Kod: ' + code +')' : ''}
+        
+        Bu haqida @ControllerSupportBot ga xabar bering. Qayta urinish uchun /start yozing.
+
+post:
+  select_channel: Yangi post yaratish uchun kanalni tanlang.
+  no_channels: |
+    Hali birorta kanal qo'shilmagan.
+
+    Yangisini qo'shish uchun /addchannel yuboring.
+  error_check_channel: Nimadir xato bo'ldi :( Iltimos, qayta urinib ko'ring. Muammo davom etsa, @ControllerSupportBot ga yozing.
+  channel_not_found: Kanal mavjud emas yoki sizda unga kirish yo'q. @ControllerBot ga qayting va qayta urinib ko'ring.
+  problems: |
+    ${channel.name} kanalida yangi post yaratib bo'lmadi. Quyidagi muammolar topildi:
+
+    ${problems}
+
+    ${from.id == channel.owner_id
+      ? 'Muammolarni tuzatish uchun kanal sozlamalariga o'ting.'
+      : 'Kanal egasi kanal sozlamalariga kirib muammolarni tuzatishi kerak.'
+    }
+  problem_items:
+    timezone_is_not_set: 🔹 vaqt mintaqasi o'rnatilmagan
+    bot_is_not_connection: 🔹 kanal botga ulanmagan
+    channel_not_found: 🔹 kanal endi mavjud emas
+    bot_is_not_admin: 🔹 ulangan bot kanal adminlariga qo'shilmagan
+    bot_was_deleted: 🔹 ulangan bot endi mavjud emas yoki tokeni bekor qilingan
+
+  start: |
+    Yangi kanal ulash va post yaratishni boshlash uchun @ControllerBot ga o'ting.
+
+  make:
+    set_formatting: |
+      Avvalo, standart bo'lib ishlatiladigan formatlash uslubini tanlang.
+
+      Yordam uchun /markdown yoki /HTML yuboring.
+
+      Ko'p foydalanuvchilar Markdown ni afzal ko'radi, chunki u qisqa va oson. Native formatlash ham qo'llab-quvvatlanadi.
+    start: |
+      Tanlangan kanal: <b>"${channel.name}"</b>${channel.username ? ' @' + channel.username : ''}.
+
+      Send me one or multiple messages you want to include in the post. It can be anything — a text, photo, video, even a sticker.
+    clear: Muvaffaqiyatli! Barcha xabarlar o'chirildi.
+    message_deleted: Tayyor! Xabar o'chirildi.
+    not_posts: Hali xabarlar yo'q.
+    not_posts_for_done: Hali xabarlar yo'q.
+    preview_sent: |
+      Post oldindan ko'rish yuqorida yuborildi.
+
+      Ushbu postda <b>${pluralize(posts, 'message', 'messages', 'messages')}</b> mavjud:
+      ${messages}
+    error_poll_not_anonymous: Kechirasiz, kanallarga anonim bo'lmagan so'rovnomani yubora olmaysiz.
+    error_parse: |
+      Matn formatida xatolar:
+
+      <pre>${description}</pre>
+
+      Iltimos, <a href="https://telegra.ph/Parsing-Error-Fix-Controller-FAQ-03-28">barcha xatolarni tuzating</a> va xabarni qayta yuboring.
+    continue_collect: Menga xabar yuborishni davom ettirishingiz mumkin.
+    html: |
+      <b>qalin</b>
+      &lt;b&gt;qalin&lt;/b&gt;
+
+      <i>qiya</i>
+      &lt;i&gt;qiya&lt;/i&gt;
+
+      <a href="http://www.example.com/">inline URL</a>
+      &lt;a href=&quot;http://www.example.com/&quot;&gt;inline URL&lt;/a&gt;
+
+      <code>inline fixed-width kod</code>
+      &lt;code&gt;inline fixed-width kod&lt;/code&gt;
+
+      <pre>oldindan formatlangan fixed-width kod bloki</pre>
+      &lt;pre&gt;oldindan formatlangan fixed-width
+      kod bloki&lt;/pre&gt;
+    markdown: |
+      <b>qalin matn</b>
+      *qalin matn*
+
+      <i>qiya matn</i>
+      _qiya matn_
+
+      <a href="http://www.example.com/">matn</a>
+      [matn](http://www.example.com/)
+
+      <code>inline fixed-width kod</code>
+      `inline fixed-width kod`
+
+      <pre>matn
+      oldindan formatlangan fixed-width kod bloki</pre>
+      ```oldindan formatlangan fixed-width
+      kod bloki
+      ```
+    canceled: Post yaratish bekor qilindi.
+    inline:
+      welcome: |
+        Xabar uchun URL tugmalar ro'yxatini yuboring. Iltimos, quyidagi formatdan foydalaning:
+        <pre>Button text 1 - http://www.example.com/
+        Button text 2 - http://www.example2.com/
+        </pre>
+
+        Shuningdek, ixtiyoriy tugma rangini ham berishingiz mumkin:
+        <pre>Button text 1 - http://www.example.com/ - style:green
+        Button text 2 - http://www.example2.com/ - style:blue
+        Button text 3 - http://www.example3.com/ - style:red
+        </pre>
+
+        Bitta qatorda 3 tagacha tugma qo'shish uchun <b>|</b> dan foydalaning. Misol:
+        <pre>Button text 1 - http://www.example.com/ | Button text 2 - http://www.example2.com/
+        Button text 3 - http://www.example3.com/ - style:red
+        </pre>
+        ${current ? '\nJoriy tugmalar:\n' + current : ''}
+
+        Post yaratishga qaytish uchun 'Cancel' ni tanlang.
+      error: |
+        URL tugmalar ro'yxatida xatolar: <code>${error}</code>
+
+        Iltimos, barcha xatolarni tuzating va xabarni qayta yuboring.
+      not_keyboard: |
+        Yuborgan xabaringiz URL tugmalar ro'yxati formatiga mos kelmadi. Iltimos, yana bir bor tekshirib qayta urinib ko'ring.
+      save: URL tugmalar saqlandi. Menga xabar yuborishni davom ettirishingiz mumkin.
+      cleared: Muvaffaqiyatli! URL tugmalar tozalandi.
+    reactions:
+      welcome: |
+        <a href="https://telegra.ph/file/dd1fcbdd1ebb1ce76ab59.jpg">&#8203;</a>Reaksiyalar qo'shish uchun emoji yoki <b>/</b> bilan ajratilgan matn yuboring.
+
+        Masalan:
+      not_found_smiles: |
+        Send me one or more emoticons. Masalan: 👍👎
+      save: Reaksiyalar saqlandi. Menga xabar yuborishni davom ettirishingiz mumkin.
+      cleared: Muvaffaqiyatli! Reaksiyalar tozalandi.
+      notify: Hisoblagichlar yuborilgandan so'ng mavjud bo'ladi.
+      default_reactions:
+        welcome: |
+          You can set reactions that will be automatically added to messages in new posts. Send me one or more emoticons. Masalan: 👍👎
+
+          ${reactions.length ? 'Joriy standart reaksiyalar: ' + reactions.join(' ') : ''}
+        saved: Standart reaksiyalar saqlandi.
+        deleted: Standart reaksiyalar o'chirildi.
+        canceled: Standart reaksiyalarni sozlash bekor qilindi.
+    image:
+      welcome: |
+        Menga havola, rasm, GIF yoki video yuboring (5 MB gacha).
+      only_link_or_photo: Menga havola, rasm, GIF yoki video yuboring (5 MB gacha).
+      error: |
+        Yuklashda xatolik yuz berdi.
+
+        Muammo haqida xabar berish uchun @ControllerSupportBot ga yozing.
+      save: Media biriktirildi.
+      cleared: Biriktirilgan media o'chirildi.
+
+  send:
+    count_posts: |
+      <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''} kanaliga yuborishga ${pluralize(count, 'message', 'messages', 'messages')} tayyor.
+    choose_type: Postni qachon yubormoqchisiz?
+    problems: |
+      ${channel.name} kanalida yangi post yaratib bo'lmadi. Quyidagi muammolar topildi:
+
+      ${problems}
+
+      ${from.id == channel.owner_id
+        ? 'Muammolarni tuzatish uchun kanal sozlamalariga o'ting.'
+        : 'Kanal egasi kanal sozlamalariga kirib muammolarni tuzatishi kerak.'
+      }
+    cancel_send: Post yuborish bekor qilindi.
+    continue_send: Menga xabar yuborishni davom ettirishingiz mumkin.
+    confirm_send: >
+      <b>${pluralize(posts, 'message', 'messages', 'messages')}</b> ni quyidagiga yuborishni tasdiqlaysizmi:
+      <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''}?
+    waiting: 🕒 Yuborilmoqda...
+    ok: Tayyor!
+
+  schedule:
+    day:
+      today: bugun
+      tomorrow: ertaga
+      after_tomorrow: indinga
+    welcome: |
+      Postni ${day} yuborish uchun vaqtni yuboring.
+      Postni boshqa kunga rejalashtirish uchun vaqt+sana yuboring.
+
+    help: |
+      <b>Quyidagi vaqt formatlari qo'llab-quvvatlanadi:</b>
+      <pre>"6" → 06:00
+      "5 3" → 05:03
+      "15:30" → 15:30
+      "1530" → 15:30</pre>
+
+      <b>Quyidagi sana formatlari qo'llab-quvvatlanadi:</b>
+      <pre>"6" → 6 of the current month
+      "9 12" → December 9
+      "8 7 18" → Jule 8, 2018</pre>
+
+      Ajratish uchun bo'shliq o'rniga ikki nuqta yoki nuqtadan ham foydalanishingiz mumkin.
+
+      Agar faqat vaqt yuborsangiz, post odatda bugungi kunga rejalashtiriladi. Boshqa kun uchun vaqt+sana yuboring. Masalan, <code>16 30 6 8 -> 16:30, Aug 6</code>
+    error_date: Noto'g'ri sana yoki vaqt. Ko'rsatma olish uchun 'Help' ni tanlang.
+    invalid_date: Noto'g'ri sana.
+    limit: Hozirgi vaqtdan kamida 1 daqiqa keyingi vaqtni tanlashingiz kerak. Joriy sana va vaqt: ${current_date}.
+    limit_year: 'Joriy vaqtdan 1 yil yoki undan ko'p oldinga vaqt tanlab bo''lmaydi. Kelajakda nima bo''lishini kim biladi... :)'
+    ok: |
+       Rejalashtirilgan post yaratildi. Post <b>${date}</b> kuni <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''} kanaliga yuboriladi.
+
+  timer:
+    welcome: Post avtomatik o'chirilishi uchun soatlarda vaqt oralig'ini tanlang yoki yuboring.
+    wrong_hour: Noto'g'ri vaqt. Faqat 1 dan 48 soatgacha ruxsat beriladi.
+    save_timer: Avto-o'chirish taymeri saqlandi.
+    timer_off: Avto-o'chirish taymeri o'chirildi.
+
+  inline:
+    removed: URL tugmalar olib tashlandi
+
+posts:
+  edit:
+    welcome: Tahrirlamoqchi bo'lgan kanal xabarini menga forward qiling.
+    only_channel_post: |
+      Kechirasiz, tahrirlash uchun faqat kanal xabarlari mavjud.
+    channel_not_found: |
+      Bu kanal mavjud emas. Xabar yuborilgan kanal va bot Controller Bot ga ulangan bo'lishi kerak. Iltimos, hammasini tekshirib qayta urinib ko'ring.
+    unsupported_type: |
+      Bu xabarni tahrirlab bo'lmaydi. Faqat matnli xabarlar va caption'larni tahrirlash mumkin.
+    post_not_found: |
+      Bu post mavjud emas. Xabar yuborilgan kanal va bot Controller Bot ga ulangan bo'lishi kerak. Iltimos, hammasini tekshirib qayta urinib ko'ring.
+    editing: |
+      Xabar turi: ${type_text}.${type == 'text' ? '\nFormatlash uslubi: ' + parse_mode : ''}
+
+      Ushbu ${type == 'text' ? 'xabar' : 'caption (1024 belgidan oshmasligi kerak)'} ni tahrirlash uchun yangi matn yuboring.
+    not_changed: |-
+      Xabar o'zgarmadi.
+    edited: Muvaffaqiyatli! Xabar tahrirlandi.
+    continue_edit: Xabarni tahrirlashni davom ettirishingiz mumkin.
+
+  edit_time: Postni boshqa kunga qayta rejalashtirish uchun vaqt+sana yuboring.
+
+  types:
+    text: matn
+    audio: audio xabar
+    document: fayl
+    photo: rasm
+    sticker: stiker
+    video: video xabar
+    voice: ovozli xabar
+    contact: kontakt
+    location: joylashuv
+    venue: joy
+    video_note: video xabar
+    poll: so'rovnoma
+    album: albom
+  types_emoji:
+    text: 📃
+    audio: 🎧
+    document: 📎
+    photo: 📷
+    sticker: 😊
+    video: 📹
+    voice: 🎙
+    contact: ☎️
+    location: 📍
+    venue: 🕹
+    video_note: 📹
+    poll: 📊
+    album: 🖼
+  welcome_schedule: Rejalashtirilgan postlarni boshqarish uchun kanalni tanlang.
+  not_schedule_posts: Bu kanal uchun hozircha rejalashtirilgan postlar yo'q.
+  choose_scheduled_post: Ko'rish yoki o'chirish uchun rejalashtirilgan postni tanlang.
+  view_scheduled_post: |
+    ${messages}
+    🕘 ${date} › ${channel.username
+      ? '@' + channel.username + ' (' + channel.name + ')'
+      : channel.name
+    }
+    ${date_delete ? '🗑 ' + date_delete : ''}
+  confirm_delete_post: Ushbu rejalashtirilgan postni o'chirmoqchimisiz?
+  scheduled_post_was_deleted: Tayyor! Rejalashtirilgan post o'chirildi.
+
+settings:
+  welcome: O'zgartirmoqchi bo'lgan narsani tanlang.
+
+  bots:
+    select_bot: |
+      ${count
+        ? 'O''chirmoqchi bo''lgan botni tanlang.'
+        : 'Hali ulangan botlar yo''q.'
+      }
+    channel_item: |
+      ${index}. ${name}
+    confirm_delete: |
+      ${count
+        ? 'Bot quyidagi kanallarga ulangan:\n\n' + channels
+        : 'Bot hech bir kanalga ulanmagan.\n'
+      }
+      Bu botni o'chirmoqchimisiz?
+    bot_deleted: Tayyor! Bot o'chirildi.
+
+statistics:
+  select_channel: Statistikani ko'rish uchun kanalni tanlang.
+  no_channels: |
+    Hali birorta kanal qo'shilmagan.
+
+    Yangisini qo'shish uchun /addchannel yuboring.
+  selected_channel: 'Tanlangan: ${channel.name}. Statistika bilan nima qilmoqchisiz?'
+  channel_not_found: Bu kanal mavjud emas.
+  select_periods: Statistika olish uchun davrni tanlang.
+  loading_data: 🕒 Ma'lumotlar qayta ishlanmoqda va grafiklar chizilmoqda...
+  error_load_data: |
+    Ma'lumotlarni qayta ishlashda xatolik yuz berdi.
+
+    Muammo haqida xabar berish uchun @ControllerSupportBot ga yozing.
+  not_found_data: Bu kanal uchun statistika hali mavjud emas. Keyinroq qayting.
+  share_text: |
+    ${channel.name}${channel.username ? ' @' + channel.username : ''} statistikasi uchun havola:
+  data: |
+    ${channel.username ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>' : channel.name} statistikasi ${period == 'week'
+      ? 'so''nggi 7 kun'
+      : 'so''nggi 31 kun'
+    }.
+
+    ${data}
+  chart:
+    title: |
+      ${channel.name}${channel.username ? ' @' + channel.username : ''} statistikasi
+    copyright: @ControllerBot tomonidan ishlaydi
+    label: obunachilar
+
+bot:
+  start:
+    welcome: Bu yerda siz boy postlar yaratishingiz, statistikani ko'rishingiz va boshqa vazifalarni bajarishingiz mumkin.
+
+  is_not_user: |
+    Bu botdan foydalanishni boshlash uchun @ControllerBot ga /start yuboring, so'ng shu botga qaytib "Continue" tugmasini bosing.
+
+  channels:
+    controller_updates_join_link: https://t.me/joinchat/AAAAAFNNAyKG1y7GopROHg
+    controller_updates_id: '-1001397556002'
+    controller_updates: |
+      🍀 Controller Bot yangiliklari va yangilanishlaridan xabardor bo'lish uchun <a href="https://t.me/joinchat/AAAAAFNNAyKG1y7GopROHg">rasmiy kanalga</a> qo'shiling.
+
+      Kanalga qo'shilganingizdan so'ng bu xabar ko'rsatilmaydi.
+
+    secretship_join_link: https://t.me/joinchat/AAAAAD63ENxmBG7CW3RG7A
+    secretship_id: '-1001052184796'
+    secretship: |
+      🍀 Bu bot asoschisi va dasturchisining <a href="https://t.me/joinchat/AAAAAD63ENxmBG7CW3RG7A">kanaliga</a> qo'shiling.
+
+      Kanalga qo'shilganingizdan so'ng bu xabar ko'rsatilmaydi.
+
+    bot_updates_join_link: https://t.me/joinchat/AAAAAD3PQl5OvYEEjS6RJw
+    bot_updates_id: '-1001036993118'
+    bot_updates: |
+      🍀 Bu bot asoschisi va dasturchisining <a href="https://t.me/joinchat/AAAAAD3PQl5OvYEEjS6RJw">kanaliga</a> qo'shiling.
+
+      Kanalga qo'shilganingizdan so'ng bu xabar ko'rsatilmaydi.
+
+  settings:
+    posting:
+      open: |
+        Here you can set the formatting style that will be used by default. Yordam uchun /markdown yoki /HTML yuboring.
+
+        Shuningdek, yangi postlardagi xabarlarga avtomatik qo'shiladigan reaksiyalarni ham sozlashingiz mumkin.
+
+donate:
+  welcome: |
+    ☘️ <b>Donate</b>
+
+    Sizning yordamlaringiz tufayli biz yangi funksiyalar qo'shamiz, bot barqarorligini yaxshilaymiz va server xarajatlarini qoplaymiz.
+
+    To'lovdan so'ng bu xabar yashiriladi.
+
+    <i>Yordamingiz uchun katta rahmat,</i>
+    <a href="https://t.me/BotUpdates">Controller Bot Team</a>
+
+  other_sum: Boshqa summa
+  enter_sum: Yordam summasini kiriting.
+  incorrect_sum: Summani rublda kiriting.
+
+  continue_use_bot: Keyinroq qo'llab-quvvatlayman 😦
+  donate_controller: ☘️ Qo'llab-quvvatlash
+
+  select_price: |
+    Click the "Pay" button to send <b>${sum} ₽</b> as a donation to the Controller Bot Team.
+
+    To'lovdan so'ng bu xabarni yashirish uchun "Check Payment" tugmasini bosing.
+  pay: To'lash
+  completed: To'lovni tekshirish
+  not_pay: To'lashment not found 😔
+  success_pay: Controller Bot jamoasini qo'llab-quvvatlaganingiz uchun rahmat! 😍
+
+  problem: To'lov bilan muammo
+  help: Muammo haqida xabar berish uchun @ControllerSupportBot ga yozing.
+
+btn:
+  common:
+    continue: Davom etish »
+    true: Ha, to'g'ri
+    back: « Orqaga
+    cancel: Bekor qilish
+    off: O'chirish
+    help: Yordam
+    yes: Ha
+    no: Yo'q
+    confirm: Tasdiqlash
+    ok: OK
+    next: Keyingi
+    edit: Tahrirlash
+    delete: O'chirish
+
+  menu:
+    create_post: Post yaratish
+    edit_sent_posts: Postni tahrirlash
+    scheduled_posts: Rejalashtirilgan postlar
+    channels: Kanallar
+    statistics: Kanal statistikasi
+    settings: Sozlamalar
+
+  channels:
+    add_channel: Kanal qo'shish
+    add_bot: Bot ulash
+    add_change_bot: Botni almashtirish
+    channel_added: Post yaratish
+
+    how_to_create_bot: Botni qanday yaratish mumkin?
+    how_to_create_bot_url: https://telegra.ph/Create-Bot-Controller-FAQ-03-28
+
+    control:
+      how_to_add_admin: Adminni qanday qo'shish mumkin?
+      how_to_add_admin_url: https://telegra.ph/Admins-Controller-FAQ-03-28
+
+      update: Ma'lumotlarni yangilash
+      bot: Ulangan botni almashtirish
+      timezone: Vaqt mintaqasini o'zgartirish
+      delete: O'chirish Channel
+
+      confirm_delete_yes: Ha
+      confirm_delete_no: Yo'q
+
+      link_chat: Chatni ulash
+      unlink_chat: Chatni uzish
+
+      subscription: Obunani boshqarish
+
+  subscription:
+    settings: Pullik obunani sozlash
+    configure_tariffs: Tariflarni sozlash
+    create_tariff: Tarif yaratish
+    add_tariff: Tarif qo'shish
+    create_subscribe_link: Havola qo'shish
+    show_subscribe_links: Obuna havolalari
+    show_balances: Balansni ko'rsatish
+    withdraw: Yechib olish
+    statistics: Statistika
+    full_statistics_report: To'liq hisobot
+    delete_tariff: Tarifni o'chirish
+    edit_subscription_settings: Salomlashuv xabarini sozlash
+    regenerateJoinLink: Havolani qayta yaratish
+    dont_show_again: Qayta ko'rsatmaslik
+    add_additional_links: Qo'shimcha obuna havolasini yaratish
+
+  post:
+    settings:
+      disable_notification_disable: 'Sokin yuborish: O''CHIQ'
+      disable_notification_enable: 'Sokin yuborish: YOQIQ'
+
+      disable_web_page_preview_disable: 'Havola preview: YOQIQ'
+      disable_web_page_preview_enable: 'Havola preview: O''CHIQ'
+
+      parse_mode_markdown: 'Avto formatlash: Markdown'
+      parse_mode_html: 'Avto formatlash: HTML'
+      parse_mode_none: 'Avto formatlash: O''CHIQ'
+
+      default_reactions_disable: 'Standart reaksiyalar: O''CHIQ'
+      default_reactions_enable: 'Standart reaksiyalar: YOQIQ'
+
+    faq: Controller Yordam
+
+    control_channel: Kanal sozlamalariga o'tish
+    return_to_channels: « Kanallar ro'yxatiga qaytish
+
+    continue: Davom etish »
+
+    add_image: Media biriktirish
+    clear_image: Biriktirilgan mediani o'chirish
+
+    open_comments: Izohlarni ochish
+    add_comments: Izoh qo'shish
+    delete_comments: Izohlarni o'chirish
+    add_native_comments: Native izoh qo'shish
+    delete_native_comments: Native izohlarni o'chirish
+
+    add_inline: URL tugmalar qo'shish
+    clear_inline: URL tugmalarni o'chirish
+
+    add_reactions: Reaksiya qo'shish
+    clear_reactions: Reaksiyalarni o'chirish
+
+    clear: Barchasini o'chirish
+    preview: Ko'rib chiqish
+    done: Yuborish
+    cancel: Bekor qilish
+
+    more: ⇣ Amallarni ko'rsatish
+
+    delete: O'chirish Message
+    send_silent: Sokin yuborish
+    silent_enable: 'Bildirishnoma: YOQIQ'
+    silent_disable: 'Bildirishnoma: O''CHIQ'
+    preview_enable: 'Havola preview: YOQIQ'
+    preview_disable: 'Havola preview: O''CHIQ'
+
+    send:
+      self_destruct_timer: "${+hours
+        ? 'Avto o''chirish taymeri: ' + hours + ' soat'
+        : 'Avto o''chirish taymerini o''rnatish'
+      }"
+      hours: ${hour} soat
+      send_now: Hozir yuborish
+      sent: Postni kanalda ko'rish
+      create_scheduled: Rejalashtirish
+
+      send: Yuborish
+      cancel: Bekor qilish
+
+    schedule:
+      today: |-
+        ${active ? '🔹 ' : ''}Bugun
+      tomorrow: |-
+        ${active ? '🔹 ' : ''}Ertaga
+      after_tomorrow: |-
+        ${active ? '🔹 ' : ''}Indinga
+
+  settings:
+    bots: Ulangan botlarni boshqarish
+    delete_bot: Botni o'chirish
+    language: Tilni o'zgartirish
+
+  posts:
+    edit:
+      add_inline: URL tugmalar qo'shish
+      edit_inline: URL tugmalarni o'zgartirish
+      remove_inline: URL tugmalarni olib tashlash
+      original: Oldingi versiyani ko'rish
+      clear_caption: Captionni o'chirish
+      save: O'zgarishlarni saqlash
+      cancel: Bekor qilish
+      open_edited_post: Postni kanalda ko'rish
+      edit_scheduled_post: Rejalashtirilgan postni tahrirlash
+
+    view: Postni ko'rish
+    copy: Nusxa yaratish
+    edit_time: Vaqtni tahrirlash
+    delete: O'chirish Post
+
+  statistics:
+    view_periods: Ko'rish
+    view_via_web: Veb sahifa orqali ko'rish
+
+    periods:
+      one_week: Hafta
+      one_month: Oy
