@@ -866,7 +866,7 @@ btn:
       open_edited_post: Посмотреть изменения
       edit_scheduled_post: Редактировать отложенный пост
 
-    view: Посмотреть все
+    view: Информация
     copy: Создать копию
     edit_time: Изменить время
     delete: Удалить пост
