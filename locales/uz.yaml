@@ -51,9 +51,8 @@ channels:
     <b>Kanal boshqaruvi</b>
 
     ${count
-      ? 'Quyidagi ro''yxatdan kanalni tanlang:'
-      : 'Hali birorta kanal qo''shilmagan.'
-    }
+      ? "Quyidagi ro'yxatdan kanalni tanlang:"
+      : "Hali birorta kanal qo'shilmagan."}
   add:
     select_bot: |
       Kanaldagi postlarni yuborish uchun ishlatiladigan botni tanlang.
@@ -79,8 +78,10 @@ channels:
       channel_not_found: Kanal topilmadi.
       you_are_not_administrator: Siz bu kanalda admin emassiz.
       you_do_not_have_rights: Sizda kanalda xabar joylash huquqi yo'q.
-      bot_is_not_admin: @${username} ni kanalingizga admin qilib qo'shing. Iltimos, yana bir bor tekshirib qayta urinib ko'ring.
-      bot_is_not_admin_in_group: @${username} ni guruhingizga admin qilib qo'shing va qayta urinib ko'ring.
+      bot_is_not_admin: |
+        ni kanalingizga admin qilib qo'shing. Iltimos, yana bir bor tekshirib qayta urinib ko'ring.
+      bot_is_not_admin_in_group: |
+        @${username} ni guruhingizga admin qilib qo'shing va qayta urinib ko'ring.
       bot_was_deleted: |
         Kanalni qo'shib bo'lmadi. @${username} endi mavjud emas yoki tokeni bekor qilingan. Bu botni qayta ulang yoki boshqasini tanlang.
       channel_already_added: Bu kanal allaqachon qo'shilgan. Yangi post yaratish uchun @${bot_username} ga o'ting.
@@ -97,9 +98,8 @@ channels:
     channel_deleted: Tayyor! Kanal o'chirildi.
     select_bot: |
       ${count
-        ? 'Kanaldagi postlarni yuborish uchun ishlatiladigan botni tanlang.'
-        : 'Hali ulangan bot yo''q. Yangisini ulash uchun /addchannel yuboring.'
-      }
+        ? "Kanaldagi postlarni yuborish uchun ishlatiladigan botni tanlang."
+        : "Hali ulangan bot yo'q. Yangisini ulash uchun /addchannel yuboring."}
     bot_is_not_admin: Botni kanalingizga admin qilib qo'shing.
     current_bot: Hozir ishlatilayotgan botni tanlab bo'lmadi.
     sync_ok: 👌 OK. Ma'lumotlar sinxronlandi.
@@ -126,7 +126,8 @@ channels:
     select_nearest: |
       Eng yaqin shaharni tanlang.
     error_timezone: Kechirasiz, bu shahar topilmadi. Iltimos, boshqa yaqin shahar nomini yuboring.
-    error_request_timezone: Nimadir xato bo'ldi :( Iltimos, qayta urinib ko'ring. Muammo davom etsa, @ControllerSupportBot ga yozing.
+    error_request_timezone: |
+      Nimadir xato bo'ldi :( Iltimos, qayta urinib ko'ring. Muammo davom etsa, @ControllerSupportBot ga yozing.
     save_timezone: OK, vaqt mintaqangiz saqlandi.
     link_chat: |-
       Native izohlarni yoqish uchun muhokama guruhini Controller botga ulashingiz mumkin.
@@ -173,12 +174,12 @@ channels:
       Tarif narxini kiriting. (Valyuta: ${currency}, Davr: ${localizedPeriod})${price ? 'Joriy narx: ' + price + ' ' + currency : ''}
       Minimal narx: ${minimum} ${currency}
     tariff_complete: Tarif muvaffaqiyatli yaratildi!
-    manage_tariff: "${name}" tarifini boshqarish
+    manage_tariff: tarifini boshqarish "${name}"
     start_subscription_process: |
       *${name}* kanal/guruh uchun obuna
-      
+
       ${description}
-      
+
       Obuna bo'lasizmi?
       ${photo ? '[\u200B](' + photo + ')' : '' }
     select_tariff: Tarifni tanlang
@@ -315,17 +316,18 @@ post:
     Hali birorta kanal qo'shilmagan.
 
     Yangisini qo'shish uchun /addchannel yuboring.
-  error_check_channel: Nimadir xato bo'ldi :( Iltimos, qayta urinib ko'ring. Muammo davom etsa, @ControllerSupportBot ga yozing.
-  channel_not_found: Kanal mavjud emas yoki sizda unga kirish yo'q. @ControllerBot ga qayting va qayta urinib ko'ring.
+  error_check_channel: |
+    Nimadir xato bo'ldi :( Iltimos, qayta urinib ko'ring. Muammo davom etsa, @ControllerSupportBot ga yozing.
+  channel_not_found: |
+    Kanal mavjud emas yoki sizda unga kirish yo'q. @ControllerBot ga qayting va qayta urinib ko'ring.
   problems: |
     ${channel.name} kanalida yangi post yaratib bo'lmadi. Quyidagi muammolar topildi:
 
     ${problems}
 
     ${from.id == channel.owner_id
-      ? 'Muammolarni tuzatish uchun kanal sozlamalariga o'ting.'
-      : 'Kanal egasi kanal sozlamalariga kirib muammolarni tuzatishi kerak.'
-    }
+      ? "Muammolarni tuzatish uchun kanal sozlamalariga o'ting."
+      : "Kanal egasi kanal sozlamalariga kirib muammolarni tuzatishi kerak."}
   problem_items:
     timezone_is_not_set: 🔹 vaqt mintaqasi o'rnatilmagan
     bot_is_not_connection: 🔹 kanal botga ulanmagan
@@ -466,7 +468,7 @@ post:
       ${problems}
 
       ${from.id == channel.owner_id
-        ? 'Muammolarni tuzatish uchun kanal sozlamalariga o'ting.'
+        ? "Muammolarni tuzatish uchun kanal sozlamalariga o'ting."
         : 'Kanal egasi kanal sozlamalariga kirib muammolarni tuzatishi kerak.'
       }
     cancel_send: Post yuborish bekor qilindi.
@@ -503,8 +505,9 @@ post:
       Agar faqat vaqt yuborsangiz, post odatda bugungi kunga rejalashtiriladi. Boshqa kun uchun vaqt+sana yuboring. Masalan, <code>16 30 6 8 -> 16:30, Aug 6</code>
     error_date: Noto'g'ri sana yoki vaqt. Ko'rsatma olish uchun 'Help' ni tanlang.
     invalid_date: Noto'g'ri sana.
-    limit: Hozirgi vaqtdan kamida 1 daqiqa keyingi vaqtni tanlashingiz kerak. Joriy sana va vaqt: ${current_date}.
-    limit_year: 'Joriy vaqtdan 1 yil yoki undan ko'p oldinga vaqt tanlab bo''lmaydi. Kelajakda nima bo''lishini kim biladi... :)'
+    limit: |
+      Hozirgi vaqtdan kamida 1 daqiqa keyingi vaqtni tanlashingiz kerak. Joriy sana va vaqt: ${current_date}.
+    limit_year: Joriy vaqtdan 1 yil yoki undan ko'p oldinga vaqt tanlab bo''lmaydi. Kelajakda nima bo''lishini kim biladi... :)
     ok: |
        Rejalashtirilgan post yaratildi. Post <b>${date}</b> kuni <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''} kanaliga yuboriladi.
 
@@ -586,16 +589,14 @@ settings:
   bots:
     select_bot: |
       ${count
-        ? 'O''chirmoqchi bo''lgan botni tanlang.'
-        : 'Hali ulangan botlar yo''q.'
-      }
+        ? "O'chirmoqchi bo'lgan botni tanlang."
+        : "Hali ulangan botlar yo'q."}
     channel_item: |
       ${index}. ${name}
     confirm_delete: |
       ${count
         ? 'Bot quyidagi kanallarga ulangan:\n\n' + channels
-        : 'Bot hech bir kanalga ulanmagan.\n'
-      }
+        : 'Bot hech bir kanalga ulanmagan.\n'}
       Bu botni o'chirmoqchimisiz?
     bot_deleted: Tayyor! Bot o'chirildi.
 
@@ -618,15 +619,15 @@ statistics:
     ${channel.name}${channel.username ? ' @' + channel.username : ''} statistikasi uchun havola:
   data: |
     ${channel.username ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>' : channel.name} statistikasi ${period == 'week'
-      ? 'so''nggi 7 kun'
-      : 'so''nggi 31 kun'
-    }.
+      ? "so'nggi 7 kun"
+      : "so'nggi 31 kun"}.
 
     ${data}
   chart:
     title: |
       ${channel.name}${channel.username ? ' @' + channel.username : ''} statistikasi
-    copyright: @ControllerBot tomonidan ishlaydi
+    copyright: |
+      @ControllerBot tomonidan ishlaydi
     label: obunachilar
 
 bot:
@@ -693,7 +694,8 @@ donate:
   success_pay: Controller Bot jamoasini qo'llab-quvvatlaganingiz uchun rahmat! 😍
 
   problem: To'lov bilan muammo
-  help: Muammo haqida xabar berish uchun @ControllerSupportBot ga yozing.
+  help: |
+    Muammo haqida xabar berish uchun @ControllerSupportBot ga yozing.
 
 btn:
   common:
@@ -815,8 +817,8 @@ btn:
 
     send:
       self_destruct_timer: "${+hours
-        ? 'Avto o''chirish taymeri: ' + hours + ' soat'
-        : 'Avto o''chirish taymerini o''rnatish'
+        ? 'Avto o\\'chirish taymeri: ' + hours + ' soat'
+        : 'Avto o\\'chirish taymerini o\\'rnatish'
       }"
       hours: ${hour} soat
       send_now: Hozir yuborish
