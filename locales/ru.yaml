@@ -41,6 +41,30 @@ bots:
     1. Перейдите в бот @BotFather и создайте новый бот.
     2. После создания бота вы получите токен бота (выглядит вот так – <code>123456:ABC-DEF1234gh...</code>) – скопируйте его или перешлите сообщение с ним сюда.
 
+  add_managed: |
+    <b>Подключение бота</b>
+
+    Вы можете подключить бота любым из двух способов:
+
+    <b>Важно:</b> не подключайте боты, которые используются в других сервисах (Livegram, Manybot, Chatfuel и другие).
+
+    <b>Способ 1.</b> Нажмите кнопку «Создать нового бота» ниже — Telegram создаст бота и безопасно передаст его @ControllerBot.
+
+    <b>Способ 2.</b> Создайте бота через @BotFather и пришлите сюда его токен (выглядит вот так – <code>123456:ABC-DEF1234gh...</code>).
+
+  added: Бот @${username} подключен.
+  managed_added: Бот @${username} создан и подключен.
+  managed_suggested_name: Controller Bot
+  profile_description: |
+    Отправьте описание для @${username}.
+
+    Оно будет отображаться в начале диалога с ботом в блоке «Что умеет этот бот?». Максимум — 512 символов.
+  profile_description_wrong: Отправьте описание текстом или нажмите «Пропустить».
+  profile_description_too_long: Описание не должно быть длиннее 512 символов.
+  profile_description_error: Не удалось сохранить описание. Попробуйте ещё раз или пропустите этот шаг.
+  profile_description_saved: Описание сохранено.
+  profile_done: Отлично, продолжаем добавление канала.
+  profile_bot_not_found: Бот не найден. Попробуйте подключить его заново.
   wrong_token: Некорректный токен бота. Токен бота выглядит вот так – <code>123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11</code>.
   error_add: Такого бота не существует. Пришлите токен другого бота.
   bot_already_added: Этот бот уже подключен к @ControllerBot.
@@ -741,6 +765,9 @@ btn:
     add_bot: Подключить бот
     add_change_bot: Изменить бот
     channel_added: Создать новый пост
+    create_managed_bot: Создать нового бота
+    setup_bot_description: Настроить описание
+    skip_description: Пропустить
 
     how_to_create_bot: Как создать бот?
     how_to_create_bot_url: https://telegra.ph/Add-Bot-to-Admins-Controller-FAQ-03-22
