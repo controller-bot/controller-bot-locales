@@ -42,6 +42,30 @@ bots:
 
     <b>Warning!</b> Don't connect bots already used by other services like Chatfuel, Manybot, ect.
 
+  add_managed: |
+    <b>Connecting a bot</b>
+
+    You can connect a bot in either of two ways:
+
+    <b>Warning!</b> Don't connect bots already used by other services like Chatfuel, Manybot, etc.
+
+    <b>Method 1.</b> Press “Create New Bot” below — Telegram will create a bot and safely share it with @ControllerBot.
+
+    <b>Method 2.</b> Create a bot via @BotFather and send its token here (e.g. <code>12345:6789ABCDEF</code>).
+
+  added: Bot @${username} is connected.
+  managed_added: Bot @${username} has been created and connected.
+  managed_suggested_name: Controller Bot
+  profile_description: |
+    Send a description for @${username}.
+
+    It will be shown at the beginning of the chat in the “What can this bot do?” block. Maximum length is 512 characters.
+  profile_description_wrong: Send the description as text or press “Skip”.
+  profile_description_too_long: The description must be no longer than 512 characters.
+  profile_description_error: Couldn't save the description. Try again or skip this step.
+  profile_description_saved: Description saved.
+  profile_done: Great, let's continue adding the channel.
+  profile_bot_not_found: Bot not found. Try connecting it again.
   wrong_token: Doesn't look like anything to me. Please send me a token of your bot.
   error_add: Invalid token. Try to get a new one or use a token of another bot.
   bot_already_added: Looks familiar to me. You already have this bot connected.
@@ -724,6 +748,9 @@ btn:
     add_bot: Connect Bot
     add_change_bot: Change Bot
     channel_added: Create Post
+    create_managed_bot: Create New Bot
+    setup_bot_description: Set Description
+    skip_description: Skip
 
     how_to_create_bot: How to create bot?
     how_to_create_bot_url: https://telegra.ph/Create-Bot-Controller-FAQ-03-28
