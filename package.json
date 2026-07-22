@@ -1,0 +1,14 @@
+{
+  "name": "controller-bot-locales",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "check": "node diff.js --baseline=locale-baseline.json",
+    "check:strict": "node diff.js",
+    "baseline:update": "node diff.js --write-baseline=locale-baseline.json",
+    "test": "node --test test/locale_validator.test.js"
+  },
+  "dependencies": {
+    "js-yaml": "4.3.0"
+  }
+}
