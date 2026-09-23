@@ -7,6 +7,7 @@ move: |
   Vá para seu bot conectado e envie o comando /start.
 
 common:
+  open_webapp: "📱 Abrir o web app"
   choose_language: Por favor, escolha seu idioma.
 
   start: |
@@ -42,6 +43,8 @@ bots:
 
     <b>Cuidado!</b> Não conecte bots já utilizados por outros serviços como Chatfuel, Manybot e etc.
 
+  auto_button: "🤖 Criar um bot automaticamente"
+  auto_created: "✅ O bot foi criado e conectado:"
   wrong_token: Não consigo identificar as informações enviadas. Por favor me envie um "token" válido do seu bot.
   error_add: '"Token" inválido. Tente pegar um novo ou use um "token" de outro bot.'
   bot_already_added: Isso me parece familiar. Voçê já tem este bot conectado.
