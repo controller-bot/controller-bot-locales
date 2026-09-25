@@ -7,6 +7,7 @@ move: |
   Go to your connected bot and send the command /start.
 
 common:
+  open_webapp: "📱 Open Web App"
   choose_language: Please choose your language.
 
   start: |
@@ -42,6 +43,8 @@ bots:
 
     <b>Warning!</b> Don't connect bots already used by other services like Chatfuel, Manybot, ect.
 
+  auto_button: "🤖 Create a bot automatically"
+  auto_created: "✅ The bot has been created and connected:"
   wrong_token: Doesn't look like anything to me. Please send me a token of your bot.
   error_add: Invalid token. Try to get a new one or use a token of another bot.
   bot_already_added: Looks familiar to me. You already have this bot connected.
