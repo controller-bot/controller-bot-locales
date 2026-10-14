@@ -7,6 +7,7 @@ move: |
   Ulangan botingizga o'ting va /start buyrug'ini yuboring.
 
 common:
+  open_webapp: "📱 Veb-ilovani ochish"
   choose_language: Iltimos, tilni tanlang.
 
   start: |
@@ -42,6 +43,8 @@ bots:
 
     <b>Diqqat!</b> Chatfuel, Manybot va boshqalar kabi xizmatlarda allaqachon ishlatilayotgan botlarni ulamang.
 
+  auto_button: "🤖 Botni avtomatik yaratish"
+  auto_created: "✅ Bot yaratildi va ulandi:"
   wrong_token: Bu to'g'ri ko'rinmayapti. Iltimos, bot tokenini yuboring.
   error_add: Noto'g'ri token. Yangi token oling yoki boshqa bot tokenidan foydalaning.
   bot_already_added: Bu bot allaqachon ulangan.

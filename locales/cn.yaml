@@ -8,6 +8,7 @@ move: |
   请前往已连接机器人发送指令/start。
 
 common:
+  open_webapp: "📱 打开网页应用"
   choose_language: 请选择语言
 
 
@@ -44,6 +45,8 @@ bots:
 
     <b>警告！</b>不要连接Chatfuel、Manybot等其他平台已经使用的机器人
 
+  auto_button: "🤖 自动创建机器人"
+  auto_created: "✅ 机器人已创建并接入："
   wrong_token: 无法识别。请发给我你的机器人的令牌。
   error_add: 无效令牌。请获取新令牌或使用另一个机器人的令牌。
   bot_already_added: 看着眼熟。你已经连接了这个机器人。

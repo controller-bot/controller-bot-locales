@@ -5,6 +5,7 @@ move: |
   Gönderi oluşturma ve düzenleme, istatistik görme ve gönderi zamanlama gibi tüm ana özellikler bağlı botlara taşındı, böylece artık botunuz ve Controller Bot arasında gidip gelmenize gerek kalmadı!
   Bağlı botunuza gidin ve /start komutunu yazın.
 common:
+  open_webapp: "📱 Web uygulamasını aç"
   choose_language: Lütfen dilinizi seçin.
 
   start: |
@@ -37,6 +38,8 @@ bots:
     2. Bir token alacaksınız (örn. 12345:6789ABCDEF) — sadece onu bana iletin veya kopyalayıp yapıştırın.
 
     <b>Uyarı!</b> Halihazırda Chatfuel, Manybot vb. servisler tarafından kullanılan botları bağlamayın.
+  auto_button: "🤖 Botu otomatik oluştur"
+  auto_created: "✅ Bot oluşturuldu ve bağlandı:"
   wrong_token: Benimle ilgili değil gibi. Lütfen bana botunuzun tokenını gönderin.
   error_add: Geçersiz token. Yeni bir token alın ya da başka bir botun tokenını kullanın.
   bot_already_added: Bana benziyor gibi. Bu botu zaten bağladınız.
