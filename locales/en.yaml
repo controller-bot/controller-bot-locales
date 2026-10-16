@@ -601,6 +601,7 @@ settings:
       }
       Are you sure you want to delete this bot?
     bot_deleted: Done! The bot is gone.
+    bot_in_use: "Cannot disconnect: there are pending publications or active subscriptions"
 
 statistics:
   select_channel: Choose a channel to view stats.

@@ -415,6 +415,7 @@ settings:
       }
       Sei sicuro di voler rimuovere questo bot?
     bot_deleted: Fatto! Il bot è andato.
+    bot_in_use: "Impossibile disconnettere: ci sono pubblicazioni in sospeso o abbonamenti attivi"
 
 statistics:
   select_channel: Scegli il canale di cui vedere le statistiche.
