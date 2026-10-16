@@ -431,6 +431,7 @@ settings:
        }
        确定要删除该机器人吗？
     bot_deleted: 机器人删除成功。
+    bot_in_use: "无法断开：存在未完成的发布或有效订阅"
 
 
 statistics:

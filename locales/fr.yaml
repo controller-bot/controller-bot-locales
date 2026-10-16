@@ -418,6 +418,7 @@ settings:
       }
       Voulez-vous vraiment supprimer ce bot?
     bot_deleted: Opération éffectuée! Le bot a été supprimé.
+    bot_in_use: "Déconnexion impossible : il y a des publications en attente ou des abonnements actifs"
 
 statistics:
   select_channel: Choisissez une chaîne pour afficher les statistiques.

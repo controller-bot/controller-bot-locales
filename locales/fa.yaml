@@ -420,6 +420,7 @@ settings:
       }
       Are you sure you want to delete this bot?
     bot_deleted: Done! The bot is gone.
+    bot_in_use: "نمی‌توان قطع اتصال: انتشار در انتظار یا اشتراک فعال وجود دارد"
 
 statistics:
   select_channel: Choose a channel to view stats.
