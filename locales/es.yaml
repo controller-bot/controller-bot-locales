@@ -418,6 +418,7 @@ settings:
       }
       ¿Seguro que quieres eliminar este bot?
     bot_deleted: ¡Hecho! El bot se ha eliminado.
+    bot_in_use: "No se puede desconectar: hay publicaciones pendientes o suscripciones activas"
 
 statistics:
   select_channel: Elige un canal para ver las estadísticas.

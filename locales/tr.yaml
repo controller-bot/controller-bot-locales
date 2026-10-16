@@ -390,6 +390,7 @@ settings:
       }
       Bu botu silmek istediğinize emin misiniz?
     bot_deleted: Tamam! Bot gitti.
+    bot_in_use: "Bağlantı kesilemiyor: bekleyen yayınlar veya etkin abonelikler var"
 
 statistics:
   select_channel: İstatistiklerini görmek istediğiniz bir kanalı seçin.

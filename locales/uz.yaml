@@ -602,6 +602,7 @@ settings:
         : 'Bot hech bir kanalga ulanmagan.\n'}
       Bu botni o'chirmoqchimisiz?
     bot_deleted: Tayyor! Bot o'chirildi.
+    bot_in_use: "O'chirib bo'lmaydi: kutilayotgan e'lonlar yoki faol obunalar mavjud"
 
 statistics:
   select_channel: Statistikani ko'rish uchun kanalni tanlang.
