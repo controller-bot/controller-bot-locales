@@ -485,13 +485,13 @@ donate:
 btn:
   common:
     continue: Працягнуць »
-    true: Так
+    "true": Так
     back: '« Назад'
     cancel: Скасаваць
-    off: Адключыць
+    "off": Адключыць
     help: Даведка
-    yes: true
-    no: false
+    "yes": Так
+    "no": Не
   menu:
     create_post: Стварыць допіс
     edit_sent_posts: Рэдагаваць допіс

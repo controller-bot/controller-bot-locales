@@ -519,13 +519,13 @@ donate:
 btn:
   common:
     continue: Continuar »
-    true: Sim, tudo bem
+    "true": Sim, tudo bem
     back: « Voltar
     cancel: Cancelar
-    off: Desabilitar
+    "off": Desabilitar
     help: Ajuda
-    yes: Sim
-    no: Não
+    "yes": Sim
+    "no": Não
 
   menu:
     create_post: Criar Post

@@ -491,13 +491,13 @@ bot:
 btn:
   common:
     continue: Continue »
-    true: Yes, It's Right
+    "true": Yes, It's Right
     back: « Back
     cancel: Cancel
-    off: Disable
+    "off": Disable
     help: Help
-    yes: Yes
-    no: No
+    "yes": Yes
+    "no": No
 
   menu:
     create_post: Create Post

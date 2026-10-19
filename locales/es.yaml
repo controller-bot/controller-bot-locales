@@ -114,7 +114,7 @@ channels:
       También puedes enviar al bot la geolocalización para que intente encontrar la ciudad más cercana, según la cual se configurará la zona horaria.
     timezone: |
       Zona horaria actual:
-      ${ciudad ? '🔹 GMT ' + (gmt > 0 ? '+' + gmt : gmt) + '\n🔹 ' + timezone_id + ' – ' + ciudad : '🔹 None'}
+      ${city ? '🔹 GMT ' + (gmt > 0 ? '+' + gmt : gmt) + '\n🔹 ' + timezone_id + ' – ' + city : '🔹 None'}
 
       O puedes enviarle al bot una geolocalización para que intente encontrar la ciudad más cercana a ti, según la cual se fijará la zona horaria.
     check_timezone: |
@@ -489,13 +489,13 @@ bot:
 btn:
   common:
     continue: Continuar »
-    true: Sí, es correcto
+    "true": Sí, es correcto
     back: « Volver
     cancel: Cancelar
-    off: Deshabilitar
+    "off": Deshabilitar
     help: Ayuda
-    yes: Sí
-    no: No
+    "yes": Sí
+    "no": No
 
   menu:
     create_post: Crear publicación

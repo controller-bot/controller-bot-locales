@@ -516,13 +516,13 @@ donate:
 btn:
   common:
     continue: Continua »
-    true: Sì, è giusto
+    "true": Sì, è giusto
     back: « Indietro
     cancel: Annulla
-    off: Disabilita
+    "off": Disabilita
     help: Aiuto
-    yes: Sì
-    no: No
+    "yes": Sì
+    "no": No
 
   menu:
     create_post: Crea post

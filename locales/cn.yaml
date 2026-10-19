@@ -306,7 +306,7 @@ post:
     cancel_send: 帖子发布被取消。
     continue_send: 可以继续向我发送消息。
     confirm_send: >
-      确定要将<b>${pluralize(帖子, '消息', '消息', '消息')}</b>发到<b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''}吗？
+      确定要将<b>${pluralize(posts, '消息', '消息', '消息')}</b>发到<b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''}吗？
 
     waiting: 🕒 发送中……
     ok: 完成！
@@ -532,13 +532,13 @@ donate:
 btn:
   common:
     continue: 继续»
-    true: Yes, It's Right 没错
+    "true": Yes, It's Right 没错
     back: « 返回
     cancel: 取消
-    off: 关闭
+    "off": 关闭
     help: 帮助
-    yes: 是
-    no: 否
+    "yes": 是
+    "no": 否
 
 
   menu:

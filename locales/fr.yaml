@@ -489,13 +489,13 @@ bot:
 btn:
   common:
     continue: Continuer »
-    true: Oui, Vrai
+    "true": Oui, Vrai
     back: « Retour
     cancel: Annuler
-    off: Désactiver
+    "off": Désactiver
     help: Aide
-    yes: Yes
-    no: No
+    "yes": Yes
+    "no": No
 
   menu:
     create_post: Créer Publication

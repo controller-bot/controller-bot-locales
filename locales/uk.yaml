@@ -487,13 +487,13 @@ bot:
 btn:
   common:
     continue: Продовжити »
-    true: Так, правильно
+    "true": Так, правильно
     back: « Назад
     cancel: Скасувати
-    off: Вимкнути
+    "off": Вимкнути
     help: Довідка
-    yes: Так
-    no: Ні
+    "yes": Так
+    "no": Ні
 
   menu:
     create_post: Cтворити пост
