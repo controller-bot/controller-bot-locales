@@ -580,6 +580,9 @@ btn:
     open_comments: Apri i commenti
     add_comments: Aggiungi i commenti
     delete_comments: Rimuovi i commenti
+    add_native_comments: Aggiungi commenti nativi
+    delete_native_comments: Elimina commenti nativi
+    send_silent: Invia in silenzio
 
     add_inline: Aggiungi pulsanti
     clear_inline: Rimuovi pulsanti

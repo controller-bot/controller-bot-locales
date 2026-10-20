@@ -555,6 +555,9 @@ btn:
     open_comments: Open Comments
     add_comments: Add Comments
     delete_comments: Delete Comments
+    add_native_comments: افزودن نظرهای بومی
+    delete_native_comments: حذف نظرهای بومی
+    send_silent: ارسال بی‌صدا
 
     add_inline: Add URL Buttons
     clear_inline: Delete URL Buttons

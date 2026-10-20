@@ -578,6 +578,9 @@ btn:
     open_comments: فتح التعليقات
     add_comments: أضف تعليقات
     delete_comments: حذف التعليقات
+    add_native_comments: إضافة التعليقات الأصلية
+    delete_native_comments: حذف التعليقات الأصلية
+    send_silent: إرسال بصمت
 
     add_inline: إضافة أزرار ذات روابط
     clear_inline: حذف أزرار ذات روابط

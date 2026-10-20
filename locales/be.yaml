@@ -1,4 +1,3 @@
----
 language_name: Беларуская
 is_enabled: true
 move: |
@@ -535,6 +534,9 @@ btn:
     open_comments: Адкрыць каментары
     add_comments: Дадаць каментары
     delete_comments: Выдаліць каментары
+    add_native_comments: Дадаць натыўныя каментарыі
+    delete_native_comments: Выдаліць натыўныя каментарыі
+    send_silent: Адправіць без гуку
     add_inline: Дадаць URL-кнопкі
     clear_inline: Выдаліць URL-кнопкі
     add_reactions: Дадаць рэакцыі

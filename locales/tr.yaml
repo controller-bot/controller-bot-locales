@@ -536,6 +536,9 @@ btn:
     open_comments: Yorumları Aç
     add_comments: Yorumları Ekle
     delete_comments: Yorumları Sil
+    add_native_comments: Yerel yorumları ekle
+    delete_native_comments: Yerel yorumları sil
+    send_silent: Sessiz gönder
 
     add_inline: Bağlantı Butonları Ekle
     clear_inline: Bağlantı Butonları Sil

@@ -583,6 +583,9 @@ btn:
     open_comments: Abrir Comentários
     add_comments: Adicionar Comentários
     delete_comments: Deletar Comentários
+    add_native_comments: Adicionar comentários nativos
+    delete_native_comments: Excluir comentários nativos
+    send_silent: Enviar silenciosamente
 
     add_inline: Adicionar URL Buttons
     clear_inline: Deletar URL Buttons
