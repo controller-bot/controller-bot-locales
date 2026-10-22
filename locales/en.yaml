@@ -261,7 +261,7 @@ channels:
       monthly_3: 3 months
       monthly_6: 6 months
       yearly: A year
-      early_2: 2 years
+      yearly_2: 2 years
       yearly_3: 3 years
     subcontrol_description: |
       Controller bot opens new ways for monetization of your channels!
@@ -430,6 +430,7 @@ post:
         The message sent by you does not fit the format of URL buttons list. Please check everything twice and try again.
       save: URL buttons saved. You can continue to send me messages.
       cleared: Success! URL buttons cleared.
+      continue: Send me a new list of URL buttons.
     reactions:
       welcome: |
         <a href="https://telegra.ph/file/dd1fcbdd1ebb1ce76ab59.jpg">&#8203;</a>Send me emojies or a text with <b>/</b> as separator to add reactions.
@@ -702,13 +703,13 @@ donate:
 btn:
   common:
     continue: Continue »
-    true: Yes, It's Right
+    "true": Yes, It's Right
     back: « Back
     cancel: Cancel
-    off: Disable
+    "off": Disable
     help: Help
-    yes: Yes
-    no: No
+    "yes": Yes
+    "no": No
     confirm: Confirm
     ok: Ok
     next: Next
@@ -867,3 +868,30 @@ btn:
     periods:
       one_week: Week
       one_month: Month
+
+not_access: You don't have access to this command.
+
+start:
+  channel: |
+    📢 Stay tuned! Subscribe to the Controller Bot news channel to be the first to know about updates and new features.
+
+keyboard:
+  all_languages: All languages
+
+newsletter:
+  welcome: |
+    Send me the posts you want to broadcast, then choose the target language.
+  send: |
+    <b>Language:</b> ${lang}
+    <b>Recipients:</b> ${count}
+
+    Send the posts, then press the send button.
+  error_sent: |
+    ⚠️ Failed to send: ${error}
+  send_done: Post accepted. Send the next one or press the send button.
+  preview_sent: Preview sent to you.
+  done: Done!
+  start: |
+    📣 Newsletter started. Total recipients: ${count}
+  end: |
+    📣 Newsletter finished.

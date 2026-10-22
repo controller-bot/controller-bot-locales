@@ -25,10 +25,6 @@ common:
     /mychannels - kanallarınızı düzenleyin
     /settings - diğer ayarlar
     /lang - dil değiştirin
-  web: |
-    🦠 <b>Controller Web</b>
-    Controller Web'i açmak ve tarayıcıda gönderi oluşturmak için aşağıdaki butona dokunun.
-    <i>Güvenlik sebepleri için, bağlantı 5 dakika kullanılabilir olacak. Yeni bir tane almak için </i>/web <i>komutuna dokunun.</i>
 bots:
   add: |
     <b>Bot Bağlama</b>
@@ -476,14 +472,13 @@ donate:
 btn:
   common:
     continue: Devam Et »
-    true: Evet, doğru
+    "true": Evet, doğru
     back: « Geri
     cancel: İptal Et
-    off: Devredışı Bırak
+    "off": Devredışı Bırak
     help: Yardım
-    yes: Evet
-    no: Hayır
-    open_web: Controller Web'i Aç
+    "yes": Evet
+    "no": Hayır
 
   menu:
     create_post: Gönderi Oluştur
@@ -541,6 +536,9 @@ btn:
     open_comments: Yorumları Aç
     add_comments: Yorumları Ekle
     delete_comments: Yorumları Sil
+    add_native_comments: Yerel yorumları ekle
+    delete_native_comments: Yerel yorumları sil
+    send_silent: Sessiz gönder
 
     add_inline: Bağlantı Butonları Ekle
     clear_inline: Bağlantı Butonları Sil

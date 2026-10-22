@@ -143,7 +143,7 @@ post:
   error_check_channel: حدث خطأ :( حاول مرة أخرى. أرسل لنا رسالة إلى @ControllerSupportBot إذا لم يتغير شيءٌ بسبب خلل ما.
   channel_not_found: القناة غير موجودة أو لا تملك صلاحية الوصول لها. ارجع إلى ControllerBot وحاول مرة أخرى.
   problems: |
-    يتعذر إنشاء منشور جديد في $ {channel.name}. عُثِرَ على الأخطاء التالية:
+    يتعذر إنشاء منشور جديد في ${channel.name}. عُثِرَ على الأخطاء التالية:
 
     ${problems}
 
@@ -179,7 +179,7 @@ post:
     preview_sent: |
       أرسلت معاينة المنشور أعلاه.
 
-      لديك <b>${pluralize(posts, 'رسالة', 'رسائل', 'رسالة')}</b> في المنشور:
+      لديك <b>${pluralize(posts, 'رسائل', 'رسالة', 'رسالتان', 'رسائل', 'رسالة', 'رسالة')}</b> في المنشور:
       ${messages}
     error_poll_not_anonymous: Sorry, but you can\'t send non-anonymous polls to channels.
     error_parse: |
@@ -280,10 +280,10 @@ post:
 
   send:
     count_posts: |
-      ${pluralize(count, 'رسالة', 'رسائل', 'رسالة')} جاهزة للإرسال إلى  <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''}.
+      ${pluralize(count, 'رسائل', 'رسالة', 'رسالتان', 'رسائل', 'رسالة', 'رسالة')} جاهزة للإرسال إلى  <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''}.
     choose_type: متى تريد إرسال المنشور؟
     problems: |
-      لا يمكن إنشاء منشور جديد في $ {channel.name}. عُثِر على الأخطاء التالية:
+      لا يمكن إنشاء منشور جديد في ${channel.name}. عُثِر على الأخطاء التالية:
 
       ${problems}
 
@@ -294,7 +294,7 @@ post:
     cancel_send: ألغيَ إرسال المنشور.
     continue_send: يمكنك الاستمرار في إرسال الرسائل.
     confirm_send: >
-      هل أنت متأكد من أنّك تريد إرسال <b>${pluralize(posts, 'رسالة', 'رسائل', 'رسالة')}</b> إلى
+      هل أنت متأكد من أنّك تريد إرسال <b>${pluralize(posts, 'رسائل', 'رسالة', 'رسالتان', 'رسائل', 'رسالة', 'رسالة')}</b> إلى
       <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''}?
     waiting: 🕒 جارِ الإرسال...
     ok: تم!
@@ -508,19 +508,19 @@ donate:
   not_pay: الدفع غير موجود 😔
   success_pay: شكرا لك على تبرعك لفريق Controller Bot! 😍
 
-  problem: Проблемы с оплатой
-  help: Напишите нам в @ControllerSupportBot, если у вас есть проблемы с отправкой пожертвования или нет подходящего способа оплаты.
+  problem: مشاكل في الدفع
+  help: راسل @ControllerSupportBot إذا واجهتك مشكلة مع التبرع أو لم تجد وسيلة دفع مناسبة.
 
 btn:
   common:
     continue: استمر »
-    true: نعم هذا صحيح
+    "true": نعم هذا صحيح
     back: « إلى الخلف
     cancel: إلغاء
-    off: تعطيل
+    "off": تعطيل
     help: مساعدة
-    yes: نعم
-    no: لا
+    "yes": نعم
+    "no": لا
 
   menu:
     create_post: إنشاء منشور
@@ -578,6 +578,9 @@ btn:
     open_comments: فتح التعليقات
     add_comments: أضف تعليقات
     delete_comments: حذف التعليقات
+    add_native_comments: إضافة التعليقات الأصلية
+    delete_native_comments: حذف التعليقات الأصلية
+    send_silent: إرسال بصمت
 
     add_inline: إضافة أزرار ذات روابط
     clear_inline: حذف أزرار ذات روابط

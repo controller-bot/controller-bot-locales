@@ -1,4 +1,3 @@
----
 language_name: Беларуская
 is_enabled: true
 move: |
@@ -485,13 +484,13 @@ donate:
 btn:
   common:
     continue: Працягнуць »
-    true: Так
+    "true": Так
     back: '« Назад'
     cancel: Скасаваць
-    off: Адключыць
+    "off": Адключыць
     help: Даведка
-    yes: true
-    no: false
+    "yes": Так
+    "no": Не
   menu:
     create_post: Стварыць допіс
     edit_sent_posts: Рэдагаваць допіс
@@ -513,8 +512,8 @@ btn:
       bot: Змяніць бота
       timezone: Змяніць часавы пояс
       delete: Выдаліць канал
-      confirm_delete_yes: true
-      confirm_delete_no: false
+      confirm_delete_yes: Так
+      confirm_delete_no: Не
   post:
     settings:
       disable_notification_disable: 'Гукавое апавяшчэнне: адкл.'
@@ -535,6 +534,9 @@ btn:
     open_comments: Адкрыць каментары
     add_comments: Дадаць каментары
     delete_comments: Выдаліць каментары
+    add_native_comments: Дадаць натыўныя каментарыі
+    delete_native_comments: Выдаліць натыўныя каментарыі
+    send_silent: Адправіць без гуку
     add_inline: Дадаць URL-кнопкі
     clear_inline: Выдаліць URL-кнопкі
     add_reactions: Дадаць рэакцыі

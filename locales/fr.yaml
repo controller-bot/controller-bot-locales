@@ -489,13 +489,13 @@ bot:
 btn:
   common:
     continue: Continuer »
-    true: Oui, Vrai
+    "true": Oui, Vrai
     back: « Retour
     cancel: Annuler
-    off: Désactiver
+    "off": Désactiver
     help: Aide
-    yes: Yes
-    no: No
+    "yes": Yes
+    "no": No
 
   menu:
     create_post: Créer Publication
@@ -553,6 +553,9 @@ btn:
     open_comments: Ouvrir Commentaires
     add_comments: Ajouter Commentaires
     delete_comments: Supprimer Commentaires
+    add_native_comments: Ajouter des commentaires natifs
+    delete_native_comments: Supprimer des commentaires natifs
+    send_silent: Envoi silencieux
 
     add_inline: Ajouter un boutton pour lien URL
     clear_inline: Supprimer bouttons pour lien URL

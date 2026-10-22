@@ -82,7 +82,7 @@ channels:
       channel_not_found: चैनल नहीं मिला।
       you_are_not_administrator: आप इस चैनल के एडमिन नहीं हैं।
       you_do_not_have_rights: आपके पास चैनल में संदेश पोस्ट करने के अधिकार नहीं हैं।
-      bot_is_not_admin: को अपने चैनल में एडमिन के रूप में जोड़ें। कृपया दोबारा जाँचकर फिर प्रयास करें।
+      bot_is_not_admin: "@${username} को अपने चैनल में एडमिन के रूप में जोड़ें। कृपया दोबारा जाँचकर फिर प्रयास करें।"
       bot_is_not_admin_in_group: |
         @${username} को अपने समूह में एडमिन के रूप में जोड़ें और फिर प्रयास करें।
       bot_was_deleted: |
@@ -261,7 +261,7 @@ channels:
       monthly_3: 3 महीने
       monthly_6: 6 महीने
       yearly: एक वर्ष
-      early_2: 2 वर्ष
+      yearly_2: 2 वर्ष
       yearly_3: 3 वर्ष
     subcontrol_description: |
       Controller bot आपके चैनलों के मुद्रीकरण के नए रास्ते खोलता है!
@@ -705,13 +705,13 @@ donate:
 btn:
   common:
     continue: जारी रखें »
-    true: हाँ, सही है
+    "true": हाँ, सही है
     back: « वापस
     cancel: रद्द करें
-    off: बंद करें
+    "off": बंद करें
     help: सहायता
-    yes: हाँ
-    no: नहीं
+    "yes": हाँ
+    "no": नहीं
     confirm: पुष्टि करें
     ok: ठीक है
     next: अगला

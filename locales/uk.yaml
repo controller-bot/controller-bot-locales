@@ -487,13 +487,13 @@ bot:
 btn:
   common:
     continue: Продовжити »
-    true: Так, правильно
+    "true": Так, правильно
     back: « Назад
     cancel: Скасувати
-    off: Вимкнути
+    "off": Вимкнути
     help: Довідка
-    yes: Так
-    no: Ні
+    "yes": Так
+    "no": Ні
 
   menu:
     create_post: Cтворити пост
@@ -551,6 +551,9 @@ btn:
     open_comments: Відкрити коментарі
     add_comments: Додати коментарі
     delete_comments: Видалити коментарі
+    add_native_comments: Додати нативні коментарі
+    delete_native_comments: Видалити нативні коментарі
+    send_silent: Надіслати без звуку
 
     add_inline: Додати кнопки-посилання
     clear_inline: Видалити кнопки-посилання

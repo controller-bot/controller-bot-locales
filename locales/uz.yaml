@@ -82,7 +82,7 @@ channels:
       you_are_not_administrator: Siz bu kanalda admin emassiz.
       you_do_not_have_rights: Sizda kanalda xabar joylash huquqi yo'q.
       bot_is_not_admin: |
-        ni kanalingizga admin qilib qo'shing. Iltimos, yana bir bor tekshirib qayta urinib ko'ring.
+        @${username} ni kanalingizga admin qilib qo'shing. Iltimos, yana bir bor tekshirib qayta urinib ko'ring.
       bot_is_not_admin_in_group: |
         @${username} ni guruhingizga admin qilib qo'shing va qayta urinib ko'ring.
       bot_was_deleted: |
@@ -262,7 +262,7 @@ channels:
       monthly_3: 3 oy
       monthly_6: 6 oy
       yearly: 1 yil
-      early_2: 2 yil
+      yearly_2: 2 yil
       yearly_3: 3 yil
     subcontrol_description: |
       Controller bot kanallaringizni monetizatsiya qilish uchun yangi imkoniyatlar ochadi!
@@ -704,13 +704,13 @@ donate:
 btn:
   common:
     continue: Davom etish »
-    true: Ha, to'g'ri
+    "true": Ha, to'g'ri
     back: « Orqaga
     cancel: Bekor qilish
-    off: O'chirish
+    "off": O'chirish
     help: Yordam
-    yes: Ha
-    no: Yo'q
+    "yes": Ha
+    "no": Yo'q
     confirm: Tasdiqlash
     ok: OK
     next: Keyingi
