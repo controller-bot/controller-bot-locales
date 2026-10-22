@@ -2,379 +2,379 @@ language_name: فارسی
 is_enabled: true
 
 move: |
-  All the main functions like creating and editing posts, view stats and scheduled posts were moved to connected bots, so you no longer need to switch between your bot and Controller Bot every time!
+  همهٔ قابلیت‌های اصلی مانند ساخت و ویرایش پست‌ها، مشاهدهٔ آمار و پست‌های زمان‌بندی‌شده به ربات‌های متصل منتقل شده‌اند، بنابراین دیگر نیازی نیست هر بار بین ربات خودتان و Controller Bot جابه‌جا شوید!
 
-  Go to your connected bot and send the command /start.
+  به ربات متصل خود بروید و دستور /start را بفرستید.
 
 common:
   open_webapp: "📱 باز کردن برنامه وب"
-  choose_language: Please choose your language.
+  choose_language: لطفاً زبان خود را انتخاب کنید.
 
   start: |
-    I can help you manage Telegram channels.
+    من می‌توانم به شما در مدیریت کانال‌های تلگرام کمک کنم.
 
-    You can control me by sending these commands:
+    با فرستادن این دستورها می‌توانید مرا کنترل کنید:
 
-    /newpost - create a new post
+    /newpost - ساخت پست جدید
 
-    /addchannel - add a new channel
-    /mychannels - edit your channels
+    /addchannel - افزودن کانال جدید
+    /mychannels - ویرایش کانال‌های شما
 
-    /settings - other settings
+    /settings - سایر تنظیمات
 
   help: |
-    If you have any questions, take a look at the <a href="https://telegra.ph/Controller-Help-03-20">Controller Help</a>.
+    اگر سؤالی دارید، نگاهی به <a href="https://telegra.ph/Controller-Help-03-20">راهنمای Controller</a> بیندازید.
 
-    You can control me by sending these commands:
+    با فرستادن این دستورها می‌توانید مرا کنترل کنید:
 
-    /newpost - create a new post
-    /addchannel - add a new channel
-    /mychannels - edit your channels
-    /settings - other settings
-    /lang - change language
+    /newpost - ساخت پست جدید
+    /addchannel - افزودن کانال جدید
+    /mychannels - ویرایش کانال‌های شما
+    /settings - سایر تنظیمات
+    /lang - تغییر زبان
 
 bots:
   add: |
-    <b>Connecting a bot</b>
+    <b>اتصال ربات</b>
 
-    To connect a bot, you should follow these two steps:
+    برای اتصال یک ربات، این دو مرحله را دنبال کنید:
 
-    1. Open @BotFather and <a href="https://telegra.ph/Create-Bot-Controller-FAQ-03-28">create a new bot</a>.
-    2. You’ll get a token (e.g. 12345:6789ABCDEF) — just forward or copy-paste it to me.
+    1. @BotFather را باز کنید و <a href="https://telegra.ph/Create-Bot-Controller-FAQ-03-28">یک ربات جدید بسازید</a>.
+    2. یک توکن دریافت می‌کنید (مثلاً 12345:6789ABCDEF) — فقط آن را برای من فوروارد کنید یا کپی-پیست کنید.
 
-    <b>Warning!</b> Don't connect bots already used by other services like Chatfuel, Manybot, ect.
+    <b>هشدار!</b> ربات‌هایی را که قبلاً توسط سرویس‌های دیگری مثل Chatfuel، Manybot و غیره استفاده شده‌اند، متصل نکنید.
 
   auto_button: "🤖 ساخت خودکار ربات"
   auto_created: "✅ ربات ساخته شد و متصل شد:"
-  wrong_token: Doesn't look like anything to me. Please send me a token of your bot.
-  error_add: Invalid token. Try to get a new one or use a token of another bot.
-  bot_already_added: Looks familiar to me. You already have this bot connected.
+  wrong_token: این برای من معنی‌ای ندارد. لطفاً توکن ربات خود را برایم بفرستید.
+  error_add: توکن نامعتبر است. یک توکن جدید بگیرید یا از توکن ربات دیگری استفاده کنید.
+  bot_already_added: برایم آشناست. این ربات قبلاً متصل شده است.
 
 channels:
   welcome: |
-    <b>Channel managment</b>
+    <b>مدیریت کانال‌ها</b>
 
     ${count
-      ? 'Choose a channel from the list below:'
-      : 'There is no added channels yet.'
+      ? 'کانالی را از فهرست زیر انتخاب کنید:'
+      : 'هنوز هیچ کانالی افزوده نشده است.'
     }
   add:
     select_bot: |
-      Choose a bot that will be used to send posts in the channel.
+      رباتی را انتخاب کنید که برای ارسال پست‌ها در کانال استفاده می‌شود.
     welcome: |
-      <b>Adding a channel</b>
+      <b>افزودن کانال</b>
 
-      To add a channel you should follow these two steps:
+      برای افزودن کانال، این دو مرحله را دنبال کنید:
 
-      1. <a href="https://telegra.ph/Add-Bot-to-Admins-Controller-FAQ-03-28">Add @${username} to admins</a> of your channel.
-      2. Then forward to me any message from your channel (you can also send me its username or ID).
+      1. <a href="https://telegra.ph/Add-Bot-to-Admins-Controller-FAQ-03-28">@${username} را به مدیران کانال خود اضافه کنید</a>.
+      2. سپس هر پیامی از کانال خود را برای من فوروارد کنید (می‌توانید نام کاربری یا شناسهٔ آن را هم بفرستید).
     added: |
-      Success! The channel ${channel.username ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>' : '<b>' + channel.name + '</b>'} has been added.
+      موفق! کانال ${channel.username ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>' : '<b>' + channel.name + '</b>'} افزوده شد.
 
-      Go to @${bot_username} to create a new post.
+      برای ساخت پست جدید به @${bot_username} بروید.
 
-      All administrators of your channel can also use this bot to create posts in this channel.
+      همهٔ مدیران کانال شما هم می‌توانند از این ربات برای ساخت پست در این کانال استفاده کنند.
 
-      If you add a new administrator, go to the channel settings and choose "Update Data" to update the list of administrators.
+      اگر مدیر جدیدی اضافه کردید، به تنظیمات کانال بروید و «به‌روزرسانی داده‌ها» را انتخاب کنید تا فهرست مدیران به‌روز شود.
 
     error:
       data: |
-        Please forward to me any message from your channel. Or send me its username or ID instead.
-      channel_not_found: The channel not found.
-      you_are_not_administrator: You aren't an administrator in the channel.
-      you_do_not_have_rights: You don't have rights to post messages in the channel.
-      bot_is_not_admin: Add @${username} to admins of your channel. Please check everything twice and try again.
-      bot_is_not_admin_in_group: Add @${username} to admins of your group and try again.
+        لطفاً هر پیامی از کانال خود را برای من فوروارد کنید، یا نام کاربری یا شناسهٔ آن را بفرستید.
+      channel_not_found: کانال پیدا نشد.
+      you_are_not_administrator: شما مدیر این کانال نیستید.
+      you_do_not_have_rights: شما اجازهٔ ارسال پیام در این کانال را ندارید.
+      bot_is_not_admin: '@${username} را به مدیران کانال خود اضافه کنید. لطفاً همه‌چیز را دوباره بررسی کنید و دوباره تلاش کنید.'
+      bot_is_not_admin_in_group: '@${username} را به مدیران گروه خود اضافه کنید و دوباره تلاش کنید.'
       bot_was_deleted: |
-        Unable to add a channel. @${username} is no longer exist, or its token was revoked. Reconnect this bot or choose another.
-      channel_already_added: This channel is already added. Go to @${bot_username} to create a new post.
+        افزودن کانال ممکن نیست. @${username} دیگر وجود ندارد یا توکن آن لغو شده است. این ربات را دوباره متصل کنید یا ربات دیگری انتخاب کنید.
+      channel_already_added: این کانال قبلاً افزوده شده است. برای ساخت پست جدید به @${bot_username} بروید.
       group_already_added: |
-        This channel is already added by ${admin.first_name}${admin.last_name ? ' ' + admin.last_name : ''}${admin.username ? ' @' + admin.username : ''}
+        این کانال قبلاً توسط ${admin.first_name}${admin.last_name ? ' ' + admin.last_name : ''}${admin.username ? ' @' + admin.username : ''} افزوده شده است
 
   control:
     options: |
-      Here it is: ${channel.name}. What do you want to do with the channel?
+      بفرمایید: ${channel.name}. می‌خواهید با این کانال چه کار کنید؟
     delete_confirm: |
-      Are you sure you want to delete this channel?
+      مطمئنید که می‌خواهید این کانال را حذف کنید؟
 
-      All scheduled posts and saved stats for this channel will be also deleted.
-    channel_deleted: Done! The channel is gone.
+      همهٔ پست‌های زمان‌بندی‌شده و آمارهای ذخیره‌شدهٔ این کانال هم حذف خواهند شد.
+    channel_deleted: انجام شد! کانال حذف شد.
     select_bot: |
       ${count
-        ? 'Choose a bot that will be used to send posts in the channel.'
-        : 'There is no connected bots yet. Send /addchannel to connect a new one.'
+        ? 'ربات مورد نظر را برای ارسال پست‌ها در کانال انتخاب کنید.'
+        : 'هنوز هیچ رباتی متصل نشده است. برای اتصال ربات جدید /addchannel را بفرستید.'
       }
-    bot_is_not_admin: Add the bot to admins of your channel.
-    current_bot: Unable to choose currently used bot.
-    sync_ok: 👌 OK. The data has been synced.
+    bot_is_not_admin: ربات را به مدیران کانال خود اضافه کنید.
+    current_bot: انتخاب رباتی که هم‌اکنون استفاده می‌شود ممکن نیست.
+    sync_ok: 👌 باشه. داده‌ها همگام‌سازی شد.
     set_timezone: |
-      <b>Setting the time zone</b>
+      <b>تنظیم منطقهٔ زمانی</b>
 
-      Send the name of your city to set the time zone. This is necessary so that the delayed posts are published exactly on time according to your local time.
+      نام شهر خود را بفرستید تا منطقهٔ زمانی تنظیم شود. این لازم است تا پست‌های زمان‌بندی‌شده دقیقاً سر وقت بر اساس زمان محلی شما منتشر شوند.
 
-      You can also send the bot a geolocation so that it tries to find the city closest to you, according to which the time zone will be set.
+      همچنین می‌توانید موقعیت مکانی خود را برای ربات بفرستید تا نزدیک‌ترین شهر به شما را پیدا کند و منطقهٔ زمانی بر اساس آن تنظیم شود.
     timezone: |
-      Current time zone:
-      ${city ? '🔹 GMT ' + (gmt > 0 ? '+' + gmt : gmt) + '\n🔹 ' + timezone_id + ' – ' + city : '🔹 None'}
+      منطقهٔ زمانی فعلی:
+      ${city ? '🔹 GMT ' + (gmt > 0 ? '+' + gmt : gmt) + '\n🔹 ' + timezone_id + ' – ' + city : '🔹 تنظیم نشده'}
 
-      Send me the name of the city close to you to change the time zone.
-      Or you can send the bot a geolocation so that it will try to find the closest city to you, according to which the time zone will be set.
+      نام شهری نزدیک به خود را بفرستید تا منطقهٔ زمانی تغییر کند.
+      یا موقعیت مکانی خود را برای ربات بفرستید تا نزدیک‌ترین شهر را پیدا کند و منطقهٔ زمانی بر اساس آن تنظیم شود.
     check_timezone: |
       · GMT ${timezone.gmtOffset > 0 ? '+' + timezone.gmtOffset : timezone.gmtOffset} (${timezone.timeZoneId})
-      · ${countryName}, ${name}
+      · ${countryName}، ${name}
 
-      To change the time zone, send the name of your city.
-      Or you can send the bot a geolocation so that it tries to find the closest city to you to set the time zone to.
+      برای تغییر منطقهٔ زمانی، نام شهر خود را بفرستید.
+      یا موقعیت مکانی خود را برای ربات بفرستید تا نزدیک‌ترین شهر را برای تنظیم منطقهٔ زمانی پیدا کند.
 
-      Correct? If not, try entering another major city closest to you.
+      درست است؟ اگر نه، نام شهر بزرگ دیگری نزدیک به خود را وارد کنید.
     select_nearest: |
-      Select the nearest city.
-    error_timezone: Sorry, I can't find this city. Try to send me the name of another city close to you.
-    error_request_timezone: Something went wrong :( Please try again. Send us a message to @ControllerSupportBot if for some reason it doesn't change anything.
-    save_timezone: OK, your timezone saved.
+      نزدیک‌ترین شهر را انتخاب کنید.
+    error_timezone: متأسفم، این شهر را پیدا نکردم. نام شهر دیگری نزدیک به خود را بفرستید.
+    error_request_timezone: مشکلی پیش آمد :( لطفاً دوباره تلاش کنید. اگر تغییری نکرد، به @ControllerSupportBot پیام بدهید.
+    save_timezone: باشه، منطقهٔ زمانی شما ذخیره شد.
 
 post:
-  select_channel: Choose a channel to create a new post.
+  select_channel: کانالی را برای ساخت پست جدید انتخاب کنید.
   no_channels: |
-    There is no added channels yet.
+    هنوز هیچ کانالی افزوده نشده است.
 
-    Send /addchannel to add a new one.
-  error_check_channel: Something went wrong :( Please try again. Send us a message to @ControllerSupportBot if for some reason it doesn't change anything.
-  channel_not_found: The channel doesn't exist, or you don't have access to it. Go back to @ControllerBot and try again.
+    برای افزودن کانال جدید /addchannel را بفرستید.
+  error_check_channel: مشکلی پیش آمد :( لطفاً دوباره تلاش کنید. اگر تغییری نکرد، به @ControllerSupportBot پیام بدهید.
+  channel_not_found: این کانال وجود ندارد یا شما به آن دسترسی ندارید. به @ControllerBot برگردید و دوباره تلاش کنید.
   problems: |
-    Unable to create a new post in ${channel.name}. The next issues found:
+    ساخت پست جدید در ${channel.name} ممکن نیست. این مشکلات پیدا شدند:
 
     ${problems}
 
     ${from.id == channel.owner_id
-      ? 'Go to the channel settings to fix the issues.'
-      : 'The creator of the channel should go to the channel settings and fix the issues.'
+      ? 'برای رفع مشکلات به تنظیمات کانال بروید.'
+      : 'سازندهٔ کانال باید به تنظیمات کانال برود و مشکلات را رفع کند.'
     }
   problem_items:
-    timezone_is_not_set: 🔹 the time zone is not set
-    bot_is_not_connection: 🔹 the channel is not connected to a bot
-    channel_not_found: 🔹 the channel is no longer exist
-    bot_is_not_admin: 🔹 the connected bot is not added to the channel admins
-    bot_was_deleted: 🔹 the connected bot is no longer exist, or its token was revoked
+    timezone_is_not_set: 🔹 منطقهٔ زمانی تنظیم نشده است
+    bot_is_not_connection: 🔹 کانال به هیچ رباتی متصل نیست
+    channel_not_found: 🔹 کانال دیگر وجود ندارد
+    bot_is_not_admin: 🔹 ربات متصل به مدیران کانال اضافه نشده است
+    bot_was_deleted: 🔹 ربات متصل دیگر وجود ندارد یا توکن آن لغو شده است
 
   start: |
-    Go to @ControllerBot to connect a new channel and start creating posts.
+    برای اتصال کانال جدید و شروع ساخت پست‌ها به @ControllerBot بروید.
 
   make:
     set_formatting: |
-      First, you need to set the formatting style that will be used by default.
+      ابتدا باید سبک قالب‌بندی پیش‌فرض را انتخاب کنید.
 
-      Send /markdown or /HTML to get a hint.
+      برای دیدن راهنما /markdown یا /HTML را بفرستید.
 
-      Most users prefer Markdown because it is shorter and easier. Native formatting is allowed as well.
+      بیشتر کاربران Markdown را ترجیح می‌دهند چون کوتاه‌تر و ساده‌تر است. قالب‌بندی بومی هم مجاز است.
     start: |
-      Here it is: <b>"${channel.name}"</b>${channel.username ? ' @' + channel.username : ''}.
+      بفرمایید: <b>"${channel.name}"</b>${channel.username ? ' @' + channel.username : ''}.
 
-      Send me one or multiple messages you want to include in the post. It can be anything — a text, photo, video, even a sticker.
-    clear: Success! All messages have been deleted.
-    message_deleted: Done! The message has been deleted.
-    not_posts: There is no any messages yet.
-    not_posts_for_done: There is no any messages yet.
+      یک یا چند پیامی را که می‌خواهید در پست باشد برای من بفرستید. هر چیزی می‌شود — متن، عکس، ویدیو، حتی استیکر.
+    clear: موفق! همهٔ پیام‌ها حذف شدند.
+    message_deleted: انجام شد! پیام حذف شد.
+    not_posts: هنوز هیچ پیامی وجود ندارد.
+    not_posts_for_done: هنوز هیچ پیامی وجود ندارد.
     preview_sent: |
-      The post preview sent above.
+      پیش‌نمایش پست در بالا ارسال شد.
 
-      You have <b>${pluralize(posts, 'message', 'messages', 'messages')}</b> in this post:
+      شما <b>${pluralize(posts, 'پیام', 'پیام‌ها', 'پیام‌ها')}</b> در این پست دارید:
       ${messages}
-    error_poll_not_anonymous: Sorry, but you can\'t send non-anonymous polls to channels.
+    error_poll_not_anonymous: متأسفم، اما ارسال نظرسنجی غیرناشناس به کانال‌ها ممکن نیست.
     error_parse: |
-      Errors in formatting text:
+      خطاهای قالب‌بندی متن:
 
       <pre>${description}</pre>
 
-      Please <a href="https://telegra.ph/Parsing-Error-Fix-Controller-FAQ-03-28">fix all errors</a> and send message again.
-    continue_collect: You can continue to send me messages.
+      لطفاً <a href="https://telegra.ph/Parsing-Error-Fix-Controller-FAQ-03-28">همهٔ خطاها را رفع کنید</a> و پیام را دوباره بفرستید.
+    continue_collect: می‌توانید ارسال پیام‌ها را ادامه دهید.
     html: |
-      <b>bold</b>
-      &lt;b&gt;bold&lt;/b&gt;
+      <b>پررنگ</b>
+      &lt;b&gt;پررنگ&lt;/b&gt;
 
-      <i>italic</i>
-      &lt;i&gt;italic&lt;/i&gt;
+      <i>مورب</i>
+      &lt;i&gt;مورب&lt;/i&gt;
 
-      <a href="http://www.example.com/">inline URL</a>
-      &lt;a href=&quot;http://www.example.com/&quot;&gt;inline URL&lt;/a&gt;
+      <a href="http://www.example.com/">پیوند درون‌خطی</a>
+      &lt;a href=&quot;http://www.example.com/&quot;&gt;پیوند درون‌خطی&lt;/a&gt;
 
-      <code>inline fixed-width code</code>
-      &lt;code&gt;inline fixed-width code&lt;/code&gt;
+      <code>کد هم‌عرض درون‌خطی</code>
+      &lt;code&gt;کد هم‌عرض درون‌خطی&lt;/code&gt;
 
-      <pre>pre-formatted fixed-width code block</pre>
-      &lt;pre&gt;pre-formatted fixed-width
-      code block&lt;/pre&gt;
+      <pre>بلوک کد هم‌عرض پیش‌قالب‌بندی‌شده</pre>
+      &lt;pre&gt;بلوک کد هم‌عرض
+      پیش‌قالب‌بندی‌شده&lt;/pre&gt;
     markdown: |
-      <b>bold text</b>
-      *bold text*
+      <b>متن پررنگ</b>
+      *متن پررنگ*
 
-      <i>italic text</i>
-      _italic text_
+      <i>متن مورب</i>
+      _متن مورب_
 
-      <a href="http://www.example.com/">text</a>
-      [text](http://www.example.com/)
+      <a href="http://www.example.com/">متن</a>
+      [متن](http://www.example.com/)
 
-      <code>inline fixed-width code</code>
-      `inline fixed-width code`
+      <code>کد هم‌عرض درون‌خطی</code>
+      `کد هم‌عرض درون‌خطی`
 
-      <pre>text
-      pre-formatted fixed-width code block</pre>
-      ```pre-formatted fixed-width
-      code block
+      <pre>متن
+      بلوک کد هم‌عرض پیش‌قالب‌بندی‌شده</pre>
+      ```بلوک کد هم‌عرض
+      پیش‌قالب‌بندی‌شده
       ```
-    canceled: Creating of the post has been canceled.
+    canceled: ساخت پست لغو شد.
     inline:
       welcome: |
-        Send me a list of URL buttons for the message. Please use this format:
-        <pre>Button text 1 - http://www.example.com/ | Button text 2 - http://www.example2.com/
-        Button text 3 - http://www.example3.com/
+        فهرست دکمه‌های URL را برایم بفرستید. لطفاً از این قالب استفاده کنید:
+        <pre>متن دکمه 1 - http://www.example.com/ | متن دکمه 2 - http://www.example2.com/
+        متن دکمه 3 - http://www.example3.com/
         </pre>
         
-        You can also pass an optional button color:
+        همچنین می‌توانید رنگ دلخواه دکمه را اضافه کنید:
         <pre>
-        Button 1 - http://example1.com - style:green
-        Button 2 - http://example2.com - style:blue
-        Button 3 - http://example3.com - style:red
+        دکمه 1 - http://example1.com - style:green
+        دکمه 2 - http://example2.com - style:blue
+        دکمه 3 - http://example3.com - style:red
         </pre>
         
-        Use the <b>|</b> separator to add up to three buttons in a row. Example:
+        برای افزودن تا سه دکمه در یک ردیف از جداکنندهٔ <b>|</b> استفاده کنید. مثال:
         <pre>
-        Button 1 - http://example1.com | Button 2 - http://example2.com
-        Button 3 - http://example3.com - style:red | Button 4 - http://example4.com
+        دکمه 1 - http://example1.com | دکمه 2 - http://example2.com
+        دکمه 3 - http://example3.com - style:red | دکمه 4 - http://example4.com
         </pre>
         
-        ${current ? '\nCurrent buttons:\n' + current : ''}
+        ${current ? '\nدکمه‌های فعلی:\n' + current : ''}
 
-        Choose 'Cancel' to back to creating of the post.
+        برای بازگشت به ساخت پست، «لغو» را انتخاب کنید.
       error: |
-        Errors in URL buttons list: <code>${error}</code>
+        خطاها در فهرست دکمه‌های URL: <code>${error}</code>
 
-        Please fix all errors and send message again.
+        لطفاً همهٔ خطاها را رفع کنید و پیام را دوباره بفرستید.
       not_keyboard: |
-        The message sent by you does not fit the format of URL buttons list. Please check everything twice and try again.
-      save: URL buttons saved. You can continue to send me messages.
-      cleared: Success! URL buttons cleared.
+        پیامی که فرستادید با قالب فهرست دکمه‌های URL مطابقت ندارد. لطفاً دوباره بررسی کنید و دوباره تلاش کنید.
+      save: دکمه‌های URL ذخیره شدند. می‌توانید ارسال پیام‌ها را ادامه دهید.
+      cleared: موفق! دکمه‌های URL پاک شدند.
     reactions:
       welcome: |
-        <a href="https://telegra.ph/file/dd1fcbdd1ebb1ce76ab59.jpg">&#8203;</a>Send me emojies or a text with <b>/</b> as separator to add reactions.
+        <a href="https://telegra.ph/file/dd1fcbdd1ebb1ce76ab59.jpg">&#8203;</a>برای افزودن واکنش‌ها، ایموجی یا متنی با جداکنندهٔ <b>/</b> برایم بفرستید.
 
-        For example:
+        مثلاً:
       not_found_smiles: |
-        Send me one or more emoticons. For example: 👍👎
-      save: Reactions saved. You can continue to send me messages.
-      cleared: Success! Reactions cleared.
-      notify: Counters will be available after sending.
+        یک یا چند ایموجی برایم بفرستید. مثلاً: 👍👎
+      save: واکنش‌ها ذخیره شدند. می‌توانید ارسال پیام‌ها را ادامه دهید.
+      cleared: موفق! واکنش‌ها پاک شدند.
+      notify: شمارنده‌ها پس از ارسال در دسترس خواهند بود.
       default_reactions:
         welcome: |
-          You can set reactions that will be automatically added to messages in new posts. Send me one or more emoticons. For example: 👍👎
+          می‌توانید واکنش‌هایی تعیین کنید که به‌طور خودکار به پیام‌های پست‌های جدید اضافه می‌شوند. یک یا چند ایموجی برایم بفرستید. مثلاً: 👍👎
 
-          ${reactions.length ? 'Current default reactions: ' + reactions.join(' ') : ''}
-        saved: Default reactions saved.
-        deleted: Default reactions disabled.
-        canceled: Setting of the default reactions has been canceled.
+          ${reactions.length ? 'واکنش‌های پیش‌فرض فعلی: ' + reactions.join(' ') : ''}
+        saved: واکنش‌های پیش‌فرض ذخیره شدند.
+        deleted: واکنش‌های پیش‌فرض غیرفعال شدند.
+        canceled: تنظیم واکنش‌های پیش‌فرض لغو شد.
     image:
       welcome: |
-        Send me a photo to attach it as a link preview.
-      only_link_or_photo: Send me a photo or a link.
+        عکسی بفرستید تا به‌عنوان پیش‌نمایش پیوند ضمیمه شود.
+      only_link_or_photo: عکس یا پیوند بفرستید.
       error: |
-        An error occurred while uploading.
+        هنگام بارگذاری خطایی رخ داد.
 
-        Message us at @ControllerSupportBot to report an issue.
-      save: The photo attached.
-      cleared: Attached photo deleted.
+        برای گزارش مشکل به @ControllerSupportBot پیام بدهید.
+      save: عکس ضمیمه شد.
+      cleared: عکس ضمیمه حذف شد.
 
   send:
     count_posts: |
-      ${pluralize(count, 'message', 'messages', 'messages')} ready to be sent to <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''}.
-    choose_type: When you want to send the post?
+      ${pluralize(count, 'پیام', 'پیام‌ها', 'پیام‌ها')} آمادهٔ ارسال به <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''}.
+    choose_type: پست را چه زمانی ارسال کنم؟
     problems: |
-      Unable to create a new post in ${channel.name}. The next issues found:
+      ساخت پست جدید در ${channel.name} ممکن نیست. این مشکلات پیدا شدند:
 
       ${problems}
 
       ${from.id == channel.owner_id
-        ? 'Go to the channel settings to fix the issues.'
-        : 'The creator of the channel should go to the channel settings and fix the issues.'
+        ? 'برای رفع مشکلات به تنظیمات کانال بروید.'
+        : 'سازندهٔ کانال باید به تنظیمات کانال برود و مشکلات را رفع کند.'
       }
-    cancel_send: Sending of the post has been canceled.
-    continue_send: You can continue to send me messages.
+    cancel_send: ارسال پست لغو شد.
+    continue_send: می‌توانید ارسال پیام‌ها را ادامه دهید.
     confirm_send: >
-      Are you sure you want to send <b>${pluralize(posts, 'message', 'messages', 'messages')}</b> to
-      <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''}?
-    waiting: 🕒 Sending...
-    ok: Done!
+      مطمئنید که می‌خواهید <b>${pluralize(posts, 'پیام', 'پیام‌ها', 'پیام‌ها')}</b> را به
+      <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''} ارسال کنید؟
+    waiting: 🕒 در حال ارسال...
+    ok: انجام شد!
 
   schedule:
     day:
-      today: today
-      tomorrow: tomorrow
-      after_tomorrow: overmorrow
+      today: امروز
+      tomorrow: فردا
+      after_tomorrow: پس‌فردا
     welcome: |
-      Send time at which you want to send the post ${day}.
-      Send time+date to enqueue the post at any other day.
+      ساعتی را که می‌خواهید پست ${day} ارسال شود بفرستید.
+      برای زمان‌بندی در هر روز دیگری، ساعت+تاریخ بفرستید.
 
     help: |
-      <b>The following time formats are supported:</b>
+      <b>این قالب‌های ساعت پشتیبانی می‌شوند:</b>
       <pre>"6" → 06:00
       "5 3" → 05:03
       "15:30" → 15:30
       "1530" → 15:30</pre>
 
-      <b>The following date formats are supported:</b>
-      <pre>"6" → 6 of the current month
-      "9 12" → December 9
-      "8 7 18" → Jule 8, 2018</pre>
+      <b>این قالب‌های تاریخ پشتیبانی می‌شوند:</b>
+      <pre>"6" → ۶م ماه جاری
+      "9 12" → ۹ دسامبر
+      "8 7 18" → ۸ ژوئیهٔ ۲۰۱۸</pre>
 
-      You can also use colons and dots instead of spaces for separation.
+      برای جدا کردن اجزا می‌توانید به‌جای فاصله از دونقطه یا نقطه استفاده کنید.
 
-      If you send only time, the post will be enqueued at the current day by default. To enqueue the post at any other day send time+date. For example, <code>16 30 6 8 -> 16:30, Aug 6</code>
-    error_date: Incorrect date or time. Choose 'Help' to get a hint.
-    invalid_date: Incorrect date.
-    limit: You need to choose a time more than the current by 1 minute or more. The current date and time is ${current_date}.
-    limit_year: 'Unable to choose a time over than the current by 1 year or more. Who knows what is going to happen... :)'
+      اگر فقط ساعت بفرستید، پست به‌طور پیش‌فرض برای امروز زمان‌بندی می‌شود. برای هر روز دیگری ساعت+تاریخ بفرستید. مثال: <code>16 30 6 8 -> 16:30، ۶ اوت</code>
+    error_date: تاریخ یا ساعت نادرست است. برای دیدن راهنما «پشتیبانی» را انتخاب کنید.
+    invalid_date: تاریخ نادرست است.
+    limit: باید زمانی حداقل ۱ دقیقه بعد از زمان فعلی انتخاب کنید. تاریخ و ساعت فعلی ${current_date} است.
+    limit_year: 'انتخاب زمانی بیش از یک سال در آینده ممکن نیست. کسی چه می‌داند تا آن موقع چه می‌شود... :)'
     ok: |
-       Scheduled post has been сreated. The post will be sent to <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''} on <b>${date}</b>.
+      پست زمان‌بندی‌شده ساخته شد. پست در <b>${date}</b> به <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''} ارسال خواهد شد.
 
   timer:
-    welcome: Choose or send a period of time in hours after which the post will self-destruct.
-    wrong_hour: Incorrect time. Only periods from 1 to 48 hours are allowed.
-    save_timer: The self-destruct timer saved.
-    timer_off: The self-destruct timer disabled.
+    welcome: مدت زمانی (به ساعت) انتخاب کنید یا بفرستید که پس از آن پست به‌طور خودکار حذف شود.
+    wrong_hour: زمان نادرست است. فقط بازه‌های ۱ تا ۴۸ ساعت مجاز هستند.
+    save_timer: تایمر خودتخریبی ذخیره شد.
+    timer_off: تایمر خودتخریبی غیرفعال شد.
 posts:
   edit:
-    welcome: Forward to me a message from your channel you want to edit.
+    welcome: پیامی از کانال خود را که می‌خواهید ویرایش کنید برای من فوروارد کنید.
     only_channel_post: |
-      Sorry, only messages from channels are available for editing.
+      متأسفم، فقط پیام‌های کانال‌ها قابل ویرایش هستند.
     channel_not_found: |
-       This channel is not available. The channel and the bot via which message was sent must be connected to Controller Bot. Please check everything twice and try again.
+      این کانال در دسترس نیست. کانال و رباتی که پیام با آن ارسال شده باید به Controller Bot متصل باشند. لطفاً دوباره بررسی کنید و دوباره تلاش کنید.
     unsupported_type: |
-      Unable to edit this message. You can edit only text messages and captions.
+      ویرایش این پیام ممکن نیست. فقط پیام‌های متنی و عنوان‌ها قابل ویرایش هستند.
     post_not_found: |
-      This post is not available. The channel and the bot via which message was sent must be connected to Controller Bot. Please check everything twice and try again.
+      این پست در دسترس نیست. کانال و رباتی که پیام با آن ارسال شده باید به Controller Bot متصل باشند. لطفاً دوباره بررسی کنید و دوباره تلاش کنید.
     editing: |
-      Message type: ${type_text}.${type == 'text' ? '\nFormatting style: ' + parse_mode : ''}
+      نوع پیام: ${type_text}.${type == 'text' ? '\nسبک قالب‌بندی: ' + parse_mode : ''}
 
-      Send a new text to edit this ${type == 'text' ? 'message' : 'caption. No more 1024 characters are allowed'}.
-    not_changed: 'Something went wrong :( Please try again.'
-    edited: Success! Message has been edited.
-    continue_edit: You can continue to edit the message.
+      متن جدیدی بفرستید تا ${type == 'text' ? 'این پیام را ویرایش کنید' : 'عنوان را ویرایش کنید. بیش از ۱۰۲۴ کاراکتر مجاز نیست'}.
+    not_changed: 'مشکلی پیش آمد :( لطفاً دوباره تلاش کنید.'
+    edited: موفق! پیام ویرایش شد.
+    continue_edit: می‌توانید ویرایش پیام را ادامه دهید.
 
-  edit_time: Send time+date to re-enqueue the post at any other day.
+  edit_time: برای زمان‌بندی مجدد پست در روزی دیگر، ساعت+تاریخ بفرستید.
 
   types:
-    text: text
-    audio: audio
-    document: file
-    photo: photo
-    sticker: sticker
-    video: video
-    voice: voice message
-    contact: contact
-    location: location
-    venue: venue
-    video_note: video message
-    poll: poll
-    album: album
+    text: متن
+    audio: صوت
+    document: فایل
+    photo: عکس
+    sticker: استیکر
+    video: ویدیو
+    voice: پیام صوتی
+    contact: مخاطب
+    location: موقعیت مکانی
+    venue: مکان
+    video_note: پیام ویدیویی
+    poll: نظرسنجی
+    album: آلبوم
   types_emoji:
     text: 📃
     audio: 🎧
@@ -389,9 +389,9 @@ posts:
     video_note: 📹
     poll: 📊
     album: 🖼
-  welcome_schedule: Choose a channel to manage scheduled posts.
-  not_schedule_posts: There is no scheduled posts for this channel in yet.
-  choose_scheduled_post: Choose a scheduled post you want to view or delete.
+  welcome_schedule: کانالی را برای مدیریت پست‌های زمان‌بندی‌شده انتخاب کنید.
+  not_schedule_posts: هنوز پست زمان‌بندی‌شده‌ای برای این کانال وجود ندارد.
+  choose_scheduled_post: پست زمان‌بندی‌شده‌ای را که می‌خواهید ببینید یا حذف کنید انتخاب کنید.
   view_scheduled_post: |
     ${messages}
     🕘 ${date} › ${channel.username
@@ -399,230 +399,230 @@ posts:
       : channel.name
     }
     ${date_delete ? '🗑 ' + date_delete : ''}
-  confirm_delete_post: Are you sure you want to delete this scheduled post?
-  scheduled_post_was_deleted: Done! Scheduled post has been deleted.
+  confirm_delete_post: مطمئنید که می‌خواهید این پست زمان‌بندی‌شده را حذف کنید؟
+  scheduled_post_was_deleted: انجام شد! پست زمان‌بندی‌شده حذف شد.
 
 settings:
-  welcome: Choose what you want to change.
+  welcome: انتخاب کنید چه چیزی را می‌خواهید تغییر دهید.
 
   bots:
     select_bot: |
       ${count
-        ? 'Choose a bot you want to delete.'
-        : 'There is no connected bots yet.'
+        ? 'ربات مورد نظر را انتخاب کنید.'
+        : 'هنوز هیچ رباتی متصل نشده است.'
       }
     channel_item: |
       ${index}. ${name}
     confirm_delete: |
       ${count
-        ? 'The bot is connected with these channels:\n\n' + channels
-        : 'The bot is not connected with any channels.\n'
+        ? 'این ربات به این کانال‌ها متصل است:\n\n' + channels
+        : 'این ربات به هیچ کانالی متصل نیست.\n'
       }
-      Are you sure you want to delete this bot?
-    bot_deleted: Done! The bot is gone.
+      مطمئنید که می‌خواهید این ربات را حذف کنید؟
+    bot_deleted: انجام شد! ربات حذف شد.
     bot_in_use: "نمی‌توان قطع اتصال: انتشار در انتظار یا اشتراک فعال وجود دارد"
 
 statistics:
-  select_channel: Choose a channel to view stats.
+  select_channel: کانالی را برای مشاهدهٔ آمار انتخاب کنید.
   no_channels: |
-    There is no added channels yet.
+    هنوز هیچ کانالی افزوده نشده است.
 
-    Send /addchannel to add a new one.
-  selected_channel: 'Here it is: ${channel.name}. What do you want to do with stats?'
-  channel_not_found: This channel is not available.
-  select_periods: Choose a period you want to get stats.
-  loading_data: 🕒 Processing the data and rendering graphs...
+    برای افزودن کانال جدید /addchannel را بفرستید.
+  selected_channel: 'بفرمایید: ${channel.name}. با آمار چه کار می‌خواهید بکنید؟'
+  channel_not_found: این کانال در دسترس نیست.
+  select_periods: بازهٔ زمانی مورد نظر برای آمار را انتخاب کنید.
+  loading_data: 🕒 در حال پردازش داده‌ها و رسم نمودارها...
   error_load_data: |
-    An error occurred while data processing.
+    هنگام پردازش داده‌ها خطایی رخ داد.
 
-    Message us at @ControllerSupportBot to report an issue.
-  not_found_data: There is no stats data for this channel yet. Come back later.
+    برای گزارش مشکل به @ControllerSupportBot پیام بدهید.
+  not_found_data: هنوز دادهٔ آماری برای این کانال وجود ندارد. بعداً برگردید.
   share_text: |
-    Here is the link to view stats of ${channel.name}${channel.username ? ' @' + channel.username : ''}
+    این پیوند مشاهدهٔ آمار ${channel.name}${channel.username ? ' @' + channel.username : ''} است
   data: |
-    Stats of ${channel.username ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>' : channel.name} for ${period == 'week'
-      ? 'the last 7 days'
-      : 'the last 31 day'
+    آمار ${channel.username ? '<a href="https://t.me/' + channel.username + '">' + channel.name + '</a>' : channel.name} برای ${period == 'week'
+      ? '۷ روز گذشته'
+      : '۳۱ روز گذشته'
     }.
 
     ${data}
   chart:
     title: |
-      Stats for ${channel.name}${channel.username ? ' @' + channel.username : ''}
-    copyright: Powered by @ControllerBot
-    label: subscribers
+      آمار ${channel.name}${channel.username ? ' @' + channel.username : ''}
+    copyright: نیرو گرفته از @ControllerBot
+    label: مشترکان
 
 bot:
   start:
-    welcome: Here you can create rich posts, view stats and accomplish other tasks.
+    welcome: اینجا می‌توانید پست‌های قالب‌بندی‌شده بسازید، آمار ببینید و کارهای دیگر انجام دهید.
 
   is_not_user: |
-    To start using this bot, you need to send the command /start to @ControllerBot, then go back to this bot and tap the "Continue" button.
+    برای شروع استفاده از این ربات، باید دستور /start را به @ControllerBot بفرستید، سپس به این ربات برگردید و دکمهٔ «ادامه» را بزنید.
 
   channels:
     controller_updates_join_link: https://t.me/joinchat/AAAAAFNNAyKG1y7GopROHg
     controller_updates_id: '-1001397556002'
     controller_updates: |
-      🍀 We recommend you to join on the <a href="https://t.me/joinchat/AAAAAFNNAyKG1y7GopROHg">official channel</a> of Controller Bot to be aware of new updates and other news of the bot.
+      🍀 پیشنهاد می‌کنیم عضو <a href="https://t.me/joinchat/AAAAAFNNAyKG1y7GopROHg">کانال رسمی</a> Controller Bot شوید تا از به‌روزرسانی‌ها و سایر اخبار ربات باخبر شوید.
 
-      This message will not show if you join the channel.
+      اگر عضو کانال شوید، این پیام نمایش داده نخواهد شد.
 
     secretship_join_link: https://t.me/joinchat/AAAAAD63ENxmBG7CW3RG7A
     secretship_id: '-1001052184796'
     secretship: |
-      🍀 Please join <a href="https://t.me/joinchat/AAAAAD63ENxmBG7CW3RG7A">the channel</a> of the founder and developer of this bot.
+      🍀 لطفاً عضو <a href="https://t.me/joinchat/AAAAAD63ENxmBG7CW3RG7A">کانال</a> بنیان‌گذار و توسعه‌دهندهٔ این ربات شوید.
 
-      This message will not show if you join the channel.
+      اگر عضو کانال شوید، این پیام نمایش داده نخواهد شد.
 
     bot_updates_join_link: https://t.me/joinchat/AAAAAD3PQl5OvYEEjS6RJw
     bot_updates_id: '-1001036993118'
     bot_updates: |
-      🍀 Please join <a href="https://t.me/joinchat/AAAAAD3PQl5OvYEEjS6RJw">the channel</a> of the founder and developer of this bot.
+      🍀 لطفاً عضو <a href="https://t.me/joinchat/AAAAAD3PQl5OvYEEjS6RJw">کانال</a> بنیان‌گذار و توسعه‌دهندهٔ این ربات شوید.
 
-      This message will not show if you join the channel.
+      اگر عضو کانال شوید، این پیام نمایش داده نخواهد شد.
 
   settings:
     posting:
       open: |
-        Here you can set the formatting style that will be used by default. Send /markdown or /HTML to get a hint.
+        اینجا می‌توانید سبک قالب‌بندی پیش‌فرض را تعیین کنید. برای دیدن راهنما /markdown یا /HTML را بفرستید.
 
-        And set reactions that will be automatically added to messages in new posts as well.
+        همچنین می‌توانید واکنش‌هایی تعیین کنید که به‌طور خودکار به پیام‌های پست‌های جدید اضافه می‌شوند.
 
 btn:
   common:
-    continue: Continue »
-    "true": Yes, It's Right
-    back: « Back
-    cancel: Cancel
-    "off": Disable
-    help: Help
-    "yes": Yes
-    "no": No
+    continue: ادامه »
+    "true": بله، درست است
+    back: « بازگشت
+    cancel: لغو
+    "off": غیرفعال
+    help: پشتیبانی
+    "yes": بله
+    "no": خیر
 
   menu:
-    create_post: Create Post
-    edit_sent_posts: Edit Post
-    scheduled_posts: Scheduled Posts
-    channels: Channels
-    statistics: Channel Stats
-    settings: Settings
+    create_post: ساخت پست
+    edit_sent_posts: ویرایش پست
+    scheduled_posts: پست‌های زمان‌بندی‌شده
+    channels: کانال‌ها
+    statistics: آمار کانال
+    settings: تنظیمات
 
   channels:
-    add_channel: Add Channel
+    add_channel: افزودن کانال
     add_bot: اضافه کردن ربات
-    add_change_bot: Change Bot
-    channel_added: Create Post
+    add_change_bot: تغییر ربات
+    channel_added: ساخت پست
 
-    how_to_create_bot: How to create bot?
+    how_to_create_bot: چگونه ربات بسازیم؟
     how_to_create_bot_url: https://telegra.ph/Create-Bot-Controller-FAQ-03-28
 
     control:
-      how_to_add_admin: How to add an admin?
+      how_to_add_admin: چگونه مدیر اضافه کنیم؟
       how_to_add_admin_url: https://telegra.ph/Admins-Controller-FAQ-03-28
 
-      update: Update Data
-      bot: Change Connected Bot
-      timezone: Change Time Zone
-      delete: Delete Channel
+      update: به‌روزرسانی داده‌ها
+      bot: تغییر ربات متصل
+      timezone: تغییر منطقهٔ زمانی
+      delete: حذف کانال
 
-      confirm_delete_yes: Yes
-      confirm_delete_no: No
+      confirm_delete_yes: بله
+      confirm_delete_no: خیر
 
   post:
     settings:
-      disable_notification_disable: 'Silent Broadcast: OFF'
-      disable_notification_enable: 'Silent Broadcast: ON'
+      disable_notification_disable: 'انتشار بی‌صدا: خاموش'
+      disable_notification_enable: 'انتشار بی‌صدا: روشن'
 
-      disable_web_page_preview_disable: 'Link Previews: ON'
-      disable_web_page_preview_enable: 'Link Previews: OFF'
+      disable_web_page_preview_disable: 'پیش‌نمایش پیوند: روشن'
+      disable_web_page_preview_enable: 'پیش‌نمایش پیوند: خاموش'
 
-      parse_mode_markdown: 'Formatting Style: Markdown'
-      parse_mode_html: 'Formatting Style: HTML'
+      parse_mode_markdown: 'سبک قالب‌بندی: Markdown'
+      parse_mode_html: 'سبک قالب‌بندی: HTML'
 
-      default_reactions_disable: 'Default Reactions: OFF'
-      default_reactions_enable: 'Default Reactions: ON'
+      default_reactions_disable: 'واکنش‌های پیش‌فرض: خاموش'
+      default_reactions_enable: 'واکنش‌های پیش‌فرض: روشن'
 
-    faq: Controller Help
+    faq: راهنمای Controller
 
-    control_channel: Go to Channel Settings
-    return_to_channels: « Back to Channels List
+    control_channel: به تنظیمات کانال بروید
+    return_to_channels: « بازگشت به فهرست کانال‌ها
 
-    continue: Continue »
+    continue: ادامه »
 
-    add_image: Attach Photo
-    clear_image: Delete Attached Photo
+    add_image: پیوست عکس
+    clear_image: حذف عکس پیوست
 
-    open_comments: Open Comments
-    add_comments: Add Comments
-    delete_comments: Delete Comments
+    open_comments: باز کردن نظرات
+    add_comments: افزودن نظرات
+    delete_comments: حذف نظرات
     add_native_comments: افزودن نظرهای بومی
     delete_native_comments: حذف نظرهای بومی
     send_silent: ارسال بی‌صدا
 
-    add_inline: Add URL Buttons
-    clear_inline: Delete URL Buttons
+    add_inline: افزودن دکمهٔ URL
+    clear_inline: حذف دکمه‌های URL
 
-    add_reactions: Add Reactions
-    clear_reactions: Delete Reactions
+    add_reactions: افزودن واکنش‌ها
+    clear_reactions: حذف واکنش‌ها
 
-    clear: Delete All
-    preview: Preview
-    done: Send
-    cancel: Cancel
+    clear: حذف همه
+    preview: پیش‌نمایش
+    done: ارسال
+    cancel: لغو
 
-    more: ⇣ Show Actions
+    more: ⇣ نمایش اقدامات
 
-    delete: Delete Message
-    silent_enable: 'Notify: ON'
-    silent_disable: 'Notify: OFF'
-    preview_enable: 'Link Previews: ON'
-    preview_disable: 'Link Previews: OFF'
+    delete: حذف پیام
+    silent_enable: 'اعلان: روشن'
+    silent_disable: 'اعلان: خاموش'
+    preview_enable: 'پیش‌نمایش پیوند: روشن'
+    preview_disable: 'پیش‌نمایش پیوند: خاموش'
 
     send:
       self_destruct_timer: "${+hours
-        ? 'Self-Destruct Timer: ' + hours + 'h'
-        : 'Set Self-Destruct Timer'
+        ? 'تایمر خودتخریبی: ' + hours + ' ساعت'
+        : 'تنظیم تایمر خودتخریبی'
       }"
-      hours: ${hour}h
-      send_now: Send Now
-      sent: View Post in Channel
-      create_scheduled: Enqueue
+      hours: ${hour} ساعت
+      send_now: ارسال فوری
+      sent: مشاهدهٔ پست در کانال
+      create_scheduled: زمان‌بندی
 
-      send: Send
-      cancel: Cancel
+      send: ارسال
+      cancel: لغو
 
     schedule:
       today: |-
-        ${active ? '🔹 ' : ''}Today
+        ${active ? '🔹 ' : ''}امروز
       tomorrow: |-
-        ${active ? '🔹 ' : ''}Tomorrow
+        ${active ? '🔹 ' : ''}فردا
       after_tomorrow: |-
-        ${active ? '🔹 ' : ''}Overmorrow
+        ${active ? '🔹 ' : ''}پس‌فردا
 
   settings:
-    bots: Manage Connected Bots
-    delete_bot: Delete Bot
-    language: Change Language
+    bots: مدیریت ربات‌های متصل
+    delete_bot: حذف ربات
+    language: تغییر زبان
 
   posts:
     edit:
-      edit_inline: Change URL-buttons
-      original: View Previous Version
-      clear_caption: Delete Caption
-      save: Save Changes
-      cancel: Cancel
-      open_edited_post: View Post in Channel
-      edit_scheduled_post: Edit a scheduled post
+      edit_inline: تغییر دکمه‌های URL
+      original: مشاهدهٔ نسخهٔ قبلی
+      clear_caption: حذف عنوان
+      save: ذخیرهٔ تغییرات
+      cancel: لغو
+      open_edited_post: مشاهدهٔ پست در کانال
+      edit_scheduled_post: ویرایش پست زمان‌بندی‌شده
 
-    view: View Post
-    copy: Create Copy
-    edit_time: Edit Time
-    delete: Delete Post
+    view: مشاهدهٔ پست
+    copy: ساخت کپی
+    edit_time: ویرایش زمان
+    delete: حذف پست
 
   statistics:
-    view_periods: View
-    view_via_web: View via Webpage
+    view_periods: مشاهده
+    view_via_web: مشاهده در وب
 
     periods:
-      one_week: Week
-      one_month: Month
+      one_week: هفته
+      one_month: ماه

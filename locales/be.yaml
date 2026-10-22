@@ -512,8 +512,8 @@ btn:
       bot: Змяніць бота
       timezone: Змяніць часавы пояс
       delete: Выдаліць канал
-      confirm_delete_yes: true
-      confirm_delete_no: false
+      confirm_delete_yes: Так
+      confirm_delete_no: Не
   post:
     settings:
       disable_notification_disable: 'Гукавое апавяшчэнне: адкл.'

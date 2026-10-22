@@ -179,7 +179,7 @@ post:
     preview_sent: |
       أرسلت معاينة المنشور أعلاه.
 
-      لديك <b>${pluralize(posts, 'رسالة', 'رسائل', 'رسالة')}</b> في المنشور:
+      لديك <b>${pluralize(posts, 'رسائل', 'رسالة', 'رسالتان', 'رسائل', 'رسالة', 'رسالة')}</b> في المنشور:
       ${messages}
     error_poll_not_anonymous: Sorry, but you can\'t send non-anonymous polls to channels.
     error_parse: |
@@ -280,7 +280,7 @@ post:
 
   send:
     count_posts: |
-      ${pluralize(count, 'رسالة', 'رسائل', 'رسالة')} جاهزة للإرسال إلى  <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''}.
+      ${pluralize(count, 'رسائل', 'رسالة', 'رسالتان', 'رسائل', 'رسالة', 'رسالة')} جاهزة للإرسال إلى  <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''}.
     choose_type: متى تريد إرسال المنشور؟
     problems: |
       لا يمكن إنشاء منشور جديد في ${channel.name}. عُثِر على الأخطاء التالية:
@@ -294,7 +294,7 @@ post:
     cancel_send: ألغيَ إرسال المنشور.
     continue_send: يمكنك الاستمرار في إرسال الرسائل.
     confirm_send: >
-      هل أنت متأكد من أنّك تريد إرسال <b>${pluralize(posts, 'رسالة', 'رسائل', 'رسالة')}</b> إلى
+      هل أنت متأكد من أنّك تريد إرسال <b>${pluralize(posts, 'رسائل', 'رسالة', 'رسالتان', 'رسائل', 'رسالة', 'رسالة')}</b> إلى
       <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''}?
     waiting: 🕒 جارِ الإرسال...
     ok: تم!
