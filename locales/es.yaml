@@ -624,3 +624,10 @@ btn:
     periods:
       one_week: Semana
       one_month: Mes
+
+video_note:
+  request: "Envía una nota de video (vídeo circular) a este chat; aparecerá en la Web App automáticamente.
+    Cancelar: /cancel"
+  received: "Nota de video recibida ✓ Vuelve a la Web App."
+  wrong: "Eso no es una nota de video. Envía un vídeo circular o cancela con /cancel"
+  expired: "La sesión ha expirado. Crea una nueva en la Web App."
