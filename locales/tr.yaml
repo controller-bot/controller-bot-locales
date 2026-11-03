@@ -606,3 +606,10 @@ btn:
     periods:
       one_week: Hafta
       one_month: Ay
+
+video_note:
+  request: "Bu sohbete yuvarlak video (video not) gönderin — Web App’de otomatik olarak görünecek.
+    İptal: /cancel"
+  received: "Video not alındı ✓ Web App’e dönün."
+  wrong: "Bu bir video not değil. Yuvarlak video gönderin veya /cancel ile iptal edin"
+  expired: "Oturumun süresi doldu. Web App’te yeni bir oturum başlatın."

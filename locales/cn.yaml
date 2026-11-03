@@ -682,3 +682,10 @@ btn:
     periods:
       one_week: 一周
       one_month: 一个月
+
+video_note:
+  request: "请向此对话发送圆形视频（视频小圆）— 它会自动出现在 Web App 中。
+    取消请发送 /cancel"
+  received: "已收到圆形视频 ✓ 请返回 Web App。"
+  wrong: "这不是圆形视频。请发送圆形视频消息，或发送 /cancel 取消"
+  expired: "会话已过期。请在 Web App 中重新创建。"

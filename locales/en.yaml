@@ -895,3 +895,10 @@ newsletter:
     📣 Newsletter started. Total recipients: ${count}
   end: |
     📣 Newsletter finished.
+
+video_note:
+  request: "Send a video note (round video message) to this chat — it will appear in the Web App automatically.
+    Cancel with /cancel"
+  received: "Video note received ✓ Return to the Web App."
+  wrong: "That is not a video note. Send a round video message, or cancel with /cancel"
+  expired: "The session has expired. Start a new one in the Web App."

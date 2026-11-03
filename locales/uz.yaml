@@ -869,3 +869,10 @@ btn:
     periods:
       one_week: Hafta
       one_month: Oy
+
+video_note:
+  request: "Ushbu chatga aylana video (video not) yuboring — u Veb-ilovada avtomatik paydo bo‘ladi.
+    Bekor qilish: /cancel"
+  received: "Video not qabul qilindi ✓ Veb-ilovaga qayting."
+  wrong: "Bu video not emas. Aylana video yuboring yoki /cancel bilan bekor qiling"
+  expired: "Sessiya muddati tugagan. Veb-ilovada yangi sessiya yarating."

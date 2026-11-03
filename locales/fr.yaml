@@ -625,3 +625,10 @@ btn:
     periods:
       one_week: Semaine
       one_month: Mois
+
+video_note:
+  request: "Envoyez une note vidéo (vidéo ronde) dans cette conversation — elle apparaîtra automatiquement dans la Web App.
+    Annuler : /cancel"
+  received: "Note vidéo reçue ✓ Revenez à la Web App."
+  wrong: "Ce n’est pas une note vidéo. Envoyez une vidéo ronde ou annulez avec /cancel"
+  expired: "La session a expiré. Créez-en une nouvelle dans la Web App."
