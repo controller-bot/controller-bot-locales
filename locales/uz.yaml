@@ -36,12 +36,13 @@ bots:
   add: |
     <b>Bot ulash</b>
 
-    Bot ulash uchun quyidagi ikki qadamni bajaring:
+    Botni ulash usulini tanlang:
 
-    1. @BotFather'ni oching va <a href="https://telegra.ph/Create-Bot-Controller-FAQ-03-28">yangi bot yarating</a>.
-    2. Siz token olasiz (masalan, 12345:6789ABCDEF) — uni menga forward qiling yoki copy-paste qiling.
+    <b>Avtomatik.</b> Quyidagi «Botni avtomatik yaratish» tugmasini bosing va Telegram'da yaratishni tasdiqlang. Token yuborish shart emas.
 
-    <b>Diqqat!</b> Chatfuel, Manybot va boshqalar kabi xizmatlarda allaqachon ishlatilayotgan botlarni ulamang.
+    <b>@BotFather orqali.</b> Yangi bot yarating va uning tokenini shu yerga yuboring (masalan, <code>12345:6789ABCDEF</code>).
+
+    <b>Diqqat:</b> Chatfuel yoki Manybot kabi boshqa xizmatlarda ishlatilayotgan botlarni ulamang.
 
   auto_button: "🤖 Botni avtomatik yaratish"
   auto_created: "✅ Bot yaratildi va ulandi:"

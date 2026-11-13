@@ -28,12 +28,14 @@ common:
 bots:
   add: |
     <b>Bot Bağlama</b>
-    Bot bağlamak için, bu iki adımı takip edin:
 
-    1. @BotFather'ı açın ve <a href="https://telegra.ph/Create-Bot-Controller-FAQ-03-28">yeni bir bot oluşturun</a>.
-    2. Bir token alacaksınız (örn. 12345:6789ABCDEF) — sadece onu bana iletin veya kopyalayıp yapıştırın.
+    Botunuzu nasıl bağlayacağınızı seçin:
 
-    <b>Uyarı!</b> Halihazırda Chatfuel, Manybot vb. servisler tarafından kullanılan botları bağlamayın.
+    <b>Otomatik olarak.</b> Aşağıdaki «Botu otomatik oluştur» düğmesine dokunun ve Telegram'da oluşturmayı onaylayın. Token göndermeniz gerekmez.
+
+    <b>@BotFather ile.</b> Yeni bir bot oluşturun ve token'ını buraya gönderin (ör. <code>12345:6789ABCDEF</code>).
+
+    <b>Uyarı:</b> Chatfuel veya Manybot gibi başka servislerde kullanılan botları bağlamayın.
   auto_button: "🤖 Botu otomatik oluştur"
   auto_created: "✅ Bot oluşturuldu ve bağlandı:"
   wrong_token: Benimle ilgili değil gibi. Lütfen bana botunuzun tokenını gönderin.

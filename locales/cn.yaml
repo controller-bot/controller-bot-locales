@@ -36,14 +36,15 @@ common:
     /lang -切换语言
 bots:
   add: |
-    <b>Connecting a bot</b>
+    <b>连接机器人</b>
 
-    请遵循以下两步来连接机器人：
+    请选择连接方式：
 
-    1. 打开@BotFather和<a href="https://telegra.ph/Create-Bot-Controller-FAQ-03-28">来创建新机器人</a>.
-    2. 你会得到一个令牌（比如：12345:6789ABCDEF），把它转发给我或复制粘贴给我即可。
+    <b>自动创建。</b> 点击下方的“自动创建机器人”，并在 Telegram 中确认创建。无需发送令牌。
 
-    <b>警告！</b>不要连接Chatfuel、Manybot等其他平台已经使用的机器人
+    <b>通过 @BotFather。</b> 创建新机器人，并将令牌发送到这里（例如 <code>12345:6789ABCDEF</code>）。
+
+    <b>注意：</b>请勿连接已在 Chatfuel、Manybot 等其他服务中使用的机器人。
 
   auto_button: "🤖 自动创建机器人"
   auto_created: "✅ 机器人已创建并接入："

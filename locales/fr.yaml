@@ -37,12 +37,13 @@ bots:
   add: |
     <b>Connecter un bot</b>
 
-    Pour connecter un bot veuillez suivre ces deux étapes:
+    Choisissez comment connecter votre bot :
 
-    1. Ouvrir @BotFather, puis entrer <code>/newbot</code> et choisir un nom et un nom d'utilisateur pour votre bot.
-    2. Vous obtiendrez un jeton (e.g. 12345:6789ABCDEF) — faire un copier-coller vers moi ou me le transferer.
+    <b>Automatiquement.</b> Appuyez sur « Créer un bot automatiquement » ci-dessous et confirmez sa création dans Telegram. Vous n'avez pas besoin d'envoyer de jeton.
 
-    <b>Attention!</b> Ne pas connecter des bots déjà utilisés par d'autres services comme Chatfuel, Manybot, ect.
+    <b>Avec @BotFather.</b> Créez un nouveau bot et envoyez son jeton ici (par exemple <code>12345:6789ABCDEF</code>).
+
+    <b>Attention :</b> ne connectez pas de bots déjà utilisés par d'autres services comme Chatfuel ou Manybot.
 
   auto_button: "🤖 Créer un bot automatiquement"
   auto_created: "✅ Le bot a été créé et connecté :"

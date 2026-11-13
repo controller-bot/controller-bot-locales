@@ -36,12 +36,13 @@ bots:
   add: |
     <b>Connecting a bot</b>
 
-    To connect a bot, you should follow these two steps:
+    Choose how to connect your bot:
 
-    1. Open @BotFather and <a href="https://telegra.ph/Create-Bot-Controller-FAQ-03-28">create a new bot</a>.
-    2. You’ll get a token (e.g. 12345:6789ABCDEF) — just forward or copy-paste it to me.
+    <b>Automatically.</b> Tap “Create a bot automatically” below and confirm creation in Telegram. You don't need to send a token.
 
-    <b>Warning!</b> Don't connect bots already used by other services like Chatfuel, Manybot, ect.
+    <b>Via @BotFather.</b> Create a new bot and send its token here (e.g. <code>12345:6789ABCDEF</code>).
+
+    <b>Warning:</b> don't connect bots already used by other services such as Chatfuel or Manybot.
 
   auto_button: "🤖 Create a bot automatically"
   auto_created: "✅ The bot has been created and connected:"
