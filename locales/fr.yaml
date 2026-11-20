@@ -302,6 +302,15 @@ post:
       <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''}?
     waiting: 🕒 Envoi...
     ok: Done!
+    failed: Les messages n'ont pas été publiés. Vérifiez les paramètres de la chaîne et réessayez.
+    partial: ${sent} messages sur ${total} ont été publiés. Vérifiez la chaîne avant de réessayer pour éviter les doublons.
+    problem_items:
+      channel_not_found: 🔹 la chaîne est introuvable
+      timezone_is_not_set: 🔹 le fuseau horaire n'est pas défini
+      bot_is_not_connection: 🔹 la chaîne n'est pas connectée à un bot
+      bot_is_not_admin: 🔹 le bot connecté n'est pas administrateur de la chaîne
+      bot_cannot_post: 🔹 autorisez le bot à publier des messages dans la chaîne
+      bot_was_deleted: 🔹 le bot a été supprimé ou son jeton n'est plus valide
 
   schedule:
     day:

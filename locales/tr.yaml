@@ -273,6 +273,15 @@ post:
       <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''} kanalına göndermek istediğinize emin misiniz?
     waiting: 🕒 Gönderiliyor...
     ok: Tamam!
+    failed: Mesajlar yayımlanmadı. Kanal ayarlarını kontrol edip tekrar deneyin.
+    partial: ${total} mesajdan ${sent} tanesi yayımlandı. Yinelenen mesajları önlemek için yeniden göndermeden önce kanalı kontrol edin.
+    problem_items:
+      channel_not_found: 🔹 kanal bulunamadı
+      timezone_is_not_set: 🔹 zaman dilimi ayarlı değil
+      bot_is_not_connection: 🔹 kanal bir bota bağlı değil
+      bot_is_not_admin: 🔹 bağlı bot kanal yöneticisi değil
+      bot_cannot_post: 🔹 bota kanalda mesaj yayımlama izni verin
+      bot_was_deleted: 🔹 bot silindi veya tokenı artık geçerli değil
 
   schedule:
     day:
