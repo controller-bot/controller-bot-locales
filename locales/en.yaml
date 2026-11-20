@@ -481,7 +481,6 @@ post:
       <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''}?
     waiting: 🕒 Sending...
     ok: Done!
-    failed_rights: The post was not published. Allow the bot to post messages in the channel and try again.
     failed: The post was not published. Please check the channel settings and try again.
     partial: ${sent} of ${total} messages were published. Check the channel before trying again to avoid duplicates.
     problem_items:

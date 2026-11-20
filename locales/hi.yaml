@@ -481,6 +481,15 @@ post:
       <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''}?
     waiting: 🕒 भेजा जा रहा है...
     ok: हो गया!
+    failed: संदेश प्रकाशित नहीं हुए। चैनल की सेटिंग्स जाँचें और फिर कोशिश करें।
+    partial: ${total} में से ${sent} संदेश प्रकाशित हुए। दोबारा भेजने से पहले चैनल जाँचें ताकि डुप्लिकेट न बनें।
+    problem_items:
+      channel_not_found: 🔹 चैनल नहीं मिला
+      timezone_is_not_set: 🔹 समय क्षेत्र सेट नहीं है
+      bot_is_not_connection: 🔹 चैनल किसी बॉट से कनेक्ट नहीं है
+      bot_is_not_admin: 🔹 कनेक्टेड बॉट चैनल का एडमिन नहीं है
+      bot_cannot_post: 🔹 बॉट को चैनल में संदेश प्रकाशित करने की अनुमति दें
+      bot_was_deleted: 🔹 बॉट हटा दिया गया है या उसका टोकन अब मान्य नहीं है
 
   schedule:
     day:

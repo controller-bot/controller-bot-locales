@@ -299,6 +299,15 @@ post:
       <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''}?
     waiting: 🕒 جارِ الإرسال...
     ok: تم!
+    failed: لم تُنشر الرسائل. تحقّق من إعدادات القناة وحاول مجددًا.
+    partial: نُشرت ${sent} من أصل ${total} رسائل. تحقّق من القناة قبل إعادة الإرسال لتجنّب التكرار.
+    problem_items:
+      channel_not_found: 🔹 لم يتم العثور على القناة
+      timezone_is_not_set: 🔹 لم يتم تعيين المنطقة الزمنية
+      bot_is_not_connection: 🔹 القناة غير متصلة ببوت
+      bot_is_not_admin: 🔹 البوت المربوط ليس مشرفًا في القناة
+      bot_cannot_post: 🔹 امنح البوت صلاحية نشر الرسائل في القناة
+      bot_was_deleted: 🔹 البوت المربوط غير موجود أو تم إبطال رمزه
 
   schedule:
     day:

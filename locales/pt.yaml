@@ -302,6 +302,15 @@ post:
       <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''}?
     waiting: 🕒 Enviando...
     ok: Feito!
+    failed: As mensagens não foram publicadas. Verifique as configurações do canal e tente novamente.
+    partial: ${sent} de ${total} mensagens foram publicadas. Confira o canal antes de reenviar para evitar duplicatas.
+    problem_items:
+      channel_not_found: 🔹 o canal não foi encontrado
+      timezone_is_not_set: 🔹 o fuso horário não está definido
+      bot_is_not_connection: 🔹 o canal não está conectado a um bot
+      bot_is_not_admin: 🔹 o bot conectado não é administrador do canal
+      bot_cannot_post: 🔹 permita que o bot publique mensagens no canal
+      bot_was_deleted: 🔹 o bot foi excluído ou seu token não é mais válido
 
   schedule:
     day:
