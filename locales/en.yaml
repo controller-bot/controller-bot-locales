@@ -48,6 +48,7 @@ bots:
   auto_created: "✅ The bot has been created and connected:"
   wrong_token: Doesn't look like anything to me. Please send me a token of your bot.
   error_add: Invalid token. Try to get a new one or use a token of another bot.
+  error_add_temporary: Telegram temporarily could not verify your bot. Please send the same token again in a few minutes. If the error continues, try again later.
   bot_already_added: Looks familiar to me. You already have this bot connected.
 
 channels:

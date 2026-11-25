@@ -40,6 +40,7 @@ bots:
   auto_created: "✅ Bot oluşturuldu ve bağlandı:"
   wrong_token: Benimle ilgili değil gibi. Lütfen bana botunuzun tokenını gönderin.
   error_add: Geçersiz token. Yeni bir token alın ya da başka bir botun tokenını kullanın.
+  error_add_temporary: Telegram geçici bir hata nedeniyle botunuzu doğrulayamadı. Aynı tokenı birkaç dakika sonra tekrar gönderin. Hata devam ederse daha sonra yeniden deneyin.
   bot_already_added: Bana benziyor gibi. Bu botu zaten bağladınız.
 
 channels:

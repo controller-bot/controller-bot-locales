@@ -48,6 +48,7 @@ bots:
   auto_created: "✅ Bot yaratildi va ulandi:"
   wrong_token: Bu to'g'ri ko'rinmayapti. Iltimos, bot tokenini yuboring.
   error_add: Noto'g'ri token. Yangi token oling yoki boshqa bot tokenidan foydalaning.
+  error_add_temporary: Telegram vaqtinchalik xatolik tufayli botingizni tekshira olmadi. Shu tokenni bir necha daqiqadan keyin qayta yuboring. Xatolik davom etsa, keyinroq urinib ko'ring.
   bot_already_added: Bu bot allaqachon ulangan.
 
 channels:

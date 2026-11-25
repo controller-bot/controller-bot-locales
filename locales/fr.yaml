@@ -49,6 +49,7 @@ bots:
   auto_created: "✅ Le bot a été créé et connecté :"
   wrong_token: Ceci ne me dit rien. Veuillez m\'envoyer le jeton de votre bot.
   error_add: Jeton invalide. Essayez d\'en obtenir un nouveau ou utilisez celui d\'un autre bot.
+  error_add_temporary: Telegram ne peut pas vérifier votre bot pour le moment. Renvoyez le même jeton dans quelques minutes. Si l'erreur persiste, réessayez plus tard.
   bot_already_added: Il me semble familier. Ce bot est déjà connecté.
 
 channels:
