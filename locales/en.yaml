@@ -481,6 +481,15 @@ post:
       <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''}?
     waiting: 🕒 Sending...
     ok: Done!
+    failed: The post was not published. Please check the channel settings and try again.
+    partial: ${sent} of ${total} messages were published. Check the channel before trying again to avoid duplicates.
+    problem_items:
+      channel_not_found: 🔹 the channel is no longer available
+      timezone_is_not_set: 🔹 the time zone is not set
+      bot_is_not_connection: 🔹 the channel is not connected to a bot
+      bot_is_not_admin: 🔹 the connected bot is not a channel administrator
+      bot_cannot_post: 🔹 allow the connected bot to post messages in the channel
+      bot_was_deleted: 🔹 the connected bot or its token is no longer valid
 
   schedule:
     day:

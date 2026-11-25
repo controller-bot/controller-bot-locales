@@ -311,6 +311,15 @@ post:
 
     waiting: 🕒 发送中……
     ok: 完成！
+    failed: 消息未发布。请检查频道设置后重试。
+    partial: 已发布 ${sent}/${total} 条消息。重新发送前请检查频道，以免产生重复内容。
+    problem_items:
+      channel_not_found: 🔹 未找到频道
+      timezone_is_not_set: 🔹 未设置时区
+      bot_is_not_connection: 🔹 频道未连接机器人
+      bot_is_not_admin: 🔹 已连接的机器人不是频道管理员
+      bot_cannot_post: 🔹 请授予机器人在频道中发布消息的权限
+      bot_was_deleted: 🔹 机器人已被删除或令牌已失效
 
   schedule:
     day:

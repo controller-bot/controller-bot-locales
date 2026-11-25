@@ -482,6 +482,15 @@ post:
       <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''}?
     waiting: 🕒 Yuborilmoqda...
     ok: Tayyor!
+    failed: Xabarlar e'lon qilinmadi. Kanal sozlamalarini tekshirib, qayta urinib ko'ring.
+    partial: ${total} ta xabardan ${sent} tasi e'lon qilindi. Takroriy xabarlar chiqmasligi uchun qayta yuborishdan oldin kanalni tekshiring.
+    problem_items:
+      channel_not_found: 🔹 kanal topilmadi
+      timezone_is_not_set: 🔹 vaqt mintaqasi o'rnatilmagan
+      bot_is_not_connection: 🔹 kanal botga ulanmagan
+      bot_is_not_admin: 🔹 ulangan bot kanal administratori emas
+      bot_cannot_post: 🔹 botga kanalda xabar e'lon qilish ruxsatini bering
+      bot_was_deleted: 🔹 bot o'chirilgan yoki uning tokeni endi yaroqsiz
 
   schedule:
     day:

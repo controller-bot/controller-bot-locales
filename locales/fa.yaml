@@ -304,6 +304,15 @@ post:
       <b>${channel.name}</b>${channel.username ? ' @' + channel.username : ''} ارسال کنید؟
     waiting: 🕒 در حال ارسال...
     ok: انجام شد!
+    failed: پیام‌ها منتشر نشدند. تنظیمات کانال را بررسی کنید و دوباره تلاش کنید.
+    partial: از ${total} پیام، ${sent} پیام منتشر شد. پیش از ارسال دوباره، کانال را بررسی کنید تا پیام تکراری ایجاد نشود.
+    problem_items:
+      channel_not_found: 🔹 کانال پیدا نشد
+      timezone_is_not_set: 🔹 منطقهٔ زمانی تنظیم نشده است
+      bot_is_not_connection: 🔹 کانال به هیچ رباتی متصل نیست
+      bot_is_not_admin: 🔹 ربات متصل مدیر کانال نیست
+      bot_cannot_post: 🔹 اجازهٔ انتشار پیام در کانال را به ربات بدهید
+      bot_was_deleted: 🔹 ربات حذف شده یا توکن آن دیگر معتبر نیست
 
   schedule:
     day:
