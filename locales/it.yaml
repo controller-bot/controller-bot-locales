@@ -49,6 +49,7 @@ bots:
   auto_created: "✅ Il bot è stato creato e collegato:"
   wrong_token: Non riconosco ciò che hai inviato. Inviami il token del tuo bot.
   error_add: Token non valido. Prova a richiederne uno nuovo o usa il token di un altro bot.
+  error_add_temporary: Telegram non è riuscito a verificare il bot a causa di un errore temporaneo. Invia di nuovo lo stesso token tra qualche minuto. Se l'errore persiste, riprova più tardi.
   bot_already_added: Ho già visto questo token. Questo bot è già connesso.
 
 channels:

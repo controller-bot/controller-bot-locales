@@ -50,6 +50,7 @@ bots:
   auto_created: "✅ 机器人已创建并接入："
   wrong_token: 无法识别。请发给我你的机器人的令牌。
   error_add: 无效令牌。请获取新令牌或使用另一个机器人的令牌。
+  error_add_temporary: Telegram 暂时无法验证你的机器人。请在几分钟后重新发送同一个令牌。如果错误仍然存在，请稍后再试。
   bot_already_added: 看着眼熟。你已经连接了这个机器人。
 
 
